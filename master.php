@@ -4,21 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    
+    
         <title>Paperless System</title>
-
+    
 <!--    CSS For Material Design-->
- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
+ <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" /> 
 <script src="material_js/material.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
     <!--  End of CSS For Material Design-->
-
+    
     <link rel="stylesheet" href="css/master.css">
-
-
+      
+            
   </head>
   <body>
 <!--    Scrollable header-->
@@ -41,19 +41,19 @@
                       </div>
                     </div>
                   </div>
-
+         
               <div class="tabs mdl-js-ripple-effect">
                   <a href="master.php" class="mdl-layout__tab is-active">Student Info</a>
                   <a href="tc_info_display.php" class="mdl-layout__tab">TC Information</a>
                   <a href="other_info_display.php" class="mdl-layout__tab">Other Info</a>
                   <a href="student_grade_display.php" class="mdl-layout__tab">Student Grades</a>
                 </div>
-
-
+                  
+                  
                 </header>
-
-
-
+                
+                
+                
               <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Paperless System</span>
                   <nav class="mdl-navigation">
@@ -61,19 +61,19 @@
                     <a class="mdl-navigation__link" href="index.php">Entry</a>
                   </nav>
               </div>
-
-
-
+                
+                
+                
                  <main class="mdl-layout__content">
 
                       <!-- Your content goes here -->
                     <div class="" id="masterTableBlock">
                          <h2 id="form_header">Master Table</h2>
-
+                      
                       <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="table1">
                         <thead>
                           <tr>
-
+                    
                                 <th>Reg. No. </th>
                                 <th class="mdl-data-table__cell--non-numeric">Student Name</th>
                                 <th class="mdl-data-table__cell--non-numeric">Mother Name</th>
@@ -105,12 +105,12 @@
                           </tr>
                         </thead>
                         <tbody>
-
+                          
                     <?php
 
                               include("connection.php");
 
-                          mysqli_query ($con,"set character_set_results='utf8'");
+                          mysqli_query ($con,"set character_set_results='utf8'"); 
                           $query = mysqli_query($con,"SELECT * FROM master") or die(mysqli_error());
                           while($row=mysqli_fetch_array($query))
                           {
@@ -147,34 +147,34 @@
 
 
                             echo "<tr>";
-                            echo "<td>$reg_no</td>";
+                            echo "<td>$reg_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$student_name</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$mother_name</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$gender</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$gender</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$Mother_tongue</td>";
-                            echo "<td>$birthdate</td>";
-                            echo "<td>$age</td>";
+                            echo "<td>$birthdate</td>"; 
+                            echo "<td>$age</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$nationality</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$religion</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$caste</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$religion</td>"; 
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$caste</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$sub_caste</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$category</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$father_name</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$father_name</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$father_occupation</td>";
-                            echo "<td>$annual_income</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$birth_place</td>";
+                            echo "<td>$annual_income</td>"; 
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$birth_place</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$district</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$state</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$state</td>"; 
 
-                            echo "<td>$prev_class</td>";
+                            echo "<td>$prev_class</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$prev_school_name</td>";
                             echo "<td>$admission_date</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$admission_class</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$admission_class</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$prev_mark_sheet</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$prev_tc</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$nadar_fee</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$prev_tc</td>"; 
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$nadar_fee</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$permanent_address</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$medium</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$medium</td>"; 
                             echo "</tr>";
                           }
 

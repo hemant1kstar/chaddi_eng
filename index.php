@@ -37,7 +37,7 @@
                                         <!-- Bottom row, not visible on scroll -->
                                         <!--
                   <div class="mdl-layout__header-row"><div class="mdl-layout-spacer"></div>
-                     Navigation
+                     Navigation 
                     <nav class="waterfall-demo-header-nav mdl-navigation"><a class="mdl-navigation__link" href="index.php">Basic Info</a><a class="mdl-navigation__link" href="">TC</a><a class="mdl-navigation__link" href="">Other Info</a><a class="mdl-navigation__link" href="student_grade.php">Grade</a></nav></div>
 -->
                                         <div class="tabs mdl-js-ripple-effect">
@@ -57,7 +57,7 @@
                                     </div>
                                     <main class="mdl-layout__content">
                                         <?php
-//    include("connection.php");
+    include("connection.php");
    ?>
                                         <?php
      if(isset($_POST['submit_student_info']))
@@ -92,12 +92,12 @@
         $nadar_fee=$_POST['nadar_fee'];
         $permanent_address=$_POST['permanent_address'];
         $medium=$_POST['medium'];
-
-
-
-      mysqli_query ($con,"set character_set_results='utf8'");
+      
+      
+      
+      mysqli_query ($con,"set character_set_results='utf8'");      
       mysqli_query($con,"INSERT INTO master(reg_no,student_name,mother_name,gender,Mother_tongue,birthdate,age,nationality,religion,caste,sub_caste,category,father_name,father_occupation,annual_income,birth_place,district,state,prev_class,admission_date,prev_school_name,admission_class,prev_mark_sheet,prev_tc,nadar_fee,permanent_address,medium)values
-      (N'$reg_no',N'$student_name',N'$mother_name',N'$gender',N'$mother_tongue',N'$birth_date',N'$age',N'$nationality',N'$religion',N'$caste',N'$sub_caste',N'$category',N'$father_name',N'$father_occupation',N'$annual_income',N'$birth_place',N'$district',N'$state',N'$prev_class',N'$admission_date',N'$prev_school_name',N'$admission_class',N'$prev_mark_sheet',N'$prev_tc',N'$nadar_fee',N'$permanent_address',N'$medium')");
+      (N'$reg_no',N'$student_name',N'$mother_name',N'$gender',N'$mother_tongue',N'$birth_date',N'$age',N'$nationality',N'$religion',N'$caste',N'$sub_caste',N'$category',N'$father_name',N'$father_occupation',N'$annual_income',N'$birth_place',N'$district',N'$state',N'$prev_class',N'$admission_date',N'$prev_school_name',N'$admission_class',N'$prev_mark_sheet',N'$prev_tc',N'$nadar_fee',N'$permanent_address',N'$medium')"); 
       echo "Student Details inserted successfully...";
 
 

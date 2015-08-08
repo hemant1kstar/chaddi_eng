@@ -4,21 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    
+    
         <title>Paperless System</title>
-
+    
 <!--    CSS For Material Design-->
- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
+ <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" /> 
 <script src="../material_js/material.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
     <!--  End of CSS For Material Design-->
-
+    
     <link rel="stylesheet" href="../css/main.css">
                <link href='../certificates/css/StudentIdCard.css' rel='stylesheet'>
-
+            
   </head>
   <body>
 <!--    Waterfall header-->
@@ -41,19 +41,19 @@
                       </div>
                     </div>
                   </div>
-
+       
                   <div class="tabs mdl-js-ripple-effect">
                   <a href="index.php" class="mdl-layout__tab">Certificate</a>
                   <a href="bonafied.php" class="mdl-layout__tab">Bonafide</a>
                   <a href="nirgam_utara.php" class="mdl-layout__tab">Nirgam Utara</a>
                   <a href="id_card.php" class="mdl-layout__tab  is-active">ID Card</a>
-
+        
                 </div>
-
+                  
                 </header>
-
-
-
+                
+                
+                
               <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Paperless System</span>
                   <nav class="mdl-navigation">
@@ -61,20 +61,20 @@
                     <a class="mdl-navigation__link" href="index.php">Entry</a>
                   </nav>
               </div>
-
-
-
+                
+                
+                
                  <main class="mdl-layout__content">
                     <div class="page-content">
                       <!-- Your content goes here -->
-                        <div class="mdl-shadow--2dp">
+                        <div class="mdl-shadow--2dp"> 
                            <form action="" method="post">
                                     <div class="mdl-grid">
                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
              <label>Reg No.</label>
            <?php
 include("../connection.php");
-              $result = mysqli_query($con,"SELECT * FROM master");
+              $result = mysqli_query($con,"SELECT * FROM master"); 
              echo "<select name='reg_no' class='form-control' required>";
              echo "<option value=''></option>";
             while($row = mysqli_fetch_array($result)){
@@ -83,12 +83,12 @@ include("../connection.php");
             }
              echo "</select>";
           ?>
-
+     
                           </div>
                            </div>
                           <div class="submitButtonDiv">
                                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="submit_student_info" type="submit">Submit</button>
-                             </div>
+                             </div>  
                            </form>
                          </div>
                     <?php
@@ -97,15 +97,15 @@ include("../connection.php");
                      $current_class="";
                      $permanent_address="";
                      $exam_seat_no="";
-
-
+       
+                  
                    if(isset($_POST['submit_student_info']))
                    {
 
 
                      $reg_no2=$_POST['reg_no'];
-
-                          mysqli_query ($con,"set character_set_results='utf8'");
+                
+                          mysqli_query ($con,"set character_set_results='utf8'"); 
                           $query = mysqli_query($con,"SELECT * FROM master where reg_no='$reg_no2'") or die(mysqli_error());
                           while($row=mysqli_fetch_array($query))
                           {
@@ -117,9 +117,9 @@ include("../connection.php");
                           }
                    }
                   ?>
-
-
-
+                                    
+                      
+                      
         <div id="dvContents">
         <div class="main" id="mains">
                 <div class="photo">
@@ -128,7 +128,7 @@ include("../connection.php");
                     <h5>विद्यार्थ्याची सही</h5>
                 </div>
                     <table class="studentinfo">
-                        <tr>
+                        <tr> 
                             <h4 class="headdata">ओळखपत्र</h4>
                         </tr>
                          <tr>
@@ -171,7 +171,7 @@ include("../connection.php");
                             <td>परीक्षा केंद्राचे नाव</td>
                             <td></td>
                         </tr>
-
+                        
                          <tr>
                             <td>दिनांक</td>
                             <td></td>
@@ -181,20 +181,20 @@ include("../connection.php");
                             <td></td>
                         </tr>
                          <tr>
-
+                           
                         </tr>
-                    </table>
+                    </table>   
                      <h4 class="principal">मुख्याध्यापक सही</h4>
          </div>
     </div>
-
+                      
                 <div class="submitButtonDiv">
 <!--                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="print_bonafied" id="btnPrint">Print</button>-->
-
+                  
                   <button type="button" class="btn btn-default btn1" id="btnPrint" value="Print">Print</button>
                 </div>
-
-
+                    
+                      
                    </div>
                   </main>
 

@@ -93,11 +93,11 @@ button[type=submit] {
 }
 
 @media (min-width:992px) {
-
+    
     #form_header {
         font-size: 34px;
     }
-
+    
     .tabs {
 /*  background-color: #2196F3;*/
   padding-left: 100px;

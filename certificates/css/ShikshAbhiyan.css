@@ -4,15 +4,23 @@
 
 /*
 p,h1,h2,h3,h4,h5{
-     margin: 0px;
-    padding: 0px;
+margin: 0px;
+padding: 0px;
 }
 */
 
 .reg_info {
     /*    width: 950px;*/
-    /*    margin:32px auto;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
 }
+
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+
 .main {
     width: 850px;
     margin: 15px auto;
@@ -78,4 +86,9 @@ p,h1,h2,h3,h4,h5{
 #btnPrint {
     display: block;
     margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
 }

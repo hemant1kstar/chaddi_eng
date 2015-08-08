@@ -24,16 +24,16 @@ p,h1,h2,h3,h4,h5{
 .tabledata{
     border: 1px solid rgb(140, 140, 140);
     text-align: center;
-    border-collapse: collapse;
+    border-collapse: collapse; 
 }
 tr{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000; 
 }
 th{
-    border-left: 1px solid #bcbcbc;
+    border-left: 1px solid #bcbcbc; 
 }
 td{
-    border-left: 1px solid #bcbcbc;
+    border-left: 1px solid #bcbcbc; 
 }
 .info{
     padding: 35px 1px;

@@ -22,7 +22,7 @@ p,h1,h2,h3,h4,h5{
 }
 .studentinfo{
     position: relative;
-    padding: 0px;
+    padding: 0px;  
 }
 .studentinfo td{
     padding: 0px;
