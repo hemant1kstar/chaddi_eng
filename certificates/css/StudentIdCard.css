@@ -1,0 +1,42 @@
+*{
+/*    border: 1px solid black;*/
+}
+p,h1,h2,h3,h4,h5{
+     margin: 0px;
+    padding: 0px;
+}
+.main{
+    width: 650px;
+    margin: 20px auto;
+    border: 1px solid #898989;
+}
+.photo{
+    width: 200px;
+    height: 250px;
+    margin: 50px 0px 0px 0px;
+    float: left;
+    text-align: center;
+}
+.headdata{
+    text-align: center;
+}
+.studentinfo{
+    position: relative;
+    padding: 0px;
+}
+.studentinfo td{
+    padding: 0px;
+}
+.image{
+    width: 150px;
+    height: 150px;
+}
+.principal{
+    padding: 5px 0px 0px 55%;
+/*    text-align: center;*/
+    margin: 15px auto;
+}
+.btn1{
+    display: block;
+    margin: 20px auto;
+}

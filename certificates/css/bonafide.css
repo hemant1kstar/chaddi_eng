@@ -1,0 +1,47 @@
+*{
+/*    border: 1px solid black;*/
+}
+p,h1,h2,h3,h4,h5{
+     margin: 0px;
+    padding: 0px;
+}
+.main{
+    width: 850px;
+    margin: 20px auto;
+    border: 1px solid #898989;
+    padding: 30px 20px;
+}
+.space{
+    margin: auto 5px;
+/*    border: 1px solid black;*/
+/*    padding: 1px 40px;*/
+}
+.schoolname,.place{
+   text-align: center;
+   padding: 5px 0px;
+}
+.bonafide{
+   text-align: center;
+   padding: 15px 0px;
+}
+.regino{
+    padding: 20px 0px;
+}
+.context{
+    text-align: justify;
+}
+.lastdiv{
+    padding: 20px 0px 0px 0px;
+    width: 250px;
+}
+.last{
+    padding: 10px 0px;
+}
+.principal{
+    float: right;
+    margin: -30px 20px 0px 0px;
+}
+.btn1{
+    display: block;
+    margin: 20px auto;
+}

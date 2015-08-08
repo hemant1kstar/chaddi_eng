@@ -1,0 +1,81 @@
+* {
+    /*    border: 1px solid black;*/
+}
+
+/*
+p,h1,h2,h3,h4,h5{
+     margin: 0px;
+    padding: 0px;
+}
+*/
+
+.reg_info {
+    /*    width: 950px;*/
+    /*    margin:32px auto;*/
+}
+.main {
+    width: 850px;
+    margin: 15px auto;
+    background: white;
+    border: 1px solid #898989;
+    padding: 30px 20px;
+}
+.space {
+    margin: auto 5px;
+    /*    border: 1px solid black;*/
+    /*    padding: 1px 40px;*/
+}
+.headname {
+    text-align: center;
+}
+.namuna {
+    text-align: center;
+}
+.pramanptra {
+    margin: 10px auto;
+}
+.pramanptra h3 {
+    text-align: center;
+    width: 440px;
+    margin: 2px auto;
+    border-width: 2px;
+    padding: 10px;
+    border-style: dashed;
+}
+.collegename {
+    margin: 5px auto;
+    text-align: center;
+}
+.data {
+    text-align: justify;
+}
+.place {
+    padding: 5px 0px;
+    text-align: center;
+}
+.logoimage {
+    /*    margin: 20px 2px 5px;*/
+    width: 650px;
+    display: block;
+    margin: auto;
+    /*    margin: 48px auto 0;*/
+}
+.lastdiv {
+    /*    margin-top: 30px;*/
+    padding: 20px 0px 0px 0px;
+    position: relative;
+    /*    width: 250px;*/
+}
+.last {
+    padding: 10px 0px;
+}
+.principal {
+    position: absolute;
+    /*    float: right;*/
+    right: 40px;
+    top: 28px;
+}
+#btnPrint {
+    display: block;
+    margin: auto;
+}

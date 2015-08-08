@@ -1,0 +1,35 @@
+body {
+    background-color: #FAFAFA;
+    font-family: Roboto, sans-serif;
+    position: relative;
+}
+.mdl-layout__content {
+    overflow: scroll;
+}
+#masterTableBlock {
+    display: inline-block;
+    margin: 48px 16px;
+}
+#form_header {
+    font-size: 24px;
+    /*    background-color: #E91E63;*/
+
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0;
+    padding: 16px 0px 2px;
+    font-weight: 300;
+}
+#table1 {
+    width: 100%;
+}
+@media (min-width: 992px) {
+    #masterTableBlock {
+        margin: 48px 24px;
+    }
+    #form_header {
+        font-size: 34px;
+    }
+    .tabs {
+        padding-left: 100px;
+    }
+}

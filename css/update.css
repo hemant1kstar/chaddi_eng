@@ -1,0 +1,27 @@
+.mdl-layout__content {
+    overflow: scroll;
+}
+#display_student_table {
+    display: inline-block;
+    margin: 48px 16px;
+}
+#studentDetailsHeader {
+    margin: 16px;
+    color: rgba(0, 0, 0, 0.54);
+}
+#displayTableRegistrationLabel {
+    display: inline-block;
+    margin: 16px;
+}
+#displayTableButton {
+/*    display: block;*/
+    position: relative;
+    left: 48px;
+/*    margin-left: 32px;*/
+/*    position: absolute;*/
+}
+@media (min-width: 992px) {
+    #display_student_table {
+        margin: 48px 24px;
+    }
+}

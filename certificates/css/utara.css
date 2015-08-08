@@ -1,0 +1,47 @@
+*{
+/*    border: 1px solid black;*/
+}
+p,h1,h2,h3,h4,h5{
+     margin: 0px;
+    padding: 0px;
+}
+.main{
+/*    width: 650px;*/
+    margin: 20px auto;
+/*    border: 1px solid #898989;*/
+    padding: 30px 20px;
+}
+.headname{
+    text-align: center;
+}
+.collegename{
+    text-align: center;
+}
+.place{
+    text-align: center;
+    padding: 5px 0px 15px;
+}
+.tabledata{
+    border: 1px solid rgb(140, 140, 140);
+    text-align: center;
+    border-collapse: collapse;
+}
+tr{
+    border-bottom: 1px solid #000;
+}
+th{
+    border-left: 1px solid #bcbcbc;
+}
+td{
+    border-left: 1px solid #bcbcbc;
+}
+.info{
+    padding: 35px 1px;
+}
+.principal{
+/*   margin: 10px 0px 0px 0px;*/*/
+}
+.btn1{
+    display: block;
+    margin: 20px auto;
+}
