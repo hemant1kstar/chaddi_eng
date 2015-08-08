@@ -117,7 +117,7 @@ if(isset($_POST['submit_student_info']))
                                 <h3 class="namuna">नमुना - ३</h3>
                                 <div class="pramanptra">
                                     <h3>प्राथमिक शिक्षणपूर्तता  प्रमाणपत्र </h3> </div>
-                                <h4 class="collegename">संत नामदेव प्राथमिक/माध्यमिक /उच्चमाध्यमिक विद्यालय ,लातूर</h4>
+                                <h4 class="schoolname">संत नामदेव प्राथमिक/माध्यमिक /उच्चमाध्यमिक विद्यालय ,लातूर</h4>
                                 <h5 class="place">तालुका :लातूर , जिल्हा :लातूर</h5>
 
                                 <p class="data">प्रमाणित करण्यात येते की ,<span class="space"><?php echo "$student_name";?></span>हिने /ह्याने बालकाचा मोफत आणि सक्तीच्या शिक्षणाचा हक्क अधिनियम २००९ मधील कलम २९ मध्ये विहित केलेल्या निकषानुसार आपले इयत्ता <span class="space"><?php echo "$prev_class1";?></span> प्राथमिक शिक्षण पूर्ण केले आहे तिने इयत्ता<span class="space"><?php echo "$admission_class1";?></span>अर्हता व विध्याविषयक कैशाल्ये प्राप्त केले आहेत .
