@@ -18,7 +18,7 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/main.css">
-    <link href='../certificates/css/ShikshAbhiyan.css' rel='stylesheet'>
+<!--    <link href='../certificates/css/ShikshAbhiyan.css' rel='stylesheet'>-->
     <link href='../certificates/css/bonafide.css' rel='stylesheet'>
 
 
@@ -123,19 +123,20 @@ echo "</select>";
 
                     <div id="dvContents">
                         <div class="main mdl-shadow--2dp" id="mains">
-                            <h3 class="schoolname">संत नामदेव प्राथमिक/माध्यमिक /उच्चमाध्यमिक विद्यालय ,लातूर </h3>
-                            <h5 class="place">तालुका :लातूर , जिल्हा :लातूर </h5>
+                            <h3 class="schoolname">संत नामदेव प्राथमिक / माध्यमिक / उच्चमाध्यमिक विद्यालय, लातूर </h3>
+                            <h5 class="place">तालुका: लातूर, जिल्हा: लातूर </h5>
                             <h4 class="bonafide">BONAFIDE CERTIFICATE</h4>
                             <p class="regino">
                                 जनरल रजि क्र.<span class="space"><?php echo "$reg_no1";?></span>
                             </p>
-                            <p class="context">प्रमाणित करण्यात येते की,<span class="space"><?php echo "$student_name";?></span>ही/हा या विध्यालायाचा विध्यार्ती आहे. व शैक्षणिक वर्ष <span class="space">2015-16</span> मध्ये इयत्ता<span class="space"><?php echo"$current_class"; ?></span>वि मध्ये शिकत आहे. शाळेच्या सर्वसाधारण नोंदवहीतील क्रमांक <span class="space"></span> वरील नोंदीनुसार तिचा /त्याचा जन्म <span class="space"><?php echo"$birth_place"; ?></span> जिल्हा :<span class="space"><?php echo"$district";?></span>राज्य :<span class="space"><?php echo"$state"; ?></span>येथे झाला असून जन्मदिनांक :<span class="space"><?php echo "$birthdate";?></span>(अक्षरी :<span class="space"></span>) आणि जात :<span class="space"><?php echo "$caste";?></span>. असे नोंदविलेली आहे .या विद्यार्थाचा शाळेतील प्रगती व वर्तणूक चांगली आहे . सदर प्रमाणपत्र शाळेच्या नोंदवहीनुसार देण्यात येते आहे </p>
+                            <p class="context">प्रमाणित करण्यात येते की, <span class="space"><?php echo "$student_name";?></span> ही/हा या विद्यालयाचा विद्यार्थी आहे. व शैक्षणिक वर्ष <span class="space">2015-16</span> मध्ये इयत्ता<span class="space"><?php echo"$current_class"; ?></span>वी मध्ये शिकत आहे. शाळेच्या सर्वसाधारण नोंदवहीतील क्रमांक <span class="space"></span> वरील नोंदीनुसार तिचा/त्याचा जन्म <span class="space"><?php echo"$birth_place"; ?></span> जिल्हा :<span class="space"><?php echo"$district";?></span>राज्य :<span class="space"><?php echo"$state"; ?></span>येथे झाला असून जन्मदिनांक :<span class="space"><?php echo "$birthdate";?></span>(अक्षरी :<span class="space"></span>) आणि जात: <span class="space"><?php echo "$caste";?></span> असे नोंदविलेली आहे. या विद्यार्थीची शाळेतील प्रगती व वर्तणूक चांगली आहे. सदर प्रमाणपत्र शाळेच्या नोंदवहीनुसार देण्यात येते आहे. </p>
 
                             <div class="lastdiv">
                                 <p class="last">ठिकाण :<span class="space">लातूर</span></p>
                                 <p class="last">दिनांक :<span class="space"></span></p>
+                                <p class="principal">मुख्याध्यापक</p>
                             </div>
-                            <p class="principal">मुख्याध्यापक</p>
+                            
                         </div>
 
                     </div>

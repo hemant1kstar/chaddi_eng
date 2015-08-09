@@ -1,47 +1,68 @@
-*{
-/*    border: 1px solid black;*/
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
+
+body {
+    color: rgba(0, 0, 0, 0.87);
 }
-p,h1,h2,h3,h4,h5{
-     margin: 0px;
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0px;
     padding: 0px;
 }
-.main{
-/*    width: 650px;*/
+.reg_info {
+    /*    width: 950px;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+.main {
+    /*    width: 650px;*/
     margin: 20px auto;
-/*    border: 1px solid #898989;*/
+    /*    border: 1px solid #898989;*/
     padding: 30px 20px;
 }
-.headname{
+.headname,
+.schoolname {
     text-align: center;
 }
-.collegename{
-    text-align: center;
-}
-.place{
+.place {
     text-align: center;
     padding: 5px 0px 15px;
 }
-.tabledata{
+.tabledata {
     border: 1px solid rgb(140, 140, 140);
     text-align: center;
-    border-collapse: collapse; 
+    border-collapse: collapse;
 }
-tr{
-    border-bottom: 1px solid #000; 
+tr {
+    border-bottom: 1px solid #424242;
 }
-th{
-    border-left: 1px solid #bcbcbc; 
+th {
+    border-left: 1px solid #424242;
 }
-td{
-    border-left: 1px solid #bcbcbc; 
+td {
+    border-left: 1px solid #424242;
 }
-.info{
+.info {
     padding: 35px 1px;
 }
-.principal{
-/*   margin: 10px 0px 0px 0px;*/*/
+.principal {
+    /*   margin: 10px 0px 0px 0px;*/
 }
-.btn1{
+#btnPrint {
     display: block;
-    margin: 20px auto;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
 }

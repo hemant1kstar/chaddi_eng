@@ -1,33 +1,59 @@
-/*
-.schoolname,.place{
-   text-align: center;
-   padding: 5px 0px;
-}
-*/
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
 
-.bonafide{
-   text-align: center;
-   padding: 15px 0px;
+body {
+    color: rgba(0, 0, 0, 0.87);
 }
-.regino{
+.main {
+    width: 850px;
+    margin: 15px auto;
+    background: white;
+    border: 1px solid #898989;
+    padding: 30px 20px;
+}
+.reg_info {
+    /*    width: 950px;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+.schoolname,
+.place {
+    text-align: center;
+    padding: 5px 0px;
+}
+.bonafide {
+    text-align: center;
+    padding: 15px 0px;
+}
+.regino {
     padding: 20px 0px;
 }
-/*
-.context{
+.context {
     text-align: justify;
 }
-*/
-/*
-.lastdiv{
+.lastdiv {
     padding: 20px 0px 0px 0px;
-    width: 250px;
+    position: relative;
 }
-.last{
+.last {
     padding: 10px 0px;
 }
-*/
-/*
-.principal{
-    float: right;
-    margin: -30px 20px 0px 0px;
-}*/
+.principal {
+    position: absolute;
+    right: 40px;
+    top: 87px;
+}
+#btnPrint {
+    display: block;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
+}
