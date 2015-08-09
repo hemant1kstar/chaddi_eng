@@ -20,9 +20,10 @@ p,h1,h2,h3,h4,h5{
     left: 48px;
 }
 .main{
-    width: 650px;
+    width: 850px; /* Width is kept as 850px rather than original 650px as it fits properly in the print in 850px */
     margin: 20px auto;
-    border: 1px solid #898989;
+    background-color: #fff;
+    border: 1px solid #9E9E9E;
 }
 .photo{
     width: 200px;
@@ -33,6 +34,8 @@ p,h1,h2,h3,h4,h5{
 }
 .headdata{
     text-align: center;
+    margin: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 .studentinfo{
     position: relative;
