@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-        <title>Paperless System</title>
+        <title>Identity Card | Paperless System</title>
     
 <!--    CSS For Material Design-->
  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" /> 
@@ -67,11 +67,10 @@
                  <main class="mdl-layout__content">
                     <div class="page-content">
                       <!-- Your content goes here -->
-                        <div class="mdl-shadow--2dp"> 
+                        <div class="mdl-shadow--2dp reg_info"> 
                            <form action="" method="post">
-                                    <div class="mdl-grid">
-                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-             <label>Reg No.</label>
+                               <div>
+                                   <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
            <?php
 include("../connection.php");
               $result = mysqli_query($con,"SELECT * FROM master"); 
@@ -82,13 +81,9 @@ include("../connection.php");
              echo "<option value='$reg_no1'>$reg_no1</option>";
             }
              echo "</select>";
-          ?>
-     
-                          </div>
-                           </div>
-                          <div class="submitButtonDiv">
-                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="submit_student_info" type="submit">Submit</button>
-                             </div>  
+                                   ?>
+                                   <button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name="submit_student_info" type="submit" id="showCertificateButton">Submit</button>
+                               </div> 
                            </form>
                          </div>
                     <?php
@@ -188,11 +183,11 @@ include("../connection.php");
          </div>
     </div>
                       
-                <div class="submitButtonDiv">
-<!--                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="print_bonafied" id="btnPrint">Print</button>-->
-                  
-                  <button type="button" class="btn btn-default btn1" id="btnPrint" value="Print">Print</button>
-                </div>
+                        <div class="submitButtonDiv">
+                            <!--                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="print_bonafied" id="btnPrint">Print</button>-->
+
+                            <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print ID Card</button>
+                        </div>
                     
                       
                    </div>

@@ -1,9 +1,23 @@
-*{
-/*    border: 1px solid black;*/
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
+
+body {
+    color: rgba(0, 0, 0, 0.87);
 }
 p,h1,h2,h3,h4,h5{
      margin: 0px;
     padding: 0px;
+}
+
+.reg_info {
+    /*    width: 950px;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+#showCertificateButton {
+    position: relative;
+    left: 48px;
 }
 .main{
     width: 650px;
@@ -36,7 +50,15 @@ p,h1,h2,h3,h4,h5{
 /*    text-align: center;*/
     margin: 15px auto;
 }
-.btn1{
+
+#btnPrint {
     display: block;
-    margin: 20px auto;
+    margin: auto;
+}
+
+
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
 }

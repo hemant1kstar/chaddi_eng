@@ -36,6 +36,10 @@ body {
 .context {
     text-align: justify;
 }
+
+.space {
+    font-weight: 700;
+}
 .lastdiv {
     padding: 20px 0px 0px 0px;
     position: relative;

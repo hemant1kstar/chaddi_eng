@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Paperless System</title>
+    <title>Nirgam Utara | Paperless System</title>
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
@@ -145,8 +145,8 @@ include("../connection.php");
                             <h5 class="place">तालुका: लातूर, जिल्हा: लातूर</h5>
                             <table class="tabledata">
                                 <tr>
-                                    <th>रेजीष्ट्रेशन नंबर</th>
-                                    <th>विध्यार्थ्याचे नाव </th>
+                                    <th> रेजिस्ट्रेशन नंबर</th>
+                                    <th> विद्यार्थ्याचे नाव </th>
                                     <th>आईचे नाव </th>
                                     <th>धर्म व जात </th>
                                     <th>मातृभाषा </th>
@@ -186,7 +186,7 @@ include("../connection.php");
                        echo "</tr>";
                         ?>
                             </table>
-                            <h5 class="info">प्रमाणित करण्यात येते कि वरील माहिती शाळेच्या नोंदवहीनुसार आहे.</h5>
+                            <h5 class="info">प्रमाणित करण्यात येते की वरील माहिती शाळेच्या नोंदवहीनुसार आहे.</h5>
                             <p class="principal">मुख्याध्यापक</p>
                         </div>
                     </div>
@@ -194,7 +194,7 @@ include("../connection.php");
                     <div class="submitButtonDiv">
                         <!--                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="print_bonafied" id="btnPrint">Print</button>-->
 
-                        <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print Nirgam Utara</button>
                     </div>
 
 

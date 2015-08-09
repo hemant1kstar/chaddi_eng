@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Paperless System</title>
+    <title>Bonafide Certificate | Paperless System</title>
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
@@ -126,9 +126,9 @@ echo "</select>";
                             <h5 class="place">तालुका: लातूर, जिल्हा: लातूर </h5>
                             <h4 class="bonafide">BONAFIDE CERTIFICATE</h4>
                             <p class="regino">
-                                जनरल रजि क्र.<span class="space"><?php echo "$reg_no1";?></span>
+                                जनरल रजि क्र. <span class="space"><?php echo "$reg_no1";?></span>
                             </p>
-                            <p class="context">प्रमाणित करण्यात येते की, <span class="space"><?php echo "$student_name";?></span> ही/हा या विद्यालयाचा विद्यार्थी आहे. व शैक्षणिक वर्ष <span class="space">2015-16</span> मध्ये इयत्ता <span class="space"><?php echo"$current_class"; ?></span> वी मध्ये शिकत आहे. शाळेच्या सर्वसाधारण नोंदवहीतील क्रमांक <span class="space"></span> वरील नोंदीनुसार तिचा/त्याचा जन्म <span class="space"><?php echo"$birth_place"; ?></span> जिल्हा :<span class="space"><?php echo"$district";?></span> राज्य :<span class="space"><?php echo"$state"; ?></span> येथे झाला असून जन्मदिनांक :<span class="space"><?php echo "$birthdate";?></span>(अक्षरी :<span class="space"></span>) आणि जात: <span class="space"><?php echo "$caste";?></span> असे नोंदविलेली आहे. या विद्यार्थीची शाळेतील प्रगती व वर्तणूक चांगली आहे. सदर प्रमाणपत्र शाळेच्या नोंदवहीनुसार देण्यात येत आहे. </p>
+                            <p class="context">प्रमाणित करण्यात येते की, <span class="space"><?php echo "$student_name";?></span> ही/हा या विद्यालयाचा विद्यार्थी आहे. व शैक्षणिक वर्ष <span class="space">2015-16</span> मध्ये इयत्ता <span class="space"><?php echo"$current_class"; ?></span> वी मध्ये शिकत आहे. शाळेच्या सर्वसाधारण नोंदवहीतील क्रमांक <span class="space"></span> वरील नोंदीनुसार तिचा/त्याचा जन्म <span class="space"><?php echo"$birth_place"; ?></span>, जिल्हा: <span class="space"><?php echo"$district";?></span>, राज्य: <span class="space"><?php echo"$state"; ?></span>, येथे झाला असून जन्मदिनांक: <span class="space"><?php echo "$birthdate";?></span> (अक्षरी : <span class="space"></span>) आणि जात: <span class="space"><?php echo "$caste";?></span>, असे नोंदविलेली आहे. या विद्यार्थीची शाळेतील प्रगती व वर्तणूक चांगली आहे. सदर प्रमाणपत्र शाळेच्या नोंदवहीनुसार देण्यात येत आहे.</p>
 
                             <div class="lastdiv">
                                 <p class="last">ठिकाण : <span class="space">लातूर</span></p>
@@ -143,7 +143,7 @@ echo "</select>";
                     <div class="submitButtonDiv">
                         <!--                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="print_bonafied" id="btnPrint">Print</button>-->
 
-                        <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print Certificate</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print Bonafide Certificate</button>
                     </div>
 
 

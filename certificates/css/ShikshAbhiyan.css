@@ -1,5 +1,6 @@
 /*  the css has many properties same in the other css files. but as the print function takes this css as its basis
 so this css is kept as it is*/
+
 body {
     color: rgba(0, 0, 0, 0.87);
 }
@@ -23,9 +24,6 @@ body {
 .space {
     font-weight: 700;
 }
-/*    margin: auto 5px;*/
-    /*    border: 1px solid black;*/
-    /*    padding: 1px 40px;*/
 
 .headname {
     text-align: center;

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-        <title>Paperless System | Print Certificate</title>
+        <title>Print Certificate | Paperless System</title>
 
         <!--    CSS For Material Design-->
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
