@@ -18,7 +18,6 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/main.css">
-
     <link href='../certificates/css/utara.css' rel='stylesheet'>
 
 </head>

@@ -32,6 +32,7 @@ h5 {
 .headname,
 .schoolname {
     text-align: center;
+    margin: 10px auto;
 }
 .place {
     text-align: center;
