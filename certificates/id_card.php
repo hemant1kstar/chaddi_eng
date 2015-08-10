@@ -120,7 +120,7 @@ include("../connection.php");
                             <h4 class="headdata">ओळखपत्र</h4>
                             <div class="photo">
                                 <!--                    <h6>PHOTO</h6>-->
-                                <img src="" class="image">
+                                <img src="images/student.png" class="image">
 
                             </div>
                             <table class="studentinfo">

@@ -171,7 +171,7 @@
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo  "<tr>";
-                           echo  "<td>Reg No.</td>";
+                           echo  "<td>Reg No.</td><td>Student Name</td><td>Gender</td><td>Caste and Subcaste</td><td>Birthdate</td>";
 
          
 //                                $timing1=$_POST['timing'];
@@ -179,27 +179,34 @@
                                 $date2=$_POST['date2'];
                                 $class1=$_POST['class'];
                                 
-                                
-                        $sql="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Morning' ORDER BY date";
-                        $result=mysqli_query($con,$sql);
-                        $result1=mysqli_query($con,$sql);
+                          mysqli_query ($con,"set character_set_results='utf8'");      
+                        $sql1="SELECT date,timing FROM calendar WHERE date BETWEEN '$date1' AND '$date2'  ORDER BY date";
+                        $result1=mysqli_query($con,$sql1);
+//                        $result1=mysqli_query($con,$sql);
 
-                       while($cal=mysqli_fetch_array($result,MYSQLI_NUM))
+                       while($cal=mysqli_fetch_array($result1,MYSQLI_NUM))
                         {
-                        echo "<td>$cal[0](सकाळ)</td>";
+                         if($cal[1]=="Morning")
+                         {
+                                echo "<td>$cal[0](Morning)</td>";
+                         }
+                          if($cal[1]=="Afternoon")
+                         {
+                                echo "<td>$cal[0](Afternoon)</td>";
+                         }
                         
 //                        $df=$cal[0];
                         }
                               
-                        $sql6="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Afternoon' ORDER BY date";
-                        $result6=mysqli_query($con,$sql6);
-                        $result7=mysqli_query($con,$sql6);
-
-                        while($cal6=mysqli_fetch_array($result6,MYSQLI_NUM))
-                        {
-                        echo "<td>$cal6[0](दुपार)</td>";
-           
-                        }
+//                        $sql2="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Afternoon' ORDER BY date";
+//                        $result2=mysqli_query($con,$sql2);
+//
+//
+//                        while($cal2=mysqli_fetch_array($result2,MYSQLI_NUM))
+//                        {
+//                        echo "<td>$cal2[0](दुपार)</td>";
+//           
+//                        }
                         echo "</tr>";
                         echo "</thead>";
                         echo "<tbody>";
@@ -210,56 +217,36 @@
                         {
 
 
-                        echo "<tr><td>$row[0]</td>";
+                        echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[3]</td><td>$row[9],$row[10]</td><td>$row[5]</td>";
 
 //                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='$timing1'";
-                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='Morning'";
+                        $sql4 = " SELECT date,timing FROM `attendance` WHERE reg_no='$row[0]'";
 
-                        $result1=mysqli_query($con,$sql);
+                        $result1=mysqli_query($con,$sql1);
 
                         while($cal1=mysqli_fetch_array($result1,MYSQLI_NUM))
                         {
-                 
-                        $status="P";
+                          
+                        $status1="P";
+
                           $result4=mysqli_query($con,$sql4);
                         while($row1=mysqli_fetch_array($result4,MYSQLI_NUM))
                         {
 
-           
-                               if($row1[0]==$cal1[0])
+
+                               if($row1[0]==$cal1[0] && $row1[1]==$cal1[1])
                                {
-                                 $status="A";
+                               
+                                      $status1="A";
 
                                }
-
-                        }
-                              echo "<td>$status</td>";  
-
-                        }
                           
-                        $sql5 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='Afternoon'";
-
-                        $result1=mysqli_query($con,$sql);
-
-                        while($cal1=mysqli_fetch_array($result1,MYSQLI_NUM))
-                        {
-                 
-                        $status="P";
-                          $result4=mysqli_query($con,$sql5);
-                        while($row1=mysqli_fetch_array($result4,MYSQLI_NUM))
-                        {
-
-           
-                               if($row1[0]==$cal1[0])
-                               {
-                                 $status="A";
-
-                               }
 
                         }
-                              echo "<td>$status</td>";  
+                              echo "<td>$status1</td>";
 
                         }
+
                                    echo "</tr>";
 
                         }
