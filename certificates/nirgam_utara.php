@@ -139,7 +139,7 @@ include("../connection.php");
                   ?>
 
                     <div id="dvContents">
-                        <div class="main" id="mains">
+                        <div class="main mdl-shadow--2dp" id="mains">
                             <h4 class="headname">विद्यार्थी प्रवेश निर्गम उतारा</h4>
                             <h4 class="schoolname">संत नामदेव प्राथमिक / माध्यमिक / उच्चमाध्यमिक विद्यालय, लातूर</h4>
                             <h5 class="place">तालुका: लातूर, जिल्हा: लातूर</h5>
@@ -187,7 +187,7 @@ include("../connection.php");
                         ?>
                             </table>
                             <h5 class="info">प्रमाणित करण्यात येते की वरील माहिती शाळेच्या नोंदवहीनुसार आहे.</h5>
-                            <p class="principal">मुख्याध्यापक</p>
+                            <h5 class="principal">मुख्याध्यापक</h5>
                         </div>
                     </div>
 

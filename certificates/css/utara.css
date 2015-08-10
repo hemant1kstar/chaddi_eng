@@ -25,9 +25,11 @@ h5 {
 }
 .main {
     /*    width: 650px;*/
-    margin: 20px auto;
-    /*    border: 1px solid #898989;*/
+    margin: 20px 16px;
+    background-color: white;
+    border: 1px solid #9E9E9E;
     padding: 30px 20px;
+    position: relative;
 }
 .headname,
 .schoolname {
@@ -56,7 +58,7 @@ td {
     padding: 35px 1px;
 }
 .principal {
-    /*   margin: 10px 0px 0px 0px;*/
+    margin-top: 48px;
 }
 #btnPrint {
     display: block;
@@ -65,5 +67,8 @@ td {
 @media (min-width: 992px) {
     .reg_info {
         margin: 48px 24px;
+    }
+    .main {
+        margin: 20px 24px;
     }
 }

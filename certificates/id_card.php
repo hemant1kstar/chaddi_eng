@@ -126,69 +126,68 @@ include("../connection.php");
                             <table class="studentinfo">
                                 <tr>
                                     <td>शैक्षणिक वर्ष</td>
-                                    <td>2015-16</td>
+                                    <td>: 2015-16</td>
                                 </tr>
                                 <tr>
                                     <td>शाळेचे नाव</td>
-                                    <td>संत नामदेव प्राथमिक/माध्यमिक /उच्चमाध्यमिक विद्यालय ,लातूर</td>
+                                    <td>: संत नामदेव प्राथमिक/माध्यमिक/उच्चमाध्यमिक विद्यालय, लातूर</td>
                                 </tr>
                                 <tr>
-                                    <td>विद्यार्थ्यांचे नाव</td>
+                                    <td>विद्यार्थ्याचे  नाव</td>
                                     <td>
-                                        <?php echo "$student_name";?>
+                                        : <?php echo "$student_name";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>रजि क्रमांक</td>
                                     <td>
-                                        <?php echo "$reg_no1";?>
+                                        : <?php echo "$reg_no1";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>इयत्ता </td>
                                     <td>
-                                        <?php echo "$current_class";?>
+                                        : <?php echo "$current_class";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>पत्ता</td>
                                     <td>
-                                        <?php echo "$permanent_address";?>
+                                        : <?php echo "$permanent_address";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>परीक्षेचे नाव</td>
-                                    <td></td>
+                                    <td>: </td>
                                 </tr>
                                 <tr>
                                     <td>बैठक क्रमांक</td>
                                     <td>
-                                        <?php echo "$exam_seat_no";?>
+                                        : <?php echo "$exam_seat_no";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>परीक्षा केंद्र क्रमांक</td>
-                                    <td></td>
+                                    <td>: </td>
                                 </tr>
                                 <tr>
                                     <td>परीक्षा केंद्राचे नाव</td>
-                                    <td></td>
+                                    <td>: </td>
                                 </tr>
 
                                 <tr>
                                     <td>दिनांक</td>
-                                    <td></td>
+                                    <td>: </td>
                                 </tr>
                                 <tr>
                                     <td>वेळ</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-
+                                    <td>: </td>
                                 </tr>
                             </table>
-                            <h5>विद्यार्थ्याची सही</h5>
-                            <h4 class="principal">मुख्याध्यापक सही</h4>
+                            <div class="signdiv">
+                                <h5>विद्यार्थ्याची सही</h5>
+                                <h5 class="principal">मुख्याध्यापक सही</h5>
+                            </div>
                         </div>
                     </div>
 
