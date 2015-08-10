@@ -99,27 +99,7 @@
                                 
         </div>
         
-                <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                 <div>
-                                    <label>Start Date:</label>
-                                 </div>
-                                 <div class="">
-                                     <input type="text" name="date1" class="form-control" id="datepicker1" required>
-                                </div>
-                            </div>
-                            
-          <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                   <div class="">
-                                    <label>End Date:</label>
-                                 </div>
-                                 <div class="">
-                                     <input type="text" name="date2" class="form-control" id="datepicker2" required>
-                                </div>
-                            </div>
-                                
         
-        
-<!--
          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                <div class=""><label> Timing:</label></div>
                                     <div class="">
@@ -131,17 +111,41 @@
                                     </div>
            
         </div>
--->
 
         
   </div>
-     
+                          <div class="mdl-grid">
+                            
+           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                 <div>
+                                    <label>Start Date:</label>
+                                 </div>
+                                 <div class="">
+                                     <input type="text" name="date1" class="form-control" id="datepicker1" required>
+                                </div>
+                            </div>
+                            
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                   <div class="">
+                                    <label>End Date:</label>
+                                 </div>
+                                 <div class="">
+                                     <input type="text" name="date2" class="form-control" id="datepicker2" required>
+                                </div>
+                            </div>
+                                
+               
+                                
+                                
+                           </div>
+                           
+              
+                           
                         <div class="mdl-grid"> 
-                                          <div>
+                        <div class=''>
                             <input type='submit'  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn1" name='submit' value='Submit' >
-                          </div>
                         </div>
-                        
+                          </div>
                     </form>
                     
 
@@ -154,7 +158,10 @@
                                <h4 id="form_header">Monthly Report</h4>
                         
               <div class="mdl-grid">
-           
+                    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+                         <thead>
+                            <tr>
+                    <td>Reg No.</td>
                               
                         <?php
                                       $con=mysqli_connect("localhost","root","","school_project");
@@ -165,43 +172,27 @@
                        ?>
                               
                         <?php
-
                             if(isset($_POST['submit'])){
-                              
-                           echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
-                           echo  "<thead>";
-                           echo  "<tr>";
-                           echo  "<td>Reg No.</td>";
 
          
-//                                $timing1=$_POST['timing'];
+                                $timing1=$_POST['timing'];
                                 $date1=$_POST['date1'];
                                 $date2=$_POST['date2'];
                                 $class1=$_POST['class'];
                                 
                                 
-                        $sql="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Morning' ORDER BY date";
+                        $sql="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='$timing1' ORDER BY date";
                         $result=mysqli_query($con,$sql);
                         $result1=mysqli_query($con,$sql);
 
-                       while($cal=mysqli_fetch_array($result,MYSQLI_NUM))
+                        while($cal=mysqli_fetch_array($result,MYSQLI_NUM))
                         {
-                        echo "<td>$cal[0](सकाळ)</td>";
-                        
-//                        $df=$cal[0];
-                        }
-                              
-                        $sql6="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Afternoon' ORDER BY date";
-                        $result6=mysqli_query($con,$sql6);
-                        $result7=mysqli_query($con,$sql6);
-
-                        while($cal6=mysqli_fetch_array($result6,MYSQLI_NUM))
-                        {
-                        echo "<td>$cal6[0](दुपार)</td>";
-           
+                        echo "<td>$cal[0]</td>";
+                        $df=$cal[0];
                         }
                         echo "</tr>";
                         echo "</thead>";
+
                         echo "<tbody>";
                         $sql3 = "SELECT * FROM master where current_class='$class1'";
                         $result3=mysqli_query($con,$sql3);
@@ -212,8 +203,7 @@
 
                         echo "<tr><td>$row[0]</td>";
 
-//                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='$timing1'";
-                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='Morning'";
+                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='$timing1'";
 
                         $result1=mysqli_query($con,$sql);
 
@@ -236,35 +226,12 @@
                               echo "<td>$status</td>";  
 
                         }
-                          
-                        $sql5 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='Afternoon'";
-
-                        $result1=mysqli_query($con,$sql);
-
-                        while($cal1=mysqli_fetch_array($result1,MYSQLI_NUM))
-                        {
-                 
-                        $status="P";
-                          $result4=mysqli_query($con,$sql5);
-                        while($row1=mysqli_fetch_array($result4,MYSQLI_NUM))
-                        {
-
-           
-                               if($row1[0]==$cal1[0])
-                               {
-                                 $status="A";
-
-                               }
-
+                          echo "</tr>";
                         }
-                              echo "<td>$status</td>";  
+                
 
-                        }
-                                   echo "</tr>";
 
-                        }
-
-                    }
+                            }
 
                         ?>
                              </tbody>

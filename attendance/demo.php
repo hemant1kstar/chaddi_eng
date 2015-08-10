@@ -43,8 +43,8 @@
                   </div>
        
                   <div class="tabs mdl-js-ripple-effect">
-                  <a href="index.php" class="mdl-layout__tab is-active">Daily Attendance</a>
-                  <a href="monthly_report.php" class="mdl-layout__tab">Monthly Attendance Report</a>
+                  <a href="index.php" class="mdl-layout__tab">Daily Attendance</a>
+                  <a href="monthly_report.php" class="mdl-layout__tab is-active">Monthly Attendance Report</a>
                 </div>
                   
                 </header>
@@ -65,85 +65,233 @@
                     <div class="page-content">
                       <!-- Your content goes here -->
                       <?php
-                                      $con=mysqli_connect("localhost","root","","santh");
+                                      $con=mysqli_connect("localhost","root","","school_project");
                                           if (mysqli_connect_errno())
                                           {
                                               echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                           }
                        ?>
                       
-                      <?php
-//include("../database/connection.php");
-//$success="";
-                            if(isset($_POST['submit'])){
-                             $date1=$_POST['date'];
-                             $subject=$_POST['subject'];
-                                if(!empty($_POST['check_list'])){
-                                    foreach($_POST['check_list'] as $selected){
-            $result = mysqli_query($con,"INSERT INTO
-            attendance(student_id,date,subject)VALUES('$selected','$date1','$subject')"); 
-                                 
-                                    }
-                                  
-                                } 
-                                  echo "Attendance inserted successfully";
-                                     
-                            }
 
-?>
                       
-                  <div class="attendance_div row">
+                  <div class="attendance_div mdl-shadow--2dp">
                     
                          <form action=""  method="post">
     
-                            <h4 class="label_heading">Entry Attendance</h4>
-                                <div class="">
+                            <h4 id="form_header">Entry Attendance</h4>
+
+                                                
+      <div class="mdl-grid">
+                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                 <div class="">
                                     <label>Class :</label>
                                 </div>
-                        <div class="">
-                                        <select name="class" class="form-control" onchange="subjectChange()" id="class1" required>
+
+                 
+                                        <div class="">
+                                        <select name="class" class="form-control" onchange="changeStudent()" id="class1" required>
                                             <option  value=""></option>
-                                            <option  value="fe">6th Class</option>
-                                            <option  value="se">7th Class</option>
+                                            <option  value="6">6th Class</option>
+                                            <option  value="7">7th Class</option>
  
                                         </select>
                                     </div>
-                                    <div class=""><label> Timing:</label></div>
-                                    <div class="" id="subject_dropdown">
-            
+                                
+        </div>
+        
+        
+         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+               <div class=""><label> Timing:</label></div>
+                                    <div class="">
+                                        <select name='timing' required>
+                                            <option></option>
+                                            <option  value='Morning'>Morning</option>
+                                            <option  value='Afternoon'>Afternoon</option>
+                                       </select>
                                     </div>
+           
+        </div>
+
+        
+  </div>
+                          <div class="mdl-grid">
+                            
+           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                 <div>
+                                    <label>Start Date:</label>
+                                 </div>
+                                 <div class="">
+                                     <input type="text" name="date1" class="form-control" id="datepicker1" required>
                                 </div>
-                            <div class="">
-                                <div class="">
-                                    <label>Date :</label>
-                                </div>
-                                    <div class="col-md-3">
-                                        <input type="text" name="date" class="form-control" id="datepicker" required>
-                                    </div>
                             </div>
-                        
-                     <div class="">
-                              <div class="" id="student_dropdown">
-                                <table class="">
-                                     <thead>
-                                        <tr>
-                                        <th>Roll No</th>
-                                        <th>Student Name</th>
-                                        <th>Attendance (only absent select)</th>
-                                        </tr>
-                                   </thead>
-                                        <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                        </div>
+                            
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                   <div class="">
+                                    <label>End Date:</label>
+                                 </div>
+                                 <div class="">
+                                     <input type="text" name="date2" class="form-control" id="datepicker2" required>
+                                </div>
+                            </div>
+                                
+               
+                                
+                                
+                           </div>
+                           
+              
+                           
+                        <div class="mdl-grid"> 
                         <div class=''>
-                            <input type='submit' class='btn btn-success' name='submit' value='Submit' >
+                            <input type='submit'  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn1" name='submit' value='Submit' >
                         </div>
+                          </div>
                     </form>
+                    
 
              </div>
+                      
+                          
+                      
+        <div class="attendance_div mdl-shadow--2dp">
+                        
+                               <h4 id="form_header">Monthly Report</h4>
+                        
+              <div class="mdl-grid">
+                    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+                         <thead>
+                            <tr>
+                    <td>Reg No.</td>
+                              
+                        <?php
+                                      $con=mysqli_connect("localhost","root","","school_project");
+                                          if (mysqli_connect_errno())
+                                          {
+                                              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                                          }
+                       ?>
+                              
+                        <?php
+                            if(isset($_POST['submit'])){
+
+         
+                                $timing1=$_POST['timing'];
+                                $date1=$_POST['date1'];
+                                $date2=$_POST['date2'];
+                                $class1=$_POST['class'];
+                                
+                                
+                        $sql="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Morning' ORDER BY date";
+                        $result=mysqli_query($con,$sql);
+                        $result1=mysqli_query($con,$sql);
+
+                        while($cal=mysqli_fetch_array($result,MYSQLI_NUM))
+                        {
+                        echo "<td>$cal[0](सकाळ)</td>";
+                        
+//                        $df=$cal[0];
+                        }
+                              
+                        $sql6="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Afternoon' ORDER BY date";
+                        $result6=mysqli_query($con,$sql6);
+                        $result7=mysqli_query($con,$sql6);
+
+                        while($cal6=mysqli_fetch_array($result6,MYSQLI_NUM))
+                        {
+                        echo "<td>$cal6[0](दुपार)</td>";
+           
+                        }
+                        echo "</tr>";
+                        echo "</thead>";
+                        echo "<tbody>";
+                        $sql3 = "SELECT * FROM master where current_class='$class1'";
+                        $result3=mysqli_query($con,$sql3);
+
+                        while($row=mysqli_fetch_array($result3,MYSQLI_NUM))
+                        {
+
+
+                        echo "<tr><td>$row[0]</td>";
+
+//                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='$timing1'";
+                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='Morning'";
+
+                        $result1=mysqli_query($con,$sql);
+
+                        while($cal1=mysqli_fetch_array($result1,MYSQLI_NUM))
+                        {
+                 
+                        $status="P";
+                          $result4=mysqli_query($con,$sql4);
+                        while($row1=mysqli_fetch_array($result4,MYSQLI_NUM))
+                        {
+
+           
+                               if($row1[0]==$cal1[0])
+                               {
+                                 $status="A";
+
+                               }
+
+                        }
+                              echo "<td>$status</td>";  
+
+                        }
+                          
+//                       $sql3 = "SELECT * FROM master where current_class='$class1'";
+//                        $result3=mysqli_query($con,$sql3);
+
+//                        while($row=mysqli_fetch_array($result3,MYSQLI_NUM))
+//                        {
+
+
+//                        echo "<tr>";
+
+
+                        $sql5 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='Afternoon'";
+
+                        $result1=mysqli_query($con,$sql);
+
+                        while($cal1=mysqli_fetch_array($result1,MYSQLI_NUM))
+                        {
+                 
+                        $status="P";
+                          $result4=mysqli_query($con,$sql5);
+                        while($row1=mysqli_fetch_array($result4,MYSQLI_NUM))
+                        {
+
+           
+                               if($row1[0]==$cal1[0])
+                               {
+                                 $status="A";
+
+                               }
+
+                        }
+                              echo "<td>$status</td>";  
+
+                        }
+                                   echo "</tr>";
+                        
+                 
+                        }
+                              
+                              
+
+              
+                
+                
+
+
+                            }
+
+
+
+                        ?>
+                             </tbody>
+                          </table>
+                        </div>
+                      </div>
 
 
                    </div>
@@ -151,96 +299,25 @@
 
             </div>
      <script src="../attendance/js/jquery-1.11.2.min.js"></script>
-   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-         <?php
-                  echo " <script>
-                  $(function() {
-            $('#datepicker').datepicker({dateFormat: 'yy-mm-dd', minDate: 0 });
-                       });
-                </script>";
-      ?>
+     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
-        <script>
-        function subjectChange() {
-    if (document.getElementById("class1").value == "fe"){
-        document.getElementById("subject_dropdown").innerHTML = "<?php
-               $con=mysqli_connect("localhost","root","","santh");
-                                          if (mysqli_connect_errno())
-                                          {
-                                              echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                                          }
-      echo "<select name='subject'  required>";
-                      echo "<option></option>"; 
-                      echo "<option  value='Morning'>Morning</option>";
-                      echo "<option  value='Afternoon'>Afternoon</option>";
-     echo "</select>";
-             ?>";
-        changeStudent();
-    }     
-    else if(document.getElementById("class1").value == "se"){
-        document.getElementById("subject_dropdown").innerHTML = "<?php
-           $con=mysqli_connect("localhost","root","","santh");
-                                          if (mysqli_connect_errno())
-                                          {
-                                              echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                                          }
-      echo "<select name='subject' required>";
-                     echo "<option></option>"; 
-                      echo "<option  value='Morning'>Morning</option>";
-                      echo "<option  value='Afternoon'>Afternoon</option>";
-     echo "</select>";
-             ?>";
-          changeStudent();
-       
-    }                
-}
-    </script>
-    <script>
-        function changeStudent(){
-            if (document.getElementById("class1").value == "fe"){
-               document.getElementById("student_dropdown").innerHTML = "<?php
-                    $con=mysqli_connect("localhost","root","","santh");
-                                          if (mysqli_connect_errno())
-                                          {
-                                              echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                                          }
-                 echo "<table class='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'>";
-                 echo "<thead>";
-                 echo "<tr><th>Roll No</th><th>Student Name</th><th>Attendance (only absent select)</th></tr>";
-                 echo "</thead><tbody>";
-                 $result = mysqli_query($con,"SELECT * FROM students where class='1st year'"); 
-                 while($row = mysqli_fetch_array($result)){
-                    echo "<tr><td>".$row['roll_no']."</td>";
-                    echo "<td> ".$row['name']."</td>";
-                    echo "<td><input type='checkbox' name='check_list[]' value={$row['student_id']} class='check'></td>";                               echo  "</tr>"; 
-                    
-                    }
-                   echo "</tbody></table>";
-        ?>";
-                
-        }     
-        else if(document.getElementById("class1").value == "se"){
-                           document.getElementById("student_dropdown").innerHTML = "<?php
-                    $con=mysqli_connect("localhost","root","","santh");
-                                          if (mysqli_connect_errno())
-                                          {
-                                              echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                                          }
-                 echo "<table class='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'>";
-                 echo "";
-                 echo "<tr><th>Roll No</th><th>Student Name</th><th>Attendance (only absent select)</th></tr>";
-                 echo "";
-                 $result = mysqli_query($con,"SELECT * FROM students where class='2nd year'"); 
-                 while($row = mysqli_fetch_array($result)){
-                    echo "<tr><td>".$row['roll_no']."</td>";
-                    echo "<td> ".$row['name']."</td>";
-                    echo "<td><input type='checkbox' name='check_list[]' value={$row['student_id']} class='check'></td>";                               echo  "</tr>";       
-                    }
-                   echo "</table>";
-        ?>";
-        }
-        }
-    </script>
+              <script>
+                $(function() {
+                  $('#datepicker1').datepicker({dateFormat: 'yy-mm-dd', maxDate: 0 });
+                     });
+              </script>
+
+
+          <script>
+
+                  $('#datepicker1').on('change', function() {
+                       var value12 = this.value;
+                       $('#datepicker2').datepicker({dateFormat: 'yy-mm-dd', maxDate: 0,minDate: value12 });
+
+                  });
+
+          </script>
+
 
   </body>
 </html>
