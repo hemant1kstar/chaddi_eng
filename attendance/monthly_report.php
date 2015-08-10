@@ -98,7 +98,37 @@
                                     </div>
                                 
         </div>
+                     <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                           <div class="">
+                                    <label>Month :</label>
+                                </div>
+                   <select name="month" class="form-control" required>
+                                            <option  value=""></option>
+                                            <option  value="01">Jan</option>
+                                            <option  value="02">Feb</option>
+                                            <option  value="03">Mar</option>
+                                            <option  value="04">April</option>
+                                            <option  value="05">May</option>
+                                            <option  value="06">Jun</option>
+                                            <option  value="07">July</option>
+                                            <option  value="08">August</option>
+                                            <option  value="09">Sep</option>
+                                            <option  value="10">Oct</option>
+                                            <option  value="11">Nov</option>
+                                            <option  value="12">Deb</option>
+                                        </select>
+                 </div>
+                     <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                           <div class="">
+                                    <label>Year :</label>
+                                </div>
+                                      <select name="year" class="form-control" required>
+                                            <option  value=""></option>
+                                            <option  value="2015">2015</option>
+                                        </select>
+                           </div>
         
+<!--
                 <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                  <div>
                                     <label>Start Date:</label>
@@ -116,6 +146,7 @@
                                      <input type="text" name="date2" class="form-control" id="datepicker2" required>
                                 </div>
                             </div>
+-->
                                 
         
         
@@ -135,6 +166,10 @@
 
         
   </div>
+                           
+                           
+       
+                  
      
                         <div class="mdl-grid"> 
                                           <div>
@@ -150,8 +185,15 @@
                           
                       
         <div class="attendance_div mdl-shadow--2dp">
-                        
-                               <h4 id="form_header">Monthly Report</h4>
+                       
+                               <h4 id="form_header">Monthly Report :
+                                 <?php 
+                                    if(isset($_POST['submit'])){
+                                        $month=$_POST['month'];
+                                         echo "$month";
+                                     }
+                                 ?>
+                               </h4>
                         
               <div class="mdl-grid">
            
@@ -175,12 +217,19 @@
 
          
 //                                $timing1=$_POST['timing'];
-                                $date1=$_POST['date1'];
-                                $date2=$_POST['date2'];
+//                                $date1=$_POST['date1'];
+//                                $date2=$_POST['date2'];
                                 $class1=$_POST['class'];
-                                
-                          mysqli_query ($con,"set character_set_results='utf8'");      
-                        $sql1="SELECT date,timing FROM calendar WHERE date BETWEEN '$date1' AND '$date2'  ORDER BY date";
+                                $month=$_POST['month'];
+                                $year=$_POST['year'];
+                                $days = cal_days_in_month(CAL_GREGORIAN, $month, $year); 
+                          mysqli_query ($con,"set character_set_results='utf8'"); 
+
+//                              echo "$month<br/>";
+//                              echo "$year<br/>";
+//                              echo "$year-$month-01";
+//                              echo "$year-$month-$days";
+                        $sql1="SELECT date,timing FROM calendar WHERE date BETWEEN '$year-$month-01' AND '$year-$month-$days'  ORDER BY date";
                         $result1=mysqli_query($con,$sql1);
 //                        $result1=mysqli_query($con,$sql);
 
@@ -188,11 +237,11 @@
                         {
                          if($cal[1]=="Morning")
                          {
-                                echo "<td>$cal[0](Morning)</td>";
+                                echo "<td>$cal[0]<br>(Morning)</td>";
                          }
                           if($cal[1]=="Afternoon")
                          {
-                                echo "<td>$cal[0](Afternoon)</td>";
+                                echo "<td>$cal[0]<br>(Afternoon)</td>";
                          }
                         
 //                        $df=$cal[0];

@@ -99,7 +99,27 @@
                                 
         </div>
         
+                <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                 <div>
+                                    <label>Start Date:</label>
+                                 </div>
+                                 <div class="">
+                                     <input type="text" name="date1" class="form-control" id="datepicker1" required>
+                                </div>
+                            </div>
+                            
+          <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                   <div class="">
+                                    <label>End Date:</label>
+                                 </div>
+                                 <div class="">
+                                     <input type="text" name="date2" class="form-control" id="datepicker2" required>
+                                </div>
+                            </div>
+                                
         
+        
+<!--
          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                <div class=""><label> Timing:</label></div>
                                     <div class="">
@@ -111,41 +131,17 @@
                                     </div>
            
         </div>
+-->
 
         
   </div>
-                          <div class="mdl-grid">
-                            
-           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                 <div>
-                                    <label>Start Date:</label>
-                                 </div>
-                                 <div class="">
-                                     <input type="text" name="date1" class="form-control" id="datepicker1" required>
-                                </div>
-                            </div>
-                            
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                   <div class="">
-                                    <label>End Date:</label>
-                                 </div>
-                                 <div class="">
-                                     <input type="text" name="date2" class="form-control" id="datepicker2" required>
-                                </div>
-                            </div>
-                                
-               
-                                
-                                
-                           </div>
-                           
-              
-                           
+     
                         <div class="mdl-grid"> 
-                        <div class=''>
+                                          <div>
                             <input type='submit'  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn1" name='submit' value='Submit' >
-                        </div>
                           </div>
+                        </div>
+                        
                     </form>
                     
 
@@ -158,10 +154,7 @@
                                <h4 id="form_header">Monthly Report</h4>
                         
               <div class="mdl-grid">
-                    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
-                         <thead>
-                            <tr>
-                    <td>Reg No.</td>
+           
                               
                         <?php
                                       $con=mysqli_connect("localhost","root","","school_project");
@@ -172,27 +165,50 @@
                        ?>
                               
                         <?php
+
                             if(isset($_POST['submit'])){
+                              
+                           echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
+                           echo  "<thead>";
+                           echo  "<tr>";
+                           echo  "<td>Reg No.</td><td>Student Name</td><td>Gender</td><td>Caste and Subcaste</td><td>Birthdate</td>";
 
          
-                                $timing1=$_POST['timing'];
+//                                $timing1=$_POST['timing'];
                                 $date1=$_POST['date1'];
                                 $date2=$_POST['date2'];
                                 $class1=$_POST['class'];
                                 
-                                
-                        $sql="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='$timing1' ORDER BY date";
-                        $result=mysqli_query($con,$sql);
-                        $result1=mysqli_query($con,$sql);
+                          mysqli_query ($con,"set character_set_results='utf8'");      
+                        $sql1="SELECT date,timing FROM calendar WHERE date BETWEEN '$date1' AND '$date2'  ORDER BY date";
+                        $result1=mysqli_query($con,$sql1);
+//                        $result1=mysqli_query($con,$sql);
 
-                        while($cal=mysqli_fetch_array($result,MYSQLI_NUM))
+                       while($cal=mysqli_fetch_array($result1,MYSQLI_NUM))
                         {
-                        echo "<td>$cal[0]</td>";
-                        $df=$cal[0];
+                         if($cal[1]=="Morning")
+                         {
+                                echo "<td>$cal[0]<br>(Morning)</td>";
+                         }
+                          if($cal[1]=="Afternoon")
+                         {
+                                echo "<td>$cal[0]<br>(Afternoon)</td>";
+                         }
+                        
+//                        $df=$cal[0];
                         }
+                              
+//                        $sql2="SELECT * FROM calendar WHERE date BETWEEN '$date1' AND '$date2' AND timing='Afternoon' ORDER BY date";
+//                        $result2=mysqli_query($con,$sql2);
+//
+//
+//                        while($cal2=mysqli_fetch_array($result2,MYSQLI_NUM))
+//                        {
+//                        echo "<td>$cal2[0](दुपार)</td>";
+//           
+//                        }
                         echo "</tr>";
                         echo "</thead>";
-
                         echo "<tbody>";
                         $sql3 = "SELECT * FROM master where current_class='$class1'";
                         $result3=mysqli_query($con,$sql3);
@@ -201,37 +217,41 @@
                         {
 
 
-                        echo "<tr><td>$row[0]</td>";
+                        echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[3]</td><td>$row[9],$row[10]</td><td>$row[5]</td>";
 
-                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='$timing1'";
+//                        $sql4 = " SELECT date FROM `attendance` WHERE reg_no='$row[0]' AND timing='$timing1'";
+                        $sql4 = " SELECT date,timing FROM `attendance` WHERE reg_no='$row[0]'";
 
-                        $result1=mysqli_query($con,$sql);
+                        $result1=mysqli_query($con,$sql1);
 
                         while($cal1=mysqli_fetch_array($result1,MYSQLI_NUM))
                         {
-                 
-                        $status="P";
+                          
+                        $status1="P";
+
                           $result4=mysqli_query($con,$sql4);
                         while($row1=mysqli_fetch_array($result4,MYSQLI_NUM))
                         {
 
-           
-                               if($row1[0]==$cal1[0])
+
+                               if($row1[0]==$cal1[0] && $row1[1]==$cal1[1])
                                {
-                                 $status="A";
+                               
+                                      $status1="A";
 
                                }
+                          
 
                         }
-                              echo "<td>$status</td>";  
+                              echo "<td>$status1</td>";
 
                         }
-                          echo "</tr>";
+
+                                   echo "</tr>";
+
                         }
-                
 
-
-                            }
+                    }
 
                         ?>
                              </tbody>
