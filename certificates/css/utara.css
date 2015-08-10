@@ -29,12 +29,13 @@ h5 {
 }
 .main {
 /*        width: 900px;*/
-    margin: 20px auto;
+    margin: 20px 16px;
     background-color: white;
     border: 1px solid #9E9E9E;
     padding: 20px 0;
     position: relative;
-    display: inline-block;
+    overflow: scroll;
+/*    display: inline-block;*/
 }
 .headname,
 .schoolname {
@@ -77,6 +78,6 @@ td {
         margin: 48px 24px;
     }
     .main {
-        margin: 20px auto;
+        margin: 20px 24px;
     }
 }
