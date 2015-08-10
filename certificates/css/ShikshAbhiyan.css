@@ -41,6 +41,7 @@ body {
     border-width: 2px;
     padding: 10px;
     border-style: dashed;
+    border-color: #9E9E9E;
 }
 .schoolname,
 .place {

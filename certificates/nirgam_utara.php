@@ -143,7 +143,7 @@ include("../connection.php");
                             <h4 class="headname">विद्यार्थी प्रवेश निर्गम उतारा</h4>
                             <h4 class="schoolname">संत नामदेव प्राथमिक / माध्यमिक / उच्चमाध्यमिक विद्यालय, लातूर</h4>
                             <h5 class="place">तालुका: लातूर, जिल्हा: लातूर</h5>
-                            <table class="tabledata">
+                            <table class="tabledata mdl-data-table mdl-js-data-table">
                                 <tr>
                                     <th> रेजिस्ट्रेशन नंबर</th>
                                     <th> विद्यार्थ्याचे नाव </th>

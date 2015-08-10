@@ -186,7 +186,7 @@ include("../connection.php");
                             </table>
                             <div class="signdiv">
                                 <h5>विद्यार्थ्याची सही</h5>
-                                <h5 class="principal">मुख्याध्यापक सही</h5>
+                                <h5 class="principal">मुख्याध्यापक</h5>
                             </div>
                         </div>
                     </div>
