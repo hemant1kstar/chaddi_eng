@@ -1,108 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-        <title>Paperless System</title>
-    
-<!--    CSS For Material Design-->
- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" /> 
-<script src="../material_js/material.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <title>Year-wise Students' List | Paperless System</title>
+
+    <!--    CSS For Material Design-->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
+    <script src="../material_js/material.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
     <!--  End of CSS For Material Design-->
-    
+
     <link rel="stylesheet" href="../css/main.css">
-               <link href='../student_list/css/year_wise.css' rel='stylesheet'>
-            
-  </head>
-  <body>
-<!--    Waterfall header-->
-              <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-                <header class="mdl-layout__header mdl-layout__header--scroll">
-                  <!-- Top row, always visible -->
-                  <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">Student List</span>
-                    <div class="mdl-layout-spacer"></div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+    <link href='../student_list/css/class_wise.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <!--    Waterfall header-->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <!-- Top row, always visible -->
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Student List</span>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                                 mdl-textfield--floating-label mdl-textfield--align-right">
-<!--
+                    <!--
                       <label class="mdl-button mdl-js-button mdl-button--icon"
                              for="waterfall-exp">
                         <i class="material-icons">search</i>
                       </label>
 -->
-                      <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample"
-                               id="waterfall-exp" />
-                      </div>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
                     </div>
-                  </div>
-       
-                  <div class="tabs mdl-js-ripple-effect">
-                  <a href="index.php" class="mdl-layout__tab">Class Wise</a>
-                  <a href="year_wise.php" class="mdl-layout__tab is-active">Year Wise</a>
-                  <a href="caste_wise.php" class="mdl-layout__tab">Caste Wise</a>
-                  <a href="student_status.php" class="mdl-layout__tab">Student Status</a>
-<!--                  <a href="" class="mdl-layout__tab">Student Leaved</a>-->
-                  <a href="division_wise.php" class="mdl-layout__tab">Division Wise</a>
-                  <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
-                  <a href="" class="mdl-layout__tab">BPL Wise</a>
                 </div>
-                  
-                </header>
-                
-                
-                
-              <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Paperless System</span>
-                  <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="master.php">Master</a>
-                    <a class="mdl-navigation__link" href="index.php">Entry</a>
-                  </nav>
-              </div>
-                
-                
-                
-                 <main class="mdl-layout__content">
-                    <div class="page-content">
-                      
-                      
-                    <div class="student_list mdl-shadow--2dp">
-                    
-                         <form action=""  method="post">
-    
-                      <h4 id="form_header">Year Wise</h4>
-                      <div class="mdl-grid">
-                     <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                           <div class="">
-                                <label>Year :</label>
-                          </div>
-                     <select name="year1" class="form-control" required>
-                                            <option  value=""></option>
-                                            <option  value="2011">2011</option>
-                                            <option  value="2012">2012</option>
-                                            <option  value="2013">2013</option>
-                                            <option  value="2014">2014</option>
-                                            <option  value="2015">2015</option>
-                                        </select>
-                    </div>
-                        
-                    <div>
-          <input type='submit'  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn1" name='submit_year' value='Submit' >
-                    </div>
-                      </div>
-                               </form>
-                      </div>
-                      
-                  <div class="student_list mdl-shadow--2dp">
-                      <h4 id="form_header">Year Wise Student List</h4>
-                      <div class="mdl-grid">
+            </div>
+
+            <div class="tabs mdl-js-ripple-effect">
+                <a href="index.php" class="mdl-layout__tab">Class Wise</a>
+                <a href="year_wise.php" class="mdl-layout__tab is-active">Year Wise</a>
+                <a href="caste_wise.php" class="mdl-layout__tab">Caste Wise</a>
+                <a href="student_status.php" class="mdl-layout__tab">Student Status</a>
+                <!--                  <a href="" class="mdl-layout__tab">Student Leaved</a>-->
+                <a href="division_wise.php" class="mdl-layout__tab">Division Wise</a>
+                <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
+                <a href="" class="mdl-layout__tab">BPL Wise</a>
+            </div>
+
+        </header>
+
+
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Paperless System</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="master.php">Master</a>
+                <a class="mdl-navigation__link" href="index.php">Entry</a>
+            </nav>
+        </div>
+
+
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+
+
+                <div class="student_list mdl-shadow--2dp">
+                    <h2 id="form_header">Year Wise</h2>
+                    <form action="" method="post">
+                        <div class="showDataDiv">
+                            <label class="customLabel">Select Year :
+                                <select name="year1" class="dropdownOptions" required>
+                                    <option value=""></option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                </select>
+                            </label>
+                            <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name='submit_class' id="showDataButton" name='submit_year' value='Submit'>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="student_list mdl-shadow--2dp">
+                    <h2 id="form_header">Year Wise Student List</h2>
+                    <div class="mdl-grid">
                         <?php
                             include("../database/connection.php");
                             if(isset($_POST['submit_year'])){
@@ -213,17 +206,18 @@
                             }
                          ?>
 
-                      </div>
-                         
-                      </div>
-                      
-                      
-                      
-                   </div>
-                  </main>
+                    </div>
+
+                </div>
+
+
 
             </div>
+        </main>
+
+    </div>
 
 
-  </body>
+</body>
+
 </html>

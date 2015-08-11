@@ -83,7 +83,7 @@
 
                             <div class="mdl-grid">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                    <label>Class :
+                                    <label class="customLabel">Class :
                                         <select name="class" class="dropdownOptions" onchange="changeStudent()" id="class1" required>
                                             <option value=""></option>
                                             <option value="6">6th Class</option>
@@ -94,7 +94,7 @@
 
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                    <label>Month :
+                                    <label class="customLabel">Month :
                                         <select name="month" class="dropdownOptions" required>
                                             <option value=""></option>
                                             <option value="01">Jan</option>
@@ -114,7 +114,7 @@
 
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                    <label>Year :
+                                    <label class="customLabel">Year :
                                         <select name="year" class="dropdownOptions" required>
                                             <option value=""></option>
                                             <option value="2015">2015</option>

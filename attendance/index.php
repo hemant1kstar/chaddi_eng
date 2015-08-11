@@ -105,7 +105,7 @@
 
                                 <div class="mdl-grid">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label>Class :
+                                        <label class="customLabel">Class :
                                             <select name="class" class="dropdownOptions" onchange="changeStudent()" id="class1" required>
                                                 <option value=""></option>
                                                 <option value="6">6th Class</option>
@@ -118,7 +118,7 @@
 
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label> Timing:
+                                        <label class="customLabel"> Timing:
                                             <select name='timing' class="dropdownOptions" required>
                                                 <option></option>
                                                 <option value='Morning'>Morning</option>
@@ -128,7 +128,7 @@
 
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label>Date :
+                                        <label class="customLabel">Date :
                                             <input type="text" name="date" class="dropdownOptions" id="datepicker" required>
                                         </label>
 
