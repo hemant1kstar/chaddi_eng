@@ -1,134 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-        <title>Paperless System</title>
-    
-<!--    CSS For Material Design-->
- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" /> 
-<script src="../material_js/material.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <title>Paperless System</title>
+
+    <!--    CSS For Material Design-->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
+    <script src="../material_js/material.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
     <!--  End of CSS For Material Design-->
-    
+
     <link rel="stylesheet" href="../css/main.css">
-               <link href='../attendance/css/attendance.css' rel='stylesheet'>
-            
-  </head>
-  <body>
-<!--    Waterfall header-->
-              <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-                <header class="mdl-layout__header mdl-layout__header--scroll">
-                  <!-- Top row, always visible -->
-                  <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">Attendance System</span>
-                    <div class="mdl-layout-spacer"></div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+    <link href='../attendance/css/attendance.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <!--    Waterfall header-->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <!-- Top row, always visible -->
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Attendance System</span>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                                 mdl-textfield--floating-label mdl-textfield--align-right">
-                      <label class="mdl-button mdl-js-button mdl-button--icon"
-                             for="waterfall-exp">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
                         <i class="material-icons">search</i>
-                      </label>
-                      <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample"
-                               id="waterfall-exp" />
-                      </div>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
                     </div>
-                  </div>
-       
-                  <div class="tabs mdl-js-ripple-effect">
-                  <a href="index.php" class="mdl-layout__tab">Daily Attendance</a>
-                  <a href="monthly_report.php" class="mdl-layout__tab is-active">Monthly Attendance Report</a>
                 </div>
-                  
-                </header>
-                
-                
-                
-              <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Paperless System</span>
-                  <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="master.php">Master</a>
-                    <a class="mdl-navigation__link" href="index.php">Entry</a>
-                  </nav>
-              </div>
-                
-                
-                
-                 <main class="mdl-layout__content">
-                    <div class="page-content">
-                      <!-- Your content goes here -->
-                      <?php
+            </div>
+
+            <div class="tabs mdl-js-ripple-effect">
+                <a href="index.php" class="mdl-layout__tab">Daily Attendance</a>
+                <a href="monthly_report.php" class="mdl-layout__tab is-active">Monthly Attendance Report</a>
+            </div>
+
+        </header>
+
+
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Paperless System</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="master.php">Master</a>
+                <a class="mdl-navigation__link" href="index.php">Entry</a>
+            </nav>
+        </div>
+
+
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <?php
                                       $con=mysqli_connect("localhost","root","","school_project");
                                           if (mysqli_connect_errno())
                                           {
                                               echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                           }
                        ?>
-                      
 
-                      
-                  <div class="attendance_div mdl-shadow--2dp">
-                    
-                         <form action=""  method="post">
-    
-                            <h4 id="form_header">Entry Attendance</h4>
 
-                                                
-      <div class="mdl-grid">
-                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                <div class="">
-                                    <label>Class :</label>
+
+                    <div class="attendance_div mdl-shadow--2dp">
+
+                        <form action="" method="post">
+
+                            <h2 id="form_header">Entry Attendance</h2>
+
+
+                            <div class="mdl-grid">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                    <label>Class :
+                                        <select name="class" class="dropdownOptions" onchange="changeStudent()" id="class1" required>
+                                            <option value=""></option>
+                                            <option value="6">6th Class</option>
+                                            <option value="7">7th Class</option>
+
+                                        </select>
+                                    </label>
+
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                    <label>Month :
+                                        <select name="month" class="dropdownOptions" required>
+                                            <option value=""></option>
+                                            <option value="01">Jan</option>
+                                            <option value="02">Feb</option>
+                                            <option value="03">Mar</option>
+                                            <option value="04">April</option>
+                                            <option value="05">May</option>
+                                            <option value="06">Jun</option>
+                                            <option value="07">July</option>
+                                            <option value="08">August</option>
+                                            <option value="09">Sep</option>
+                                            <option value="10">Oct</option>
+                                            <option value="11">Nov</option>
+                                            <option value="12">Deb</option>
+                                        </select>
+                                    </label>
+
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                    <label>Year :
+                                        <select name="year" class="dropdownOptions" required>
+                                            <option value=""></option>
+                                            <option value="2015">2015</option>
+                                        </select>
+                                    </label>
+
                                 </div>
 
-                 
-                                        <div class="">
-                                        <select name="class" class="form-control" onchange="changeStudent()" id="class1" required>
-                                            <option  value=""></option>
-                                            <option  value="6">6th Class</option>
-                                            <option  value="7">7th Class</option>
- 
-                                        </select>
-                                    </div>
-                                
-        </div>
-                     <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                           <div class="">
-                                    <label>Month :</label>
-                                </div>
-                   <select name="month" class="form-control" required>
-                                            <option  value=""></option>
-                                            <option  value="01">Jan</option>
-                                            <option  value="02">Feb</option>
-                                            <option  value="03">Mar</option>
-                                            <option  value="04">April</option>
-                                            <option  value="05">May</option>
-                                            <option  value="06">Jun</option>
-                                            <option  value="07">July</option>
-                                            <option  value="08">August</option>
-                                            <option  value="09">Sep</option>
-                                            <option  value="10">Oct</option>
-                                            <option  value="11">Nov</option>
-                                            <option  value="12">Deb</option>
-                                        </select>
-                 </div>
-                     <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                           <div class="">
-                                    <label>Year :</label>
-                                </div>
-                                      <select name="year" class="form-control" required>
-                                            <option  value=""></option>
-                                            <option  value="2015">2015</option>
-                                        </select>
-                           </div>
-        
-<!--
+                                <!--
                 <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                  <div>
                                     <label>Start Date:</label>
@@ -147,10 +142,10 @@
                                 </div>
                             </div>
 -->
-                                
-        
-        
-<!--
+
+
+
+                                <!--
          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                <div class=""><label> Timing:</label></div>
                                     <div class="">
@@ -164,49 +159,47 @@
         </div>
 -->
 
-        
-  </div>
-                           
-                           
-       
-                  
-     
-                        <div class="mdl-grid"> 
-                                          <div>
-                            <input type='submit'  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn1" name='submit' value='Submit' >
-                          </div>
-                        </div>
-                        
-                    </form>
-                    
 
-             </div>
-                      
-                          
-                      
-        <div class="attendance_div mdl-shadow--2dp">
-                       
-                               <h4 id="form_header">Monthly Report :
+                            </div>
+
+
+
+
+
+                            <div>
+                                <input type='submit' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submitAttendance" name='submit' value='Submit'>
+                            </div>
+
+                        </form>
+
+
+                    </div>
+
+
+
+                    <div class="attendance_div mdl-shadow--2dp">
+
+                        <h2 id="form_header">Monthly Report :
                                  <?php 
                                     if(isset($_POST['submit'])){
                                         $month=$_POST['month'];
                                          echo "$month";
                                      }
                                  ?>
-                               </h4>
-                        
-              <div class="mdl-grid">
-           
-                              
-                        <?php
+                               </h2>
+
+                        <div class="mdl-grid">
+
+
+                            <?php
                                       $con=mysqli_connect("localhost","root","","school_project");
                                           if (mysqli_connect_errno())
                                           {
                                               echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                           }
                        ?>
-                              
-                        <?php
+
+                                <?php
 
                             if(isset($_POST['submit'])){
                               
@@ -303,36 +296,44 @@
                     }
 
                         ?>
-                             </tbody>
-                          </table>
+                                    </tbody>
+                                    </table>
                         </div>
-                      </div>
+                    </div>
 
-
-                   </div>
-                  </main>
 
             </div>
-     <script src="../attendance/js/jquery-1.11.2.min.js"></script>
-     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    
-              <script>
-                $(function() {
-                  $('#datepicker1').datepicker({dateFormat: 'yy-mm-dd', maxDate: 0 });
-                     });
-              </script>
+        </main>
+
+    </div>
+    <script src="../attendance/js/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <script>
+        $(function() {
+            $('#datepicker1').datepicker({
+                dateFormat: 'yy-mm-dd',
+                maxDate: 0
+            });
+        });
+
+    </script>
 
 
-          <script>
+    <script>
+        $('#datepicker1').on('change', function() {
+            var value12 = this.value;
+            $('#datepicker2').datepicker({
+                dateFormat: 'yy-mm-dd',
+                maxDate: 0,
+                minDate: value12
+            });
 
-                  $('#datepicker1').on('change', function() {
-                       var value12 = this.value;
-                       $('#datepicker2').datepicker({dateFormat: 'yy-mm-dd', maxDate: 0,minDate: value12 });
+        });
 
-                  });
-
-          </script>
+    </script>
 
 
-  </body>
+</body>
+
 </html>

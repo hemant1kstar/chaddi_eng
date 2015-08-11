@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <!--  End of CSS For Material Design-->
-    
+
     <!-- CSS and JS for Jquery datepicker -->
     <link rel="stylesheet" href="../jquery-ui-1.11.4.custom/jquery-ui.min.css" />
     <script src="../jquery/jquery-2.1.4.min.js"></script>
@@ -96,59 +96,43 @@
 
 ?>
 
-                        <div class="attendance_div mdl-shadow--2dp">
+                        <div class="attendance_div reg_info mdl-shadow--2dp">
 
                             <form action="" method="post">
 
-                                <h4 id="form_header">Entry Attendance</h4>
+                                <h2 id="form_header">Entry Attendance</h2>
 
 
                                 <div class="mdl-grid">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <div class="">
-                                            <label>Class :</label>
-                                        </div>
-
-
-                                        <div class="">
-                                            <select name="class" class="form-control" onchange="changeStudent()" id="class1" required>
+                                        <label>Class :
+                                            <select name="class" class="dropdownOptions" onchange="changeStudent()" id="class1" required>
                                                 <option value=""></option>
                                                 <option value="6">6th Class</option>
                                                 <option value="7">7th Class</option>
 
                                             </select>
-                                        </div>
+                                        </label>
 
                                     </div>
 
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <div class="">
-                                            <label> Timing:</label>
-                                        </div>
-                                        <div class="">
-                                            <select name='timing' required>
+                                        <label> Timing:
+                                            <select name='timing' class="dropdownOptions" required>
                                                 <option></option>
                                                 <option value='Morning'>Morning</option>
                                                 <option value='Afternoon'>Afternoon</option>
                                             </select>
-                                        </div>
+                                        </label>
 
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <div class="">
-                                            <div class="">
-                                                <label>Date :</label>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <input type="text" name="date" class="form-control" id="datepicker" required>
-                                            </div>
-                                        </div>
+                                        <label>Date :
+                                            <input type="text" name="date" class="dropdownOptions" id="datepicker" required>
+                                        </label>
+
                                     </div>
-
-                                </div>
-
-                                <div class="mdl-grid">
 
                                 </div>
 
@@ -160,7 +144,7 @@
                                                     <tr>
                                                         <th>Reg No.</th>
                                                         <th class='mdl-data-table__cell--non-numeric'>Student Name</th>
-                                                        <th>Attendance (only absent select)</th>
+                                                        <th>Attendance (Tick only absent students)</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -169,11 +153,11 @@
                                         </div>
                                     </div>
 
-
-                                    <div class=''>
-                                        <input type='submit' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn1" name='submit' value='Submit'>
-                                    </div>
                                 </div>
+                                <div class=''>
+                                    <input type='submit' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submitAttendance" name='submit' value='Submit'>
+                                </div>
+
                             </form>
 
 
