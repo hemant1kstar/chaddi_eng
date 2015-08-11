@@ -1,0 +1,8 @@
+/* This file is only for giving css to the print version of the DIV */
+
+.main {
+    /*        width: 900px;*/
+    margin: 20px 0px;
+    overflow: visible;
+    display: inline-block;
+}
