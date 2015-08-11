@@ -12,23 +12,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <!--  End of CSS For Material Design-->
-    
+
     <!-- CSS and JS for Jquery datepicker -->
     <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css" />
     <script src="jquery/jquery-2.1.4.min.js"></script>
     <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
-    
+
     <link rel="stylesheet" href="css/main.css">
-    
+
     <!-- FUnction for the datepicker -->
     <script>
         $(function() {
-            $( ".datepicker" ).datepicker({dateFormat: 'dd-mm-yy', minDate: 0 });
+            $(".datepicker").datepicker({
+                dateFormat: 'dd-mm-yy'
+            });
         });
+
     </script>
-    
-    
+
+
 </head>
 
 <body>
@@ -157,11 +160,10 @@
                                             <span class="mdl-radio__label"> Female</span>
                                         </label>
                                     </div>
-                                    <div class="mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
-                                        <label class="customLabel">Birthdate : </label>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input datepicker" type="text" name="birth_date" required/>
-                                        </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
+                                        <label class="customLabel">Birthdate :
+                                            <input class="datepicker" type="text" name="birth_date" required/>
+                                        </label>
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age" name="age" required />
@@ -188,16 +190,18 @@
                                         <input class="mdl-textfield__input" type="text" id="sub_caste" name="sub_caste" />
                                         <label class="mdl-textfield__label" for="sub_caste">Sub Caste</label>
                                     </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                    <div class=" mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel">Category :</label>
-                                        <select class="dropdownOptions" name="category" required>
-                                            <option value="Open">OPEN</option>
-                                            <option value="OBC">OBC</option>
-                                            <option value="SC">SC</option>
-                                            <option value="ST">ST</option>
-                                            <option value="VJ">VJ</option>
-                                            <option value="SBC">SBC</option>
-                                        </select>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <select class="dropdownOptions" name="category" required>
+                                                <option value="Open">OPEN</option>
+                                                <option value="OBC">OBC</option>
+                                                <option value="SC">SC</option>
+                                                <option value="ST">ST</option>
+                                                <option value="VJ">VJ</option>
+                                                <option value="SBC">SBC</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <input class="mdl-textfield__input" type="text" id="father_name" name="father_name" required/>
@@ -233,11 +237,10 @@
                                     </div>
                                 </div>
                                 <div class="mdl-grid">
-                                    <div class="mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label class="customLabel">Admission Date :</label>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input datepicker" type="text" id="" name="admission_date" />
-                                        </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                        <label class="customLabel">Admission Date :
+                                            <input class="datepicker" type="text" id="" name="admission_date" />
+                                        </label>
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <input class="mdl-textfield__input" type="text" id="admission_class" name="admission_class" />

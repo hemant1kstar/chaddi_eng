@@ -75,7 +75,7 @@
                             <?php
 include("../connection.php");
 $result = mysqli_query($con,"SELECT * FROM master");
-echo "<select name='reg_no' class='form-control' required>";
+echo "<select name='reg_no' class='dropdownOptions' required>";
 echo "<option value=''></option>";
 while($row = mysqli_fetch_array($result)){
     $reg_no1=$row['reg_no'];

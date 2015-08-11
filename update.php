@@ -114,7 +114,7 @@
                                 <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
                                 <?php
               $result = mysqli_query($con,"SELECT * FROM master"); 
-                                         echo "<select name='reg_no' class='form-control' required>";
+echo "<select name='reg_no' class='dropdownOptions' required>";
                                          echo "<option value=''></option>";
                                         while($row = mysqli_fetch_array($result)){
                                           $reg_no1=$row['reg_no'];
@@ -300,7 +300,7 @@
                                         <label class="customLabel">Registration No :</label>
                                         <?php
               $result = mysqli_query($con,"SELECT * FROM master"); 
-             echo "<select name='reg_no3' class='form-control' required>";
+echo "<select name='reg_no3' class='dropdownOptions' required>";
              echo "<option value=''></option>";
             while($row = mysqli_fetch_array($result)){
               $reg_no1=$row['reg_no'];
