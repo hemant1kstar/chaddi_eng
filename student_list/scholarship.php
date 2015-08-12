@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Year-wise Students' List | Paperless System</title>
+    <title>Scholarship | Paperless System</title>
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
@@ -47,14 +47,13 @@
 
             <div class="tabs mdl-js-ripple-effect">
                 <a href="index.php" class="mdl-layout__tab">Class Wise</a>
-                <a href="year_wise.php" class="mdl-layout__tab is-active">Year Wise</a>
+                <a href="year_wise.php" class="mdl-layout__tab">Year Wise</a>
                 <a href="caste_wise.php" class="mdl-layout__tab">Caste Wise</a>
                 <a href="student_status.php" class="mdl-layout__tab">Student Status</a>
-                <!--                  <a href="" class="mdl-layout__tab">Student Leaved</a>-->
                 <a href="division_wise.php" class="mdl-layout__tab">Division Wise</a>
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
-                <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
+                <a href="scholarship.php" class="mdl-layout__tab is-active">Scholarship</a>
             </div>
 
         </header>
@@ -76,20 +75,24 @@
 
 
                 <div class="student_list mdl-shadow--2dp">
-                    <h2 id="form_header">Year Wise</h2>
+                    <h2 id="form_header">Student Scholarship</h2>
                     <form action="" method="post">
+
                         <div class="showDataDiv">
-                            <label class="customLabel">Select Year :
-                                <select name="year1" class="dropdownOptions" required>
-                                    <option value=""></option>
-                                    <option value="2011">2011</option>
-                                    <option value="2012">2012</option>
-                                    <option value="2013">2013</option>
-                                    <option value="2014">2014</option>
-                                    <option value="2015">2015</option>
-                                </select>
-                            </label>
-                            <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect"  id="showDataButton" name='submit_year' value='Submit'>
+                      <label class="customLabel">Scholarship :</label> 
+                                        
+                                    <select  name="scholarship" class='dropdownOptions' required>
+                                     <option value='No'>नाही</option>
+                                     <option value='Savitri_Bai'>सावेत्री बाई</option>
+                                     <option value='Handicapped'>अपंग</option>
+                                     <option value='Unclean_business'>अस्वच्छ व्यवसाय</option>
+                                     <option value='Minority'>अल्पसंख्याक</option>
+                                     <option value='Metric_before'>मेट्रिकपूर्व</option>
+                                     <option value='Attendance_bhatta'>उपस्थितीभत्ता</option>
+                                     <option value='Adivasi_Scholarship'>आदिवासी शिष्यवृत्ती</option>
+                                    </select>
+
+                            <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" id="showDataButton" name='submit_scholarship' value='Submit'>
                         </div>
                     </form>
                 </div>
@@ -97,10 +100,11 @@
                 <div class="student_list mdl-shadow--2dp">
                         <?php
                             include("../database/connection.php");
-                            if(isset($_POST['submit_year'])){
-                              $year=$_POST['year1'];
-                           echo "<h2 id='form_header'>Year Wise Student List</h2>";
-                           echo "<div id='dvContents'>";  
+                            if(isset($_POST['submit_scholarship'])){
+                              $scholarship=$_POST['scholarship'];
+                              
+                           echo "<h2 id='form_header'>Scholarship Wise Student List</h2>";
+                           echo "<div id='dvContents'>";     
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo "<tr>";
@@ -116,7 +120,7 @@
                            echo "<tbody>";
                               
                           mysqli_query ($con,"set character_set_results='utf8'"); 
-                          $query = mysqli_query($con,"SELECT * FROM master where admission_year='$year'") or die(mysqli_error());
+                    $query = mysqli_query($con,"SELECT * FROM master where scholarship='$scholarship'") or die(mysqli_error());
                           while($row=mysqli_fetch_array($query))
                           {
                             $reg_no=$row['reg_no'];
@@ -126,8 +130,6 @@
                             $permanent_address=$row['permanent_address'];
                             $aadhar_no=$row['aadhar_no'];
                             $class=$row['current_class'];
-
-
 
                             echo "<tr>";
                             echo "<td>$reg_no</td>"; 
@@ -146,8 +148,11 @@
                            echo "<div class='submitButtonDiv'>";
                            echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print ID Card</button>";
                            echo "</div>";
+                        
+
                             }
                          ?>
+
 
 
                 </div>
@@ -158,8 +163,9 @@
         </main>
 
     </div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
+    
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
                 var contents = $("#dvContents").html();

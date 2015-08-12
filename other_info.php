@@ -296,8 +296,22 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
+<!--
                                         <input class="mdl-textfield__input" type="text" id="scholarship" name="scholarship" />
                                         <label class="mdl-textfield__label" for="scholarship">Scholarship</label>
+-->
+                            <label class="customLabel">Scholarship :</label> 
+                                        
+                                    <select  name="scholarship" class='dropdownOptions' required>
+                                     <option value='No'>नाही</option>
+                                     <option value='Savitri_Bai'>सावेत्री बाई</option>
+                                     <option value='Handicapped'>अपंग</option>
+                                     <option value='Unclean_business'>अस्वच्छ व्यवसाय</option>
+                                     <option value='Minority'>अल्पसंख्याक</option>
+                                     <option value='Metric_before'>मेट्रिकपूर्व</option>
+                                     <option value='Attendance_bhatta'>उपस्थितीभत्ता</option>
+                                     <option value='Adivasi_Scholarship'>आदिवासी शिष्यवृत्ती</option>
+                                    </select>
 
                                     </div>
                                 </div>

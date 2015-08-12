@@ -50,10 +50,10 @@
                 <a href="year_wise.php" class="mdl-layout__tab">Year Wise</a>
                 <a href="caste_wise.php" class="mdl-layout__tab">Caste Wise</a>
                 <a href="student_status.php" class="mdl-layout__tab">Student Status</a>
-                <!--                  <a href="" class="mdl-layout__tab">Student Leaved</a>-->
                 <a href="division_wise.php" class="mdl-layout__tab">Division Wise</a>
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
+                <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
             </div>
 
         </header>
@@ -96,63 +96,28 @@
                                     </select>
                                 </label>
                                 <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name='submit_class' id="showDataButton" value='Submit'>
-
-                                <?php
-//                              $result = mysqli_query($con,"SELECT * FROM master");
-//
-//                             echo "<select name='class1' class='form-control' required>";
-//                            echo "<option value=''></option>";
-//                            while($row = mysqli_fetch_array($result)){
-//                                    $current_class1=$row['current_class'];
-//                                   echo "<option value='$current_class1'>$current_class1</option>";
-//                            }
-//                             echo "</select>";
-//                            ?>
-
-
                             </div>
 
                         </form>
                     </div>
 
                     <div class="student_list mdl-shadow--2dp">
-                        <h2 id="form_header">Class Wise Student List</h2>
-                        <div class="mdl-grid">
                             <?php
                             
                             if(isset($_POST['submit_class'])){
                               $class=$_POST['class1'];
-                              
+                           echo "<h2 id='form_header'>Class Wise Student List</h2>";
+                           echo "<div id='dvContents'>";  
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo "<tr>";
                            echo "<th>Reg. No.</th>";
                            echo "<th class='mdl-data-table__cell--non-numeric'>Student Name</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Mother Name</th>";
                            echo "<th class='mdl-data-table__cell--non-numeric'>Gender</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Mother Tongue</th>";
-                           echo "<th>Birth Date</th>";
-                           echo "<th>Age</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Nationality</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Religion</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Caste</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Sub-Caste</th>";
                            echo "<th class='mdl-data-table__cell--non-numeric'>Category</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Father Name</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Father Occupation</th>";
-                           echo "<th>Annual Income</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Birth Place</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>District</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>State</th>";
-                           echo "<th>Prev Class</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Prev School Name</th>";
-                           echo "<th>Admission Date</th>";
-                           echo "<th>Admission Class</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Prev Mark Sheet</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Prev Tc</th>";
-                           echo "<th class='mdl-data-table__cell--non-numeric'>Nadar Fee</th>";
+                           echo "<th class='mdl-data-table__cell--non-numeric'>Class</th>";
+                           echo "<th class='mdl-data-table__cell--non-numeric'>Aadhar No.</th>";
                            echo "<th class='mdl-data-table__cell--non-numeric'>Permanent Address</th>";
-                           echo  "<th class='mdl-data-table__cell--non-numeric'>Medium</th>";
                            echo "</tr>";
                            echo  "</thead>";
                            echo "<tbody>";
@@ -163,75 +128,33 @@
                           {
                             $reg_no=$row['reg_no'];
                             $student_name=$row['student_name'];
-                            $mother_name=$row['mother_name'];
                             $gender=$row['gender'];
-                            $Mother_tongue=$row['Mother_tongue'];
-                            $birthdate=$row['birthdate'];
-                            $age=$row['age'];
-                            $nationality=$row['nationality'];
-                            $religion=$row['religion'];
-
-
-                            $caste=$row['caste'];
-                            $sub_caste=$row['sub_caste'];
                             $category=$row['category'];
-                            $father_name=$row['father_name'];
-                            $father_occupation=$row['father_occupation'];
-                            $annual_income=$row['annual_income'];
-                            $birth_place=$row['birth_place'];
-                            $district=$row['district'];
-                            $state=$row['state'];
-
-                            $prev_class=$row['prev_class'];
-                            $prev_school_name=$row['prev_school_name'];
-                            $admission_date=$row['admission_date'];
-                            $admission_class=$row['admission_class'];
-                            $prev_mark_sheet=$row['prev_mark_sheet'];
-                            $prev_tc=$row['prev_tc'];
-                            $nadar_fee=$row['nadar_fee'];
                             $permanent_address=$row['permanent_address'];
-                            $medium=$row['medium'];
+                            $aadhar_no=$row['aadhar_no'];
+                            $class=$row['current_class'];
+
 
 
                             echo "<tr>";
                             echo "<td>$reg_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$student_name</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$mother_name</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$gender</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$Mother_tongue</td>";
-                            echo "<td>$birthdate</td>"; 
-                            echo "<td>$age</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$nationality</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$religion</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$caste</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$sub_caste</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$category</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$father_name</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$father_occupation</td>";
-                            echo "<td>$annual_income</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$birth_place</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$district</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$state</td>"; 
-
-                            echo "<td>$prev_class</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$prev_school_name</td>";
-                            echo "<td>$admission_date</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$admission_class</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$prev_mark_sheet</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$prev_tc</td>"; 
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$nadar_fee</td>"; 
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$class</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$aadhar_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$permanent_address</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$medium</td>"; 
                             echo "</tr>";
                           }
 
                            echo "</tbody>";
                            echo "</table>";
+                           echo "</div>";
+                           echo "<div class='submitButtonDiv'>";
+                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print ID Card</button>";
+                           echo "</div>";
                             }
                          ?>
-
-                        </div>
-
                     </div>
 
 
@@ -240,6 +163,38 @@
         </main>
 
     </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#btnPrint").click(function() {
+                var contents = $("#dvContents").html();
+                var frame1 = $('<iframe />');
+                frame1[0].name = "frame1";
+                frame1.css({
+                    "position": "absolute",
+                    "top": "-1000000px"
+                });
+                $("body").append(frame1);
+                var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+                frameDoc.document.open();
+                //Create a new HTML document.
+                frameDoc.document.write('<html><head><title></title>');
+                frameDoc.document.write('</head><body>');
+                //Append the external CSS file.
+                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/StudentIdCard.css" rel="stylesheet" type="text/css" />');
+                //Append the DIV contents.
+                frameDoc.document.write(contents);
+                frameDoc.document.write('</body></html>');
+                frameDoc.document.close();
+                setTimeout(function() {
+                    window.frames["frame1"].focus();
+                    window.frames["frame1"].print();
+                    frame1.remove();
+                }, 500);
+            });
+        });
+
+    </script>
 
 
 </body>
