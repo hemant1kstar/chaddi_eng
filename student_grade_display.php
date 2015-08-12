@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-        <title>Paperless System</title>
+        <title>Student Grades Table | Paperless System</title>
     
 <!--    CSS For Material Design-->
  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" /> 
@@ -58,7 +58,7 @@
 
                       <!-- Your content goes here -->
                     <div class="" id="masterTableBlock">
-                         <h2 id="form_header">Other Details Table</h2>
+                        <h2 id="form_header">Student Grades Table</h2>
                       
                       <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="table1">
                         <thead>

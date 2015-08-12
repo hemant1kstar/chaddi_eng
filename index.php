@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paperless System</title>
+    <title>Student Basic Information | Paperless System</title>
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
     <script src="material_js/material.js"></script>
@@ -42,8 +42,8 @@
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Entry Student Details</span>
-                
-                
+
+
             </div>
             <!-- Bottom row, not visible on scroll -->
             <!--
