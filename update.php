@@ -257,7 +257,11 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
         $mother_name1=$_POST['mother_name'];
         $mother_tongue1=$_POST['mother_tongue'];
         $gender1=$_POST['gender'];
-        $birth_date1=$_POST['birth_date'];
+//        $birth_date1=$_POST['birth_date'];
+        $date1=$_POST['birth_date'];
+         
+        $dateTime = new DateTime($date1);
+        $birth_date=date_format ($dateTime, 'Y-m-d');
         $age1=$_POST['age'];
         $nationality1=$_POST['nationality'];
         $religion1=$_POST['religion'];
@@ -271,7 +275,12 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
         $district1=$_POST['district'];
         $state1=$_POST['state'];
         $prev_class1=$_POST['prev_class'];
-        $admission_date1=$_POST['admission_date'];
+//        $admission_date1=$_POST['admission_date'];
+          $admission_date1=$_POST['admission_date'];
+         
+        $dateTime2 = new DateTime($admission_date1);
+        $admission_date=date_format ($dateTime2, 'Y-m-d');
+                       
         $prev_school_name1=$_POST['prev_school_name'];
         $admission_class1=$_POST['admission_class'];
         $prev_mark_sheet1=$_POST['prev_mark_sheet'];
