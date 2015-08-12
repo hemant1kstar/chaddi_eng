@@ -37,7 +37,7 @@
 <body>
     <!--    Waterfall header-->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--scroll">
+        <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
