@@ -76,7 +76,7 @@
                             <label class="customLabel">Status :</label>
                             <select name="status1" class="dropdownOptions" required>
                                     <option value=""></option>
-                                    <option value="">Student Present</option>
+                                <option value="Present">Student Present</option>
                                     <option value="Left School">Student Left school</option>
                                 </select>
 
@@ -90,13 +90,12 @@
                             include("../database/connection.php");
                             if(isset($_POST['submit_status'])){
                               $status=$_POST['status1'];
-                                if ($status == "")
+                                if ($status == "Present")
                                 {
                                     $status1 = "Current Students"; 
                                 } else 
                                     $status1 = "Students who left school";
-                                            
-                           
+                                                                       
                            echo "<div id='dvContents'>";   
                                 echo "<h2 id='form_header'>Students' List for: $status1</h2>";
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
