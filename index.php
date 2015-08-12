@@ -42,20 +42,12 @@
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Entry Student Details</span>
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                                mdl-textfield--floating-label mdl-textfield--align-right">
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
-                        <i class="material-icons">search</i>
-                    </label>
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
-                    </div>
-                </div>
+                
+                
             </div>
             <!-- Bottom row, not visible on scroll -->
             <!--
-                  <div class="mdl-layout__header-row"><div class="mdl-layout-spacer"></div>
+                  <div class="mdl-layout__header-row">
                      Navigation 
                     <nav class="waterfall-demo-header-nav mdl-navigation"><a class="mdl-navigation__link" href="index.php">Basic Info</a><a class="mdl-navigation__link" href="">TC</a><a class="mdl-navigation__link" href="">Other Info</a><a class="mdl-navigation__link" href="student_grade.php">Grade</a></nav></div>
 -->

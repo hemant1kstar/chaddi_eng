@@ -30,13 +30,8 @@
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Student List</span>
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                                mdl-textfield--floating-label mdl-textfield--align-right">
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
-                    </div>
-                </div>
+                
+               
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
