@@ -249,8 +249,16 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
+<!--
                                         <input class="mdl-textfield__input" type="text" id="status" name="status" />
                                         <label class="mdl-textfield__label" for="status">Status</label>
+-->
+                                 <label class="customLabel">Status :</label> 
+                                    <select  name="status" class='dropdownOptions' required>
+                                     <option value=''></option>
+                                     <option value='Present'>Present</option>
+                                     <option value='Left School'>Left School</option>
+                                    </select>
 
                                     </div>
 

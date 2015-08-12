@@ -48,6 +48,7 @@
                 <a href="bonafied.php" class="mdl-layout__tab is-active">Bonafide</a>
                 <a href="nirgam_utara.php" class="mdl-layout__tab">Nirgam Utara</a>
                 <a href="id_card.php" class="mdl-layout__tab">ID Card</a>
+                <a href="tc.php" class="mdl-layout__tab">TC</a>
 
             </div>
 

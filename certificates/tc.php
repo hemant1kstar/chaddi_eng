@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Nirgam Utara | Paperless System</title>
+    <title>TC Certificate | Paperless System</title>
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
@@ -18,14 +18,15 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/main.css">
-    <link href='../certificates/css/utara.css' rel='stylesheet'>
+    <link href='../certificates/css/tc.css' rel='stylesheet'>
+
 
 </head>
 
 <body>
     <!--    Waterfall header-->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -33,22 +34,25 @@
                 <div class="mdl-layout-spacer"></div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                                 mdl-textfield--floating-label mdl-textfield--align-right">
+<!--
                     <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
                         <i class="material-icons">search</i>
                     </label>
+-->
+<!--
                     <div class="mdl-textfield__expandable-holder">
                         <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
                     </div>
+-->
                 </div>
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
                 <a href="index.php" class="mdl-layout__tab">Certificate</a>
                 <a href="bonafied.php" class="mdl-layout__tab">Bonafide</a>
-                <a href="nirgam_utara.php" class="mdl-layout__tab is-active">Nirgam Utara</a>
+                <a href="nirgam_utara.php" class="mdl-layout__tab">Nirgam Utara</a>
                 <a href="id_card.php" class="mdl-layout__tab">ID Card</a>
-                <a href="tc.php" class="mdl-layout__tab">TC</a>
-
+                <a href="tc.php" class="mdl-layout__tab is-active">TC</a>
             </div>
 
         </header>
@@ -72,41 +76,46 @@
                     <form action="" method="post">
                         <div>
                             <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
-                                <?php
+                            <?php
 include("../connection.php");
-              $result = mysqli_query($con,"SELECT * FROM master"); 
+$result = mysqli_query($con,"SELECT * FROM master");
 echo "<select name='reg_no' class='dropdownOptions' required>";
-             echo "<option value=''></option>";
-            while($row = mysqli_fetch_array($result)){
-              $reg_no1=$row['reg_no'];
-             echo "<option value='$reg_no1'>$reg_no1</option>";
-            }
-             echo "</select>";
-          ?>
-                            <button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name="submit_student_info" type="submit" id="showCertificateButton">Submit</button>
+echo "<option value=''></option>";
+while($row = mysqli_fetch_array($result)){
+    $reg_no1=$row['reg_no'];
+    echo "<option value='$reg_no1'>$reg_no1</option>";
+}
+echo "</select>";
+                                   ?>
+                                <button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name="submit_student_info" type="submit" id="showCertificateButton">Submit</button>
                         </div>
                     </form>
                 </div>
-
                 <?php
-                            $reg_no="";;
-                            $student_name="";
-                            $mother_name="";
+                            $tc_no="";
+                            $reg_no1="";
+                            $date_issued="";
+                            $student_name=""; 
+                            $motername="";
                             $religion="";
                             $caste="";
-                            $Mother_tongue="";
+                            $nationality="";
                             $birth_place="";
+                            $birth_district="";
+                            $birth_state="";
                             $birthdate="";
                             $prev_school_name="";
-                            $prev_class="";
-                            $admission_class="";
-                            $admission_date="";
+                            $admission_date=""; 
                             $student_progress="";
                             $behaviour="";
-                            $school_leaving_class="";
-                            $reason="";
                             $date_leaving="";
+                            $reason="";
+                            $class="";
                             $remark="";
+                         
+
+
+                  
                    if(isset($_POST['submit_student_info']))
                    {
 
@@ -117,85 +126,67 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                           $query = mysqli_query($con,"SELECT * FROM master where reg_no='$reg_no2'") or die(mysqli_error());
                           while($row=mysqli_fetch_array($query))
                           {
-                            $reg_no=$row['reg_no'];
-                            $student_name=$row['student_name'];
-                            $mother_name=$row['mother_name'];
+                            $tc_no=$row['tc_no'];
+                            $reg_no1=$row['reg_no'];
+                            $date_issued=$row['tc_date'];
+                            $student_name=$row['student_name']; 
+                            $motername=$row['mother_name'];
                             $religion=$row['religion'];
                             $caste=$row['caste'];
-                            $Mother_tongue=$row['Mother_tongue'];
+//                            $nationality=$row['nationality'];
                             $birth_place=$row['birth_place'];
+                            $birth_district=$row['district'];
+                            $birth_state=$row['state'];
                             $birthdate=$row['birthdate'];
                             $prev_school_name=$row['prev_school_name'];
-                            $prev_class=$row['prev_class'];
-                            $admission_class=$row['admission_class'];
-                            $admission_date=$row['admission_date'];
+                            $admission_date=$row['admission_date']; 
                             $student_progress=$row['student_progress'];
                             $behaviour=$row['behaviour'];
-                            $school_leaving_class=$row['school_leaving_class'];
-                            $reason=$row['school_leaving_reason'];
                             $date_leaving=$row['school_leaving_date'];
+                            $reason=$row['school_leaving_reason'];
+                            $class=$row['school_leaving_class'];
                             $remark=$row['tc_remark'];
+                         
                           }
                    }
                   ?>
 
+
                     <div id="dvContents">
                         <div class="main mdl-shadow--2dp" id="mains">
-                            <h4 class="headname">विद्यार्थी प्रवेश निर्गम उतारा</h4>
-                            <h4 class="schoolname">संत नामदेव प्राथमिक / माध्यमिक / उच्चमाध्यमिक विद्यालय, लातूर</h4>
-                            <h5 class="place">तालुका: लातूर, जिल्हा: लातूर</h5>
-                            <table class="tabledata mdl-data-table mdl-js-data-table">
-                                <tr>
-                                    <th> रेजिस्ट्रेशन नंबर</th>
-                                    <th> विद्यार्थ्याचे नाव </th>
-                                    <th>आईचे नाव </th>
-                                    <th>धर्म व जात </th>
-                                    <th>मातृभाषा </th>
-                                    <th>जन्म ठिकाण </th>
-                                    <th>जन्म दिनांक (अंकात)</th>
-                                    <!--                            <th>जन्म दिनांक (अक्षरी)</th>-->
-                                    <th>पूर्वीची शाळा </th>
-                                    <th>पूर्वीचा वर्ग </th>
-                                    <th>प्रवेश घेतलेला वर्ग </th>
-                                    <th>प्रवेश दिनांक </th>
-                                    <th>प्रगती </th>
-                                    <th>वर्तणूक </th>
-                                    <th>शाळा सोडल्याचा वर्ग </th>
-                                    <th>शाळा सोडल्याचा दिनांक </th>
-                                    <th>शाळा सोडल्याचे कारण </th>
-                                    <th>शेरा</th>
-                                </tr>
-                                <?php
-                       echo "<tr>";
-                       echo "<td>$reg_no</td>";
-                       echo "<td>$student_name</td>";
-                       echo "<td>$mother_name</td>";
-                       echo "<td>$religion,$caste</td>";
-                       echo "<td>$Mother_tongue</td>";
-                       echo "<td>$birth_place</td>";
-                       echo "<td>$birthdate</td>";
-                       echo "<td>$prev_school_name</td>";
-                       echo "<td>$prev_class</td>";
-                       echo "<td>$admission_class</td>";
-                       echo "<td>$admission_date</td>";
-                       echo "<td>$student_progress</td>";
-                       echo "<td>$behaviour</td>";
-                       echo "<td>$school_leaving_class</td>";
-                       echo "<td>$date_leaving</td>";
-                       echo "<td>$reason</td>";
-                       echo "<td>$remark</td>";
-                       echo "</tr>";
-                        ?>
-                            </table>
-                            <h5 class="info">प्रमाणित करण्यात येते की वरील माहिती शाळेच्या नोंदवहीनुसार आहे.</h5>
-                            <h5 class="principal">मुख्याध्यापक</h5>
+                            <h3 class="schoolname">संत नामदेव प्राथमिक / माध्यमिक / उच्चमाध्यमिक विद्यालय, लातूर </h3>
+                            <h5 class="place">तालुका: लातूर, जिल्हा: लातूर </h5>
+                            <p>नंबर:<?php echo"$tc_no";?> रेजिस्टर नंबर: <?php echo"$reg_no1";?>दिनांक :<?php echo"$date_issued";?></p>
+                            <div class="tc_info1">
+                                <p><span>१) विधाथ्याचे संपूर्ण नाव : चि. </span><?php echo"$student_name"?></p>
+                                <p><span>२) आईचे नाव : सौ . </span><?php echo "$motername";?></p>
+                                <p><span>३) धर्म व जात (उपजातीसह): </span><?php echo "$religion-$caste";?></p>
+                                <p><span>४) राष्ट्रीयत्व : भारतीय</span></p>
+                                <p><span>५) जन्मस्थान :</span><?php echo "$birth_place,$birth_district,$birth_state";?></p>
+                                <p><span>६) जन्मदिनांक अंक व अक्षरी :</span><?php echo "$birthdate";?></p>
+                                <p><span>७) पूर्वी शिकत असलेली शाळा :</span><?php echo "$prev_school_name";?></p>
+                                <p><span>८) प्रवेश दिनांक :</span><?php echo "$admission_date";?></p>
+                                <p><span>९) प्रगती :</span><?php echo "$student_progress";?>
+                                   <span>१०) वर्तणूक :</span><?php echo "$behaviour";?></p>
+                                <p><span>११) शाळा सोडण्याचा दिनांक :</span><?php echo "$date_leaving";?></p>
+                                <p><span>१२) शाळा सोडण्याचे कारण  :</span><?php echo "$reason";?></p>
+                                <p><span>१३) कोणत्या वर्गात शिकत होता , केव्हापासून  :</span><?php echo "$class";?></p>
+                                <p><span>१४) शाळा सोडण्याचे कारण  :</span><?php echo "$remark";?></p>
+                            </div>
+                            <div class="lastdiv">
+                                <p>प्रमाणित करण्यात येते की , वरील सर्व माहिती शाळेच्या अधिकूर्त नोंदणीप्रमाणे देण्यात आली आहे .</p>
+                                <p class="lipic"><span class="space">मुख्य लिपिक</span></p>
+                                <p class="class_teacher"><span class="space">वर्ग शिक्षक</span></p>
+                                <p class="principal">मुख्याध्यापक</p>
+                            </div>
+                            
                         </div>
                     </div>
 
                     <div class="submitButtonDiv">
                         <!--                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="print_bonafied" id="btnPrint">Print</button>-->
 
-                        <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print Nirgam Utara</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print Bonafide Certificate</button>
                     </div>
 
 
@@ -203,7 +194,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
         </main>
 
     </div>
-    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
@@ -221,7 +212,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                 frameDoc.document.write('<html><head><title></title>');
                 frameDoc.document.write('</head><body>');
                 //Append the external CSS file.
-                frameDoc.document.write('<link href="../certificates/css/utara.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/utaraForPrinting.css" rel="stylesheet" type="text/css" />');
+                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/bonafide.css" rel="stylesheet" type="text/css" />');
                 //Append the DIV contents.
                 frameDoc.document.write(contents);
                 frameDoc.document.write('</body></html>');

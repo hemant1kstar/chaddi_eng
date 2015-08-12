@@ -1,0 +1,33 @@
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
+
+body {
+    color: rgba(0, 0, 0, 0.87);
+}
+.main {
+    width: 850px;
+    margin: 15px auto 20px;
+    background: white;
+    border: 1px solid #9E9E9E;
+    padding: 30px 20px;
+}
+.reg_info {
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+
+.schoolname,
+.place {
+    text-align: center;
+    margin: 10px auto;
+}
+#btnPrint {
+    display: block;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
+}
