@@ -61,26 +61,23 @@
         <main class="mdl-layout__content">
             <div class="page-content">
                 <!-- Your content goes here -->
-                <?php
-                                      $con=mysqli_connect("localhost","root","","school_project");
-                                          if (mysqli_connect_errno())
-                                          {
-                                              echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                                          }
-                       ?>
 
+<?php
+    include("../database/connection.php");
+?>
                     <?php
 
                             if(isset($_POST['submit'])){
                              $date1=$_POST['date'];
+                              $dateTime = new DateTime($date1);
+                              $formatted_date=date_format ($dateTime, 'Y-m-d' );
                              $timing=$_POST['timing'];
                                 if(!empty($_POST['check_list'])){
                                     foreach($_POST['check_list'] as $selected){
             $result = mysqli_query($con,"INSERT INTO
-            attendance(reg_no,date,timing)VALUES('$selected','$date1','$timing')"); 
+            attendance(reg_no,date,timing)VALUES('$selected','$formatted_date','$timing')"); 
                                  
                                     }
-                                  
                                 } 
                                   echo "Attendance inserted successfully";
                                      

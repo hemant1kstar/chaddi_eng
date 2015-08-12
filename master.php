@@ -134,6 +134,11 @@
                             $nadar_fee=$row['nadar_fee'];
                             $permanent_address=$row['permanent_address'];
                             $medium=$row['medium'];
+                            
+                            $birthdate1= strtotime($birthdate);
+                            $birthdate2=date('d/m/Y',$birthdate1);
+                            $admission_date1= strtotime($admission_date);
+                            $admission_date2=date('d/m/Y',$admission_date1);
 
 
                             echo "<tr>";
@@ -142,7 +147,7 @@
                             echo "<td class='mdl-data-table__cell--non-numeric'>$mother_name</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$gender</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$Mother_tongue</td>";
-                            echo "<td>$birthdate</td>"; 
+                            echo "<td>$birthdate2</td>"; 
                             echo "<td>$age</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$nationality</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$religion</td>"; 
@@ -158,7 +163,7 @@
 
                             echo "<td>$prev_class</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$prev_school_name</td>";
-                            echo "<td>$admission_date</td>";
+                            echo "<td>$admission_date2</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$admission_class</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$prev_mark_sheet</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$prev_tc</td>"; 

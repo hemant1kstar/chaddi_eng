@@ -81,7 +81,11 @@
         $mother_name=$_POST['mother_name'];
         $mother_tongue=$_POST['mother_tongue'];
         $gender=$_POST['gender'];
-        $birth_date=$_POST['birth_date'];
+        $date1=$_POST['birth_date'];
+         
+        $dateTime = new DateTime($date1);
+        $birth_date=date_format ($dateTime, 'Y-m-d');
+         
         $age=$_POST['age'];
         $nationality=$_POST['nationality'];
         $religion=$_POST['religion'];
@@ -95,7 +99,12 @@
         $district=$_POST['district'];
         $state=$_POST['state'];
         $prev_class=$_POST['prev_class'];
-        $admission_date=$_POST['admission_date'];
+        $admission_date1=$_POST['admission_date'];
+         
+        $dateTime2 = new DateTime($admission_date1);
+        $admission_date=date_format ($dateTime2, 'Y-m-d');
+         
+         
         $prev_school_name=$_POST['prev_school_name'];
         $admission_class=$_POST['admission_class'];
         $prev_mark_sheet=$_POST['prev_mark_sheet'];

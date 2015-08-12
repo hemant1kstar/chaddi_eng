@@ -95,12 +95,19 @@
                    {
                       $reg_no=$_POST['reg_no'];
                       $school_leaving_class=$_POST['school_leaving_class'];
-                      $date_leaving=$_POST['date_leaving'];
+                      $date_leaving1=$_POST['date_leaving'];
+                      $dateTime1 = new DateTime($date_leaving1);
+                      $date_leaving=date_format ($dateTime1, 'Y-m-d' );
+                       
                       $student_progress=$_POST['student_progress'];
                       $leaving_reason=$_POST['leaving_reason'];
                       $tc_no=$_POST['tc_no'];
                       $behaviour=$_POST['behaviour'];
-                      $tc_date=$_POST['tc_date'];
+                      $date1=$_POST['tc_date'];
+                       
+                     $dateTime = new DateTime($date1);
+                     $tc_date=date_format ($dateTime, 'Y-m-d' );
+                       
                       $remark=$_POST['remark'];
 
                     mysqli_query ($con,"set character_set_results='utf8'");      

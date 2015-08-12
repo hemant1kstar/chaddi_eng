@@ -92,14 +92,19 @@
           $remark=$row['tc_remark'];
           $date_leaving=$row['school_leaving_date'];
           
+          $date_issued1 = strtotime($date_issued);
+          $date_issued2=date('d/m/Y',$date_issued1);
+          $date_leaving1= strtotime($date_leaving);
+          $date_leaving2=date('d/m/Y',$date_leaving1);
+         
           echo "<tr>";
           echo "<td>$sr_no</td>"; 
           echo "<td>$tc_no</td>";
-          echo "<td>$date_issued</td>";
+          echo "<td>$date_issued2</td>";
           echo "<td class='mdl-data-table__cell--non-numeric'>$name</td>"; 
           echo "<td>$adm_no</td>";
           echo "<td>$class</td>"; 
-          echo "<td>$date_leaving</td>"; 
+          echo "<td>$date_leaving2</td>"; 
           echo "<td class='mdl-data-table__cell--non-numeric'>$reason</td>";
           echo "<td class='mdl-data-table__cell--non-numeric'>$remark</td>"; 
           echo "</tr>";
