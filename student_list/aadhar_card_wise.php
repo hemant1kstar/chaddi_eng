@@ -95,8 +95,8 @@
                             if(isset($_POST['submit_aadhar_card'])){
                               $aadhar_card_no=$_POST['aadhar_card_no'];
                               
-                           echo "<h2 id='form_header'>Aadhar Card Wise Student List</h2>";
                            echo "<div id='dvContents'>";     
+                                echo "<h2 id='form_header'>Student's Data for Aadhar No: $aadhar_card_no</h2>";
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo "<tr>";
@@ -138,7 +138,7 @@
                            echo "</table>";
                            echo "</div>";
                            echo "<div class='submitButtonDiv'>";
-                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print ID Card</button>";
+                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print List</button>";
                            echo "</div>";
 
                             }
@@ -155,7 +155,7 @@
 
     </div>
     
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
         <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
@@ -173,7 +173,7 @@
                 frameDoc.document.write('<html><head><title></title>');
                 frameDoc.document.write('</head><body>');
                 //Append the external CSS file.
-                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/StudentIdCard.css" rel="stylesheet" type="text/css" />');
+                frameDoc.document.write('<link href="css/forPrinting.css" rel="stylesheet" type="text/css" />');
                 //Append the DIV contents.
                 frameDoc.document.write(contents);
                 frameDoc.document.write('</body></html>');

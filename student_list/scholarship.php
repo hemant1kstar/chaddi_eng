@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Scholarship | Paperless System</title>
+    <title>Scholarship-wise Students' List | Paperless System</title>
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
@@ -79,18 +79,19 @@
                     <form action="" method="post">
 
                         <div class="showDataDiv">
-                      <label class="customLabel">Scholarship :</label> 
-                                        
-                                    <select  name="scholarship" class='dropdownOptions' required>
-                                     <option value='No'>नाही</option>
-                                     <option value='Savitri_Bai'>सावेत्री बाई</option>
-                                     <option value='Handicapped'>अपंग</option>
-                                     <option value='Unclean_business'>अस्वच्छ व्यवसाय</option>
-                                     <option value='Minority'>अल्पसंख्याक</option>
-                                     <option value='Metric_before'>मेट्रिकपूर्व</option>
-                                     <option value='Attendance_bhatta'>उपस्थितीभत्ता</option>
-                                     <option value='Adivasi_Scholarship'>आदिवासी शिष्यवृत्ती</option>
-                                    </select>
+                            <label class="customLabel">Scholarship :</label>
+
+                            <select name="scholarship" class='dropdownOptions' required>
+                                <option value=''></option>
+                                <option value='No'>नाही</option>
+                                <option value='Savitri_Bai'>सावित्रीबाई</option>
+                                <option value='Handicapped'>अपंग</option>
+                                <option value='Unclean_business'>अस्वच्छ व्यवसाय</option>
+                                <option value='Minority'>अल्पसंख्याक</option>
+                                <option value='Metric_before'>मैट्रिकपूर्व</option>
+                                <option value='Attendance_bhatta'>उपस्थिती भत्ता</option>
+                                <option value='Adivasi_Scholarship'>आदिवासी शिष्यवृत्ती</option>
+                            </select>
 
                             <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" id="showDataButton" name='submit_scholarship' value='Submit'>
                         </div>
@@ -98,13 +99,46 @@
                 </div>
 
                 <div class="student_list mdl-shadow--2dp">
-                        <?php
+                    <?php
                             include("../database/connection.php");
                             if(isset($_POST['submit_scholarship'])){
                               $scholarship=$_POST['scholarship'];
+                                $scholarship_text = "";
+                                if ($scholarship == "No")
+                                {
+                                    $scholarship_text = "नाही"; 
+                                }
+                                elseif ($scholarship == "Savitri_Bai")
+                                {
+                                    $scholarship_text = "सावित्रीबाई";
+                                }
+                                elseif ($scholarship == "Handicapped")
+                                {
+                                    $scholarship_text = "अपंग";
+                                }
+                                elseif ($scholarship == "Unclean_business")
+                                {
+                                    $scholarship_text = "अस्वच्छ व्यवसाय";
+                                }
+                                elseif ($scholarship == "Minority")
+                                {
+                                    $scholarship_text = "अल्पसंख्याक";
+                                }
+                                elseif ($scholarship == "Metric_before")
+                                {
+                                    $scholarship_text = "मैट्रिकपूर्व";
+                                }
+                                elseif ($scholarship == "Attendance_bhatta")
+                                {
+                                    $scholarship_text = "उपस्थिती भत्ता";
+                                }
+                                elseif ($scholarship == "Adivasi_Scholarship")
+                                {
+                                    $scholarship_text = "आदिवासी शिष्यवृत्ती";
+                                }
                               
-                           echo "<h2 id='form_header'>Scholarship Wise Student List</h2>";
                            echo "<div id='dvContents'>";     
+                                echo "<h2 id='form_header'>Students' List for scholarship ($scholarship_text)</h2>";
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo "<tr>";
@@ -146,7 +180,7 @@
                            echo "</table>";
                            echo "</div>";
                            echo "<div class='submitButtonDiv'>";
-                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print ID Card</button>";
+                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print List</button>";
                            echo "</div>";
                         
 
@@ -163,9 +197,9 @@
         </main>
 
     </div>
-    
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script type="text/javascript">
+
+    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
                 var contents = $("#dvContents").html();
@@ -182,7 +216,7 @@
                 frameDoc.document.write('<html><head><title></title>');
                 frameDoc.document.write('</head><body>');
                 //Append the external CSS file.
-                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/StudentIdCard.css" rel="stylesheet" type="text/css" />');
+                frameDoc.document.write('<link href="css/forPrinting.css" rel="stylesheet" type="text/css" />');
                 //Append the DIV contents.
                 frameDoc.document.write(contents);
                 frameDoc.document.write('</body></html>');

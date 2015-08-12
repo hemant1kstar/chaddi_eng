@@ -1,21 +1,30 @@
 .student_list {
+    background-color: white;
     margin: 48px 16px;
 }
 .showDataDiv {
-/*    margin: 48px 16px;*/
+    /*    margin: 48px 16px;*/
     background-color: white;
     padding: 16px;
 }
+
 /*  To style only the dropdown menus in the LISTS section of the system*/
+
 .dropdownOptions {
     margin-left: 8px;
     position: relative;
     bottom: 8px;
 }
-
+#dvContents table {
+    margin: 0 16px;
+}
+#btnPrint {
+    display: block;
+    margin: 16px;
+}
 #showDataButton {
-    position: relative;
-    left: 48px;
+    /*    position: relative;*/
+    margin-left: 48px;
 }
 @media (min-width: 992px) {
     .student_list {

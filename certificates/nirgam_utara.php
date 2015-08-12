@@ -202,7 +202,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
         </main>
 
     </div>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
     <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
