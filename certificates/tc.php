@@ -63,7 +63,7 @@
                 <div class="mdl-shadow--2dp reg_info">
                     <form action="" method="post">
                         <div>
-                            <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
+                            <label class="customLabel" id="displayTableRegistrationLabel">Registration No for test:</label>
                             <?php
 include("../connection.php");
 $result = mysqli_query($con,"SELECT * FROM master");
