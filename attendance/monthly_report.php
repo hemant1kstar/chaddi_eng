@@ -23,13 +23,13 @@
 </head>
 
 <body>
-    <!--    Waterfall header-->
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Attendance System</span>
+                <span class="mdl-layout-title">Attendance</span>
                 
                 
             </div>
@@ -70,7 +70,7 @@
 
                         <form action="" method="post">
 
-                            <h2 id="form_header">Entry Attendance</h2>
+                            <h2 id="form_header">Monthly Attendance Report</h2>
 
 
                             <div class="mdl-grid">
@@ -171,14 +171,7 @@
 
                     <div class="attendance_div mdl-shadow--2dp">
 
-                        <h2 id="form_header">Monthly Report :
-                                 <?php 
-                                    if(isset($_POST['submit'])){
-                                        $month=$_POST['month'];
-                                         echo "$month";
-                                     }
-                                 ?>
-                               </h2>
+                        
 
                         <div class="">
 
@@ -194,7 +187,40 @@
                                 <?php
 
                             if(isset($_POST['submit'])){
-                              
+                                $class1=$_POST['class'];
+                                $month=$_POST['month'];
+                                $year=$_POST['year'];
+                                $monthName = "";
+
+                                
+                                
+                                if ($month == 01) {
+                                    $monthName = "Jan";
+                                }elseif ($month == 02) {
+                                    $monthName = "Feb";
+                                }if ($month == 03) {
+                                    $monthName = "March";
+                                }if ($month == 04) {
+                                    $monthName = "April";
+                                }if ($month == 05) {
+                                    $monthName = "May";
+                                }if ($month == 06) {
+                                    $monthName = "June";
+                                }if ($month == 07) {
+                                    $monthName = "July";
+                                }if ($month == 08) {
+                                    $monthName = "Aug";
+                                }if ($month == 09) {
+                                    $monthName = "Sept";
+                                }if ($month == 10) {
+                                    $monthName = "Oct";
+                                }if ($month == 11) {
+                                    $monthName = "Nov";
+                                }if ($month == 12) {
+                                    $monthName = "Dec";
+                                }
+                                
+                                echo "<h2 id='form_header'>Monthly Report for $monthName, $year </h2>"  ;
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo  "<tr>";
@@ -204,9 +230,7 @@
 //                                $timing1=$_POST['timing'];
 //                                $date1=$_POST['date1'];
 //                                $date2=$_POST['date2'];
-                                $class1=$_POST['class'];
-                                $month=$_POST['month'];
-                                $year=$_POST['year'];
+                               
                                 $days = cal_days_in_month(CAL_GREGORIAN, $month, $year); 
                           mysqli_query ($con,"set character_set_results='utf8'"); 
 

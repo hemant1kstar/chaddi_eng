@@ -19,6 +19,12 @@
     <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
 
+    <!-- CSS and JS for Snackbar -->
+    <link href="css/snackbar.min.css" rel="stylesheet">
+    <link href="material_js/material_for_snackbar.css" rel="stylesheet">
+    <script src="material_js/snackbar.min.js" type="text/javascript"></script>
+    <!-- End of CSS and JS for Snackbar -->
+
     <link rel="stylesheet" href="css/main.css">
 
     <!-- FUnction for the datepicker -->
@@ -35,13 +41,13 @@
 </head>
 
 <body>
-    <!--    Waterfall header-->
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Entry Student Details</span>
+                <span class="mdl-layout-title">All Student Details</span>
 
 
             </div>
@@ -118,9 +124,12 @@
       mysqli_query ($con,"set character_set_results='utf8'");      
       mysqli_query($con,"INSERT INTO master(reg_no,student_name,mother_name,gender,Mother_tongue,birthdate,age,nationality,religion,caste,sub_caste,category,father_name,father_occupation,annual_income,birth_place,district,state,prev_class,admission_date,prev_school_name,admission_class,prev_mark_sheet,prev_tc,nadar_fee,permanent_address,medium)values
       (N'$reg_no',N'$student_name',N'$mother_name',N'$gender',N'$mother_tongue',N'$birth_date',N'$age',N'$nationality',N'$religion',N'$caste',N'$sub_caste',N'$category',N'$father_name',N'$father_occupation',N'$annual_income',N'$birth_place',N'$district',N'$state',N'$prev_class',N'$admission_date',N'$prev_school_name',N'$admission_class',N'$prev_mark_sheet',N'$prev_tc',N'$nadar_fee',N'$permanent_address',N'$medium')"); 
-      echo "Student Details inserted successfully...";
-
-
+         // Code for Snackbar after the Submit button is clicked
+         echo "<script type='text/javascript'>
+                    $( document ).ready(function() {
+                        $.snackbar({content: 'Student basic data was entered successfully', timeout: 5000});
+                    });
+                </script>" ;
      }
     ?>
                     <div class="page-content">

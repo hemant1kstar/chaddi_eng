@@ -21,6 +21,12 @@
     <script src="jquery/jquery-2.1.4.min.js"></script>
     <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
+    
+    <!-- CSS and JS for Snackbar -->
+    <link href="css/snackbar.min.css" rel="stylesheet">
+    <link href="material_js/material_for_snackbar.css" rel="stylesheet">
+    <script src="material_js/snackbar.min.js" type="text/javascript"></script>
+    <!-- End of CSS and JS for Snackbar -->
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -28,8 +34,7 @@
     <script>
         $(function() {
             $(".datepicker").datepicker({
-                dateFormat: 'dd-mm-yy',
-                minDate: 0
+                dateFormat: 'dd-mm-yy'
             });
         });
 
@@ -42,13 +47,13 @@
 </head>
 
 <body>
-    <!--    Waterfall header-->
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Entry Student Details</span>
+                <span class="mdl-layout-title">All Student Details</span>
                 
                 
             </div>
@@ -121,7 +126,6 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                         </form>
 
 
-                        <!--                <div class="" id="masterTableBlock">-->
                         <h5 id="studentDetailsHeader">Student Details</h5>
 
                         <table class="mdl-data-table mdl-js-data-table table1" id="table1">
@@ -291,7 +295,15 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
                     mysqli_query ($con,"set character_set_results='utf8'");      
                     mysqli_query($con,"UPDATE master SET student_name=N'$student_name1',mother_name=N'$mother_name1',gender=N'$gender1',Mother_tongue=N'$mother_tongue1',birthdate=N'$birth_date1',age=N'$age1',nationality=N'$nationality1',religion=N'$religion1',caste=N'$caste1',sub_caste=N'$sub_caste1',category=N'$category1',father_name=N'$father_name1',father_occupation=N'$father_occupation1',annual_income=N'$annual_income1',birth_place=N'$birth_place1',district=N'$district1',state=N'$state1',prev_class='$prev_class1',admission_date=N'$admission_date1',prev_school_name=N'$prev_school_name1',admission_class=N'$admission_class1',prev_mark_sheet=N'$prev_mark_sheet1',prev_tc=N'$prev_tc1',nadar_fee=N'$nadar_fee1',permanent_address=N'$permanent_address1',medium=N'$medium1'  WHERE reg_no='$reg_no3'");
-                    echo "Student Details Updated  successfully...";
+                    
+                       
+                       // Code for Snackbar after the Submit button is clicked
+                       echo "<script type='text/javascript'>
+                    $( document ).ready(function() {
+                        $.snackbar({content: 'Student data was updated successfully', timeout: 5000});
+                    });
+                </script>" ;
+                       
                    }
                   ?>
                             <form action="" method="post">

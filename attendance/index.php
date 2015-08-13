@@ -35,13 +35,13 @@
 </head>
 
 <body>
-    <!--    Waterfall header-->
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Attendance System</span>
+                <span class="mdl-layout-title">Attendance</span>
 
 
             </div>
@@ -89,7 +89,7 @@
                                 // Code for Snackbar after the Submit button is clicked
                                 echo "<script type='text/javascript'>
                                             $( document ).ready(function() {
-                                                $.snackbar({content: 'Attendance inserted successfully'});
+                                                $.snackbar({content: 'Attendance inserted successfully', timeout: 5000});
                                             });
                                         </script>" ;       
                             }
@@ -101,7 +101,7 @@
 
                             <form action="" method="post">
 
-                                <h2 id="form_header">Entry Attendance</h2>
+                                <h2 id="form_header">Attendance Entry</h2>
 
 
                                 <div class="mdl-grid">

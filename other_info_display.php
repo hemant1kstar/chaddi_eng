@@ -27,7 +27,7 @@
                   <!-- Top row, always visible -->
                   <div class="mdl-layout__header-row">
                     <!-- Title -->
-                    <span class="mdl-layout-title">Entry Student Details</span>
+                    <span class="mdl-layout-title">All Student Details</span>
                     
                     
                   </div>

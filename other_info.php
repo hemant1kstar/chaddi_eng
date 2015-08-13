@@ -21,6 +21,12 @@
     <script src="jquery/jquery-2.1.4.min.js"></script>
     <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
+    
+    <!-- CSS and JS for Snackbar -->
+    <link href="css/snackbar.min.css" rel="stylesheet">
+    <link href="material_js/material_for_snackbar.css" rel="stylesheet">
+    <script src="material_js/snackbar.min.js" type="text/javascript"></script>
+    <!-- End of CSS and JS for Snackbar -->
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -28,8 +34,7 @@
     <script>
         $(function() {
             $(".datepicker").datepicker({
-                dateFormat: 'dd-mm-yy',
-                minDate: 0
+                dateFormat: 'dd-mm-yy'
             });
         });
 
@@ -39,13 +44,13 @@
 </head>
 
 <body>
-    <!--    Waterfall header-->
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Entry Student Details</span>
+                <span class="mdl-layout-title">All Student Details</span>
                 
                 
             </div>
@@ -117,7 +122,14 @@
       
       mysqli_query ($con,"set character_set_results='utf8'");      
       mysqli_query($con,"UPDATE master SET aadhar_no=N'$aadhar_no',bank_account_no=N'$bank_account_no',bank_branch=N'$bank_branch',bank_branch_code=N'$bank_branch_code',lic_id_no=N'$lic_id_no',minority_details=N'$minority_details',admitted_division=N'$admitted_division',student_name1=N'$student_name1',current_class=N'$current_class',current_class_entry_date=N'$current_class_entry_date',status=N'$status',contact_no=N'$contact_no',fee_concession=N'$fee_concession',admission_month=N'$admission_month',admission_year=N'$admission_year',handicapped=N'$handicapped',scholarship=N'$scholarship' WHERE reg_no='$reg_no'");
-      echo "Student Other Details inserted successfully...";
+      
+         
+         // Code for Snackbar after the Submit button is clicked
+         echo "<script type='text/javascript'>
+                    $( document ).ready(function() {
+                        $.snackbar({content: 'Student details were entered successfully', timeout: 5000});
+                    });
+                </script>" ;
      }
     ?>
 

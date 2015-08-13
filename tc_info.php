@@ -21,6 +21,12 @@
     <script src="jquery/jquery-2.1.4.min.js"></script>
     <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
+    
+    <!-- CSS and JS for Snackbar -->
+    <link href="css/snackbar.min.css" rel="stylesheet">
+    <link href="material_js/material_for_snackbar.css" rel="stylesheet">
+    <script src="material_js/snackbar.min.js" type="text/javascript"></script>
+    <!-- End of CSS and JS for Snackbar -->
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -28,8 +34,7 @@
     <script>
         $(function() {
             $(".datepicker").datepicker({
-                dateFormat: 'dd-mm-yy',
-                minDate: 0
+                dateFormat: 'dd-mm-yy'
             });
         });
 
@@ -38,13 +43,13 @@
 </head>
 
 <body>
-    <!--    Waterfall header-->
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Entry Student Details</span>
+                <span class="mdl-layout-title">All Student Details</span>
                 
                
             </div>
@@ -112,7 +117,14 @@
 
                     mysqli_query ($con,"set character_set_results='utf8'");      
                     mysqli_query($con,"UPDATE master SET school_leaving_class=N'$school_leaving_class',school_leaving_date=N'$date_leaving',student_progress=N'$student_progress',behaviour=N'$behaviour',school_leaving_reason=N'$leaving_reason',tc_no=N'$tc_no',tc_date=N'$tc_date',tc_remark=N'$remark' WHERE reg_no='$reg_no'");
-                    echo "Student TC Details inserted successfully...";
+                    
+                       // Code for Snackbar after the Submit button is clicked
+                       echo "<script type='text/javascript'>
+                    $( document ).ready(function() {
+                        $.snackbar({content: 'TC information was entered successfully', timeout: 5000});
+                    });
+                </script>" ;
+                       
                    }
                   ?>
 

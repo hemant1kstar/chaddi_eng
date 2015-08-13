@@ -21,7 +21,6 @@
     <link href="material_js/material_for_snackbar.css" rel="stylesheet">
     <script src="material_js/snackbar.min.js" type="text/javascript"></script>
     <!-- End of CSS and JS for Snackbar -->
-
     
     <link rel="stylesheet" href="css/main.css">
 
@@ -29,13 +28,13 @@
 </head>
 
 <body>
-    <!--    Waterfall header-->
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Entry Student Details</span>
+                <span class="mdl-layout-title">All Student Details</span>
                 
                
             </div>
@@ -92,7 +91,14 @@
       
       mysqli_query ($con,"set character_set_results='utf8'");      
       mysqli_query($con,"UPDATE master SET   exam_seat_no=N'$exam_seat_no',10_percentage=N'$class10_percentage',9_percentage=N'$class9_percentage',8_grade=N'$class8_grade',7_grade=N'$class7_grade',6_grade=N'$class6_grade',5_grade=N'$class5_grade',4_grade=N'$class4_grade',3_grade=N'$class3_grade',2_grade=N'$class2_grade',1_grade=N'$class1_grade' WHERE reg_no='$reg_no'");
-         echo "Student grades inserted successfully";
+         
+         
+         // Code for Snackbar after the Submit button is clicked
+         echo "<script type='text/javascript'>
+                    $( document ).ready(function() {
+                        $.snackbar({content: 'Student's grades were entered successfully', timeout: 5000});
+                    });
+                </script>" ;
      }
     ?>
 
