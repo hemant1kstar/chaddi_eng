@@ -104,7 +104,7 @@ if(isset($_POST['submit_student_info']))
                     <div class="">
                         <div id="dvContents">
 
-                            <div class="main mdl-shadow--2dp" id="mains">
+                            <div class="main mdl-shadow--4dp" id="mains">
                                 <h3 class="headname">महाराष्ट्र बालकांचा मोफत आणि सक्तीच्या शिक्षणाच्या नियम २०११, परीशिस्त - दोन </h3>
                                 <h3 class="namuna">नमुना - ३</h3>
                                 <div class="pramanptra">

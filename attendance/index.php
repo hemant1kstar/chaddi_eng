@@ -22,9 +22,16 @@
     <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
 
+    <!-- CSS and JS for Snackbar -->
+    <link href="../css/snackbar.min.css" rel="stylesheet">
+    <link href="../material_js/material_for_snackbar.css" rel="stylesheet">
+    <script src="../material_js/snackbar.min.js" type="text/javascript"></script>
+    <!-- End of CSS and JS for Snackbar -->
+
     <link rel="stylesheet" href="../css/main.css">
     <link href='../attendance/css/attendance.css' rel='stylesheet'>
 
+    
 </head>
 
 <body>
@@ -35,8 +42,8 @@
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Attendance System</span>
-                
-                
+
+
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
@@ -62,7 +69,7 @@
             <div class="page-content">
                 <!-- Your content goes here -->
 
-<?php
+                <?php
     include("../database/connection.php");
 ?>
                     <?php
@@ -79,11 +86,16 @@
                                  
                                     }
                                 } 
-                                  echo "Attendance inserted successfully";
-                                     
+                                // Code for Snackbar after the Submit button is clicked
+                                echo "<script type='text/javascript'>
+                                            $( document ).ready(function() {
+                                                $.snackbar({content: 'Attendance inserted successfully'});
+                                            });
+                                        </script>" ;       
                             }
 
 ?>
+                
 
                         <div class="attendance_div reg_info mdl-shadow--2dp">
 

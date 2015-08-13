@@ -8,7 +8,7 @@ body {
     width: 950px;
     margin: 15px auto 20px;
     background: white;
-    border: 1px solid #9E9E9E;
+/*    border: 1px solid #9E9E9E;*/
     padding: 30px 20px;
 }
 .reg_info {
@@ -19,6 +19,51 @@ body {
 #showCertificateButton {
     position: relative;
     left: 48px;
+}
+.numbersDiv {
+    position: relative;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+#tcNumberDiv,
+#registerNumberDiv,
+#dateNumberDiv {
+    display: inline;
+    position: relative;
+}
+#registerNumberDiv {
+    left: 32%;
+}
+#dateNumberDiv {
+    left: 64%;
+}
+.tc_info1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+.tc_info1  span{
+margin-right: 10px;
+}
+.space {
+    font-weight: 700;
+}
+.lastdiv {
+    padding: 50px 0px ;
+    position: relative;
+}
+.lipic,
+.class_teacher,
+.principal {
+    display: inline;
+    position: relative;
+}
+.lipic {
+    left: 7%;
+}
+.class_teacher {
+    left: 36%;
+}
+.principal {
+    left: 64%;
 }
 .schoolname,
 .place {

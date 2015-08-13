@@ -61,7 +61,7 @@
         <main class="mdl-layout__content">
             <div class="page-content">
                 <!-- Your content goes here -->
-                <div class="mdl-shadow--2dp reg_info">
+                <div class="mdl-shadow--4dp reg_info">
                     <form action="" method="post">
                         <div>
                             <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
@@ -114,7 +114,7 @@ echo "</select>";
 
 
                     <div id="dvContents">
-                        <div class="main mdl-shadow--2dp" id="mains">
+                        <div class="main mdl-shadow--4dp" id="mains">
                             <h3 class="schoolname">संत नामदेव प्राथमिक / माध्यमिक / उच्चमाध्यमिक विद्यालय, लातूर </h3>
                             <h5 class="place">तालुका: लातूर, जिल्हा: लातूर </h5>
                             <h4 class="bonafide">BONAFIDE CERTIFICATE</h4>

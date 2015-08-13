@@ -26,7 +26,7 @@
 <body>
     <!--    Waterfall header-->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--scroll">
+        <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -141,30 +141,35 @@ echo "</select>";
 
 
                     <div id="dvContents">
-                        <div class="main mdl-shadow--2dp" id="mains">
+                        <div class="main mdl-shadow--4dp" id="mains">
                             <h3 class="schoolname">संत नामदेव प्राथमिक / माध्यमिक / उच्चमाध्यमिक विद्यालय, लातूर </h3>
                             <h5 class="place">तालुका: लातूर, जिल्हा: लातूर </h5>
-                            <p>नंबर:<?php echo"$tc_no";?> रेजिस्टर नंबर: <?php echo"$reg_no1";?>दिनांक :<?php echo"$date_issued";?></p>
-                            <div class="tc_info1">
-                                <p><span>१) विधाथ्याचे संपूर्ण नाव : चि. </span><?php echo"$student_name"?></p>
-                                <p><span>२) आईचे नाव : सौ . </span><?php echo "$motername";?></p>
-                                <p><span>३) धर्म व जात (उपजातीसह): </span><?php echo "$religion-$caste";?></p>
-                                <p><span>४) राष्ट्रीयत्व : भारतीय</span></p>
-                                <p><span>५) जन्मस्थान :</span><?php echo "$birth_place,$birth_district,$birth_state";?></p>
-                                <p><span>६) जन्मदिनांक अंक व अक्षरी :</span><?php echo "$birthdate";?></p>
-                                <p><span>७) पूर्वी शिकत असलेली शाळा :</span><?php echo "$prev_school_name";?></p>
-                                <p><span>८) प्रवेश दिनांक :</span><?php echo "$admission_date";?></p>
-                                <p><span>९) प्रगती :</span><?php echo "$student_progress";?>
-                                   <span>१०) वर्तणूक :</span><?php echo "$behaviour";?></p>
-                                <p><span>११) शाळा सोडण्याचा दिनांक :</span><?php echo "$date_leaving";?></p>
-                                <p><span>१२) शाळा सोडण्याचे कारण  :</span><?php echo "$reason";?></p>
-                                <p><span>१३) कोणत्या वर्गात शिकत होता , केव्हापासून  :</span><?php echo "$class";?></p>
-                                <p><span>१४) शाळा सोडण्याचे कारण  :</span><?php echo "$remark";?></p>
+                            <div class="numbersDiv">
+                                <p id="tcNumberDiv">नंबर  : <?php echo"$tc_no";?></p>
+                                <p id="registerNumberDiv">रेजिस्टर नंबर  :  <?php echo"$reg_no1";?></p>
+                                <p id="dateNumberDiv">दिनांक  :  <?php echo"$date_issued";?></p>
                             </div>
+                            <div class="tc_info1">
+                                <p><span>१) विधाथ्याचे संपूर्ण नाव  :   </span><?php echo"$student_name"?></p>
+                                <p><span>२) आईचे नाव  :   </span><?php echo "$motername";?></p>
+                                <p><span>३) धर्म व जात (उपजातीसह) :  </span><?php echo "$religion-$caste";?></p>
+                                <p><span>४) राष्ट्रीयत्व  :  भारतीय</span></p>
+                                <p><span>५) जन्मस्थान  : </span><?php echo "$birth_place,$birth_district,$birth_state";?></p>
+                                <p><span>६) जन्मदिनांक अंक व अक्षरी  : </span><?php echo "$birthdate";?></p>
+                                <p><span>७) पूर्वी शिकत असलेली शाळा  : </span><?php echo "$prev_school_name";?></p>
+                                <p><span>८) प्रवेश दिनांक  : </span><?php echo "$admission_date";?></p>
+                                <p><span>९) प्रगती  : </span><?php echo "$student_progress";?></p>
+                                <p><span>१०) वर्तणूक  : </span><?php echo "$behaviour";?></p>
+                                <p><span>११) शाळा सोडण्याचा दिनांक  : </span><?php echo "$date_leaving";?></p>
+                                <p><span>१२) शाळा सोडण्याचे कारण   : </span><?php echo "$reason";?></p>
+                                <p><span>१३) कोणत्या वर्गात शिकत होता, केव्हापासून   : </span><?php echo "$class";?></p>
+                                <p><span>१४) शेरा    : </span><?php echo "$remark";?></p>
+                            </div>
+                            <p>प्रमाणित करण्यात येते की, वरील सर्व माहिती शाळेच्या अधिकृत नोंदणीप्रमाणे देण्यात आली आहे.</p>
+
                             <div class="lastdiv">
-                                <p>प्रमाणित करण्यात येते की , वरील सर्व माहिती शाळेच्या अधिकूर्त नोंदणीप्रमाणे देण्यात आली आहे .</p>
-                                <p class="lipic"><span class="space">मुख्य लिपिक</span></p>
-                                <p class="class_teacher"><span class="space">वर्ग शिक्षक</span></p>
+                                <p class="lipic">मुख्य लिपिक</p>
+                                <p class="class_teacher">वर्ग शिक्षक</p>
                                 <p class="principal">मुख्याध्यापक</p>
                             </div>
                             
@@ -200,7 +205,7 @@ echo "</select>";
                 frameDoc.document.write('<html><head><title></title>');
                 frameDoc.document.write('</head><body>');
                 //Append the external CSS file.
-                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/bonafide.css" rel="stylesheet" type="text/css" />');
+                frameDoc.document.write('<link href="../certificates/css/tc.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/tcForPrinting.css" rel="stylesheet" type="text/css" />');
                 //Append the DIV contents.
                 frameDoc.document.write(contents);
                 frameDoc.document.write('</body></html>');

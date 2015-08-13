@@ -109,7 +109,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
 
                     <div id="dvContents">
-                        <div class="main mdl-shadow--2dp" id="mains">
+                        <div class="main mdl-shadow--4dp" id="mains">
                             <h4 class="headdata">ओळखपत्र</h4>
                             <div class="photo">
                                 <!--                    <h6>PHOTO</h6>-->
