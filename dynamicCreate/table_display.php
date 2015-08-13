@@ -50,12 +50,14 @@
                         ?>
                     </tr>
                   </thead>
-                  <tbody>
+<!--                  <tbody>-->
                       <?php
+                            echo "<tbody>";
                             $arraylen=sizeof($columnname); //find array length
                             $result=mysqli_query($con,"SELECT * FROM $link");//select value from perticular table
                             while($row2= mysqli_fetch_array($result)) {
-                                  echo "<tr>";
+                                
+                                echo "<tr>";
                             for($co=0;$co<$arraylen;$co++){  
                                 $col_value=$row2[$co];
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
@@ -65,11 +67,12 @@
                                          echo "<th><a class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' href='table_for_delete.php?q=$link'>Delete</a></th>";
      
 
-                                   echo "<tr>";
+                                   echo "</tr>";
                                    $co++;
                             }
+                           echo "</tbody>";
                       ?>
-                  </tbody>
+<!--                  </tbody>-->
                  </table>
             
 <!--
