@@ -86,7 +86,7 @@ echo "</select>";
                             $student_name=""; 
                             $motername="";
                             $religion="";
-                            $caste="";
+                            $caste=""; 
                             $nationality="";
                             $birth_place="";
                             $birth_district="";
