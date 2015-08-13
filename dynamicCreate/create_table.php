@@ -30,7 +30,7 @@
         </div>
       </div>
         
-       <div class="mdl-grid" id="add_fields_div">
+       <div id="add_fields_div">
  
 
         </div>

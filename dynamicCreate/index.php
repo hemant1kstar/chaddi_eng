@@ -30,7 +30,7 @@
             echo " <h2 class='mdl-card__title-text'>$tablename1</h2>";
             echo " </div>";
             echo "<div class='mdl-card__actions mdl-card--border'>";
-            echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>Update Table</a>");
+            echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
             echo "</div>";
             echo "</div>";
             echo "</div>";
@@ -50,7 +50,7 @@
   </div>
   <div class="mdl-card__actions mdl-card--border">
       <!-- Accent-colored raised button with ripple -->
-    <a href="create_table.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    <a href="create_table.php" class="mdl-button mdl-js-button mdl-button--primary">
       Add Tables
     </a>
   </div>

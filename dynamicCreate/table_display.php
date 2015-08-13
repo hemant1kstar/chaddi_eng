@@ -63,8 +63,8 @@
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
                          
                                  }
-                echo "<th><a class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' href='edit_user.php?q=$link'>Update</a></th>";
-                                         echo "<th><a class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' href='table_for_delete.php?q=$link'>Delete</a></th>";
+                echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_user.php?q=$link'>Update</a></th>";
+                                         echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_for_delete.php?q=$link'>Delete</a></th>";
      
 
                                    echo "</tr>";
