@@ -61,7 +61,7 @@
         <main class="mdl-layout__content">
             <div class="page-content">
                 <!-- Your content goes here -->
-                <div class="mdl-shadow--4dp reg_info">
+                <div class="mdl-shadow--2dp reg_info">
                     <form action="" method="post">
                         <div>
                             <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
