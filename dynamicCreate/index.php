@@ -50,7 +50,7 @@
   </div>
   <div class="mdl-card__actions mdl-card--border">
       <!-- Accent-colored raised button with ripple -->
-    <a href="create_table.php" class="mdl-button mdl-js-button mdl-button--primary">
+    <a href="create_table_layout.php" class="mdl-button mdl-js-button mdl-button--primary">
       Add Tables
     </a>
   </div>

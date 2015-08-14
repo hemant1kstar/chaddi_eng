@@ -28,7 +28,6 @@
     <div class="">
         
         
-<!--      <form name="frmUser" method="post" action="edit_user.php?q=<?php echo $link; ?>">-->
             <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
                        <thead>
                     <tr>
@@ -50,7 +49,6 @@
                         ?>
                     </tr>
                   </thead>
-<!--                  <tbody>-->
                       <?php
                             echo "<tbody>";
                             $arraylen=sizeof($columnname); //find array length
@@ -60,11 +58,12 @@
                                 echo "<tr>";
                             for($co=0;$co<$arraylen;$co++){  
                                 $col_value=$row2[$co];
+                                $link1=$row2[0];
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
                          
                                  }
-                echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_user.php?q=$link'>Update</a></th>";
-                                         echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_for_delete.php?q=$link'>Delete</a></th>";
+    echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_user.php?q=".$link."&Create_id=".$link1."'>Update</a></th>";
+           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_for_delete.php?q=$link'>Delete</a></th>";
      
 
                                    echo "</tr>";
@@ -72,18 +71,14 @@
                             }
                            echo "</tbody>";
                       ?>
-<!--                  </tbody>-->
                  </table>
+        
+
+    <a href='addData.php?q=$link' class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" >
+       <i class="material-icons">add</i>
+    </a>
             
-<!--
-                         <input type="submit" name="update" value="Update"  id="checkBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submitbtn"/>  
-                    <button type='button' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent abutton'><a href='addData.php?q=$link' >Add</a></button>
-                       <button type='button' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent abutton'><a href='table_for_delete.php?q=$link' id='checkBtn1' >Delete</a></button>
--->
-                  
-           
-<!--    </form>  -->
-    
+
     </div>
     
     
