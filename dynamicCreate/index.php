@@ -31,6 +31,7 @@
             echo " </div>";
             echo "<div class='mdl-card__actions mdl-card--border'>";
             echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
+            echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
             echo "</div>";
             echo "</div>";
             echo "</div>";

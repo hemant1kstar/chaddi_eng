@@ -62,8 +62,8 @@
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
                          
                                  }
-    echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_user.php?q=".$link."&Create_id=".$link1."'>Update</a></th>";
-           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_for_delete.php?q=$link'>Delete</a></th>";
+    echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_table_row.php?q=".$link."&Create_id=".$link1."'>Update</a></th>";
+           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
      
 
                                    echo "</tr>";
