@@ -16,7 +16,31 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     </head>
 <body>
-<?php
+    
+    <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+              <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                  <!-- Title -->
+                  <span class="mdl-layout-title">Dynamic Content</span>
+                  <!-- Add spacer, to align navigation to the right -->
+                  <div class="mdl-layout-spacer"></div>
+                  <!-- Navigation. We hide it in small screens. -->
+                  <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="../index.php">Home</a>
+                  </nav>
+                </div>
+              </header>
+              <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Dynamic Content</span>
+                <nav class="mdl-navigation">
+                  <a class="mdl-navigation__link" href="../index.php">Home</a>
+                </nav>
+              </div>
+              <main class="mdl-layout__content">
+                <div class="page-content">
+                  <!-- Your content goes here -->
+                  <?php
    include("database/connection.php");
    $result = mysqli_query($con,"show tables");
 
@@ -30,8 +54,8 @@
             echo " <h2 class='mdl-card__title-text'>$tablename1</h2>";
             echo " </div>";
             echo "<div class='mdl-card__actions mdl-card--border'>";
-            echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
             echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
+            echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
             echo "</div>";
             echo "</div>";
             echo "</div>";
@@ -58,8 +82,11 @@
 </div>
     </div>
     
-    </div>
-    
+    </div>  
+<!--                </div>-->
+              </main>
+</div>
+  
     
     </body>
 </html>
