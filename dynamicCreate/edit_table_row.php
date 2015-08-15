@@ -7,7 +7,8 @@
         }
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
     <link rel="stylesheet" href="mdl/material.min.css">
     <link rel="stylesheet" href="css/add.css">

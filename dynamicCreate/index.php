@@ -75,7 +75,13 @@
         }
     
 ?>
-
+                <!-- Colored FAB button with ripple -->
+                <a href="create_table_layout.php" class="mdl-button mdl-js-button mdl-button--primary">
+                    Add Tables
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored addTable">
+                    <i class="material-icons">add</i>
+                    
+                    </button></a>
                     <div class='mdl-cell mdl-cell--4-col'>
 
                         <div class="mdl-card mdl-shadow--2dp demo-card-square">
