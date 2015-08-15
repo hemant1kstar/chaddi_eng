@@ -1,11 +1,20 @@
-<!-- Square card -->
-<style>
+body {
+    background-color: #FAFAFA;
+    font-family: Roboto, sans-serif;
+}
+
+.page-content {
+    max-width: 1024px;
+    margin: 48px auto;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+/*Square card*/
   .demo-card-square.mdl-card {
     width: 320px;
-    height: 320px;
+    height: 160px;
   }
   .demo-card-square > .mdl-card__title {
     color: #fff;
-    background:#46B6AC;
+      background:#8BC34A;
   }
-</style>
