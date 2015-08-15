@@ -6,26 +6,7 @@
         $results=mysqli_query($con,$query) or die('Query error:'.mysql_error());
         }
 ?>
-<?php
-        if(isset($_POST["submit_edit"]))
-        {
-           $dCreate_id=$_GET['Create_id'];
-            echo "$dCreate_id<br/>";
 
-            $columnname1=array();
-            $count1=0;
-                $row5= mysqli_fetch_array($results);
-                $columnname1[$count1]=$row5[0];
-              foreach($_POST["col_name"] as $cna=>$name1){
-                    
-                  echo "$columnname1[$count1]<br/>";
-//                mysqli_query($con,"UPDATE $link set $name='$name1' WHERE id='$dCreate_id'"); 
-               echo "$name1<br/>";
-                          $count1++;
-               }
-
-        }
-?>
 <html>
     <head>
     <link rel="stylesheet" href="mdl/material.min.css">
@@ -34,6 +15,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     </head>
 <body>
+    <div class='mdl-grid'>
+    <?php
+        if(isset($_POST["submit_edit"]))
+        {
+           $dCreate_id=$_GET['Create_id'];
+//            echo "$dCreate_id<br/>";
+
+//            $columnname1=array();
+//            $count1=1;
+              
+              foreach($_POST["col_name"] as $cna=>$value1){
+                      $row5= mysqli_fetch_array($results);
+                      $columnname1=$row5[0];
+                      echo "columnname: $columnname1<br/>";
+                            echo "columnvalue: $value1<br/>";
+                  if($columnname1=='id'){
+                  
+                  }else{
+                         mysqli_query($con,"UPDATE $link set $columnname1='$value1' WHERE id='$dCreate_id'"); 
+                  }
+               }
+//              $count1++;
+
+        }
+?>
+    </div>
+    
     <form method="post" action="">
         <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp dataadd">
         <?php
@@ -50,7 +58,7 @@
         <?php
                   $dCreate_id=$_GET['Create_id'];
                   $result=mysqli_query($con,"SELECT * FROM $link WHERE id='$dCreate_id'");
-                  echo "<input name='cid' value='$dCreate_id' disabled><br/>";
+         echo "<input name='col_name[]' value='$dCreate_id' type='text'><br/>";
             while($row1=mysqli_fetch_array($result))
             { 
                $arraylen=sizeof($columnname);
@@ -60,6 +68,7 @@
                 }
                 $co++;
             }
+          
           ?>
 
 
