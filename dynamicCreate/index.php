@@ -23,6 +23,8 @@
 
 <body>
 
+
+
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
@@ -35,7 +37,9 @@
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
                     <a class="mdl-navigation__link" href="../index.php">Home</a>
                 </nav>
+                
             </div>
+            
         </header>
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Dynamic Content</span>
@@ -45,7 +49,16 @@
         </div>
         <main class="mdl-layout__content">
             <div class="page-content">
-                <!-- Your content goes here -->
+                <!--                Floating FAB button -->
+                <div>
+                    <a href="create_table_layout.php" id="addTable" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored addTable">
+                        <i class="material-icons">add</i>
+                    </a>
+                    <div class="mdl-tooltip mdl-tooltip--large" for="addTable">
+                        Add New Tables
+                    </div>
+                </div>
+               
                 <?php
    include("database/connection.php");
    $result = mysqli_query($con,"show tables");
@@ -61,8 +74,8 @@
             echo " </div>";
 
             echo "<div class='mdl-card__actions mdl-card--border'>";
-//            echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
-            echo "<button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete Table</button>";
+            echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
+//            echo "<button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete Table</button>";
             echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
 
             echo "</div>";
@@ -72,15 +85,11 @@
         }
 
 ?>
-                <!-- Colored FAB button with ripple -->
-                <a href="create_table_layout.php" class="mdl-button mdl-js-button mdl-button--primary">
-                    Add Tables
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored addTable">
-                    <i class="material-icons">add</i>
-                    
-                    </button></a>
+                    <!-- Colored FAB button with ripple -->
+
                     <div class='mdl-cell mdl-cell--4-col'>
 
+                        <!--
                         <div class="mdl-card mdl-shadow--2dp demo-card-square">
                             <div class="mdl-card__title mdl-card--expand">
                                 <h2 class="mdl-card__title-text">Add Tables</h2>
@@ -89,12 +98,10 @@
                                 To add any dept info.
                             </div>
                             <div class="mdl-card__actions mdl-card--border">
-                                <!-- Accent-colored raised button with ripple -->
-                                <a href="create_table_layout.php" class="mdl-button mdl-js-button mdl-button--primary">
-      Add Tables
-    </a>
+                                <a href="create_table_layout.php" class="mdl-button mdl-js-button mdl-button--primary">Add Tables</a>
                             </div>
                         </div>
+-->
                     </div>
                     <?php  echo "</div>";?>
             </div>
@@ -102,13 +109,14 @@
         </main>
     </div>
 
-<script>
-function myFunction_Delete() {
-    if (confirm("Do you want to delete!") == true) {
-      window.location="table_delete.php?q=<?php echo $table[0]?>";
-    }
-}
-</script>
+    <script>
+        function myFunction_Delete() {
+            if (confirm("Do you want to delete!") == true) {
+                window.location = "table_delete.php?q=<?php echo $table[0]?>";
+            }
+        }
+
+    </script>
 
 </body>
 
