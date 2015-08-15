@@ -46,21 +46,22 @@
                       foreach($_POST["col_name"] as $cna=>$value1){
                               $row5= mysqli_fetch_array($results);
                               $columnname1=$row5[0];
-                              echo "columnname: $columnname1<br/>";
-                                    echo "columnvalue: $value1<br/>";
+//                              echo "columnname: $columnname1<br/>";
+//                                    echo "columnvalue: $value1<br/>";
                           if($columnname1=='id'){
 
                           }else{
-                                 mysqli_query($con,"UPDATE $link set $columnname1='$value1' WHERE id='$dCreate_id'"); 
+                                 mysqli_query($con,"UPDATE `$link` set `$columnname1`='$value1' WHERE id='$dCreate_id'"); 
                           }
                        }
+                       header("Location:table_display.php?q=$link");
 
                 }
         ?>
     </div>
-
+  <div class='mdl-grid'>
             <form method="post" action="">
-                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp dataadd">
+<!--                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp dataadd">-->
                 <?php
 
                     $columnname=array();
@@ -74,13 +75,14 @@
                 <?php
                           $dCreate_id=$_GET['Create_id'];
                           $result=mysqli_query($con,"SELECT * FROM $link WHERE id='$dCreate_id'");
-                 echo "<input name='col_name[]' value='$dCreate_id' type='text'><br/>";
+                 echo "<input name='col_name[]' value='$dCreate_id' class='mdl-textfield__input mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet' type='text' readonly>";
                     while($row1=mysqli_fetch_array($result))
                     { 
                        $arraylen=sizeof($columnname);
                        for($co=1;$co<$arraylen;$co++){ 
                              $col_value=$row1[$co];
-                              echo "<input type='text' name='col_name[]' value='$col_value'><br/>";
+              echo "<label class='mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet'>$columnname[$co]</label>";
+              echo "<input type='text' class='mdl-textfield__input mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet' name='col_name[]' value='$col_value' required>";
                         }
                         $co++;
                     }
@@ -91,8 +93,8 @@
             <input type="submit" name="submit_edit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised submitbtn">
 
             </form>
-
-        
+      </div>
+      
       </div>
   </main>
 </div>
