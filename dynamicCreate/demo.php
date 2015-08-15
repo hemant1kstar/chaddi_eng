@@ -54,16 +54,17 @@
 
         while($table = mysqli_fetch_array($result)) {
             echo "<div class='mdl-cell mdl-cell--4-col'>";
-            echo "<div class='mdl-card mdl-shadow--2dp demo-card-square'>";
-            echo " <div class='mdl-card__title mdl-card--expand'>";
+            echo "<div class='mdl-card mdl-shadow--2dp'>";
+            echo " <div class='mdl-card__title mdl-card--expand card1'>";
             $tablename1=ucwords($table[0]);
             echo " <h2 class='mdl-card__title-text'>$tablename1</h2>";
             echo " </div>";
 
             echo "<div class='mdl-card__actions mdl-card--border'>";
-            echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
-//          echo "<button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete Table</button>";
+//            echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
+            echo "<button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete Table</button>";
             echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
+
             echo "</div>";
             echo "</div>";
             echo "</div>";
@@ -71,11 +72,12 @@
         }
 
 ?>
-       
+                <!-- Colored FAB button with ripple -->
+
                     <div class='mdl-cell mdl-cell--4-col'>
 
-                        <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                            <div class="mdl-card__title mdl-card--expand">
+                        <div class="mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand card1">
                                 <h2 class="mdl-card__title-text">Add Tables</h2>
                             </div>
                             <div class="mdl-card__supporting-text">
@@ -95,8 +97,34 @@
         </main>
     </div>
 
+<script>
+function myFunction_Delete() {
+    if (confirm("Do you want to delete!") == true) {
+      window.location="table_delete.php?q=<?php echo $table[0]?>";
+    }
+}
+</script>
 
-
+<!--
+    <script>
+    $(document).ready(function() {
+    $('.card1').each(function () {
+    	var hue = 'rgb(' + (Math.floor((256-199)*Math.random()) + 200) + ',' + (Math.floor((256-199)*Math.random()) + 200) + ',' + (Math.floor((256-199)*Math.random()) + 200) + ')';
+    	$(this).css("background-color", hue);
+    });
+});
+    </script>
+-->
+   <script>
+    $(document).ready(function() {
+    $('.card1').each(function () {
+    var colors = ["#2196F3", "#3F51B5", "#673AB7", "#F44336", "#E91E63","#9C27B0","#00BCD4","#03A9F4","#009688","#4CAF50","#FFEB3B","#FF5722"];
+    var rand = Math.floor(Math.random() * colors.length);
+    $(this).css("background-color", colors[rand]);
+    });
+});
+    </script>
+    
 </body>
 
 </html>

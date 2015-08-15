@@ -87,8 +87,8 @@
                          
                                  }
     echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_table_row.php?q=".$link."&Create_id=".$link1."'>Update</a></th>";
-//           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
-                              echo "<th><button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete</button></th>";
+           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
+//                              echo "<th><button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete</button></th>";
      
 
                                    echo "</tr>";
@@ -111,6 +111,7 @@
 </div>
     
     
+<!--
 <script>
 function myFunction_Delete() {
     if (confirm("Do you want to delete!") == true) {
@@ -118,6 +119,7 @@ function myFunction_Delete() {
     }
 }
 </script>
+-->
 
       
 </body>
