@@ -4,7 +4,7 @@ body {
 }
 .page-content {
     position: relative;
-    max-width: 1024px;
+    max-width: 1023px;
     margin: 96px auto;
     background-color: white;
     padding: 48px 16px;
