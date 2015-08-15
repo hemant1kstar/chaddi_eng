@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css" /> 
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css" />
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <!--  End of CSS For Material Design-->
-    
+
     <link rel="stylesheet" href="css/style.css">
     <title>Index Page</title>
 
@@ -59,21 +59,18 @@
             $tablename1=ucwords($table[0]);
             echo " <h2 class='mdl-card__title-text'>$tablename1</h2>";
             echo " </div>";
-<<<<<<< HEAD
+
             echo "<div class='mdl-card__actions mdl-card--border'>";
 //            echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
-            echo "<button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete</button>";
-=======
-            echo "<div class='mdl-card__actions'>";
-            echo("<a href='table_delete.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
->>>>>>> origin/master
+            echo "<button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete Table</button>";
             echo("<a href='table_display.php?q=$table[0]'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
+
             echo "</div>";
             echo "</div>";
             echo "</div>";
             
         }
-    
+
 ?>
                 <!-- Colored FAB button with ripple -->
                 <a href="create_table_layout.php" class="mdl-button mdl-js-button mdl-button--primary">
@@ -99,33 +96,20 @@
                             </div>
                         </div>
                     </div>
-
+                    <?php  echo "</div>";?>
             </div>
-            <!--                </div>-->
+
         </main>
     </div>
-<<<<<<< HEAD
-    
-    </div>  
-<!--                </div>-->
-              </main>
-</div>
-  
-  
+
 <script>
 function myFunction_Delete() {
     if (confirm("Do you want to delete!") == true) {
-      window.location="table_delete.php?q=<?php echo $table[0] ;?>";
+      window.location="table_delete.php?q=<?php echo $table[0]?>";
     }
 }
 </script>
-    
-    </body>
-</html>
-=======
-
 
 </body>
 
 </html>
->>>>>>> origin/master
