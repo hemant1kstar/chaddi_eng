@@ -86,7 +86,8 @@
                          
                                  }
     echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_table_row.php?q=".$link."&Create_id=".$link1."'>Update</a></th>";
-           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
+//           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
+                              echo "<th><button class='mdl-button mdl-js-button mdl-button--primary' onclick='myFunction_Delete()'>Delete</button></th>";
      
 
                                    echo "</tr>";
@@ -97,22 +98,25 @@
                  </table>
         
 <?php
-   echo "<a href='add_data.php?q=$link' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
-   Add Data</a>";
+   echo "<a href='add_data.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary'>Add Data</a>";
+   echo "<a href='index.php' class='mdl-button mdl-js-button mdl-button--primary'>Back</a>";
 ?>
             
 
     </div>
         
-        
       </div>
   </main>
 </div>
     
-
     
-    
-    
+<script>
+function myFunction_Delete() {
+    if (confirm("Do you want to delete!") == true) {
+      window.location='table_row_delete.php?q=<?php echo $link;?>&row_id=<?php echo $link1?>';
+    }
+}
+</script>
 
       
 </body>
