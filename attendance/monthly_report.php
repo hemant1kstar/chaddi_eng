@@ -100,7 +100,7 @@
                                             <option value="09">Sep</option>
                                             <option value="10">Oct</option>
                                             <option value="11">Nov</option>
-                                            <option value="12">Deb</option>
+                                            <option value="12">Dec</option>
                                         </select>
                                     </label>
 
@@ -169,7 +169,7 @@
 
 
 
-                    <div class="attendance_div mdl-shadow--2dp">
+                    <div class="attendance_div mdl-shadow--2dp reportDiv">
 
                         
 
@@ -198,25 +198,25 @@
                                     $monthName = "Jan";
                                 }elseif ($month == 02) {
                                     $monthName = "Feb";
-                                }if ($month == 03) {
+                                }elseif ($month == 03) {
                                     $monthName = "March";
-                                }if ($month == 04) {
+                                }elseif ($month == 04) {
                                     $monthName = "April";
-                                }if ($month == 05) {
+                                }elseif ($month == 05) {
                                     $monthName = "May";
-                                }if ($month == 06) {
+                                }elseif ($month == 06) {
                                     $monthName = "June";
-                                }if ($month == 07) {
+                                }elseif ($month == 07) {
                                     $monthName = "July";
-                                }if ($month == 08) {
+                                }elseif ($month == '08') {
                                     $monthName = "Aug";
-                                }if ($month == 09) {
+                                }elseif ($month == '09') {
                                     $monthName = "Sept";
-                                }if ($month == 10) {
+                                }elseif ($month == 10) {
                                     $monthName = "Oct";
-                                }if ($month == 11) {
+                                }elseif ($month == 11) {
                                     $monthName = "Nov";
-                                }if ($month == 12) {
+                                }elseif ($month == 12) {
                                     $monthName = "Dec";
                                 }
                                 
@@ -322,14 +322,13 @@
         </main>
 
     </div>
-    <script src="../attendance/js/jquery-1.11.2.min.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="../jquery/jquery-2.1.4.min.js"></script>
+    <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 
     <script>
         $(function() {
             $('#datepicker1').datepicker({
-                dateFormat: 'yy-mm-dd',
-                maxDate: 0
+                dateFormat: 'yy-mm-dd'
             });
         });
 

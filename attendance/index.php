@@ -169,6 +169,7 @@
         </main>
 
     </div>
+    
 
     <?php
                   echo " <script>
@@ -188,7 +189,7 @@
                     }
                     echo "<table class='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'>";
                     echo "<thead>";
-                    echo "<tr><th>Reg No.</th><th class='mdl-data-table__cell--non-numeric'>Student Name</th><th>Attendance (only absent select)</th></tr>";
+                    echo "<tr><th>Reg No.</th><th class='mdl-data-table__cell--non-numeric'>Student Name</th><th>Attendance (Select only absent)</th></tr>";
                     echo "</thead><tbody>";
                     mysqli_query($con, "set character_set_results='utf8'");
                     $result = mysqli_query($con, "SELECT * FROM master where current_class='6'");
@@ -197,7 +198,9 @@
                         "</td>";
                         echo "<td class='mdl-data-table__cell--non-numeric'> ".$row['student_name'].
                         "</td>";
-                        echo "<td><input type='checkbox' name='check_list[]' value={$row['reg_no']} class='check'></td>";
+                        echo "<td><label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect' for='checkbox-1'>";
+                        echo "<input type='checkbox' id='checkbox-1'  name='check_list[]' value={$row['reg_no']} class='mdl-checkbox__input'>";
+                        echo "</label></td>";
                         echo "</tr>";
 
                     }
@@ -211,7 +214,7 @@
                     }
                     echo "<table class='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'>";
                     echo "<thead>";
-                    echo "<tr><th>Reg No.</th><th class='mdl-data-table__cell--non-numeric'>Student Name</th><th>Attendance (only absent select)</th></tr>";
+                    echo "<tr><th>Reg No.</th><th class='mdl-data-table__cell--non-numeric'>Student Name</th><th>Attendance (Select only absent)</th></tr>";
                     echo "</thead><tbody>";
                     mysqli_query($con, "set character_set_results='utf8'");
                     $result = mysqli_query($con, "SELECT * FROM master where current_class='7'");

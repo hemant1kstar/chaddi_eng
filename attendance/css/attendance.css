@@ -1,12 +1,16 @@
 .attendance_div {
     margin: 48px 16px;
     background-color: #fff;
-
-    /*    overflow: scroll;*/
+}
+.reportDiv {
+    overflow: scroll;
+}
+.reportDiv div {
+    display: inline-block;
 }
 .submitAttendance {
     margin: 16px;
-/*    margin: 16px auto;*/
+    /*    margin: 16px auto;*/
 }
 .dropdownOptions {
     margin-left: 8px;
