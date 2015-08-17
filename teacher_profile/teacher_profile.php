@@ -63,7 +63,8 @@
                                 echo "</div>";
                          }
                         ?>
-                        
+                    
+                <div class="mdl-shadow--2dp">       
                     <?php
                      include("../database/connection.php");
                       mysqli_query ($con,"set character_set_results='utf8'"); 
@@ -79,7 +80,13 @@
                          $other_info=$row['other_info'];
                          $training_info=$row['training_info'];
                          $date_of_appointment=$row['date_of_appointment'];
+                         $profile_photo_url=$row['profile_photo_url'];
                          
+                         echo "<div class='mdl-grid'>";
+                         echo "<div class='mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet'>";
+                         echo "<img src='$profile_photo_url' alt='No Image'>";
+                         echo "</div>";
+                         echo "</div>";
                          echo "<div class='mdl-grid'>";
                          echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "<label>Teacher Name :</label>";
@@ -132,7 +139,8 @@
                          echo "</div>";
                      }
                      ?>
-
+                    
+                    </div>
 
                     </div>
                 </main>

@@ -2,6 +2,7 @@
 <?php
 session_start();
 $success="";
+include("../../database/connection.php");
 
 $teacher_id=$_SESSION['teacher_id'];
 if(isset($_POST["teacher_profile_photo"])) {
@@ -46,11 +47,14 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 //                echo "Sorry, your file was not uploaded.";
                  echo "<script>
                         window.location = '../teacher_profile.php?success_info=Profile photo not Updated';
-                        </script>";
+                     </script>";
             // if everything is ok, try to upload file
             } else {
                 if (move_uploaded_file($_FILES["profile_photo"]["tmp_name"], $target_file)) {
 //                    echo "The file ". basename( $_FILES["profile_photo"]["name"]). " has been uploaded.";
+                     mysqli_query ($con,"set character_set_results='utf8'"); 
+                     $sql="UPDATE teacher_profile SET profile_photo_url=N'$target_file1' WHERE teacher_id='$teacher_id'";
+                     mysqli_query($con,$sql);
                         echo "<script>
                         window.location = '../teacher_profile.php?success_info=Profile photo Updated';
                         </script>";

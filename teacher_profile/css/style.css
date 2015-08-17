@@ -1,0 +1,29 @@
+body {
+    background-color: #A1887F;
+    font-family: Roboto, sans-serif;
+}
+.page-content {
+    position: relative;
+    max-width: 1023px;
+    margin: 96px auto;
+    background-color: white;
+    padding: 48px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+.addTable {
+    position: absolute;
+    right: 28px;
+    top: -28px;
+}
+
+/*Square card*/
+
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 160px;
+}
+.demo-card-square > .mdl-card__title {
+    color: #fff;
+    background: #8BC34A;
+}

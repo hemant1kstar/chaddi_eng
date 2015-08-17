@@ -12,11 +12,11 @@ unset($_SESSION['teacher_id']);
   if($success==0)
     {
         echo "<script>
-        window.location ='login.php?q=Please Login';
+        window.location ='login.php?problem=Please Login';
         </script>";
     }else{
            echo "<script>
-           window.location ='login.php?q=You have successfully Logged Out';
+           window.location ='login.php?problem=You have successfully Logged Out';
            </script>";
         }
 ?>

@@ -5,7 +5,21 @@
                  header("location:login/login.php?problem='Not Logged In'");
                      exit;
          }
+    $teacher_id=$_SESSION['teacher_id'];
 ?>
+
+<?php
+        include("database/connection.php");
+         // Make my_db the current database
+         $db_selected = mysqli_select_db($con,"teacher_.$teacher_id.");
+
+            if (!$db_selected) {
+            // If we couldn't, then it either doesn't exist, or we can't see it.
+              $db_sql = "CREATE DATABASE teacher_$teacher_id";
+            mysqli_query($con,$db_sql);
+             }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,6 +32,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <title>Teacher Profile</title>
+    <link rel="stylesheet" href="css/style.css">
         
 <!--        it must for checkbox select-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -52,6 +67,44 @@
                 <main class="mdl-layout__content">
                     <div class="page-content">
                         <!-- Your content goes here -->
+                        
+                                        <div>
+                    <a href="create_table_layout.php" id="addTable" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored addTable">
+                        <i class="material-icons">add</i>
+                    </a>
+                    <div class="mdl-tooltip mdl-tooltip--large" for="addTable">
+                        Add New Tables
+                    </div>
+                </div>
+               
+                <?php
+   include("database/connection.php");
+   $db_selected = mysqli_select_db($con,"teacher_$teacher_id");
+   $result = mysqli_query($con,"show tables");
+
+   echo "<div class='mdl-grid'>";
+
+        while($table = mysqli_fetch_array($result)) {
+            echo "<div class='mdl-cell mdl-cell--4-col'>";
+            echo "<div class='mdl-card mdl-shadow--2dp demo-card-square'>";
+            echo " <div class='mdl-card__title mdl-card--expand'>";
+            $tablename1=ucwords($table[0]);
+            echo " <h2 class='mdl-card__title-text'>$tablename1</h2>";
+            echo " </div>";
+
+            echo "<div class='mdl-card__actions mdl-card--border'>";
+            echo("<a href='table_delete.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
+            echo("<a href='table_display.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+            
+        }
+
+?>
+
+                    <?php  echo "</div>";?>
+         
                     </div>
                 </main>
             </div>
