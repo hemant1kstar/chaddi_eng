@@ -7,9 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <link rel="stylesheet" href="mdl/material.min.css">
+    <link rel="stylesheet" href="../material_js/material.min.css">
     <link rel="stylesheet" href="css/add.css">
-    <script src="mdl/material.min.js"></script>
+    <script src="../material_js/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <title>Data Add Page</title>
