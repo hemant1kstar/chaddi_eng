@@ -5,6 +5,7 @@
                  header("location:login/login.php?problem='Not Logged In'");
                      exit;
          }
+ $teacher_id=$_SESSION['teacher_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,9 +53,21 @@
                 <main class="mdl-layout__content">
                     <div class="page-content">
                         <!-- Your content goes here -->
+                        
+                        <?php
+                         if (isset($_GET["success_info"]))
+                                    {
+                                $str=$_GET["success_info"];
+                                echo "<div>";
+                                echo "$str";
+                                echo "</div>";
+                         }
+                        ?>
+                        
                     <?php
                      include("../database/connection.php");
-                     $sql="SELECT * from teacher_profile where teacher_id='501'";
+                      mysqli_query ($con,"set character_set_results='utf8'"); 
+                     $sql="SELECT * from teacher_profile where teacher_id='$teacher_id'";
                      $result = mysqli_query($con,$sql);
                      while($row = mysqli_fetch_array($result))
                      {
@@ -67,15 +80,56 @@
                          $training_info=$row['training_info'];
                          $date_of_appointment=$row['date_of_appointment'];
                          
-                         
+                         echo "<div class='mdl-grid'>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Teacher Name :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$teacher_profile_name";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Qualification :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$qualification";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Designation :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$designation";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Experience :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$experience";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Subjects :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$subjects";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Other Info :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$other_info";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Training Info :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$training_info";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
+                         echo "<label>Date of Appointment :</label>";
+                         echo "</div>";
+                         echo "<div class='mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet'>";
                          echo "$date_of_appointment";
+                         echo "</div>";
+                         echo "</div>";
                      }
                      ?>
 
