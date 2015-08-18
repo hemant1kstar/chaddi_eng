@@ -1,0 +1,34 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+.loginBlock {
+    max-width: 332px;
+    margin: 48px auto 16px;
+}
+
+.loginBlock h2 {
+    font-size: 34px;
+    margin: 0;
+    padding: 16px 16px 4px;
+    background-color: #4caf50;
+    color: white;
+}
+
+.inputDiv {
+    padding: 0 16px;
+}
+.mdl-textfield {
+    display: block;
+    margin: 8px auto;
+}
+
+.inputDiv button {
+    width: 100%;
+    margin: 16px auto;
+}
+
+.loginStatus {
+    text-align: center;
+    color: #f44336;
+    font-weight: 700;
+}
