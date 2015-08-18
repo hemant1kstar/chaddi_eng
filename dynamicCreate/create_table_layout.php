@@ -43,19 +43,30 @@
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
                     <input type="text" class="mdl-textfield__input" name="table_name" required placeholder="Enter table name">
                 </div>
+               </div>
+                 <div class='mdl-grid'>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
                     <button id="btnAddAddress"  class="mdl-button mdl-js-button mdl-button--primary" type="button">FIELDS ADD</button>
                 </div>
-      
-
+                  </div>
+          
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+              <input type="text" class="mdl-textfield__input" placeholder="Enter Field Name" name="check_list1[]" required>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+              <input type="hidden" name="datatype[]" value="VARCHAR(255)">
+              </div>
+            </div>
+            
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript">
             $("#btnAddAddress").click(function () {
-              $("#container").append('<div class="mdl-grid"><div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet"><input type="text" class="mdl-textfield__input" placeholder="Enter Field Name" name="check_list1[]" required></div><div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><select name="datatype[]"><option value="INTEGER">int</option><option value="VARCHAR(255)">VARCHAR</option><option value="date">DATE</option></select></div></div>');
+              $("#container").append('<div class="mdl-grid"><div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet"><input type="text" class="mdl-textfield__input" placeholder="Enter Field Name" name="check_list1[]" required></div><div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><input type="hidden" name="datatype[]" value="VARCHAR(255)"></div></div>');
             });
         </script>
           
-          </div>
+
           
           <div id="container">
           </div>

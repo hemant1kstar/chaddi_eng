@@ -19,6 +19,11 @@
 
     <!--        it must for checkbox select-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+    <!-- SweetAlert CSS and JavaScript files-->  
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+    
 </head>
 
 <body>
@@ -74,7 +79,8 @@
             echo " </div>";
 
             echo "<div class='mdl-card__actions mdl-card--border'>";
-            echo("<a href='table_delete.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
+//            echo '<button class="mdl-button mdl-js-button mdl-button--primary" onClick="myFunction_Delete(\''.$table[0].'\')">Delete Table</button>';
+            echo '<button class="mdl-button mdl-js-button mdl-button--primary delete_button1" onClick="myFunction_Delete(\''.$table[0].'\')">Delete Table</button>';
             echo("<a href='table_display.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
             echo "</div>";
             echo "</div>";
@@ -106,6 +112,14 @@
         </main>
     </div>
 
+<script>
+function myFunction_Delete(x) {
+swal({   title: "Are you sure?",   text: "You will not be able to recover this file!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   closeOnConfirm: false }, function(){   swal("Deleted!", "Your  file has been deleted.", "success"); 
+  window.location="table_delete.php?q="+x;
+});
+    
+}
+</script>
 
 
 </body>
