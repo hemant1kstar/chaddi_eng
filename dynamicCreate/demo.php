@@ -68,12 +68,7 @@
                               while($row1= mysqli_fetch_array($results)) {
                                 $columnname[$count]=$row1[0];
                                 $columnname1=ucwords($row1[0]);
-                                if($row1[0]=='id'){
-                                
-                                }else
-                                {
-                                 echo "<th class='mdl-data-table__cell--non-numeric'>$columnname1</th>";
-                                }
+                                echo "<th class='mdl-data-table__cell--non-numeric'>$columnname1</th>";
                                 $count++;
                               }
                           echo "<th class='mdl-data-table__cell--non-numeric'>Update</th>";
@@ -89,7 +84,7 @@
                             while($row2= mysqli_fetch_array($result)) {
                                 
                                 echo "<tr>";
-                            for($co=1;$co<$arraylen;$co++){  
+                            for($co=0;$co<$arraylen;$co++){  
                                 $col_value=$row2[$co];
                                 $link1=$row2[0];
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
@@ -98,6 +93,9 @@
     echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_table_row.php?q=".$link."&Create_id=".$link1."'>Update</a></th>";
       echo '<th><button class="mdl-button mdl-js-button mdl-button--primary" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')">Delete</button></th>';
 //           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
+
+     
+
                                    echo "</tr>";
                                    $co++;
                             }
@@ -117,14 +115,18 @@
   </main>
 </div>
     
-  <script>
-function myFunction_Delete_row(t_name,r_name) {
-swal({   title: "Are you sure?",   text: "You will not be able to recover this data!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   closeOnConfirm: false }, function(){   swal("Deleted!", "Your  file has been deleted.", "success"); 
-  window.location="table_row_delete.php?t_name="+t_name+"&row_id="+r_name;
-});   
+    
+<script>
+function myFunction_Delete_row(t_name) {
+swal({   title: "Are you sure?",   text: "You will not be able to recover this data!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   closeOnConfirm: false }, function(){   swal("Deleted!", "Your  data has been deleted.", "success"); 
+  window.location="table_row_delete.php?q="+t_name;
+});
+    
 }
-</script>  
+</script>
 
+
+      
 </body>
 </html>  
     

@@ -12,6 +12,7 @@
     <head>
     <link rel="stylesheet" href="../material_js/material.min.css">
     <link rel="stylesheet" href="css/add.css">
+    <link rel="stylesheet" href="css/edit_row.css">
     <script src="../material_js/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     </head>
@@ -53,7 +54,9 @@
 
                           }else{
 //                            echo "$link";
-                                 mysqli_query($con,"UPDATE $link set $columnname1='$value1' WHERE id='$dCreate_id'"); 
+//                            echo "$columnname1<br>";
+//                            echo "$value1<br>";
+                                 mysqli_query($con,"UPDATE $link set `$columnname1`='$value1' WHERE id='$dCreate_id'"); 
                           }
                        }
                        header("Location:table_display.php?q=$link");
@@ -77,7 +80,9 @@
                 <?php
                           $dCreate_id=$_GET['Create_id'];
                           $result=mysqli_query($con,"SELECT * FROM $link WHERE id='$dCreate_id'");
-                 echo "<input name='col_name[]' value='$dCreate_id' class='mdl-textfield__input mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet' type='text' readonly>";
+
+//this field is hidden which is not editable by user
+                 echo "<input name='col_name[]' value='$dCreate_id' class='mdl-textfield__input mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet hidden1' type='text' readonly>";
                     while($row1=mysqli_fetch_array($result))
                     { 
                        $arraylen=sizeof($columnname);

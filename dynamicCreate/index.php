@@ -79,7 +79,6 @@
             echo " </div>";
 
             echo "<div class='mdl-card__actions mdl-card--border'>";
-//            echo '<button class="mdl-button mdl-js-button mdl-button--primary" onClick="myFunction_Delete(\''.$table[0].'\')">Delete Table</button>';
             echo '<button class="mdl-button mdl-js-button mdl-button--primary delete_button1" onClick="myFunction_Delete(\''.$table[0].'\')">Delete Table</button>';
             echo("<a href='table_display.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
             echo "</div>";
@@ -87,37 +86,19 @@
             echo "</div>";
             
         }
-
+           echo "</div>";
 ?>
 
-                    <div class='mdl-cell mdl-cell--4-col'>
-
-                        <!--
-                        <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                            <div class="mdl-card__title mdl-card--expand">
-                                <h2 class="mdl-card__title-text">Add Tables</h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                To add any dept info.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a href="create_table_layout.php" class="mdl-button mdl-js-button mdl-button--primary">Add Tables</a>
-                            </div>
-                        </div>
--->
-                    </div>
-                    <?php  echo "</div>";?>
             </div>
 
         </main>
     </div>
 
 <script>
-function myFunction_Delete(x) {
+function myFunction_Delete(t_name) {
 swal({   title: "Are you sure?",   text: "You will not be able to recover this file!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   closeOnConfirm: false }, function(){   swal("Deleted!", "Your  file has been deleted.", "success"); 
-  window.location="table_delete.php?q="+x;
-});
-    
+  window.location="table_delete.php?q="+t_name;
+});   
 }
 </script>
 
