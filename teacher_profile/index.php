@@ -8,17 +8,7 @@
     $teacher_id=$_SESSION['teacher_id'];
 ?>
 
-<?php
-        include("database/connection.php");
-         // Make my_db the current database
-         $db_selected = mysqli_select_db($con,"teacher_.$teacher_id.");
 
-            if (!$db_selected) {
-            // If we couldn't, then it either doesn't exist, or we can't see it.
-              $db_sql = "CREATE DATABASE teacher_$teacher_id";
-            mysqli_query($con,$db_sql);
-             }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +69,7 @@
                
                 <?php
    include("database/connection.php");
-   $db_selected = mysqli_select_db($con,"teacher_$teacher_id");
+//   $db_selected = mysqli_select_db($con,"teacher_$teacher_id");
    $result = mysqli_query($con,"show tables");
 
    echo "<div class='mdl-grid'>";
