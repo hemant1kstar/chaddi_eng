@@ -1,5 +1,5 @@
 body {
-    background-color: #A1887F;
+/*    background-color: #A1887F;*/
     font-family: Roboto, sans-serif;
 }
 .page-content {
@@ -8,7 +8,7 @@ body {
     margin: 96px auto;
     background-color: white;
     padding: 48px 16px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+/*    border: 1px solid rgba(0, 0, 0, 0.12);*/
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
 }
 .addTable {

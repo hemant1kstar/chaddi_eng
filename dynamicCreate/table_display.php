@@ -1,69 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include("database/connection.php");
+if (isset($_GET['q'])) {  //get value as table name from url
+    $link=$_GET['q'];
+    //        mysqli_query ($con,"set character_set_results='utf8'"); 
+}
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+
     <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    <link rel="stylesheet" href="../material_js/material.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="../material_js/material.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css">
+        <script src="../material_js/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-        <title>Index Page</title>
-        
-<!--        it must for checkbox select-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-      
-    <!-- SweetAlert CSS and JavaScript files-->  
-    <script src="dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+        <title>
+            <?php echo $link; ?>
+        </title>
+
+        <link rel="stylesheet" href="css/table_display.css">
+
+        <!--        it must for checkbox select-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+        <!-- SweetAlert CSS and JavaScript files-->
+        <script src="dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
     </head>
-<body>
-    
-  <?php
-        include("database/connection.php");
-        if (isset($_GET['q'])) {  //get value as table name from url
-        $link=$_GET['q'];
-        mysqli_query ($con,"set character_set_results='utf8'"); 
-        }
-?>  
-    
-    
-    <!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Dynamic Content</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="./index.php">Home</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="./index.php">Home</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-        <!-- Your content goes here -->
-         
-              
-           <a href='index.php' class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect'>
-              <img src="../images/dynamicTables/ic_arrow_back_black_24px.svg" alt="x"/>
-           </a>
-          <div class="mdl-shadow--2dp">
-            <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp" id="dvContents">
-                       <thead>
-                    <tr>
-                        <?php
+
+    <body>
+
+
+
+
+        <!-- Always shows a header, even in smaller screens. -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Dynamic Content</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="./index.php">Home</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Title</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.php">Home</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <div class="contentDiv">
+                        <!-- Your content goes here -->
+                        <a href='index.php' class='mdl-button mdl-js-button mdl-js-ripple-effect backButton'>
+                            <img src="../images/dynamicTables/ic_arrow_back_black_24px.svg" alt="Back" />
+                        </a>
+                        <div class="mdl-shadow--2dp">
+                            <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp" id="dvContents">
+                                <thead>
+                                    <tr>
+                                        <?php
                              $query="DESCRIBE $link"; //build query for get column names from table
+//                                mysqli_query ($con,"set character_set_results='utf8'"); 
+
                              $results=mysqli_query($con,$query) or die('Query error:'.mysql_error());
 
                              $columnname=array();
@@ -83,9 +90,9 @@
                           echo "<th class='mdl-data-table__cell--non-numeric'>Delete</th>";
 
                         ?>
-                    </tr>
-                  </thead>
-                      <?php
+                                    </tr>
+                                </thead>
+                                <?php
                             echo "<tbody>";
                             $arraylen=sizeof($columnname); //find array length
                             $result=mysqli_query($con,"SELECT * FROM $link");//select value from perticular table
@@ -106,65 +113,71 @@
                             }
                            echo "</tbody>";
                       ?>
-                 </table>
-        
-<?php
+                            </table>
+
+                            <?php
    echo "<a href='add_data.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary'>Add Data</a>";
 ?>
-    
-  <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print   </button>        
 
-    </div>
-        
-      </div>
-  </main>
-</div>
-    
-  <script>
-function myFunction_Delete_row(t_name,r_name) {
-swal({   title: "Are you sure?",   text: "You will not be able to recover this data!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   closeOnConfirm: false }, function(){   swal("Deleted!", "Your  file has been deleted.", "success"); 
-  window.location="table_row_delete.php?t_name="+t_name+"&row_id="+r_name;
-});   
-}
-</script>  
-  
-      <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#btnPrint").click(function() {
-                var contents = $("#dvContents").html();
-                var frame1 = $('<iframe />');
-                frame1[0].name = "frame1";
-                frame1.css({
-                    "position": "absolute",
-                    "top": "-1000000px"
+                                <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print </button>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function myFunction_Delete_row(t_name, r_name) {
+                swal({
+                    title: "Are you sure?",
+                    text: "You will not be able to recover this data!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes, delete it!",
+                    closeOnConfirm: false
+                }, function() {
+                    swal("Deleted!", "Your  file has been deleted.", "success");
+                    window.location = "table_row_delete.php?t_name=" + t_name + "&row_id=" + r_name;
                 });
-                $("body").append(frame1);
-                var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
-                frameDoc.document.open();
-                //Create a new HTML document.
-                frameDoc.document.write('<html><head><title></title>');
-                frameDoc.document.write('</head><body>');
-                //Append the external CSS file.
-                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="css/style.css" rel="stylesheet" type="text/css" />');
-                //Append the DIV contents.
-                frameDoc.document.write(contents);
-                frameDoc.document.write('</body></html>');
-                frameDoc.document.close();
-                setTimeout(function() {
-                    window.frames["frame1"].focus();
-                    window.frames["frame1"].print();
-                    frame1.remove();
-                }, 500);
+            }
+
+        </script>
+
+        <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("#btnPrint").click(function() {
+                    var contents = $("#dvContents").html();
+                    var frame1 = $('<iframe />');
+                    frame1[0].name = "frame1";
+                    frame1.css({
+                        "position": "absolute",
+                        "top": "-1000000px"
+                    });
+                    $("body").append(frame1);
+                    var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+                    frameDoc.document.open();
+                    //Create a new HTML document.
+                    frameDoc.document.write('<html><head><title></title>');
+                    frameDoc.document.write('</head><body>');
+                    //Append the external CSS file.
+                    frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="css/style.css" rel="stylesheet" type="text/css" />');
+                    //Append the DIV contents.
+                    frameDoc.document.write(contents);
+                    frameDoc.document.write('</body></html>');
+                    frameDoc.document.close();
+                    setTimeout(function() {
+                        window.frames["frame1"].focus();
+                        window.frames["frame1"].print();
+                        frame1.remove();
+                    }, 500);
+                });
             });
-        });
 
-    </script>
+        </script>
 
-</body>
-</html>  
-    
-    
-    
+    </body>
 
-
+    </html>

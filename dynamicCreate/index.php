@@ -15,7 +15,7 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="css/style.css">
-    <title>Index Page</title>
+    <title>Create Tables</title>
 
     <!--        it must for checkbox select-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -68,12 +68,13 @@
                
                 <?php
    include("database/connection.php");
+mysqli_query ($con,"set character_set_results='utf8'"); 
    $result = mysqli_query($con,"show tables");
 
    echo "<div class='mdl-grid'>";
 
         while($table = mysqli_fetch_array($result)) {
-            echo "<div class='mdl-cell mdl-cell--4-col'>";
+            echo "<div class='mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--4-col'>";
             echo "<div class='mdl-card mdl-shadow--2dp demo-card-square'>";
             $tablename1=ucwords($table[0]);
             echo "<a href='table_display.php?q=`$table[0]`'  class='mdl-card__title mdl-card--expand'>";
