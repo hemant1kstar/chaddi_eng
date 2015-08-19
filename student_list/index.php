@@ -18,6 +18,7 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/tab.css">
     <link href='../student_list/css/class_wise.css' rel='stylesheet'>
 
 </head>
@@ -43,6 +44,7 @@
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
                 <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
+                <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
             </div>
 
         </header>
@@ -57,16 +59,19 @@
             </nav>
         </div>
 
+            
+
 
 
         <main class="mdl-layout__content">
+            
             <div class="page-content">
                 <?php
                       include("../database/connection.php");
-                      ?>
+                ?>
 
                     <div class="student_list mdl-shadow--2dp">
-                        <h2 id="form_header">Class Wise</h2>
+                        <h2 id="form_header">Class Wise Student List</h2>
                         <form action="" method="post">
                             <div class="showDataDiv">
                                 <label class="customLabel">Select Class :
@@ -89,7 +94,12 @@
 
                         </form>
                     </div>
-
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+      <a href="#student_list_panel" class="mdl-tabs__tab is-active">Student List</a>
+      <a href="#student_report_panel" class="mdl-tabs__tab">Student Report</a>
+  </div>
+    <div class="mdl-tabs__panel is-active" id="student_list_panel">
                     <div class="student_list mdl-shadow--2dp">
                         <?php
                             
@@ -146,9 +156,33 @@
                             }
                          ?>
                     </div>
-
-
-
+            
+</div>
+    <div class="mdl-tabs__panel" id="student_report_panel">
+        
+            <div class="student_list mdl-shadow--2dp">
+                        <?php
+                            
+                            if(isset($_POST['submit_class'])){
+                              $class=$_POST['class1'];
+                           
+                           echo "<div id='dvContents1'>";  
+                           echo "<h2 id='form_header'>Students' Report for Class $class</h2>";
+                              
+                          mysqli_query ($con,"set character_set_results='utf8'"); 
+                          $query = mysqli_query($con,"SELECT * FROM master where current_class='$class'") or die(mysqli_error());
+                          $num_rows = mysqli_num_rows($query);
+                           echo "Total Students : $num_rows \n";
+                           echo "</div>";
+                           echo "<div class='submitButtonDiv'>";
+                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint1' value='Print'>Print List</button>";
+                           echo "</div>";
+                            }
+                         ?>
+                    </div>
+        
+    </div>
+                </div>
             </div>
         </main>
 
@@ -172,6 +206,38 @@
                 frameDoc.document.write('</head><body>');
                 //Append the external CSS file.
                 frameDoc.document.write('<link href="css/forPrinting.css" rel="stylesheet" type="text/css" />');
+                //Append the DIV contents.
+                frameDoc.document.write(contents);
+                frameDoc.document.write('</body></html>');
+                frameDoc.document.close();
+                setTimeout(function() {
+                    window.frames["frame1"].focus();
+                    window.frames["frame1"].print();
+                    frame1.remove();
+                }, 500);
+            });
+        });
+
+    </script>
+        
+    <script type="text/javascript">
+        $(function() {
+            $("#btnPrin1t").click(function() {
+                var contents = $("#dvContents1").html();
+                var frame1 = $('<iframe />');
+                frame1[0].name = "frame1";
+                frame1.css({
+                    "position": "absolute",
+                    "top": "-1000000px"
+                });
+                $("body").append(frame1);
+                var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+                frameDoc.document.open();
+                //Create a new HTML document.
+                frameDoc.document.write('<html><head><title></title>');
+                frameDoc.document.write('</head><body>');
+                //Append the external CSS file.
+                frameDoc.document.write('<link href="css/style_report.css" rel="stylesheet" type="text/css" />');
                 //Append the DIV contents.
                 frameDoc.document.write(contents);
                 frameDoc.document.write('</body></html>');

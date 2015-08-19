@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Division-wise Students' List | Paperless System</title>
+    <title>Report Students' List | Paperless System</title>
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
@@ -32,7 +32,7 @@
                 <!-- Title -->
                 <span class="mdl-layout-title">Student List</span>
                 
-                
+               
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
@@ -40,12 +40,11 @@
                 <a href="year_wise.php" class="mdl-layout__tab">Year Wise</a>
                 <a href="caste_wise.php" class="mdl-layout__tab">Caste Wise</a>
                 <a href="student_status.php" class="mdl-layout__tab">Student Status</a>
-                <!--                  <a href="" class="mdl-layout__tab">Student Leaved</a>-->
-                <a href="division_wise.php" class="mdl-layout__tab is-active">Division Wise</a>
+                <a href="division_wise.php" class="mdl-layout__tab">Division Wise</a>
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
                 <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
-                <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
+                <a href="total_report.php" class="mdl-layout__tab is-active">Student Report</a>
             </div>
 
         </header>
@@ -60,54 +59,59 @@
             </nav>
         </div>
 
+            
+
 
 
         <main class="mdl-layout__content">
+            
             <div class="page-content">
+                <?php
+                      include("../database/connection.php");
+                ?>
 
-
-                <div class="student_list mdl-shadow--2dp">
-                    <h2 id="form_header">Division Wise</h2>
-                    <form action="" method="post">
-                        <div class="showDataDiv">
-                            
-                            <label class="customLabel">Select Class :
-                                    <select name="class1" class="dropdownOptions" required>
+                    <div class="student_list mdl-shadow--2dp">
+                        <h2 id="form_header">Age Wise Student List</h2>
+                        <form action="" method="post">
+                            <div class="showDataDiv">
+                                <label class="customLabel">Select Age:
+                                    <select name="age1" class="dropdownOptions" required>
                                         <option value=""></option>
-                                        <option value="1">1st</option>
-                                        <option value="2">2nd</option>
-                                        <option value="3">3rd</option>
-                                        <option value="4">4th</option>
-                                        <option value="5">5th</option>
-                                        <option value="6">6th</option>
-                                        <option value="7">7th</option>
-                                        <option value="8">8th</option>
-                                        <option value="9">9th</option>
-                                        <option value="10">10th</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
                                     </select>
                                 </label>
-                            <label class="customLabel">Select Division :</label>
-                            <select name="division1" class="dropdownOptions" required>
-                                <option value=""></option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                            </select>
+                                <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name='submit_class' id="showDataButton" value='Submit'>
+                            </div>
 
-                            <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" id="showDataButton" name='submit_division' value='Submit'>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="student_list mdl-shadow--2dp">
+                        </form>
+                    </div>
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+      <a href="#student_list_panel" class="mdl-tabs__tab is-active">Student List</a>
+      <a href="#student_report_panel" class="mdl-tabs__tab">Student Report</a>
+      <a href="#total_report_panel" class="mdl-tabs__tab">Total Student Report</a>
+  </div>
+    <div class="mdl-tabs__panel is-active" id="student_list_panel">
+                    <div class="student_list mdl-shadow--2dp">
                         <?php
-                            include("../database/connection.php");
-                            if(isset($_POST['submit_division'])){
-                              $division=$_POST['division1'];
-                              $class=$_POST['class1'];
-                              
+                            
+                            if(isset($_POST['submit_class'])){
+                              $age1=$_POST['age1'];
+                           
                            echo "<div id='dvContents'>";  
-                                echo "<h2 id='form_header'>Students' List for Class $class, Division $division</h2>";
+                           echo "<h2 id='form_header'>Students' List for Age $age1</h2>";
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo "<tr>";
@@ -123,7 +127,7 @@
                            echo "<tbody>";
                               
                           mysqli_query ($con,"set character_set_results='utf8'"); 
-                                          $query = mysqli_query($con,"SELECT * FROM master where admitted_division='$division' and current_class='$class'") or die(mysqli_error());
+                          $query = mysqli_query($con,"SELECT * FROM master where age='$age1'") or die(mysqli_error());
                           while($row=mysqli_fetch_array($query))
                           {
                             $reg_no=$row['reg_no'];
@@ -134,13 +138,15 @@
                             $aadhar_no=$row['aadhar_no'];
                             $class=$row['current_class'];
 
+
+
                             echo "<tr>";
                             echo "<td>$reg_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$student_name</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$gender</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$category</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$class</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$aadhar_no</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$aadhar_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$permanent_address</td>";
                             echo "</tr>";
                           }
@@ -150,23 +156,58 @@
                            echo "</div>";
                            echo "<div class='submitButtonDiv'>";
                            echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print List</button>";
-                           echo "</div>"; 
-       
-
+                           echo "</div>";
                             }
                          ?>
-
-
+                    </div>
+            
+</div>
+    <div class="mdl-tabs__panel" id="student_report_panel">
+        
+            <div class="student_list mdl-shadow--2dp">
+                        <?php
+                            
+                            if(isset($_POST['submit_class'])){
+                                   $age1=$_POST['age1'];
+                           
+                           echo "<div id='dvContents1'>";  
+                           echo "<h2 id='form_header'>Students' Report for Age $age1</h2>";
+                              
+                          mysqli_query ($con,"set character_set_results='utf8'"); 
+                          $query = mysqli_query($con,"SELECT * FROM master where age='$age1'") or die(mysqli_error());
+                          $num_rows = mysqli_num_rows($query);
+                           echo "Total Students : $num_rows \n";
+                           echo "</div>";
+                           echo "<div class='submitButtonDiv'>";
+                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint1' value='Print'>Print List</button>";
+                           echo "</div>";
+                            }
+                         ?>
+                    </div>
+        
+    </div>
+    
+        <div class="mdl-tabs__panel" id="total_report_panel">
+            <div class="student_list mdl-shadow--2dp">
+                    <?php       
+                           echo "<div id='dvContents1'>";  
+                           echo "<h2 id='form_header'>Overall Students Report</h2>";
+                          mysqli_query ($con,"set character_set_results='utf8'"); 
+                          $query1 = mysqli_query($con,"SELECT * FROM master") or die(mysqli_error());
+                          $num_rows1 = mysqli_num_rows($query1);
+                           echo "Total Students : $num_rows1 \n";
+                           echo "</div>";
+                ?>
+                
+            </div>
+        </div>
                 </div>
-
-
-
             </div>
         </main>
 
     </div>
-                    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
                 var contents = $("#dvContents").html();
@@ -184,6 +225,38 @@
                 frameDoc.document.write('</head><body>');
                 //Append the external CSS file.
                 frameDoc.document.write('<link href="css/forPrinting.css" rel="stylesheet" type="text/css" />');
+                //Append the DIV contents.
+                frameDoc.document.write(contents);
+                frameDoc.document.write('</body></html>');
+                frameDoc.document.close();
+                setTimeout(function() {
+                    window.frames["frame1"].focus();
+                    window.frames["frame1"].print();
+                    frame1.remove();
+                }, 500);
+            });
+        });
+
+    </script>
+        
+    <script type="text/javascript">
+        $(function() {
+            $("#btnPrin1t").click(function() {
+                var contents = $("#dvContents1").html();
+                var frame1 = $('<iframe />');
+                frame1[0].name = "frame1";
+                frame1.css({
+                    "position": "absolute",
+                    "top": "-1000000px"
+                });
+                $("body").append(frame1);
+                var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+                frameDoc.document.open();
+                //Create a new HTML document.
+                frameDoc.document.write('<html><head><title></title>');
+                frameDoc.document.write('</head><body>');
+                //Append the external CSS file.
+                frameDoc.document.write('<link href="css/style_report.css" rel="stylesheet" type="text/css" />');
                 //Append the DIV contents.
                 frameDoc.document.write(contents);
                 frameDoc.document.write('</body></html>');

@@ -18,6 +18,7 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/tab.css">
     <link href='../student_list/css/class_wise.css' rel='stylesheet'>
 
 </head>
@@ -43,6 +44,7 @@
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
                 <a href="scholarship.php" class="mdl-layout__tab is-active">Scholarship</a>
+                <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
             </div>
 
         </header>

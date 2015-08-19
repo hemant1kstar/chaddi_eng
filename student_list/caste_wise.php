@@ -18,6 +18,7 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/tab.css">
     <link href='../student_list/css/class_wise.css' rel='stylesheet'>
 
 </head>
@@ -43,6 +44,7 @@
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
                 <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
+                <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
             </div>
 
         </header>
@@ -61,7 +63,6 @@
 
         <main class="mdl-layout__content">
             <div class="page-content">
-
 
                 <div class="student_list mdl-shadow--2dp">
                     <h2 id="form_header">Caste Wise</h2>
@@ -82,8 +83,15 @@
                             <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" id="showDataButton" name='submit_category' value='Submit'>
                         </div>
                     </form>
-                </div>
+            </div>
+                
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+      <a href="#student_list_panel" class="mdl-tabs__tab is-active">Student List</a>
+      <a href="#student_report_panel" class="mdl-tabs__tab">Student Report</a>
+  </div>
 
+    <div class="mdl-tabs__panel is-active" id="student_list_panel">
                 <div class="student_list mdl-shadow--2dp">
                         <?php
                             include("../database/connection.php");
@@ -119,8 +127,6 @@
                             $aadhar_no=$row['aadhar_no'];
                             $class=$row['current_class'];
 
-
-
                             echo "<tr>";
                             echo "<td>$reg_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$student_name</td>";
@@ -142,9 +148,35 @@
                          ?>
 
                 </div>
+    </div>
+       <div class="mdl-tabs__panel" id="student_report_panel">
+                           <div class="student_list mdl-shadow--2dp">
+                        <?php
+                            include("../database/connection.php");
+                            if(isset($_POST['submit_category'])){
+                              $category=$_POST['category1'];
+                                
+                           echo "<div id='dvContents'>";  
+                                echo "<h2 id='form_header'>Students' Report for Category: $category</h2>";
+
+                              
+                          mysqli_query ($con,"set character_set_results='utf8'"); 
+                          $query = mysqli_query($con,"SELECT * FROM master where category='$category'") or die(mysqli_error());
+                            $num_rows = mysqli_num_rows($query);
+                           echo "Total Students : $num_rows\n";
+                           echo "</div>";
+                           echo "<div class='submitButtonDiv'>";
+                           echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print List</button>";
+                           echo "</div>";
+                            }
+                
+                         ?>
+
+                </div>
+       </div>
 
 
-
+                </div>
             </div>
         </main>
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Aadhar Card-wise Students' List | Paperless System</title>
+    <title>Age-wise Students' List | Paperless System</title>
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
@@ -18,7 +18,6 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="css/tab.css">
     <link href='../student_list/css/class_wise.css' rel='stylesheet'>
 
 </head>
@@ -32,19 +31,18 @@
                 <!-- Title -->
                 <span class="mdl-layout-title">Student List</span>
                 
-                
+               
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
-                <a href="index.php" class="mdl-layout__tab">Class Wise</a>
+                <a href="index.php" class="mdl-layout__tab is-active">Class Wise</a>
                 <a href="year_wise.php" class="mdl-layout__tab">Year Wise</a>
                 <a href="caste_wise.php" class="mdl-layout__tab">Caste Wise</a>
                 <a href="student_status.php" class="mdl-layout__tab">Student Status</a>
                 <a href="division_wise.php" class="mdl-layout__tab">Division Wise</a>
-                <a href="aadhar_card_wise.php" class="mdl-layout__tab is-active">Aadhar Card Wise</a>
+                <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
                 <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
-                 <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
             </div>
 
         </header>
@@ -63,31 +61,43 @@
 
         <main class="mdl-layout__content">
             <div class="page-content">
+                <?php
+                      include("../database/connection.php");
+                      ?>
 
-
-                <div class="student_list mdl-shadow--2dp">
-                    <h2 id="form_header">Aadhar Card</h2>
-                    <form action="" method="post">
-                        <div class="showDataDiv">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                <input class="mdl-textfield__input" type="text" id="aadhar_card_no" name="aadhar_card_no" />
-                                <label class="mdl-textfield__label" for="aadhar_card_no">Aadhar Card No:</label>
-                                
+                    <div class="student_list mdl-shadow--2dp">
+                        <h2 id="form_header">Class Wise</h2>
+                        <form action="" method="post">
+                            <div class="showDataDiv">
+                                <label class="customLabel">Select Class :
+                                    <select name="class1" class="dropdownOptions" required>
+                                        <option value=""></option>
+                                        <option value="1">1st</option>
+                                        <option value="2">2nd</option>
+                                        <option value="3">3rd</option>
+                                        <option value="4">4th</option>
+                                        <option value="5">5th</option>
+                                        <option value="6">6th</option>
+                                        <option value="7">7th</option>
+                                        <option value="8">8th</option>
+                                        <option value="9">9th</option>
+                                        <option value="10">10th</option>
+                                    </select>
+                                </label>
+                                <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name='submit_class' id="showDataButton" value='Submit'>
                             </div>
-                            <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" id="showDataButton" name='submit_aadhar_card' value='Submit'>
-                        </div>
-                    </form>
-                </div>
 
-                <div class="student_list mdl-shadow--2dp">
-  
+                        </form>
+                    </div>
+
+                    <div class="student_list mdl-shadow--2dp">
                         <?php
-                            include("../database/connection.php");
-                            if(isset($_POST['submit_aadhar_card'])){
-                              $aadhar_card_no=$_POST['aadhar_card_no'];
-                              
-                           echo "<div id='dvContents'>";     
-                                echo "<h2 id='form_header'>Student's Data for Aadhar No: $aadhar_card_no</h2>";
+                            
+                            if(isset($_POST['submit_class'])){
+                              $class=$_POST['class1'];
+                           
+                           echo "<div id='dvContents'>";  
+                           echo "<h2 id='form_header'>Students' List for Class $class</h2>";
                            echo  "<table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>";
                            echo  "<thead>";
                            echo "<tr>";
@@ -103,7 +113,7 @@
                            echo "<tbody>";
                               
                           mysqli_query ($con,"set character_set_results='utf8'"); 
-                         $query = mysqli_query($con,"SELECT * FROM master where aadhar_no='$aadhar_card_no'") or die(mysqli_error());
+                          $query = mysqli_query($con,"SELECT * FROM master where current_class='$class'") or die(mysqli_error());
                           while($row=mysqli_fetch_array($query))
                           {
                             $reg_no=$row['reg_no'];
@@ -114,13 +124,15 @@
                             $aadhar_no=$row['aadhar_no'];
                             $class=$row['current_class'];
 
+
+
                             echo "<tr>";
                             echo "<td>$reg_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$student_name</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$gender</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$category</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$class</td>";
-                            echo "<td class='mdl-data-table__cell--non-numeric'>$aadhar_no</td>";
+                            echo "<td class='mdl-data-table__cell--non-numeric'>$aadhar_no</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$permanent_address</td>";
                             echo "</tr>";
                           }
@@ -131,13 +143,9 @@
                            echo "<div class='submitButtonDiv'>";
                            echo "<button type='button' class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary' id='btnPrint' value='Print'>Print List</button>";
                            echo "</div>";
-
                             }
                          ?>
-
-  
-
-                </div>
+                    </div>
 
 
 
@@ -145,9 +153,8 @@
         </main>
 
     </div>
-    
     <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
                 var contents = $("#dvContents").html();
