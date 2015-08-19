@@ -53,10 +53,13 @@
   <main class="mdl-layout__content">
     <div class="page-content">
         <!-- Your content goes here -->
-            <div class="mdl-shadow--2dp">
-        
-        
-            <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+         
+              
+           <a href='index.php' class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect'>
+              <img src="../images/dynamicTables/ic_arrow_back_black_24px.svg" alt="x"/>
+           </a>
+          <div class="mdl-shadow--2dp">
+            <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp" id="dvContents">
                        <thead>
                     <tr>
                         <?php
@@ -107,9 +110,9 @@
         
 <?php
    echo "<a href='add_data.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary'>Add Data</a>";
-   echo "<a href='index.php' class='mdl-button mdl-js-button mdl-button--primary'>Back</a>";
 ?>
-            
+    
+  <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print   </button>        
 
     </div>
         
@@ -124,6 +127,39 @@ swal({   title: "Are you sure?",   text: "You will not be able to recover this d
 });   
 }
 </script>  
+  
+      <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#btnPrint").click(function() {
+                var contents = $("#dvContents").html();
+                var frame1 = $('<iframe />');
+                frame1[0].name = "frame1";
+                frame1.css({
+                    "position": "absolute",
+                    "top": "-1000000px"
+                });
+                $("body").append(frame1);
+                var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+                frameDoc.document.open();
+                //Create a new HTML document.
+                frameDoc.document.write('<html><head><title></title>');
+                frameDoc.document.write('</head><body>');
+                //Append the external CSS file.
+                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="css/style.css" rel="stylesheet" type="text/css" />');
+                //Append the DIV contents.
+                frameDoc.document.write(contents);
+                frameDoc.document.write('</body></html>');
+                frameDoc.document.close();
+                setTimeout(function() {
+                    window.frames["frame1"].focus();
+                    window.frames["frame1"].print();
+                    frame1.remove();
+                }, 500);
+            });
+        });
+
+    </script>
 
 </body>
 </html>  

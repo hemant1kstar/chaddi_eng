@@ -41,6 +41,7 @@
                 <!-- Navigation. We hide it in small screens. -->
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
                     <a class="mdl-navigation__link" href="../index.php">Home</a>
+                    <a class="mdl-navigation__link" href="backup/backup_db.php">Backup</a>
                 </nav>
                 
             </div>
@@ -50,6 +51,7 @@
             <span class="mdl-layout-title">Dynamic Content</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="backup/backup_db.php">Backup</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
@@ -73,14 +75,14 @@
         while($table = mysqli_fetch_array($result)) {
             echo "<div class='mdl-cell mdl-cell--4-col'>";
             echo "<div class='mdl-card mdl-shadow--2dp demo-card-square'>";
-            echo " <div class='mdl-card__title mdl-card--expand'>";
             $tablename1=ucwords($table[0]);
-            echo " <h2 class='mdl-card__title-text'>$tablename1</h2>";
+            echo "<a href='table_display.php?q=`$table[0]`'  class='mdl-card__title mdl-card--expand'>";
+            echo " <div>";
+            echo "<h2 class='mdl-card__title-text'>$tablename1</h2>";
             echo " </div>";
-
+            echo "</a>";
             echo "<div class='mdl-card__actions mdl-card--border'>";
             echo '<button class="mdl-button mdl-js-button mdl-button--primary delete_button1" onClick="myFunction_Delete(\''.$table[0].'\')">Delete Table</button>';
-            echo("<a href='table_display.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
             echo "</div>";
             echo "</div>";
             echo "</div>";
