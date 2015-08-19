@@ -60,11 +60,11 @@ if (isset($_GET['q'])) {  //get value as table name from url
                 <div class="page-content">
                     <div class="contentDiv">
                         <!-- Your content goes here -->
-                        <a href='index.php' class='mdl-button mdl-js-button mdl-js-ripple-effect backButton'>
+                        <a href='index.php' class='mdl-js-button mdl-js-ripple-effect backButton'>
                             <img src="../images/dynamicTables/ic_arrow_back_black_24px.svg" alt="Back" />
                         </a>
-                        <div class="mdl-shadow--2dp">
-                            <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp" id="dvContents">
+                        <div class="">
+                            <table class="mdl-data-table mdl-js-data-table" id="dvContents">
                                 <thead>
                                     <tr>
                                         <?php
@@ -105,8 +105,8 @@ if (isset($_GET['q'])) {  //get value as table name from url
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
                          
                                  }
-    echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='edit_table_row.php?q=".$link."&Create_id=".$link1."'>Update</a></th>";
-      echo '<th><button class="mdl-button mdl-js-button mdl-button--primary" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')">Delete</button></th>';
+                                echo "<th><a class='mdl-js-button mdl-js-ripple-effect' href='edit_table_row.php?q=".$link."&Create_id=".$link1."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></th>";
+                                echo '<th><button class="mdl-js-button mdl-js-ripple-effect" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></th>';
 //           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
                                    echo "</tr>";
                                    $co++;

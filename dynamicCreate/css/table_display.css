@@ -9,15 +9,18 @@ body {
     position: relative;
     display: inline-block;
     background-color: white;
-    padding: 48px 16px;
+    padding: 48px 16px 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
 }
 .backButton {
+    padding: 12px;
     position: absolute;
     left: 0;
     top: 0;
 }
-
+#dvContents{
+    margin: 16px 0;
+}
 @media (min-width: 992px) {
     .page-content {
         margin: 96px 24px;
