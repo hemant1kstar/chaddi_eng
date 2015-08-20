@@ -3,7 +3,11 @@ include("database/connection.php");
 if (isset($_GET['q'])) {  //get value as table name from url
     $link=$_GET['q'];
     //        mysqli_query ($con,"set character_set_results='utf8'"); 
+    
 }
+$reso = $link;
+$links = trim($reso,'`');
+$linksTitle = strtoupper($links);
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -18,7 +22,7 @@ if (isset($_GET['q'])) {  //get value as table name from url
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <title>
-            <?php echo $link; ?>
+            <?php echo $linksTitle; ?> | Paperless System
         </title>
 
         <link rel="stylesheet" href="css/table_display.css">
@@ -58,9 +62,11 @@ if (isset($_GET['q'])) {  //get value as table name from url
             </div>
             <main class="mdl-layout__content">
                 <div class="page-content">
+                    <h2 class="contentHeader"><?php echo $links; ?></h2>
+
                     <div class="contentDiv">
                         <!-- Your content goes here -->
-                        <a href='index.php' class='mdl-js-button mdl-js-ripple-effect backButton'>
+                        <a href='index.php' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
                             <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
                         </a>
                         <div class="">

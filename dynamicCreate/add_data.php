@@ -25,31 +25,34 @@
         }
 ?>
 
-        <!-- Always shows a header, even in smaller screens. -->
+ <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Dynamic Content</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="./index.php">Home</a>
-      </nav>
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Dynamic Content</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="./index.php">Home</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="./index.php">Home</a>
+        </nav>
     </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="./index.php">Home</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-        <!-- Your content goes here -->
-      <form method="post" action="">
-        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp dataadd">   
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="contentDiv">
+            <!-- Your content goes here -->
+                <a href='table_display.php' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
+                    <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
+                </a>
+            <form method="post" action="">
         <?php
             $columnname=array();
             $count=0;
@@ -62,10 +65,14 @@
             for($co=1;$co<$arraylen;$co++){
                 $name=$columnname[$co];   
         ?>
-        <tr>
-        <td class="mdl-data-table__cell--non-numeric"><label><?php echo $name ?></label></td>
-        <td><input type="text" name="cname[]" class="text" value=""></td>    
-        </tr>
+               <div class="labelAndInput">
+                    <label>
+                        <?php echo $name ?>
+                    </label>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input type="text" class="mdl-textfield__input" name="cname[]" class="text" value="">
+                    </div>
+                </div>
         <?php
             }
         ?>
@@ -92,13 +99,10 @@
                 }
                   
             ?>
-        <tr>
-            <td colspan="2">
                 <input type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Add">
-            </td>
-        </tr>
-        </table>   
+
     </form>
+            </div>
         
       </div>
   </main>

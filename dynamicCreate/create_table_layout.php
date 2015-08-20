@@ -42,8 +42,12 @@
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <!-- Your content goes here -->
+
                     <h2 class="contentHeader">Create New Table</h2>
                     <div class="contentDiv">
+                        <a href='index.php' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
+                            <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
+                        </a>
                         <form method="post" action="create_table.php">
 
                             <div class="mdl-textfield mdl-js-textfield">

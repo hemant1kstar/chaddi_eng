@@ -1,9 +1,32 @@
-*{
-/*    border: 1px solid #838383;*/
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
 }
-.dataadd{
-    margin: 100px auto 0px;
+.page-content {
+    display: block;
+    margin: 96px 16px;
 }
+
+.contentDiv {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    padding: 48px 16px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+.backButton {
+    padding: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.labelAndInput {
+    display: block;
+}
+.labelAndInput label {
+    
+}
+/*
 .text{
     width: 200px;
     height: 30px;
@@ -14,6 +37,8 @@
     background-color: #acacac;
     border-radius: 5px;
 }
+*/
+/*
 .submitbtn{
     margin: 0px auto 15px;
 }
@@ -30,4 +55,4 @@
 }
 .abutton{
     margin: 0px 0px 15px 10px;
-}
+}*/

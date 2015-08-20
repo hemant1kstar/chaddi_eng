@@ -1,26 +1,32 @@
 body {
+    background-color: #fafafa;
     font-family: Roboto, sans-serif;
     color: rgba(0, 0, 0, 0.87);
 }
 .contentHeader {
     font-size: 24px;
-    background-color: #8bc34a;
-    color: black;
     margin: 0;
-    padding: 16px 16px 4px;
+    color: rgba(0, 0, 0, 0.54);
 }
 .page-content {
     width: 600px;
-    margin: 96px auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+    margin: 96px 16px;
 }
 .contentDiv {
-    padding: 16px;
+    padding: 48px 16px 16px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+.backButton {
+    padding: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .mdl-textfield {
     display: block;
 }
-
 #btnAddAddress {
     margin: 16px 0;
 }
@@ -31,4 +37,9 @@ body {
 #submitButton input {
     position: absolute;
     right: 0;
+}
+@media (min-width: 992px) {
+    .page-content {
+        margin: 96px 24px;
+    }
 }
