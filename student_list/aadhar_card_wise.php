@@ -54,8 +54,7 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="master.php">Master</a>
-                <a class="mdl-navigation__link" href="index.php">Entry</a>
+       <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
 

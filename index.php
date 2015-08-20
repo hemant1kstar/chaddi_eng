@@ -51,7 +51,10 @@
         </div>
         <main class="mdl-layout__content">
             <div class="page-content">
-                <div class="mdl-card mdl-shadow--2dp cards_layout">
+                
+                <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                     <div class="mdl-card mdl-shadow--2dp cards_layout">
                   <div class="mdl-card__title mdl-card--expand">
                     <h2 class="mdl-card__title-text">Information</h2>
                   </div>
@@ -64,7 +67,9 @@
                     </a>
                   </div>
                 </div>
+            </div>
                 
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                 <div class="mdl-card mdl-shadow--2dp cards_layout">
                   <div class="mdl-card__title mdl-card--expand">
                     <h2 class="mdl-card__title-text">Certificates</h2>
@@ -78,7 +83,10 @@
                     </a>
                   </div>
                 </div>
+            </div>
                 
+                    
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                 <div class="mdl-card mdl-shadow--2dp cards_layout">
                   <div class="mdl-card__title mdl-card--expand">
                     <h2 class="mdl-card__title-text">Student List</h2>
@@ -92,7 +100,10 @@
                     </a>
                   </div>
                 </div>
+         </div>
                 
+                    
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                 <div class="mdl-card mdl-shadow--2dp cards_layout">
                   <div class="mdl-card__title mdl-card--expand">
                     <h2 class="mdl-card__title-text">Teacher Profile</h2>
@@ -106,20 +117,25 @@
                     </a>
                   </div>
                 </div>
-                
+        </div>
+             
+                    
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
             <div class="mdl-card mdl-shadow--2dp cards_layout">
                   <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text"></h2>
+                    <h2 class="mdl-card__title-text">Dynamic Information</h2>
                   </div>
                   <div class="mdl-card__supporting-text">
-                     Get Student Information ..
+                     Get Dynamic Information ..
                   </div>
                   <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="master_table/index.php">
-                      Student Info
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="dynamicCreate/index.php">
+                      Dynamic Info
                     </a>
                   </div>
                 </div>
+                </div>
+        </div>
 
             </div>
 

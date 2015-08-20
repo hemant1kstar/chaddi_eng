@@ -50,8 +50,7 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="master.php">Master</a>
-                <a class="mdl-navigation__link" href="index.php">Entry</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
 
@@ -65,7 +64,7 @@
                         <div>
                             <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
                                 <?php
-include("../connection.php");
+include("../database/connection.php");
               $result = mysqli_query($con,"SELECT * FROM master"); 
 echo "<select name='reg_no' class='dropdownOptions' required>";
              echo "<option value=''></option>";
