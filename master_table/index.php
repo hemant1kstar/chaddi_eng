@@ -20,9 +20,9 @@
     <!-- End of CSS and JS for Jquery datepicker -->
 
     <!-- CSS and JS for Snackbar -->
-    <link href="css/snackbar.min.css" rel="stylesheet">
-    <link href="material_js/material_for_snackbar.css" rel="stylesheet">
-    <script src="material_js/snackbar.min.js" type="text/javascript"></script>
+    <link href="../css/snackbar.min.css" rel="stylesheet">
+    <link href="../material_js/material_for_snackbar.css" rel="stylesheet">
+    <script src="../material_js/snackbar.min.js" type="text/javascript"></script>
     <!-- End of CSS and JS for Snackbar -->
 
     <link rel="stylesheet" href="../css/main.css">

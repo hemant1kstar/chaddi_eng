@@ -52,7 +52,7 @@
         <main class="mdl-layout__content">
             <div class="page-content">
                 
-                <div class="mdl-grid">
+        <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                      <div class="mdl-card mdl-shadow--2dp cards_layout">
                   <div class="mdl-card__title mdl-card--expand">
@@ -64,6 +64,22 @@
                   <div class="mdl-card__actions mdl-card--border">
                     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="master_table/index.php">
                       Student Info
+                    </a>
+                  </div>
+                </div>
+            </div>
+            
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                <div class="mdl-card mdl-shadow--2dp cards_layout">
+                  <div class="mdl-card__title mdl-card--expand">
+                    <h2 class="mdl-card__title-text">Attendance</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                     Get Student attendance ..
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="attendance/index.php">
+                      Student Attendance
                     </a>
                   </div>
                 </div>
