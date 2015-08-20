@@ -22,6 +22,7 @@
         $link=$_GET['q'];
         $query="DESCRIBE $link"; //build query for get column names from table
         $results=mysqli_query($con,$query) or die('Query error:'.mysql_error());
+        $links = trim($link,'`');
         }
 ?>
 
@@ -47,12 +48,17 @@
     </div>
     <main class="mdl-layout__content">
         <div class="page-content">
+            <h2 class="contentHeader">Add new data in "<span class="tableName"><?php echo $links; ?></span>"</h2>
+
             <div class="contentDiv">
             <!-- Your content goes here -->
-                <a href='table_display.php' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
+                <a href='table_display.php?q=<?php echo $link; ?>' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
                     <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
                 </a>
+
             <form method="post" action="">
+                <table >
+
         <?php
             $columnname=array();
             $count=0;
@@ -65,14 +71,20 @@
             for($co=1;$co<$arraylen;$co++){
                 $name=$columnname[$co];   
         ?>
-               <div class="labelAndInput">
-                    <label>
+                
+                       <tr>
+                           <td>
+                   <label class="headerLabel">
                         <?php echo $name ?>
                     </label>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input type="text" class="mdl-textfield__input" name="cname[]" class="text" value="">
+                           </td>
+                           <td>
+                               <div id="addDataInput" class="mdl-textfield mdl-js-textfield">
+                        <input type="text"  class="mdl-textfield__input" name="cname[]" value="">
                     </div>
-                </div>
+                           </td>
+                       </tr>
+                
         <?php
             }
         ?>
@@ -99,9 +111,15 @@
                 }
                   
             ?>
-                <input type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Add">
+                    <tr >
+                        <td colspan="2" id="addButton">
+                        <input type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Add">
+                        </td>
+                    </tr>
+                </table>
 
     </form>
+
             </div>
         
       </div>

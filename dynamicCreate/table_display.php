@@ -5,8 +5,7 @@ if (isset($_GET['q'])) {  //get value as table name from url
     //        mysqli_query ($con,"set character_set_results='utf8'"); 
     
 }
-$reso = $link;
-$links = trim($reso,'`');
+$links = trim($link,'`');
 $linksTitle = strtoupper($links);
 ?>
     <!DOCTYPE html>

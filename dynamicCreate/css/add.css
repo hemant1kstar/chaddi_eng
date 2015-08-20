@@ -6,7 +6,15 @@ body {
     display: block;
     margin: 96px 16px;
 }
-
+.contentHeader {
+    font-size: 24px;
+/*    text-transform: capitalize;*/
+    margin: 0;
+    color: rgba(0, 0, 0, 0.54);
+}
+.tableName {
+    text-transform: capitalize;
+}
 .contentDiv {
     position: relative;
     display: inline-block;
@@ -20,12 +28,32 @@ body {
     left: 0;
     top: 0;
 }
-.labelAndInput {
-    display: block;
+.headerLabel {
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 700;
+    font-size: 14px;
 }
-.labelAndInput label {
-    
+#addDataInput {
+    padding: 8px;
+    /*    margin-left: 16px;*/
 }
+#addButton {
+    position: relative;
+    height: 36px;
+}
+#addButton input {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+
+@media (min-width: 992px) {
+    .page-content {
+        margin: 96px 24px;
+    }
+}
+
+
 /*
 .text{
     width: 200px;
@@ -38,6 +66,8 @@ body {
     border-radius: 5px;
 }
 */
+
+
 /*
 .submitbtn{
     margin: 0px auto 15px;
