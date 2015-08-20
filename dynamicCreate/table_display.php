@@ -61,7 +61,7 @@ if (isset($_GET['q'])) {  //get value as table name from url
                     <div class="contentDiv">
                         <!-- Your content goes here -->
                         <a href='index.php' class='mdl-js-button mdl-js-ripple-effect backButton'>
-                            <img src="../images/dynamicTables/ic_arrow_back_black_24px.svg" alt="Back" />
+                            <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
                         </a>
                         <div class="">
                             <table class="mdl-data-table mdl-js-data-table" id="dvContents">
