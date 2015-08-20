@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-        <title>TC Table | Paperless System</title>
+        <title>Student Grades Table | Paperless System</title>
     
 <!--    CSS For Material Design-->
  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" /> 
-<script src="material_js/material.js"></script>
+<script src="../material_js/material.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
     <!--  End of CSS For Material Design-->
     
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="../css/master.css">
       
             
   </head>
@@ -34,9 +34,9 @@
          
               <div class="tabs mdl-js-ripple-effect">
                   <a href="master.php" class="mdl-layout__tab">Student Info</a>
-                  <a href="tc_info_display.php" class="mdl-layout__tab is-active">TC Information</a>
+                  <a href="tc_info_display.php" class="mdl-layout__tab">TC Information</a>
                   <a href="other_info_display.php" class="mdl-layout__tab">Other Info</a>
-                  <a href="student_grade_display.php" class="mdl-layout__tab">Student Grades</a>
+                  <a href="student_grade_display.php" class="mdl-layout__tab  is-active">Student Grades</a>
                 </div>
                   
                   
@@ -58,55 +58,68 @@
 
                       <!-- Your content goes here -->
                     <div class="" id="masterTableBlock">
-                         <h2 id="form_header">TC Table</h2>
+                        <h2 id="form_header">Student Grades Table</h2>
                       
                       <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="table1">
                         <thead>
-                                <tr>
-                                  <th>Sr. No.</th>
-                                  <th>T.C.No.</th>
-                                  <th>Date of T.C. issued</th>
-                                  <th class="mdl-data-table__cell--non-numeric">Name</th>
-                                  <th>Adm.No.</th>
-                                  <th>Class</th>
-                                  <th>Date of Leaving</th>
-                                  <th class="mdl-data-table__cell--non-numeric">Reason for Leaving</th>
-                                  <th class="mdl-data-table__cell--non-numeric">Remarks</th>
-                                </tr>
+                          <tr>
+                            <th>Sr No.</th>
+                            <th>Reg No.</th>
+                            <th class="mdl-data-table__cell--non-numeric">Student Name</th>
+                            <th>Exam Seat No.</th>
+                            <th>10th class</th>
+                            <th>9th class</th>
+                            <th>8th class</th>
+                            <th>7th class</th>
+                            <th>6th class</th>
+                            <th>5th class</th>
+                            <th>4th class</th>
+                            <th>3rd class</th>
+                            <th>2nd class</th>
+                            <th>1st class</th>
+                          </tr>
                         </thead>
                         <tbody>
         <?php
- include("connection.php");
+ include("../database/connection.php");
         mysqli_query ($con,"set character_set_results='utf8'"); 
-        $query = mysqli_query($con,"SELECT * FROM master") or die(mysql_error());
+        $query = mysqli_query($con,"SELECT * FROM master") or die(mysqli_error());
+
         $sr_no=1;
         while($row=mysqli_fetch_array($query))
         {
           
-          $tc_no=$row['tc_no'];
-          $date_issued=$row['tc_date'];
+          $reg_no=$row['reg_no'];
           $name=$row['student_name'];
-          $adm_no=$row['reg_no'];
-          $class=$row['school_leaving_class'];
-          $reason=$row['school_leaving_reason'];
-          $remark=$row['tc_remark'];
-          $date_leaving=$row['school_leaving_date'];
-          
-          $date_issued1 = strtotime($date_issued);
-          $date_issued2=date('d/m/Y',$date_issued1);
-          $date_leaving1= strtotime($date_leaving);
-          $date_leaving2=date('d/m/Y',$date_leaving1);
-         
+          $exam_seat_no=$row['exam_seat_no'];
+          $class10_percentage=$row['10_percentage'];
+          $class9_percentage=$row['9_percentage'];
+          $class8_grade=$row['8_grade'];
+          $class7_grade=$row['7_grade'];
+          $class6_grade=$row['6_grade'];
+          $class5_grade=$row['5_grade'];
+          $class4_grade=$row['4_grade'];
+          $class3_grade=$row['3_grade'];
+          $class2_grade=$row['2_grade'];
+          $class1_grade=$row['1_grade'];
+      
+            
           echo "<tr>";
           echo "<td>$sr_no</td>"; 
-          echo "<td>$tc_no</td>";
-          echo "<td>$date_issued2</td>";
-          echo "<td class='mdl-data-table__cell--non-numeric'>$name</td>"; 
-          echo "<td>$adm_no</td>";
-          echo "<td>$class</td>"; 
-          echo "<td>$date_leaving2</td>"; 
-          echo "<td class='mdl-data-table__cell--non-numeric'>$reason</td>";
-          echo "<td class='mdl-data-table__cell--non-numeric'>$remark</td>"; 
+          echo "<td>$reg_no</td>";
+          echo "<td>$name</td>";
+          echo "<td>$exam_seat_no</td>";
+          echo "<td>$class10_percentage</td>";
+          echo "<td>$class9_percentage</td>"; 
+          echo "<td>$class8_grade</td>"; 
+          echo "<td>$class7_grade</td>"; 
+          echo "<td>$class6_grade</td>"; 
+          echo "<td>$class5_grade</td>"; 
+          echo "<td>$class4_grade</td>"; 
+          echo "<td>$class3_grade</td>"; 
+          echo "<td>$class2_grade</td>"; 
+          echo "<td>$class1_grade</td>"; 
+       
           echo "</tr>";
           
            $sr_no++;

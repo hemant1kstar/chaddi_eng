@@ -1,0 +1,22 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.page-content {
+    position: relative;
+/*    max-width: 1023px;*/
+    margin: 46px;
+    background-color: white;
+    padding: 48px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+
+/*Squre Card*/
+
+.cards_layout > .mdl-card__title {
+  color: #fff;
+  background:#46B6AC;
+}
+
+

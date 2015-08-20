@@ -11,18 +11,18 @@
 
     <!--    CSS For Material Design-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-pink.min.css" />
-    <script src="material_js/material.js"></script>
+    <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <!--  End of CSS For Material Design-->
 
     <!-- CSS and JS for Snackbar -->
-    <link href="css/snackbar.min.css" rel="stylesheet">
-    <link href="material_js/material_for_snackbar.css" rel="stylesheet">
-    <script src="material_js/snackbar.min.js" type="text/javascript"></script>
+    <link href="../css/snackbar.min.css" rel="stylesheet">
+    <link href="../material_js/material_for_snackbar.css" rel="stylesheet">
+    <script src="../material_js/snackbar.min.js" type="text/javascript"></script>
     <!-- End of CSS and JS for Snackbar -->
     
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
 
 </head>
@@ -65,7 +65,7 @@
         <main class="mdl-layout__content">
 
             <?php
-    include("connection.php");
+include("../database/connection.php");
 ?>
 
                 <?php
