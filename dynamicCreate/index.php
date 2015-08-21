@@ -18,7 +18,7 @@
     <title>Create Tables</title>
 
     <!--        it must for checkbox select-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="../jquery/jquery-2.1.4.min.js"></script>
 
     <!-- SweetAlert CSS and JavaScript files-->  
     <script src="dist/sweetalert.min.js"></script>

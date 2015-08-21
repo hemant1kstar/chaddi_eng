@@ -7,41 +7,44 @@
         }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+
     <head>
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css">
-    <link rel="stylesheet" href="css/add.css">
-    <link rel="stylesheet" href="css/edit_row.css">
-    <script src="../material_js/material.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css">
+        <script src="../material_js/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+        <link rel="stylesheet" href="css/edit_row.css">
+
     </head>
-<body>
-    
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Dynamic Content</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="./index.php">Home</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="./index.php">Home</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-        <!-- Your content goes here -->
-    <div class='mdl-grid'>
-            <?php
+
+    <body>
+
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Dynamic Content</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="./index.php">Home</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Title</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.php">Home</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <?php
                 if(isset($_POST["submit_edit"]))
                 {
                    $dCreate_id=$_GET['Create_id'];
@@ -63,11 +66,13 @@
 
                 }
         ?>
-    </div>
-  <div class='mdl-grid'>
-            <form method="post" action="">
-<!--                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp dataadd">-->
-                <?php
+                        <div class='contentDiv'>
+                            <a href='table_display.php?q=<?php echo $link; ?>' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
+                                <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
+                            </a>
+                            <form method="post" action="">
+                                <table>
+                                    <?php
 
                     $columnname=array();
                     $count=0;
@@ -77,34 +82,42 @@
                         }
                 ?>
 
-                <?php
+                                        <?php
                           $dCreate_id=$_GET['Create_id'];
                           $result=mysqli_query($con,"SELECT * FROM $link WHERE id='$dCreate_id'");
 
 //this field is hidden which is not editable by user
-                 echo "<input name='col_name[]' value='$dCreate_id' class='mdl-textfield__input mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet hidden1' type='text' readonly>";
+//input is hidden in attributes. If any problem to send data then the ID input is to be shown in HTML but hidden from user.
+// that is change hidden to readonly
+                 echo "<input name='col_name[]' value='$dCreate_id' class='mdl-textfield__input mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet hidden1' type='text' hidden >";
                     while($row1=mysqli_fetch_array($result))
                     { 
                        $arraylen=sizeof($columnname);
                        for($co=1;$co<$arraylen;$co++){ 
                              $col_value=$row1[$co];
-              echo "<label class='mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet'>$columnname[$co]</label>";
-              echo "<input type='text' class='mdl-textfield__input mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet' name='col_name[]' value='$col_value' required>";
+                           echo "<tr>";
+                           echo "<td><label class='headerLabel'>$columnname[$co]</label></td>";
+                           echo "<td class='editText'><div class='mdl-textfield mdl-js-textfield'><input type='text' class='mdl-textfield__input' name='col_name[]' value='$col_value' required></div></td>";
+                           echo "</tr>";
                         }
                         $co++;
                     }
                   ?>
 
 
-            <br/>
-            <input type="submit" name="submit_edit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised submitbtn">
+                                            <tr>
+                                                <td colspan="2" id="addButton">
+                                                    <input type="submit" name="submit_edit" value="OK, Edit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submitbtn">
+                                                </td>
+                                            </tr>
+                                </table>
+                            </form>
+                        </div>
 
-            </form>
-      </div>
-      
-      </div>
-  </main>
-</div>
+                </div>
+            </main>
+        </div>
 
-</body>
-</html>
+    </body>
+
+    </html>

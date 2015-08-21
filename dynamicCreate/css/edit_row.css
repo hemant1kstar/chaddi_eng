@@ -1,4 +1,50 @@
-.hidden1{
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
+}
+.page-content {
+    display: block;
+    margin: 96px 16px;
+}
+.hidden1 {
+    /*
     color: transparent;
     border-color: transparent;
+*/
+    /*    position: absolute;*/
+}
+.contentDiv {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    padding: 48px 16px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+.backButton {
+    padding: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.headerLabel {
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 700;
+    font-size: 14px;
+}
+.editText {
+    padding-left:16px;
+}
+#addButton {
+    position: relative;
+    height: 36px;
+}
+#addButton input {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+@media (min-width: 992px) {
+    .page-content {
+        margin: 96px 24px;
+    }
 }
