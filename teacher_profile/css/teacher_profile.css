@@ -1,0 +1,56 @@
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+}
+.page-content {
+/*    display: block;*/
+    max-width: 452px;
+    margin: 96px auto;
+}
+.contentHeader {
+    font-size: 24px;
+    /*    text-transform: capitalize;*/
+    margin: 0;
+    color: rgba(0, 0, 0, 0.54);
+}
+.contentDiv {
+    position: relative;
+/*    display: inline-block;*/
+    background-color: white;
+    margin: auto;
+    padding: 16px;
+    /*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);*/
+}
+.editProfile {
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.54;
+    transition-duration: 0.2s;
+}
+.editProfile:hover,
+.editProfile:focus {
+    opacity: 1;
+}
+.profilePicture {
+    height: 96px;
+    width: 96px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    display: block;
+    margin: 0px auto 16px;
+    border-radius: 50%;
+}
+td>label {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 700;
+}
+td {
+    padding: 8px 0;
+}
+@media (min-width: 992px) {
+    .page-content {
+/*        margin: 96px 24px;*/
+    }
+}

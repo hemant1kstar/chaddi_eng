@@ -55,7 +55,7 @@
             </nav>
         </div>
         <main class="mdl-layout__content">
-            <div class="page-content">
+            <div class="page-content mdl-shadow--4dp">
                 <!--                Floating FAB button -->
                 <div>
                     <a href="create_table_layout.php" id="addTable" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored addTable">
@@ -74,10 +74,10 @@ mysqli_query ($con,"set character_set_results='utf8'");
    echo "<div class='mdl-grid'>";
 
         while($table = mysqli_fetch_array($result)) {
-            echo "<div class='mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--4-col'>";
+            echo "<div class='mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col'>";
             echo "<div class='mdl-card mdl-shadow--2dp demo-card-square'>";
             $tablename1=ucwords($table[0]);
-            echo "<a href='table_display.php?q=`$table[0]`'  class='mdl-card__title mdl-card--expand'>";
+            echo "<a href='table_display.php?q=`$table[0]`'  class='mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect'>";
             echo " <div>";
             echo "<h2 class='mdl-card__title-text'>$tablename1</h2>";
             echo " </div>";
