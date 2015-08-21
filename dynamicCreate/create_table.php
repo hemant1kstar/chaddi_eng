@@ -22,9 +22,10 @@
                         }  
              
                     for($i=0;$i<sizeof($varname);$i++){
-                       $sql=$sql."`".$varname[$i]."`"." ".$datatype[$i].",";
+                       $sql=$sql."`".$varname[$i]."`"." ".$datatype[$i]." CHARACTER SET utf8 collate utf8_general_ci,";
                      }
                     $sqla=substr_replace($sql, "", -1);
+                    mysqli_query ($con,"set character_set_results='utf8'"); 
                     $sqla="create table"." "."`".$table."`"."(`id` int(5) NOT NULL AUTO_INCREMENT,$sqla,PRIMARY KEY (`id`))";
                     if ($con->query($sqla) === TRUE){
                          header("Location:index.php");

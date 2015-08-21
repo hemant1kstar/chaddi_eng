@@ -2,7 +2,6 @@
 include("database/connection.php");
 if (isset($_GET['q'])) {  //get value as table name from url
     $link=$_GET['q'];
-    //        mysqli_query ($con,"set character_set_results='utf8'"); 
     
 }
 $links = trim($link,'`');
@@ -100,6 +99,7 @@ $linksTitle = strtoupper($links);
                                 <?php
                             echo "<tbody>";
                             $arraylen=sizeof($columnname); //find array length
+                            mysqli_query ($con,"set character_set_results='utf8'"); 
                             $result=mysqli_query($con,"SELECT * FROM $link");//select value from perticular table
                             while($row2= mysqli_fetch_array($result)) {
                                 

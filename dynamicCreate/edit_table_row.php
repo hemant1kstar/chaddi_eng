@@ -10,6 +10,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css">
     <link rel="stylesheet" href="css/add.css">
     <link rel="stylesheet" href="css/edit_row.css">
@@ -56,7 +59,8 @@
 //                            echo "$link";
 //                            echo "$columnname1<br>";
 //                            echo "$value1<br>";
-                                 mysqli_query($con,"UPDATE $link set `$columnname1`='$value1' WHERE id='$dCreate_id'"); 
+                               mysqli_query ($con,"set character_set_results='utf8'"); 
+                                 mysqli_query($con,"UPDATE $link set `$columnname1`=N'$value1' WHERE id='$dCreate_id'"); 
                           }
                        }
                        header("Location:table_display.php?q=$link");
@@ -79,6 +83,7 @@
 
                 <?php
                           $dCreate_id=$_GET['Create_id'];
+                          mysqli_query ($con,"set character_set_results='utf8'");
                           $result=mysqli_query($con,"SELECT * FROM $link WHERE id='$dCreate_id'");
 
 //this field is hidden which is not editable by user

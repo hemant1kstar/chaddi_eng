@@ -68,7 +68,7 @@
                
                 <?php
    include("database/connection.php");
-mysqli_query ($con,"set character_set_results='utf8'"); 
+   mysqli_query ($con,"set character_set_results='utf8'"); 
    $result = mysqli_query($con,"show tables");
 
    echo "<div class='mdl-grid'>";

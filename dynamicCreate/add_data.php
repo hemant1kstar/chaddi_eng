@@ -99,11 +99,16 @@
                         $k++;
                         }
                     $sqla=substr_replace($colnames, "", -1);
-                    $colvals = "'".implode("', '", $vals)."'";
+                    $colvals = "N'".implode("',N'",$vals)."'";
+                    mysqli_query ($con,"set character_set_results='utf8'"); 
+//                    echo "$colvals";
                     $query1=mysqli_query($con, "INSERT INTO $link ($sqla) VALUES ($colvals)");
                         if($query1)
                         {
-                                header("Location:table_display.php?q=$link");
+//                                header("Location:table_display.php?q=$link");
+                            echo "<script>
+                            window.location='table_display.php?q=$link'
+                            </script>";
                         }else{
                              echo "error in inserting row";
                         }
