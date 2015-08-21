@@ -25,6 +25,11 @@ body {
     left: 0;
     top: 0;
 }
+.deleteRowButton {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+}
 #dvContents {
     margin: 16px 0;
 }

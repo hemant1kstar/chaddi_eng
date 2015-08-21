@@ -26,7 +26,7 @@ $linksTitle = strtoupper($links);
         <link rel="stylesheet" href="css/table_display.css">
 
         <!--        it must for checkbox select-->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="../jquery/jquery-2.1.4.min.js"></script>
 
         <!-- SweetAlert CSS and JavaScript files-->
         <script src="dist/sweetalert.min.js"></script>
@@ -111,7 +111,7 @@ $linksTitle = strtoupper($links);
                          
                                  }
                                 echo "<th><a class='mdl-js-button mdl-js-ripple-effect' href='edit_table_row.php?q=".$link."&Create_id=".$link1."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></th>";
-                                echo '<th><button class="mdl-js-button mdl-js-ripple-effect" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></th>';
+                                echo '<th><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></th>';
 //           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
                                    echo "</tr>";
                                    $co++;
