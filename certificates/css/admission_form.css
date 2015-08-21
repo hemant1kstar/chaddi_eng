@@ -1,0 +1,79 @@
+.main {
+    width: 850px;
+    margin: 15px auto 20px;
+    background: white;
+    border: 1px solid #9E9E9E;
+    padding: 30px 20px;
+}
+
+#btnPrint {
+    display: block;
+    margin: auto;
+}
+
+.schoolname,.place{
+    text-align: center;
+}
+
+.heading_title{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.personal_info,.prev_school_info,.family_info{
+/*    margin: 16px auto;*/
+    padding: 16px;
+}
+.section_label{
+    font-size: 24px;
+    border-bottom: 1px solid black;
+}
+
+.info_div{
+    font-size: 16px;
+    margin: 16px auto;
+}
+
+.profile_img{
+     font-size: 18px;
+     padding:16px; 
+}
+.empty1{
+    width:150px;
+    height: 14px;
+    display:inline-block;
+    border-top: 1px solid black;
+}
+
+.profile_img{
+    margin:auto 32px;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.lastdiv{
+    border-top: 1px solid black;
+    margin: 16px auto;
+    padding: 32px auto;
+    font-size: 16px;
+    position: relative;
+}
+
+.declare{
+       font-size: 16px;
+       text-align: justify;
+}
+.date,.place1{
+    text-align: left;
+    font-size: 16px;
+}
+.signature{
+/*    text-align: right;*/
+    font-size: 16px;
+    position: absolute;
+    right: 48px;
+    bottom:-16px;
+    
+}

@@ -40,6 +40,7 @@
                     <a href="nirgam_utara.php" class="mdl-layout__tab">Nirgam Utara</a>
                     <a href="id_card.php" class="mdl-layout__tab">ID Card</a>
                     <a href="tc.php" class="mdl-layout__tab">TC</a>
+                    <a href="admission_form.php" class="mdl-layout__tab">Admission Form</a>
 
                 </div>
 
