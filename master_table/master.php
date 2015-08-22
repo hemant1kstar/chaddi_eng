@@ -11,7 +11,7 @@
 <!--    CSS For Material Design-->
  <link rel="stylesheet" href="../css/material.blue-pink.min.css" /> 
 <script src="../material_js/material.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
 
     <!--  End of CSS For Material Design-->
