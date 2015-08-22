@@ -1,0 +1,63 @@
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
+}
+.page-content {
+    display: block;
+    margin: 96px 16px;
+}
+.contentHeader {
+    font-size: 24px;
+    text-transform: capitalize;
+    margin: 0px 0px 0px 15px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.contentDiv {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    padding: 48px 16px 16px;
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);*/
+}
+.backButton {
+    visibility: hidden;
+    padding: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.divhide{
+     visibility: hidden;
+}
+.deleteRowButton {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+}
+#dvContents {
+    margin: 16px 0;
+}
+.tabledata {
+    border: 1px solid #9E9E9E;
+    text-align: center;
+    border-collapse: collapse;
+    margin: auto;
+}
+tr {
+    border-bottom: 1px solid #9E9E9E;
+}
+th {
+    border-left: 1px solid #9E9E9E;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+
+
+
+
+@media (min-width: 992px) {
+    .page-content {
+        margin: 96px 24px;
+    }
+}

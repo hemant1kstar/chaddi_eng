@@ -15,10 +15,10 @@ $linksTitle = strtoupper($links);
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/material.brown-light_green.min.css" />
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css">
         <script src="../material_js/material.min.js"></script>
-        <link rel="stylesheet" href="../material_js/Material+Icons.css" />
-            <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <title>
             <?php echo $linksTitle; ?> | Paperless System
         </title>
@@ -53,7 +53,7 @@ $linksTitle = strtoupper($links);
                     <a class="mdl-navigation__link" href="./index.php">Home</a>
                 </nav>
             </div>
-            <main class="mdl-layout__content">
+            <main class="mdl-layout__content" id="dvContents">
                 <div class="page-content">
                     <h2 class="contentHeader"><?php echo $links; ?></h2>
 
@@ -63,7 +63,7 @@ $linksTitle = strtoupper($links);
                             <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
                         </a>
                         <div class="">
-                            <table class="mdl-data-table mdl-js-data-table" id="dvContents">
+                            <table class="mdl-data-table mdl-js-data-table tabledata" id="dvContents">
                                 <thead>
                                     <tr>
                                         <?php
@@ -85,8 +85,8 @@ $linksTitle = strtoupper($links);
                                 }
                                 $count++;
                               }
-                          echo "<th class='mdl-data-table__cell--non-numeric'>Update</th>";
-                          echo "<th class='mdl-data-table__cell--non-numeric'>Delete</th>";
+                          echo "<th class='mdl-data-table__cell--non-numeric divhide'>Update</th>";
+                          echo "<th class='mdl-data-table__cell--non-numeric divhide'>Delete</th>";
 
                         ?>
                                     </tr>
@@ -105,8 +105,8 @@ $linksTitle = strtoupper($links);
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
                          
                                  }
-                                echo "<th><a class='mdl-js-button mdl-js-ripple-effect' href='edit_table_row.php?q=".$link."&Create_id=".$link1."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></th>";
-                                echo '<th><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></th>';
+                                echo "<th class='divhide'><a class='mdl-js-button mdl-js-ripple-effect' href='edit_table_row.php?q=".$link."&Create_id=".$link1."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></th>";
+                                echo '<th class="divhide"><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></th>';
 //           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
                                    echo "</tr>";
                                    $co++;
@@ -116,12 +116,12 @@ $linksTitle = strtoupper($links);
                             </table>
 
                             <?php
-   echo "<a href='add_data.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary'>Add Data</a>";
+   echo "<a href='add_data.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary divhide'>Add Data</a>";
 ?>
-                                <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print </button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary divhide" id="btnPrint" value="Print">Print </button>
                             
                              <?php
-   echo "<a href='add_Fields_layout.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary'>Fields Add</a>";
+   echo "<a href='add_Fields_layout.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary divhide'>Fields Add</a>";
 ?>
                         </div>
                     </div>
@@ -165,7 +165,7 @@ $linksTitle = strtoupper($links);
                     frameDoc.document.write('<html><head><title></title>');
                     frameDoc.document.write('</head><body>');
                     //Append the external CSS file.
-                    frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="css/style.css" rel="stylesheet" type="text/css" />');
+                    frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css"/><link href="css/styles_for_print.css" rel="stylesheet" type="text/css"/>');
                     //Append the DIV contents.
                     frameDoc.document.write(contents);
                     frameDoc.document.write('</body></html>');
