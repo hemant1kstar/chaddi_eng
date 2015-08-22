@@ -41,8 +41,8 @@
                     <!-- Navigation. We hide it in small screens. -->
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
                         <a class="mdl-navigation__link" href="index.php">Home</a>
-                        <a class="mdl-navigation__link" href="teacher_profile.php">Teacher Profile</a>
-                        <a class="mdl-navigation__link" href="update_profile.php">Update Profile</a>
+                        <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
+                        
                         <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
                     </nav>
                 </div>
@@ -51,8 +51,8 @@
                 <span class="mdl-layout-title">Teacher Panel</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.php">Home</a>
-                    <a class="mdl-navigation__link" href="teacher_profile.php">Teacher Profile</a>
-                    <a class="mdl-navigation__link" href="update_profile.php">Update Profile</a>
+                    <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
+                    
                     <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
                 </nav>
             </div>

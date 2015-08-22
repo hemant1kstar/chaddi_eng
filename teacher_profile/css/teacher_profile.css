@@ -19,7 +19,7 @@ body {
 /*    display: inline-block;*/
     background-color: white;
     margin: auto;
-    padding: 16px;
+    padding: 48px 16px 16px;
     /*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);*/
 }
 .editProfile {
@@ -33,6 +33,12 @@ body {
 .editProfile:hover,
 .editProfile:focus {
     opacity: 1;
+}
+.backButton {
+    padding: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .profilePicture {
     height: 96px;
@@ -48,6 +54,16 @@ td>label {
 }
 td {
     padding: 8px 0;
+}
+
+.updateButton {
+    position: relative;
+    height: 36px;
+}
+.updateButton button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 @media (min-width: 992px) {
     .page-content {
