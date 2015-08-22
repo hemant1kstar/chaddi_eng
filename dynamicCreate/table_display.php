@@ -32,12 +32,7 @@ $linksTitle = strtoupper($links);
         <script src="dist/sweetalert.min.js"></script>
         <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
     </head>
-
     <body>
-
-
-
-
         <!-- Always shows a header, even in smaller screens. -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header class="mdl-layout__header">
@@ -123,9 +118,11 @@ $linksTitle = strtoupper($links);
                             <?php
    echo "<a href='add_data.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary'>Add Data</a>";
 ?>
-
                                 <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print </button>
-
+                            
+                             <?php
+   echo "<a href='add_Fields_layout.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary'>Fields Add</a>";
+?>
                         </div>
                     </div>
                 </div>
