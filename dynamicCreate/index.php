@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css" />
+    <link rel="stylesheet" href="../css/material.brown-light_green.min.css" />
     <script src="../material_js/material.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="../material_js/Material+Icons.css" />
+    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="css/style.css">
@@ -20,10 +20,10 @@
     <!--        it must for checkbox select-->
     <script src="../jquery/jquery-2.1.4.min.js"></script>
 
-    <!-- SweetAlert CSS and JavaScript files-->  
+    <!-- SweetAlert CSS and JavaScript files-->
     <script src="dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
-    
+
 </head>
 
 <body>
@@ -43,9 +43,9 @@
                     <a class="mdl-navigation__link" href="../index.php">Home</a>
                     <a class="mdl-navigation__link" href="backup/backup_db.php">Backup</a>
                 </nav>
-                
+
             </div>
-            
+
         </header>
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Dynamic Content</span>
@@ -65,7 +65,7 @@
                         Add New Tables
                     </div>
                 </div>
-               
+
                 <?php
    include("database/connection.php");
    mysqli_query ($con,"set character_set_results='utf8'"); 
@@ -97,13 +97,23 @@
         </main>
     </div>
 
-<script>
-function myFunction_Delete(t_name) {
-swal({   title: "Are you sure?",   text: "You will not be able to recover this file!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes, delete it!",   closeOnConfirm: false }, function(){   swal("Deleted!", "Your  file has been deleted.", "success"); 
-  window.location="table_delete.php?q="+t_name;
-});   
-}
-</script>
+    <script>
+        function myFunction_Delete(t_name) {
+            swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover this file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                closeOnConfirm: false
+            }, function() {
+                swal("Deleted!", "Your  file has been deleted.", "success");
+                window.location = "table_delete.php?q=" + t_name;
+            });
+        }
+
+    </script>
 
 
 </body>

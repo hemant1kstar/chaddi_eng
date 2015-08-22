@@ -15,10 +15,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.orange-green.min.css">
+        <link rel="stylesheet" href="../css/material.orange-green.min.css" />
         <script src="../material_js/material.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="../material_js/Material+Icons.css" />
+        <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
         <title>Teacher Profile</title>
 
         <!--        it must for checkbox select-->
@@ -93,7 +93,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Name :</label>";
+                         echo "<label>Name </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$teacher_profile_name";
@@ -102,7 +102,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Qualification :</label>";
+                         echo "<label>Qualification </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$qualification";
@@ -111,7 +111,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Designation :</label>";
+                         echo "<label>Designation </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$designation";
@@ -120,7 +120,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Experience :</label>";
+                         echo "<label>Experience </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$experience";
@@ -129,7 +129,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Subjects :</label>";
+                         echo "<label>Subjects </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$subjects";
@@ -138,7 +138,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Other Info :</label>";
+                         echo "<label>Other Info </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$other_info";
@@ -147,7 +147,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Training Info :</label>";
+                         echo "<label>Training Info </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$training_info";
@@ -156,7 +156,7 @@
                          
                          echo "<tr>";
                          echo "<td>";
-                         echo "<label>Date of Appointment :</label>";
+                         echo "<label>Date of Appointment </label>";
                          echo "</td>";
                          echo "<td>";
                          echo "$date_of_appointment";
