@@ -1,3 +1,14 @@
+<?php
+include("database/connection.php");
+if (isset($_GET['q'])) {  //get value as table name from url
+    $link=$_GET['q'];
+    
+    $query="DESCRIBE $link"; //build query for get column names from table
+    $results=mysqli_query($con,$query) or die('Query error:'.mysql_error());   
+}
+$links = trim($link,'`');
+$linksTitle = strtoupper($links);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +17,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/material.brown-light_green.min.css" />
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.brown-light_green.min.css">
     <script src="../material_js/material.js"></script>
-    <link rel="stylesheet" href="../material_js/Material+Icons.css" />
-    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
     
     <link rel="stylesheet" href="css/create_table_layout.css" />
@@ -45,17 +56,37 @@
                 <div class="page-content">
                     <!-- Your content goes here -->
 
-                    <h2 class="contentHeader">Update Table Fields</h2>
-                    <div class="contentDiv">
-                        <a href='index.php' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
+                    <h2 class="contentHeader">Update <?php echo $linksTitle; ?> Fields</h2>
+                    <div class="contentDiv mdl-grid">
+                        <a href='table_display.php?q=<?php echo $link;?>' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
                             <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
-                        </a>
-                        <form method="post" action="add_Fields.php">
-
-                            <div class="mdl-textfield mdl-js-textfield">
-                                <input type="text" class="mdl-textfield__input" name="table_name" placeholder="Enter table name" required />
-                                <label class="mdl-textfield__label"></label>
+                        </a>  
+                        <form method="post" action="add_Fields.php?q=<?php echo $link; ?>">
+                             <table>
+                    <?php
+                            $columnname=array();
+                            $count=0;
+                                while($row1 = mysqli_fetch_array($results)) {
+                                    $columnname[$count]=$row1[0];
+                                    $count++;
+                                }
+                            $result=mysqli_query($con,"SELECT * FROM $link"); 
+                            $arraylen=sizeof($columnname); //find array length
+                            for($co=1;$co<$arraylen;$co++){
+                                $name=$columnname[$co];   
+                    ?>      
+                            <div class="">
+                               <tr>
+                                    <td><label class=""><?php echo $name;?></label></td>
+<!--                                    <td><input type="text" class="" name="table_name" placeholder="" required /></td>-->
+                                   <td><a href="drop_field.php?q=<?php echo $links;?>&q1=<?php echo $name;?>">Drop Field</a></td>
+                               </tr>                    
                             </div>
+                    <?php
+                   }    
+                 ?>
+                </table>
+                            
                             <div class="mdl-textfield mdl-js-textfield">
                                 <input type="text" class="mdl-textfield__input" name="check_list1[]" placeholder="Enter Field Name" required>
                             </div>
@@ -83,9 +114,6 @@
             $("#btnAddAddress").click(function() {
                 $("#container").append('<div class="mdl-textfield mdl-js-textfield"><input type="text" class="mdl-textfield__input" name="check_list1[]" placeholder="Enter Field Name" required></div><input type="hidden" name="datatype[]" value="VARCHAR(255)">');
             });
-
         </script>
-
 </body>
-
 </html>

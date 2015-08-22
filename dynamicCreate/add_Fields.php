@@ -5,9 +5,16 @@
 <?php
 
     include("database/connection.php");
+        if (isset($_GET['q'])) {  //get value as table name from url
+            $link=$_GET['q'];
+        }
+            $links = trim($link,'`');
+            $linksTitle = strtoupper($links);
+
     if(isset($_POST["submit"])){
                 $count=0;
-                $table=$_POST["table_name"];
+//                $table=$_POST["table_name"];
+                $table=$link;
                 if(!empty($_POST['check_list1'])){
                     foreach($_POST['check_list1'] as $selected){ 
                         $varname[$count]=$selected;
@@ -26,17 +33,19 @@
                      }
                     $sqla=substr_replace($sql, "", -1);
                         
-                        $sqla="ALTER TABLE"." "."`".$table."`".$sqla;
+                        $sqla="ALTER TABLE"." "."`".$linksTitle."`".$sqla;
                         
+                        echo $sqla;
+                        echo $linksTitle;
                     if ($con->query($sqla) === TRUE){
                         
-                         header("Location:table_display.php?q=$table");
+                         header("Location:table_display.php?q=$linksTitle");
                     }
                         else{
-//?>
+?>
                        <script>
                            if(confirm("field names and table names not to same?")) {
-                                window.location.href = "create_table_layout.php";
+                                window.location.href = "add_Fields_layout.php";
                             }else{
                             window.location.href = "add_Fields_layout.php";
                             }   
