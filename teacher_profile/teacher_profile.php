@@ -69,7 +69,9 @@
                         ?>
 
                     <div class="contentDiv mdl-shadow--2dp">
-                            <?php
+                        
+                    <?php
+
                      include("../database/connection.php");
                       mysqli_query ($con,"set character_set_results='utf8'"); 
                      $sql="SELECT * from teacher_profile where teacher_id='$teacher_id'";

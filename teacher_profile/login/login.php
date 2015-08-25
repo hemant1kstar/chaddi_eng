@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="../../css/material.orange-green.min.css" />
     <script src="../../material_js/material.min.js"></script>
-    <link rel="stylesheet" href="../material_js/Material+Icons.css" />
-    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
+    <link rel="stylesheet" href="../../material_js/Material+Icons.css" />
+    <link rel="stylesheet" href="../../fonts/Roboto+300,400,500,700.css" />
     <title>Teacher Profile</title>
 
     <!-- CSS and JS for Snackbar -->

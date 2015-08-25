@@ -1,14 +1,44 @@
 <?php
          session_start();
-         if(!$_SESSION['LoggedIn'])
+         if(!$_SESSION['LoggedIn_SMS'])
            {
-                 header("location:login/login.php?problem='Not Logged In'");
+                 header("location:login/login.php?login_problem='Not Logged In'");
                      exit;
          }
 ?>
 
+<?php
+ $comment = $comment1 = $url = "";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+   
+   
 
+   if (empty($_POST["comment"])) {
+     $comment = "";
+   } else {
+     $comment = test_input($_POST["comment"]);
+   }
+
+  
+     if (empty($_POST["comment1"])) {
+     $comment1 = "";
+   } else {
+     $comment1 = test_input($_POST["comment1"]);
+   }
+    
+ $comment1 = urlencode($comment1); 
+}
+
+function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+    
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -21,7 +51,7 @@
         <script src="../material_js/material.min.js"></script>
         <link rel="stylesheet" href="../material_js/Material+Icons.css" />
         <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
-        <title>Teacher Profile</title>
+        <title>SMS Panel</title>
         <link rel="stylesheet" href="css/style.css">
 
         <!--        it must for checkbox select-->
@@ -34,72 +64,138 @@
             <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
-                    <span class="mdl-layout-title">Teacher Panel</span>
+                    <span class="mdl-layout-title">SMS Panel</span>
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
                         <a class="mdl-navigation__link" href="index.php">Home</a>
-                        <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
                         
-                        <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
+                        <a class="mdl-navigation__link" href="login/smsgateway_logout.php">Logout</a>
                     </nav>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Teacher Panel</span>
+                <span class="mdl-layout-title">SMS Panel</span>
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="index.php">Home</a>
-                    <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
-                    
-                    <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
+                    <a class="mdl-navigation__link" href="index.php">Home</a>         
+                    <a class="mdl-navigation__link" href="login/smsgateway_logout.php">Logout</a>
                 </nav>
             </div>
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <!-- Your content goes here -->
+         
+                <div id="get_student_div">
+                            <label>Select the Class</label>
+                            <select name="users" onchange="showUser(this.value)" id="select1">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
 
-                    <div>
-                        <a href="create_table_layout.php" id="addTable" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored addTable">
-                            <i class="material-icons">add</i>
-                        </a>
-                        <div class="mdl-tooltip mdl-tooltip--large" for="addTable">
-                            Add New Tables
+
+                            <button id='button2' onClick='addallmob()'>All Student</button>
+                            <br/>
+
+                            <br>
+                            <div id="txtHint" style="width:450px; float:left;"><b>Student info will be listed here...</b></div>
+            </div>
+
+    
+                        <div id="student_display">
+
+                            <h1>Bulk SMS Facility</h1>
+
+                            <form method="post" action="send.php" name="myform" id="id2">
+                                <b>Numbers:</b>
+                                <br/>
+                                <textarea name="comment" rows="5" cols="60" id="textarea1">
+                                    <?php echo $comment;?>
+                                </textarea>
+                                <br>
+                                <br>
+                                <b> Message:</b>
+                                <br/>
+                                <textarea name="comment1" rows="15" cols="60"><?php echo $comment1;?></textarea>
+                                <br>
+                                <input type="reset" name="reset" value="Clear">
+                                <input type="submit" name="submit" value="Send">
+
+                            </form>
+
+
+                            <!----End OF The Bulk SMS FORM---->
+
+
                         </div>
-                    </div>
-
-                    <?php
-   include("database/connection.php");
-//   $db_selected = mysqli_select_db($con,"teacher_$teacher_id");
-   $result = mysqli_query($con,"show tables");
-
-   echo "<div class='mdl-grid'>";
-
-        while($table = mysqli_fetch_array($result)) {
-            echo "<div class='mdl-cell mdl-cell--4-col'>";
-            echo "<div class='mdl-card mdl-shadow--2dp demo-card-square'>";
-            echo " <div class='mdl-card__title mdl-card--expand'>";
-            $tablename1=ucwords($table[0]);
-            echo " <h2 class='mdl-card__title-text'>$tablename1</h2>";
-            echo " </div>";
-
-            echo "<div class='mdl-card__actions mdl-card--border'>";
-            echo("<a href='table_delete.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Delete Table</a>");
-            echo("<a href='table_display.php?q=`$table[0]`'  class='mdl-button mdl-js-button mdl-button--primary'>Update Table</a>");
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-            
-        }
-
-?>
-
-                        <?php  echo "</div>";?>
-
+                    
+                    
+                    
                 </div>
             </main>
         </div>
 
+        
+      <!--To Fetch Data From Table-->  
+    <script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","get_student.php?s_class="+str,true);
+        xmlhttp.send();
+    }
+}
+     function addallmob() {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      document.myform.textarea1.value +=xmlhttp.responseText;
+        
+            }
+        }
+        xmlhttp.open("GET","allstud.php",true);
+        xmlhttp.send();
+}
+
+  
+</script>
+
+    
+       <script> 
+           function addmob(mob1)
+           {
+document.myform.textarea1.value += mob1+',';
+            }
+       </script> 
 
     </body>
 
