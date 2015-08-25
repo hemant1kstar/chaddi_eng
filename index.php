@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="css/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="css/material.red-blue.min.css" />
     <script src="material_js/material.js"></script>
     <link rel="stylesheet" href="material_js/Material+Icons.css" />
     <link rel="stylesheet" href="fonts/Roboto+300,400,500,700.css" />
@@ -55,7 +55,7 @@
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-card__title mdl-card--expand" id="studentInformation">
                                 <h2 class="mdl-card__title-text">Information</h2>
                             </div>
                             <div class="mdl-card__supporting-text">
@@ -71,7 +71,7 @@
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-card__title mdl-card--expand" id="attendance">
                                 <h2 class="mdl-card__title-text">Attendance</h2>
                             </div>
                             <div class="mdl-card__supporting-text">
@@ -121,7 +121,7 @@
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-card__title mdl-card--expand" id="teacherProfile">
                                 <h2 class="mdl-card__title-text">Teacher Profile</h2>
                             </div>
                             <div class="mdl-card__supporting-text">
@@ -138,7 +138,7 @@
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-card__title mdl-card--expand" id="dynamicTables">
                                 <h2 class="mdl-card__title-text">Dynamic Information</h2>
                             </div>
                             <div class="mdl-card__supporting-text">

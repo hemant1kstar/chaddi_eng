@@ -25,4 +25,19 @@ body {
   background:#46B6AC;
 }
 
+#studentInformation {
+    background-color: #2196f3;
+}
+
+#attendance {
+    background-color: #3f51b5;
+}
+
+#teacherProfile {
+    background-color: #ff9800;
+}
+
+#dynamicTables {
+    background-color: #795548;
+}
 

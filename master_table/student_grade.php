@@ -76,7 +76,7 @@
          ?>
 
                 <?php
-     if(isset($_POST['submit_student_info']))
+if(isset($_POST['submit_student_grade']))
      {
 
         $reg_no=$_POST['reg_no'];
