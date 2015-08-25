@@ -70,7 +70,7 @@ include("../database/connection.php");
 ?>
 
                 <?php
-     if(isset($_POST['submit_student_grade']))
+     if(isset($_POST['submit_student_info']))
      {
 
         $reg_no=$_POST['reg_no'];

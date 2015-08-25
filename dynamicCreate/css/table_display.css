@@ -11,6 +11,7 @@ body {
     text-transform: capitalize;
     margin: 0;
     color: rgba(0, 0, 0, 0.54);
+       
 }
 .contentDiv {
     position: relative;
@@ -18,6 +19,7 @@ body {
     background-color: white;
     padding: 48px 16px 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+      width: 100%;
 }
 .backButton {
     padding: 12px;
@@ -33,8 +35,24 @@ body {
 #dvContents {
     margin: 16px 0;
 }
+/*
+.scroll{
+  overflow:auto;
+}
+*/
+table{
+    display:inline-block;
+    width: 99%;
+    overflow:auto;
+}
 @media (min-width: 992px) {
     .page-content {
         margin: 96px 24px;
     }
+    /*
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+*/
 }

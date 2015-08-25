@@ -53,7 +53,7 @@ $linksTitle = strtoupper($links);
                     <a class="mdl-navigation__link" href="./index.php">Home</a>
                 </nav>
             </div>
-            <main class="mdl-layout__content" id="dvContents">
+            <main class="mdl-layout__content scroll" id="dvContents">
                 <div class="page-content">
                     <h2 class="contentHeader"><?php echo $links; ?></h2>
 
