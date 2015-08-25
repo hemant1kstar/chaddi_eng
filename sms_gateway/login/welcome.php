@@ -6,36 +6,28 @@ if(isset($_POST['submitteacher']))
      $username=test_input($_POST['teachuser']);
      $password=test_input($_POST['teachpass']);
 
-                $result = mysqli_query($con,"SELECT * FROM teacher_profile");
-                while($row = mysqli_fetch_array($result))
-             {
-
-                      $teacher_username=$row['username'];  
-                      $teacher_password=$row['password']; 
-   if($username==$teacher_username && $password==$teacher_password)
+   if($username=='sms' && $password=='gateway@2015')
         {
-         $_SESSION['LoggedIn']='teacher_logged_in';     
-         $_SESSION['teacher_id']=$row['teacher_id'];
+         $_SESSION['LoggedIn_SMS']='admin_logged_in';     
          $url="Location:../index.php" ;
          header($url);   
         exit;
         }    
    $problem="";
- if($username==$teacher_username && $password !=$teacher_password)
+ if($username=='sms' && $password !='gateway@2015')
      {
          $problem='Invalid Password';
     }
-  if($username !=$teacher_username && $password==$teacher_password)
+  if($username !='sms' && $password=='gateway@2015')
    {
     $problem="Invalid Username";
     }
-  if($username !=$teacher_username && $password !=$teacher_password)
+  if($username !='sms' && $password !='gateway@2015')
    {
     $problem="Invalid Username and Password";
   }
                  
-   }
-    $url="Location:login.php?problem=$problem" ;
+    $url="Location:login.php?login_problem=$problem" ;
     header($url);    
     exit; 
      }

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/material.orange-green.min.css" />
+    <link rel="stylesheet" href="../../css/material.orange-green.min.css" />
     <script src="../../material_js/material.min.js"></script>
-    <link rel="stylesheet" href="../material_js/Material+Icons.css" />
-    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
-    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="../../material_js/Material+Icons.css" />
+    <link rel="stylesheet" href="../../fonts/Roboto+300,400,500,700.css" />
+    <title>SMS Gateway</title>
 
     <!-- CSS and JS for Snackbar -->
     <link href="css/snackbar.min.css" rel="stylesheet">
@@ -71,10 +71,10 @@
 
                 <p class="loginStatus">
                     <?php
-                      if (isset($_GET["problem"]))
+                      if (isset($_GET["login_problem"]))
                         {
-                           $problem=$_GET["problem"];
-                           echo $problem; 
+                           $login_problem=$_GET["login_problem"];
+                           echo $login_problem; 
 //                           echo "<script type='text/javascript'> $( document ).ready(function() {
 //                        $.snackbar({content: 'Student details were entered successfully', timeout: 5000});});
 //                           </script>" ;
