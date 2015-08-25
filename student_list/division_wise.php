@@ -10,7 +10,7 @@
     <title>Division-wise Students' List | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="../css/material.green-purple.min.css" />
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
@@ -24,15 +24,17 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Student List</span>
-                
-                
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
+
+
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
@@ -55,7 +57,7 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
 
@@ -69,22 +71,22 @@
                     <h2 id="form_header">Division Wise</h2>
                     <form action="" method="post">
                         <div class="showDataDiv">
-                            
+
                             <label class="customLabel">Select Class :
-                                    <select name="class1" class="dropdownOptions" required>
-                                        <option value=""></option>
-                                        <option value="1">1st</option>
-                                        <option value="2">2nd</option>
-                                        <option value="3">3rd</option>
-                                        <option value="4">4th</option>
-                                        <option value="5">5th</option>
-                                        <option value="6">6th</option>
-                                        <option value="7">7th</option>
-                                        <option value="8">8th</option>
-                                        <option value="9">9th</option>
-                                        <option value="10">10th</option>
-                                    </select>
-                                </label>
+                                <select name="class1" class="dropdownOptions" required>
+                                    <option value=""></option>
+                                    <option value="1">1st</option>
+                                    <option value="2">2nd</option>
+                                    <option value="3">3rd</option>
+                                    <option value="4">4th</option>
+                                    <option value="5">5th</option>
+                                    <option value="6">6th</option>
+                                    <option value="7">7th</option>
+                                    <option value="8">8th</option>
+                                    <option value="9">9th</option>
+                                    <option value="10">10th</option>
+                                </select>
+                            </label>
                             <label class="customLabel">Select Division :</label>
                             <select name="division1" class="dropdownOptions" required>
                                 <option value=""></option>
@@ -99,7 +101,7 @@
                 </div>
 
                 <div class="student_list mdl-shadow--2dp">
-                        <?php
+                    <?php
                             include("../database/connection.php");
                             if(isset($_POST['submit_division'])){
                               $division=$_POST['division1'];
@@ -164,8 +166,8 @@
         </main>
 
     </div>
-                    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
                 var contents = $("#dvContents").html();

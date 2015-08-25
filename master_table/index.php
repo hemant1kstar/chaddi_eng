@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
@@ -73,7 +73,7 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-                 <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
                 <a class="mdl-navigation__link" href="master.php">Master</a>
                 <a class="mdl-navigation__link" href="index.php">Entry</a>
             </nav>

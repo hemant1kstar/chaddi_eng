@@ -7,12 +7,6 @@ body {
     /*  background-color: #2196F3;*/
     /*  padding-left: 100px;*/
 }
-.mdl-navigation__link {
-    font-weight: 500;
-    font-size: 13px;
-    text-transform: uppercase;
-    box-sizing: border-box;
-}
 .mdl-grid {
     /*  To reduce the vertical height between elements */
     padding: 0px 8px;

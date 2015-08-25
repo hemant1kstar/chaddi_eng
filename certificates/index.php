@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-        <title>Primary Certificate | Paperless System</title>
+    <title>Primary Certificate | Paperless System</title>
 
-        <!--    CSS For Material Design-->
-        <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
-        <script src="../material_js/material.js"></script>
-        <link rel="stylesheet" href="../material_js/Material+Icons.css" />
-        <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
+    <!--    CSS For Material Design-->
+    <link rel="stylesheet" href="../css/material.teal-lime.min.css" />
+    <script src="../material_js/material.js"></script>
+    <link rel="stylesheet" href="../material_js/Material+Icons.css" />
+    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
 
-        <!--  End of CSS For Material Design-->
+    <!--  End of CSS For Material Design-->
 
-        <link rel="stylesheet" href="../css/main.css">
-        <link href='../certificates/css/ShikshAbhiyan.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href='../certificates/css/ShikshAbhiyan.css' rel='stylesheet'>
 
-    </head>
+</head>
 
-    <body>
-        
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
-                <!-- Top row, always visible -->
-                <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">Certificates</span>
-                    
-                    
-                </div>
+<body>
 
-                <div class="tabs mdl-js-ripple-effect">
-                    <a href="index.php" class="mdl-layout__tab is-active">Certificate</a>
-                    <a href="bonafied.php" class="mdl-layout__tab">Bonafide</a>
-                    <a href="nirgam_utara.php" class="mdl-layout__tab">Nirgam Utara</a>
-                    <a href="id_card.php" class="mdl-layout__tab">ID Card</a>
-                    <a href="tc.php" class="mdl-layout__tab">TC</a>
-                    <a href="admission_form.php" class="mdl-layout__tab">Admission Form</a>
-
-                </div>
-
-            </header>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <!-- Top row, always visible -->
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Certificates</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
 
 
-
-            <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Paperless System</span>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="../index.php">Home</a>
-                </nav>
             </div>
 
+            <div class="tabs mdl-js-ripple-effect">
+                <a href="index.php" class="mdl-layout__tab is-active">Certificate</a>
+                <a href="bonafied.php" class="mdl-layout__tab">Bonafide</a>
+                <a href="nirgam_utara.php" class="mdl-layout__tab">Nirgam Utara</a>
+                <a href="id_card.php" class="mdl-layout__tab">ID Card</a>
+                <a href="tc.php" class="mdl-layout__tab">TC</a>
+                <a href="admission_form.php" class="mdl-layout__tab">Admission Form</a>
+
+            </div>
+
+        </header>
 
 
-            <main class="mdl-layout__content">
-                <div class="page-content">
-                    <!-- Your content goes here -->
-                    <div class="mdl-shadow--2dp reg_info">
-                        <form action="" method="post">
-                            <div>
-                                <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
-                                <?php
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Paperless System</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
+            </nav>
+        </div>
+
+
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="mdl-shadow--2dp reg_info">
+                    <form action="" method="post">
+                        <div>
+                            <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
+                            <?php
 include("../database/connection.php");
 $result = mysqli_query($con,"SELECT * FROM master");
 echo "<select name='reg_no' class='dropdownOptions' required>";
@@ -76,10 +78,10 @@ while($row = mysqli_fetch_array($result)){
 echo "</select>";
                                 ?>
                                 <button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name="submit_student_info" type="submit" id="showCertificateButton">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <?php
+                        </div>
+                    </form>
+                </div>
+                <?php
 $student_name="";
 $prev_class1="";
 $admission_class1="";
@@ -133,42 +135,42 @@ if(isset($_POST['submit_student_info']))
                     </div>
 
 
-                </div>
-            </main>
+            </div>
+        </main>
 
-        </div>
-        <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                $("#btnPrint").click(function() {
-                    var contents = $("#dvContents").html();
-                    var frame1 = $('<iframe />');
-                    frame1[0].name = "frame1";
-                    frame1.css({
-                        "position": "absolute",
-                        "top": "-1000000px"
-                    });
-                    $("body").append(frame1);
-                    var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
-                    frameDoc.document.open();
-                    //Create a new HTML document.
-                    frameDoc.document.write('<html><head><title></title>');
-                    frameDoc.document.write('</head><body>');
-                    //Append the external CSS file.
-                    frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/ShikshAbhiyan.css" rel="stylesheet" type="text/css" />');
-                    //Append the DIV contents.
-                    frameDoc.document.write(contents);
-                    frameDoc.document.write('</body></html>');
-                    frameDoc.document.close();
-                    setTimeout(function() {
-                        window.frames["frame1"].focus();
-                        window.frames["frame1"].print();
-                        frame1.remove();
-                    }, 500);
+    </div>
+    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#btnPrint").click(function() {
+                var contents = $("#dvContents").html();
+                var frame1 = $('<iframe />');
+                frame1[0].name = "frame1";
+                frame1.css({
+                    "position": "absolute",
+                    "top": "-1000000px"
                 });
+                $("body").append(frame1);
+                var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+                frameDoc.document.open();
+                //Create a new HTML document.
+                frameDoc.document.write('<html><head><title></title>');
+                frameDoc.document.write('</head><body>');
+                //Append the external CSS file.
+                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/ShikshAbhiyan.css" rel="stylesheet" type="text/css" />');
+                //Append the DIV contents.
+                frameDoc.document.write(contents);
+                frameDoc.document.write('</body></html>');
+                frameDoc.document.close();
+                setTimeout(function() {
+                    window.frames["frame1"].focus();
+                    window.frames["frame1"].print();
+                    frame1.remove();
+                }, 500);
             });
+        });
 
-        </script>
-    </body>
+    </script>
+</body>
 
 </html>

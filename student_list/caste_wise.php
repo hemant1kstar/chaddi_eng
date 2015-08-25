@@ -10,7 +10,7 @@
     <title>Caste-wise Students' List | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="../css/material.green-purple.min.css" />
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
@@ -24,15 +24,17 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Student List</span>
-                
-                
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
+
+
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
@@ -54,7 +56,7 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
 
@@ -82,17 +84,17 @@
                             <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" id="showDataButton" name='submit_category' value='Submit'>
                         </div>
                     </form>
-            </div>
-                
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-  <div class="mdl-tabs__tab-bar">
-      <a href="#student_list_panel" class="mdl-tabs__tab is-active">Student List</a>
-      <a href="#student_report_panel" class="mdl-tabs__tab">Student Report</a>
-  </div>
+                </div>
 
-    <div class="mdl-tabs__panel is-active" id="student_list_panel">
-                <div class="student_list mdl-shadow--2dp">
-                        <?php
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar">
+                        <a href="#student_list_panel" class="mdl-tabs__tab is-active">Student List</a>
+                        <a href="#student_report_panel" class="mdl-tabs__tab">Student Report</a>
+                    </div>
+
+                    <div class="mdl-tabs__panel is-active" id="student_list_panel">
+                        <div class="student_list mdl-shadow--2dp">
+                            <?php
                             include("../database/connection.php");
                             if(isset($_POST['submit_category'])){
                               $category=$_POST['category1'];
@@ -146,11 +148,11 @@
                             }
                          ?>
 
-                </div>
-    </div>
-       <div class="mdl-tabs__panel" id="student_report_panel">
-                           <div class="student_list mdl-shadow--2dp">
-                        <?php
+                        </div>
+                    </div>
+                    <div class="mdl-tabs__panel" id="student_report_panel">
+                        <div class="student_list mdl-shadow--2dp">
+                            <?php
                             include("../database/connection.php");
                             if(isset($_POST['submit_category'])){
                               $category=$_POST['category1'];
@@ -171,8 +173,8 @@
                 
                          ?>
 
-                </div>
-       </div>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -180,7 +182,7 @@
         </main>
 
     </div>
-            <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
     <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {

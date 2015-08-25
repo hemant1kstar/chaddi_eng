@@ -40,7 +40,7 @@
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">All Student Details</span>
+                <span class="mdl-layout-title">All Student Details</span>                 <div class="mdl-layout-spacer"></div>                 <nav class="mdl-navigation">                     <a class="mdl-navigation__link" href="../index.php">Home</a>                 </nav>
                 
                
             </div>

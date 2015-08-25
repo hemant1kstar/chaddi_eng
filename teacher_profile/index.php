@@ -62,7 +62,8 @@
 
                     <div>
                         <a href="create_table_layout.php" id="addTable" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored addTable">
-                            <i class="material-icons">add</i>
+                            <img class="material-icons" src="../images/dynamicTables/ic_add_24px.svg" />
+<!--                            <i class="material-icons">add</i>-->
                         </a>
                         <div class="mdl-tooltip mdl-tooltip--large" for="addTable">
                             Add New Tables

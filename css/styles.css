@@ -9,11 +9,12 @@ body {
 /*    max-width: 1023px;*/
     display: inline-block;
     margin: 48px 24px;
-    background-color: white;
+/*    background-color: white;*/
     padding: 48px 16px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
 }
-
+.mdl-cell {
+    padding: 16px 0;
+}
 .cards_layout {
     margin: auto;
 }
@@ -22,7 +23,7 @@ body {
 
 .cards_layout > .mdl-card__title {
   color: #fff;
-  background:#46B6AC;
+    text-transform: capitalize;
 }
 
 #studentInformation {
@@ -31,6 +32,12 @@ body {
 
 #attendance {
     background-color: #3f51b5;
+}
+#certificates {
+    background-color: #009688;
+}
+#studentLists {
+    background-color: #4caf50;
 }
 
 #teacherProfile {

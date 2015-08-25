@@ -10,7 +10,7 @@
     <title>Nirgam Utara | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="../css/material.teal-lime.min.css" />
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
@@ -23,15 +23,17 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Certificates</span>
-                
-               
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
+
+
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
@@ -64,7 +66,7 @@
                     <form action="" method="post">
                         <div>
                             <label class="customLabel" id="displayTableRegistrationLabel">Registration No :</label>
-                                <?php
+                            <?php
 include("../database/connection.php");
               $result = mysqli_query($con,"SELECT * FROM master"); 
 echo "<select name='reg_no' class='dropdownOptions' required>";
@@ -75,7 +77,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
             }
              echo "</select>";
           ?>
-                            <button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name="submit_student_info" type="submit" id="showCertificateButton">Submit</button>
+                                <button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" name="submit_student_info" type="submit" id="showCertificateButton">Submit</button>
                         </div>
                     </form>
                 </div>

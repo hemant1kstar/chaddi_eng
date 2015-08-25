@@ -10,7 +10,7 @@
     <title>Identity Card | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="../css/material.teal-lime.min.css" />
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
@@ -23,15 +23,17 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Certificates</span>
-                
-                
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
+
+
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
@@ -126,27 +128,31 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                     <td>: संत नामदेव प्राथमिक/माध्यमिक/उच्चमाध्यमिक विद्यालय, लातूर</td>
                                 </tr>
                                 <tr>
-                                    <td>विद्यार्थ्याचे  नाव</td>
+                                    <td>विद्यार्थ्याचे नाव</td>
                                     <td>
-                                        : <?php echo "$student_name";?>
+                                        :
+                                        <?php echo "$student_name";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>रजि क्रमांक</td>
                                     <td>
-                                        : <?php echo "$reg_no1";?>
+                                        :
+                                        <?php echo "$reg_no1";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>इयत्ता </td>
                                     <td>
-                                        : <?php echo "$current_class";?>
+                                        :
+                                        <?php echo "$current_class";?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>पत्ता</td>
                                     <td>
-                                        : <?php echo "$permanent_address";?>
+                                        :
+                                        <?php echo "$permanent_address";?>
                                     </td>
                                 </tr>
                                 <tr>
@@ -156,7 +162,8 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <tr>
                                     <td>बैठक क्रमांक</td>
                                     <td>
-                                        : <?php echo "$exam_seat_no";?>
+                                        :
+                                        <?php echo "$exam_seat_no";?>
                                     </td>
                                 </tr>
                                 <tr>

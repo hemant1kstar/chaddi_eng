@@ -10,7 +10,7 @@
     <title>Aadhar Card-wise Students' List | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="../css/material.green-purple.min.css" />
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
@@ -24,15 +24,17 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Student List</span>
-                
-                
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
+
+
             </div>
 
             <div class="tabs mdl-js-ripple-effect">
@@ -44,7 +46,7 @@
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab is-active">Aadhar Card Wise</a>
                 <a href="" class="mdl-layout__tab">BPL Wise</a>
                 <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
-                 <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
+                <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
             </div>
 
         </header>
@@ -54,7 +56,7 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-       <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
 
@@ -71,7 +73,7 @@
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                 <input class="mdl-textfield__input" type="text" id="aadhar_card_no" name="aadhar_card_no" />
                                 <label class="mdl-textfield__label" for="aadhar_card_no">Aadhar Card No:</label>
-                                
+
                             </div>
                             <input type='submit' class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" id="showDataButton" name='submit_aadhar_card' value='Submit'>
                         </div>
@@ -79,8 +81,8 @@
                 </div>
 
                 <div class="student_list mdl-shadow--2dp">
-  
-                        <?php
+
+                    <?php
                             include("../database/connection.php");
                             if(isset($_POST['submit_aadhar_card'])){
                               $aadhar_card_no=$_POST['aadhar_card_no'];
@@ -134,7 +136,7 @@
                             }
                          ?>
 
-  
+
 
                 </div>
 
@@ -144,9 +146,9 @@
         </main>
 
     </div>
-    
+
     <script type="text/javascript" src="../jquery/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
                 var contents = $("#dvContents").html();

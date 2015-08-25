@@ -50,53 +50,38 @@
             </nav>
         </div>
         <main class="mdl-layout__content">
-            <div class="page-content mdl-shadow--4dp">
+            <div class="page-content">
 
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand" id="studentInformation">
-                                <h2 class="mdl-card__title-text">Information</h2>
-                            </div>
+                            <a href="master_table/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="studentInformation">
+                                <h2 class="mdl-card__title-text">Student Information</h2>
+                            </a>
                             <div class="mdl-card__supporting-text">
-                                Get Student Information ..
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="master_table/index.php">
-                      Student Info
-                    </a>
+                                Get Student Information..
                             </div>
                         </div>
                     </div>
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand" id="attendance">
-                                <h2 class="mdl-card__title-text">Attendance</h2>
-                            </div>
+                            <a href="attendance/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="attendance">
+                                <h2 class="mdl-card__title-text"> Student Attendance</h2>
+                            </a>
                             <div class="mdl-card__supporting-text">
-                                Get Student attendance ..
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="attendance/index.php">
-                      Student Attendance
-                    </a>
+                                Get Student attendance..
                             </div>
                         </div>
                     </div>
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand">
-                                <h2 class="mdl-card__title-text">Certificates</h2>
-                            </div>
+                            <a href="certificates/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="certificates">
+                                <h2 class="mdl-card__title-text">Student Certificates</h2>
+                            </a>
                             <div class="mdl-card__supporting-text">
-                                Get Student Certificates ..
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="certificates/index.php">
-                      Student Certificates
-                    </a>
+                                Get Student Certificates..
                             </div>
                         </div>
                     </div>
@@ -104,50 +89,35 @@
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand">
+                            <a href="student_list/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="studentLists">
                                 <h2 class="mdl-card__title-text">Student List</h2>
-                            </div>
+                            </a>
                             <div class="mdl-card__supporting-text">
                                 Get Student List ..
                             </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="student_list/index.php">
-                      Student List
-                    </a>
-                            </div>
                         </div>
                     </div>
 
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand" id="teacherProfile">
+                            <a href="teacher_profile/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="teacherProfile">
                                 <h2 class="mdl-card__title-text">Teacher Profile</h2>
-                            </div>
+                            </a>
                             <div class="mdl-card__supporting-text">
                                 Teacher Profile ..
                             </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="teacher_profile/index.php">
-                      Teacher Profile
-                    </a>
-                            </div>
                         </div>
                     </div>
 
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <div class="mdl-card__title mdl-card--expand" id="dynamicTables">
+                            <a href="dynamicCreate/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="dynamicTables">
                                 <h2 class="mdl-card__title-text">Dynamic Information</h2>
-                            </div>
+                            </a>
                             <div class="mdl-card__supporting-text">
                                 Get Dynamic Information ..
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="dynamicCreate/index.php">
-                      Dynamic Info
-                    </a>
                             </div>
                         </div>
                     </div>
