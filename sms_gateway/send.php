@@ -13,7 +13,9 @@ if(isset($_POST['submit']))
 //$message = (isset($_POST['message']) ) ? $_POST['message'] : '';
  
  
- $Curl_Session = curl_init('http://bhashsms.com/api/sendmsg.php');
+ 
+ 
+// $Curl_Session = curl_init('http://bhashsms.com/api/sendmsg.php');commented
  curl_setopt ($Curl_Session, CURLOPT_POST, 1);
 curl_setopt ($Curl_Session, CURLOPT_POSTFIELDS, "user=7350182285&pass=a5c84b9&sender=ALMALA&phone=$comment&text=$comment1&priority=ndnd&smstype=normal");
  //curl_setopt ($Curl_Session, CURLOPT_FOLLOWLOCATION, 1);

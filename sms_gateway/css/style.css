@@ -10,14 +10,18 @@ body {
     padding: 48px 16px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
-    height: 700px;
+    height: 600px;
 }
  
 #get_student_div{
-/*     float:left*/
      display: inline-block;
+     border: 1px solid rgba(0, 0, 0, 0.57);
+     padding: 16px;
+     max-width: 650px;
 }
 
 #student_display{
     float: right;
+    border: 1px solid rgba(0, 0, 0, 0.57);
+    padding: 16px;
 }
