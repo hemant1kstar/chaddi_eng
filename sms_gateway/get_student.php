@@ -20,7 +20,7 @@ while($row = mysqli_fetch_array($result)) {
     echo "<td>" . $Stud_reg_no . "</td>";
     echo "<td class='mdl-data-table__cell--non-numeric'>" . $Stud_Name . "</td>";
     echo "<td>" . $Stud_Mob .  "</td>";
-   echo "<td><button id='button1' onClick='addmob($Stud_Mob)' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>ADD</button></td>";
+   echo "<td><button id='button1' onClick='addmob($Stud_Mob)' class='mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>ADD</button></td>";
     echo "</tr>";
 }
 echo "</tbody></table>";

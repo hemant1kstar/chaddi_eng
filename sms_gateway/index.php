@@ -124,8 +124,8 @@ function test_input($data) {
                                 <br>
                                 <br>
                                 <b> Message:</b>
-                                <br/>
-                                <textarea name="comment1" rows="15" cols="60"><?php echo $comment1;?></textarea>
+                                <br/><textarea name="comment1" rows="15" cols="60">
+                                <?php echo $comment1;?></textarea>
                                 <br>
                                 <input type="reset" name="reset" value="Clear">
                                 <input type="submit" name="submit" value="Send">
