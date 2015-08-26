@@ -51,6 +51,7 @@
                 <span class="mdl-layout-title">All Student Details</span>
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="master.php">Master</a>
                     <a class="mdl-navigation__link" href="../index.php">Home</a>
                 </nav>
 
@@ -70,6 +71,7 @@
                 <a href="update.php" class="mdl-layout__tab">Update Student Info</a>
             </div>
         </header>
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
@@ -78,6 +80,7 @@
                 <a class="mdl-navigation__link" href="index.php">Entry</a>
             </nav>
         </div>
+-->
         <main class="mdl-layout__content">
             <?php
     include("../database/connection.php");

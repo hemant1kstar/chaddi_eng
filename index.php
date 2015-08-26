@@ -32,23 +32,27 @@
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Paperless System</span>
+                <span class="mdl-layout-title">Sant Namdev Vidyalaya, Paperless System</span>
                 <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
+<!--                <div class="mdl-layout-spacer"></div>-->
                 <!-- Navigation. We hide it in small screens. -->
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
+<!--
+                <nav class="mdl-navigation ">
                     <a class="mdl-navigation__link" href="index.php">Home</a>
                 </nav>
+-->
 
             </div>
 
         </header>
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="index.php">Home</a>
             </nav>
         </div>
+-->
         <main class="mdl-layout__content">
             <div class="page-content">
 
@@ -124,9 +128,14 @@
                 </div>
 
             </div>
+            <p class="madeBy">Made by <a href="http://www.resoneuronance.com">Team Resoneuronance</a></p>
+
 
         </main>
+
     </div>
+    
+
 
 </body>
 

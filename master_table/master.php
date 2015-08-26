@@ -1,103 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-        <title>Master Table | Paperless System</title>
-    
-<!--    CSS For Material Design-->
- <link rel="stylesheet" href="../css/material.blue-pink.min.css" /> 
-<script src="../material_js/material.js"></script>
+
+
+    <title>Master Table | Paperless System</title>
+
+    <!--    CSS For Material Design-->
+    <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
+    <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
 
     <!--  End of CSS For Material Design-->
-    
+
     <link rel="stylesheet" href="../css/master.css">
-      
-            
-  </head>
-  <body>
-<!--    Scrollable header-->
-              <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-                <header class="mdl-layout__header">
-                  <!-- Top row, always visible -->
-                  <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">All Student Details</span>                 <div class="mdl-layout-spacer"></div>                 <nav class="mdl-navigation">                     <a class="mdl-navigation__link" href="../index.php">Home</a>                 </nav>
-                    
-                    
-                  </div>
-         
-              <div class="tabs mdl-js-ripple-effect">
-                  <a href="master.php" class="mdl-layout__tab is-active">Student Info</a>
-                  <a href="tc_info_display.php" class="mdl-layout__tab">TC Information</a>
-                  <a href="other_info_display.php" class="mdl-layout__tab">Other Info</a>
-                  <a href="student_grade_display.php" class="mdl-layout__tab">Student Grades</a>
-                </div>
-                  
-                  
-                </header>
-                
-                
-                
-              <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Paperless System</span>
-                  <nav class="mdl-navigation">
-                     <a class="mdl-navigation__link" href="../index.php">Home</a>
-                    <a class="mdl-navigation__link" href="master.php">Master</a>
+
+
+</head>
+
+<body>
+    <!--    Scrollable header-->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <!-- Top row, always visible -->
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">All Student Details</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.php">Entry</a>
-                  </nav>
-              </div>
-                
-                
-                
-                 <main class="mdl-layout__content">
+                    <a class="mdl-navigation__link" href="../index.php">Home</a> 
+                </nav>
 
-                      <!-- Your content goes here -->
-                    <div class="" id="masterTableBlock">
-                         <h2 id="form_header">Master Table</h2>
-                      
-                      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="table1">
-                        <thead>
-                          <tr>
-                    
-                                <th>Reg. No. </th>
-                                <th class="mdl-data-table__cell--non-numeric">Student Name</th>
-                                <th class="mdl-data-table__cell--non-numeric">Mother Name</th>
-                                <th class='mdl-data-table__cell--non-numeric'>Gender</th>
-                                <th class="mdl-data-table__cell--non-numeric">Mother Tongue</th>
-                                <th>Birth Date</th>
-                                <th>Age</th>
-                                <th class="mdl-data-table__cell--non-numeric">Nationality</th>
-                                <th class="mdl-data-table__cell--non-numeric">Religion</th>
-                                <th class="mdl-data-table__cell--non-numeric">Caste</th>
-                                <th class="mdl-data-table__cell--non-numeric">Sub-Caste</th>
-                                <th class="mdl-data-table__cell--non-numeric">Category</th>
-                                <th class="mdl-data-table__cell--non-numeric">Father Name</th>
-                                <th class="mdl-data-table__cell--non-numeric">Father Occupation</th>
-                                <th>Annual Income</th>
-                                <th class="mdl-data-table__cell--non-numeric">Birth Place</th>
-                                <th class="mdl-data-table__cell--non-numeric">District</th>
-                                <th class="mdl-data-table__cell--non-numeric">State</th>
 
-                                <th>Prev Class</th>
-                                <th class="mdl-data-table__cell--non-numeric">Prev School Name</th>
-                                <th>Admission Date</th>
-                                <th>Admission Class</th>
-                                <th class="mdl-data-table__cell--non-numeric">Prev Mark Sheet</th>
-                                <th class="mdl-data-table__cell--non-numeric">Prev Tc</th>
-                                <th class="mdl-data-table__cell--non-numeric">Nadar Fee</th>
-                                <th class="mdl-data-table__cell--non-numeric">Permanent Address</th>
-                                <th class="mdl-data-table__cell--non-numeric">Medium</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          
-                    <?php
+            </div>
+
+            <div class="tabs mdl-js-ripple-effect">
+                <a href="master.php" class="mdl-layout__tab is-active">Student Info</a>
+                <a href="tc_info_display.php" class="mdl-layout__tab">TC Information</a>
+                <a href="other_info_display.php" class="mdl-layout__tab">Other Info</a>
+                <a href="student_grade_display.php" class="mdl-layout__tab">Student Grades</a>
+            </div>
+
+
+        </header>
+
+
+
+<!--
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Paperless System</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="master.php">Master</a>
+                <a class="mdl-navigation__link" href="index.php">Entry</a>
+            </nav>
+        </div>
+-->
+
+
+
+        <main class="mdl-layout__content">
+
+            <!-- Your content goes here -->
+            <div class="" id="masterTableBlock">
+                <h2 id="form_header">Master Table</h2>
+
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="table1">
+                    <thead>
+                        <tr>
+
+                            <th>Reg. No. </th>
+                            <th class="mdl-data-table__cell--non-numeric">Student Name</th>
+                            <th class="mdl-data-table__cell--non-numeric">Mother Name</th>
+                            <th class='mdl-data-table__cell--non-numeric'>Gender</th>
+                            <th class="mdl-data-table__cell--non-numeric">Mother Tongue</th>
+                            <th>Birth Date</th>
+                            <th>Age</th>
+                            <th class="mdl-data-table__cell--non-numeric">Nationality</th>
+                            <th class="mdl-data-table__cell--non-numeric">Religion</th>
+                            <th class="mdl-data-table__cell--non-numeric">Caste</th>
+                            <th class="mdl-data-table__cell--non-numeric">Sub-Caste</th>
+                            <th class="mdl-data-table__cell--non-numeric">Category</th>
+                            <th class="mdl-data-table__cell--non-numeric">Father Name</th>
+                            <th class="mdl-data-table__cell--non-numeric">Father Occupation</th>
+                            <th>Annual Income</th>
+                            <th class="mdl-data-table__cell--non-numeric">Birth Place</th>
+                            <th class="mdl-data-table__cell--non-numeric">District</th>
+                            <th class="mdl-data-table__cell--non-numeric">State</th>
+
+                            <th>Prev Class</th>
+                            <th class="mdl-data-table__cell--non-numeric">Prev School Name</th>
+                            <th>Admission Date</th>
+                            <th>Admission Class</th>
+                            <th class="mdl-data-table__cell--non-numeric">Prev Mark Sheet</th>
+                            <th class="mdl-data-table__cell--non-numeric">Prev Tc</th>
+                            <th class="mdl-data-table__cell--non-numeric">Nadar Fee</th>
+                            <th class="mdl-data-table__cell--non-numeric">Permanent Address</th>
+                            <th class="mdl-data-table__cell--non-numeric">Medium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php
 
                              include("../database/connection.php");
 
@@ -176,12 +185,13 @@
 
                           ?>
 
-                        </tbody>
-                      </table>
-
-                    </div>
-                  </main>
+                    </tbody>
+                </table>
 
             </div>
-  </body>
+        </main>
+
+    </div>
+</body>
+
 </html>

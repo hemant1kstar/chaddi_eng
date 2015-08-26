@@ -37,7 +37,7 @@
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <nav class="mdl-navigation ">
                         <a class="mdl-navigation__link" href="index.php">Home</a>
                         <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
                         
@@ -45,6 +45,7 @@
                     </nav>
                 </div>
             </header>
+<!--
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Teacher Panel</span>
                 <nav class="mdl-navigation">
@@ -54,6 +55,7 @@
                     <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
                 </nav>
             </div>
+-->
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <!-- Your content goes here -->
@@ -170,7 +172,7 @@
                     </div>
 
                     <h2 class="contentHeader">Update Profile Photo</h2>
-                    <div class="mdl-shadow--2dp">
+                    <div class="uploadPicDiv mdl-shadow--2dp">
                         <form action="php/teacher_update_photo.php" method="post" enctype="multipart/form-data">
                             <input type='file' class='' name='profile_photo' required/>
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" type="submit" name="teacher_profile_photo">Upload</button>
