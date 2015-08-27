@@ -1,0 +1,30 @@
+body {
+    color: rgba(0, 0, 0, 0.87);
+    padding: 16px;
+}
+
+/*
+#dvContents{
+    border: 1px solid #9E9E9E;
+}
+*/
+.report_title{
+    text-align: center;
+    font-size: 14px;
+}
+
+.report_sub_title{
+    padding-right: 8px;
+    font-size: 14px;
+}
+
+table {
+    border: 1px solid #9E9E9E;
+    text-align: center;
+    border-collapse: collapse;
+}
+tr, th, td {
+    border: 1px solid #9E9E9E;
+    font-size: 12px;
+    font-weight: 400;
+}

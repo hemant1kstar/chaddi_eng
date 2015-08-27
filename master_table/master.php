@@ -26,11 +26,12 @@
                 <header class="mdl-layout__header">
                   <!-- Top row, always visible -->
                   <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">All Student Details</span>                 <div class="mdl-layout-spacer"></div>                 <nav class="mdl-navigation">                     <a class="mdl-navigation__link" href="../index.php">Home</a>                 </nav>
-                    
-                    
-                  </div>
+<!-- Title -->
+<span class="mdl-layout-title">All Student Details</span>
+<div class="mdl-layout-spacer"></div>
+<nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a>
+</nav>
+</div>
          
               <div class="tabs mdl-js-ripple-effect">
                   <a href="master.php" class="mdl-layout__tab is-active">Student Info</a>

@@ -1,0 +1,23 @@
+.page-content
+{
+    margin:auto 36px;
+}
+
+.mdl-tabs{
+    margin: 36px auto;
+}
+
+.printButtonDiv{
+    padding: 16px;
+}
+.report_title{
+    text-align: center;
+    font-size: 18px;
+    margin: 8px;
+}
+
+.report_sub_title{
+    padding: 16px;
+    font-size: 16px;
+}
+
