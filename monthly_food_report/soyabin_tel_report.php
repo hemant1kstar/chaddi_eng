@@ -68,7 +68,7 @@
     <a href="turdal_report.php" class="mdl-layout__tab"> तुरडाळ हिशोब </a>
     <a href="masurdal_report.php" class="mdl-layout__tab"> मसूरडाळ हिशोब</a>
     <a href="sugar_report.php" class="mdl-layout__tab">गुळ / साखर हिशोब </a>
-    <a href="matki_report.php" class="mdl-layout__tab is-active">मटकी हिशोब </a>
+    <a href="matki_report.php" class="mdl-layout__tab">मटकी हिशोब </a>
     <a href="mug_report.php" class="mdl-layout__tab"> मुग हिशोब </a>
     <a href="chavli_report.php" class="mdl-layout__tab"> चवली हिशोब </a>
     <a href="harbara_report.php" class="mdl-layout__tab"> हरभरा हिशोब </a> 
@@ -77,7 +77,7 @@
     <a href="mohari_report.php" class="mdl-layout__tab"> मोहरी हिशोब </a>
     <a href="halad_report.php" class="mdl-layout__tab"> हळद हिशोब </a>
     <a href="mirchi_powder_report.php" class="mdl-layout__tab">  मिर्ची पावडर हिशोब </a>
-    <a href="soyabin_tel_report.php" class="mdl-layout__tab"> सोयाबीन तेल हिशोब </a>
+    <a href="soyabin_tel_report.php" class="mdl-layout__tab is-active"> सोयाबीन तेल हिशोब </a>
     <a href="salt_report.php" class="mdl-layout__tab"> मीठ हिशोब </a>
     <a href="vegetables_report.php" class="mdl-layout__tab"> भाजीपाला हिशोब </a>
 </div>
@@ -101,20 +101,20 @@
         ?>
 
             <?php
-     if(isset($_POST['daily_matki_info']))
+     if(isset($_POST['daily_soyabin_tel_info']))
      {
          $entry_date=$_POST['entry_date'];
          $entry_date1= new DateTime($entry_date);
          $entry_date1=date_format ($entry_date1, 'Y-m-d');
          $t_student=$_POST['total_student'];
-         $prev_month_remain_matki=$_POST['prev_month_remain_matki'];
-         $matki_got=$_POST['matki_got'];
-         $total_matki=$_POST['total_matki'];
+         $prev_month_remain_soyabin_tel=$_POST['prev_month_remain_soyabin_tel'];
+         $soyabin_tel_got=$_POST['soyabin_tel_got'];
+         $total_soyabin_tel=$_POST['total_soyabin_tel'];
          $total_plates=$_POST['total_plates'];
-         $cooked_matki=$_POST['cooked_matki'];
-         $remaining_matki=$_POST['remaining_matki'];
+         $cooked_soyabin_tel=$_POST['cooked_soyabin_tel'];
+         $remaining_soyabin_tel=$_POST['remaining_soyabin_tel'];
          mysqli_query ($con,"set character_set_results='utf8'");      
-      if(mysqli_query($con,"INSERT INTO matki_report(date, total_student,prev_matki_remain, current_month_matki_got, total_matki, total_plates, matki_cooked, monthEnd_remaining_matki)values (N'$entry_date1',N'$t_student',N'$prev_month_remain_matki',N'$matki_got',N'$total_matki',N'$total_plates',N'$cooked_matki',N'$remaining_matki')"))
+      if(mysqli_query($con,"INSERT INTO soyabin_tel_report(date, total_student,prev_soyabin_tel_remain, current_month_soyabin_tel_got, total_soyabin_tel, total_plates, soyabin_tel_cooked, monthEnd_remaining_soyabin_tel)values (N'$entry_date1',N'$t_student',N'$prev_month_remain_soyabin_tel',N'$soyabin_tel_got',N'$total_soyabin_tel',N'$total_plates',N'$cooked_soyabin_tel',N'$remaining_soyabin_tel')"))
       {
          // Code for Snackbar after the Submit button is clicked
          echo "<script type='text/javascript'>
@@ -135,12 +135,12 @@
 
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
         <div class="mdl-tabs__tab-bar">
-            <a href="#matki_entry_panel" class="mdl-tabs__tab is-active">Daily matki Entry</a>
-            <a href="#matki_report_panel" class="mdl-tabs__tab">matki Report</a>
+            <a href="#soyabin_tel_entry_panel" class="mdl-tabs__tab is-active">Daily soyabin_tel Entry</a>
+            <a href="#soyabin_tel_report_panel" class="mdl-tabs__tab">soyabin_tel Report</a>
         </div>
-        <div class="mdl-tabs__panel is-active" id="matki_entry_panel">
-            <div class="matki_entry_div">
-                <h2 id="form_header">Daily matki Entry Form</h2>
+        <div class="mdl-tabs__panel is-active" id="soyabin_tel_entry_panel">
+            <div class="soyabin_tel_entry_div">
+                <h2 id="form_header">Daily soyabin_tel Entry Form</h2>
                 <form action="" method="post">
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -154,20 +154,20 @@
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_matki" name="prev_month_remain_matki" required/>
-                            <label class="mdl-textfield__label" for="prev_month_remain_matki"> मागील महिना शिल्लक मटकी </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_soyabin_tel" name="prev_month_remain_soyabin_tel" required/>
+                            <label class="mdl-textfield__label" for="prev_month_remain_soyabin_tel"> मागील महिना शिल्लक सोयाबीन तेल </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                     </div>
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="matki_got" name="matki_got" required/>
-                            <label class="mdl-textfield__label" for="matki_got"> चालू महिना प्राप्त मटकी </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="soyabin_tel_got" name="soyabin_tel_got" required/>
+                            <label class="mdl-textfield__label" for="soyabin_tel_got"> चालू महिना प्राप्त सोयाबीन तेल </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_matki" name="total_matki" required/>
-                            <label class="mdl-textfield__label" for="total_matki"> एकून मटकी </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_soyabin_tel" name="total_soyabin_tel" required/>
+                            <label class="mdl-textfield__label" for="total_soyabin_tel"> एकून सोयाबीन तेल </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
@@ -178,29 +178,29 @@
                     </div>
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_matki" name="cooked_matki" required/>
-                            <label class="mdl-textfield__label" for="cooked_matki"> शिजवलेली मटकी </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_soyabin_tel" name="cooked_soyabin_tel" required/>
+                            <label class="mdl-textfield__label" for="cooked_soyabin_tel"> सोयाबीन तेल वापरले </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_matki" name="remaining_matki" required/>
-                            <label class="mdl-textfield__label" for="remaining_matki"> महिना अखेर शिल्लक मटकी </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_soyabin_tel" name="remaining_soyabin_tel" required/>
+                            <label class="mdl-textfield__label" for="remaining_soyabin_tel"> महिना अखेर शिल्लक सोयाबीन तेल </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
 
                     </div>
                     <!-- Accent-colored raised button with ripple -->
                     <div class="submitButtonDiv">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_matki_info" type="submit">Submit</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_soyabin_tel_info" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
 
 </div>
-<div class="mdl-tabs__panel" id="matki_report_panel">
+<div class="mdl-tabs__panel" id="soyabin_tel_report_panel">
 
-    <div class="matki_report_div">
-        <h2 id="form_header">Monthly matki  Report</h2>
+    <div class="soyabin_tel_report_div">
+        <h2 id="form_header">Monthly soyabin_tel  Report</h2>
         <div class="mdl-shadow--2dp">
             <div class="mdl-grid">
                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -272,7 +272,7 @@
         }
         str1=document.getElementById("report_year").value;
         str2=document.getElementById("report_month").value;
-        xmlhttp.open("GET","php/monthly_matki_report.php?s_year="+str1+"&s_month="+str2,true);
+        xmlhttp.open("GET","php/monthly_soyabin_tel_report.php?s_year="+str1+"&s_month="+str2,true);
         xmlhttp.send();
 }
     </script>

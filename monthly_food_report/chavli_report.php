@@ -71,14 +71,15 @@
     <a href="matki_report.php" class="mdl-layout__tab">मटकी हिशोब </a>
     <a href="mug_report.php" class="mdl-layout__tab"> मुग हिशोब </a>
     <a href="chavli_report.php" class="mdl-layout__tab is-active"> चवली हिशोब </a>
-     <a href="" class="mdl-layout__tab">report</a> 
-     <a href="" class="mdl-layout__tab">report</a> 
-     <a href="" class="mdl-layout__tab">report</a>
-     <a href="" class="mdl-layout__tab">report</a>
-     <a href="" class="mdl-layout__tab">report</a>
-     <a href="" class="mdl-layout__tab">report</a>
-     <a href="" class="mdl-layout__tab">report</a>
-     <a href="" class="mdl-layout__tab">report</a>
+    <a href="harbara_report.php" class="mdl-layout__tab"> हरभरा हिशोब </a> 
+    <a href="vatana_report.php" class="mdl-layout__tab"> वाटाणा हिशोब </a> 
+    <a href="jire_report.php" class="mdl-layout__tab"> जिरे हिशोब </a>
+    <a href="mohari_report.php" class="mdl-layout__tab"> मोहरी हिशोब </a>
+    <a href="halad_report.php" class="mdl-layout__tab"> हळद हिशोब </a>
+    <a href="mirchi_powder_report.php" class="mdl-layout__tab">  मिर्ची पावडर हिशोब </a>
+    <a href="soyabin_tel_report.php" class="mdl-layout__tab"> सोयाबीन तेल हिशोब </a>
+    <a href="salt_report.php" class="mdl-layout__tab"> मीठ हिशोब </a>
+    <a href="vegetables_report.php" class="mdl-layout__tab"> भाजीपाला हिशोब </a>
 </div>
             
             
@@ -178,7 +179,7 @@
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_chavli" name="cooked_chavli" required/>
-                            <label class="mdl-textfield__label" for="cooked_chavli"> शिजवलेला चवली </label>
+                            <label class="mdl-textfield__label" for="cooked_chavli"> शिजवलेली चवली </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
