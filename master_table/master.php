@@ -19,43 +19,13 @@
 
     <link rel="stylesheet" href="../css/master.css">
 
-      
-            
-  </head>
-  <body>
-<!--    Scrollable header-->
-              <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-                <header class="mdl-layout__header">
-                  <!-- Top row, always visible -->
-                  <div class="mdl-layout__header-row">
-<!-- Title -->
-<span class="mdl-layout-title">All Student Details</span>
-<div class="mdl-layout-spacer"></div>
-<nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a>
-</nav>
-</div>
-         
-              <div class="tabs mdl-js-ripple-effect">
-                  <a href="master.php" class="mdl-layout__tab is-active">Student Info</a>
-                  <a href="tc_info_display.php" class="mdl-layout__tab">TC Information</a>
-                  <a href="other_info_display.php" class="mdl-layout__tab">Other Info</a>
-                  <a href="student_grade_display.php" class="mdl-layout__tab">Student Grades</a>
-                </div>
-                  
-                  
-                </header>
-                
-                
-                
-              <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Paperless System</span>
-                  <nav class="mdl-navigation">
-                     <a class="mdl-navigation__link" href="../index.php">Home</a>
-                    <a class="mdl-navigation__link" href="master.php">Master</a>
-
 
 
 </head>
+
+
+
+
 
 <body>
     <!--    Scrollable header-->
@@ -68,7 +38,7 @@
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.php">Entry</a>
-                    <a class="mdl-navigation__link" href="../index.php">Home</a> 
+                    <a class="mdl-navigation__link" href="../index.php">Home</a>
                 </nav>
 
 
@@ -86,7 +56,7 @@
 
 
 
-<!--
+        <!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">

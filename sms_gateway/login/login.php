@@ -39,12 +39,14 @@
                 </nav>
             </div>
         </header>
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Login</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="../../index.php">Home</a>
             </nav>
         </div>
+-->
         <main class="mdl-layout__content">
             <div class="page-content">
                 <!-- Your content goes here -->

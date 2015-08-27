@@ -125,6 +125,30 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card mdl-shadow--2dp cards_layout">
+                            <a href="sms_gateway/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="dynamicTables">
+                                <h2 class="mdl-card__title-text">SMS</h2>
+                            </a>
+                            <div class="mdl-card__supporting-text">
+                                Send SMS to students
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card mdl-shadow--2dp cards_layout">
+                            <a href="monthly_food_report/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="dynamicTables">
+                                <h2 class="mdl-card__title-text">Food Report</h2>
+                            </a>
+                            <div class="mdl-card__supporting-text">
+                                Get reports on food and grocery
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

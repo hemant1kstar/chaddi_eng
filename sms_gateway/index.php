@@ -7,7 +7,7 @@
          }
 ?>
 
-<?php
+    <?php
  $comment = $comment1 = $url = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -39,89 +39,91 @@ function test_input($data) {
 }
     
 ?>
-    <!DOCTYPE html>
-    <html lang="en">
+        <!DOCTYPE html>
+        <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/material.orange-green.min.css" />
-        <script src="../material_js/material.min.js"></script>
-        <link rel="stylesheet" href="../material_js/Material+Icons.css" />
-        <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
-        <title>SMS Panel</title>
-        
+            <link rel="stylesheet" href="../css/material.orange-green.min.css" />
+            <script src="../material_js/material.min.js"></script>
+            <link rel="stylesheet" href="../material_js/Material+Icons.css" />
+            <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
+            <title>SMS Panel</title>
+
             <!-- CSS and JS for Jquery datepicker -->
-    <link rel="stylesheet" href="../jquery-ui-1.11.4.custom/jquery-ui.min.css" />
-    <script src="../jquery/jquery-2.1.4.min.js"></script>
-    <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-    <!-- End of CSS and JS for Jquery datepicker -->
-        <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="../jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+            <script src="../jquery/jquery-2.1.4.min.js"></script>
+            <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+            <!-- End of CSS and JS for Jquery datepicker -->
+            <link rel="stylesheet" href="css/style.css">
 
-        <!--        it must for checkbox select-->
-        <script src="../jquery/jquery-2.1.4.min.js"></script>
-    </head>
+            <!--        it must for checkbox select-->
+            <script src="../jquery/jquery-2.1.4.min.js"></script>
+        </head>
 
-    <body>
-        <!-- Always shows a header, even in smaller screens. -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                    <!-- Title -->
+        <body>
+            <!-- Always shows a header, even in smaller screens. -->
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                <header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row">
+                        <!-- Title -->
+                        <span class="mdl-layout-title">SMS Panel</span>
+                        <!-- Add spacer, to align navigation to the right -->
+                        <div class="mdl-layout-spacer"></div>
+                        <!-- Navigation. We hide it in small screens. -->
+                        <nav class="mdl-navigation ">
+                            <a class="mdl-navigation__link" href="index.php">Home</a>
+
+                            <a class="mdl-navigation__link" href="login/smsgateway_logout.php">Logout</a>
+                        </nav>
+                    </div>
+                </header>
+<!--
+                <div class="mdl-layout__drawer">
                     <span class="mdl-layout-title">SMS Panel</span>
-                    <!-- Add spacer, to align navigation to the right -->
-                    <div class="mdl-layout-spacer"></div>
-                    <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation ">
+                    <nav class="mdl-navigation">
                         <a class="mdl-navigation__link" href="index.php">Home</a>
-                        
                         <a class="mdl-navigation__link" href="login/smsgateway_logout.php">Logout</a>
                     </nav>
                 </div>
-            </header>
-            <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">SMS Panel</span>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="index.php">Home</a>         
-                    <a class="mdl-navigation__link" href="login/smsgateway_logout.php">Logout</a>
-                </nav>
-            </div>
-            <main class="mdl-layout__content">
-                <div class="page-content">
-                    <!-- Your content goes here -->
-         
-                <div id="get_student_div">
-                    
-                    <form action="" method="post">
-                       <div class="mdl-grid">
-                           
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <label>Select the Class</label>
-                            <select name="student_class1" required>
-                                <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
-                               
-            </div>
-                           
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+-->
+                <main class="mdl-layout__content">
+                    <div class="page-content">
+                        <!-- Your content goes here -->
+
+                        <div id="get_student_div">
+
+                            <form action="" method="post">
+                                <div class="mdl-grid">
+
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                        <label>Select the Class</label>
+                                        <select name="student_class1" required>
+                                            <option value=""></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel">Date :</label>
-                          <input type="date" name="attendance_date" class="dropdownOptions" id="datepicker" required>
+                                        <input type="date" name="attendance_date" class="dropdownOptions" id="datepicker" required>
 
-            </div>
+                                    </div>
 
-         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel"> Timing:
                                             <select name='attendance_timing' class="dropdownOptions" required>
                                                 <option></option>
@@ -131,14 +133,14 @@ function test_input($data) {
                                         </label>
 
                                     </div>
-                    </div>
-                        
-                        <input type="submit" name="submit_details" value="Get Student" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                        
-            <button id='button2' onClick='addallmob()' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Get All Student</button>
-                    </form>
+                                </div>
 
-                     <?php
+                                <input type="submit" name="submit_details" value="Get Student" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+
+                                <button id='button2' onClick='addallmob()' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Get All Student</button>
+                            </form>
+
+                            <?php
 
 if(isset($_POST['submit_details']))
 {
@@ -197,9 +199,9 @@ if(isset($_POST['submit_details']))
 
 }
   ?>
-            </div>
+                        </div>
 
-    
+
                         <div id="student_display">
 
                             <h3>Bulk SMS Facility</h3>
@@ -207,11 +209,16 @@ if(isset($_POST['submit_details']))
                             <form method="post" action="send.php" name="myform" id="id2">
                                 <b>Numbers:</b>
                                 <br/>
-                                <textarea name="comment" rows="5" cols="60" id="textarea1"><?php echo $comment;?></textarea>
+                                <textarea name="comment" rows="5" cols="60" id="textarea1">
+                                    <?php echo $comment;?>
+                                </textarea>
                                 <br>
                                 <br>
                                 <b> Message:</b>
-                                <br/><textarea name="comment1" rows="15" cols="60"><?php echo $comment1;?></textarea>
+                                <br/>
+                                <textarea name="comment1" rows="15" cols="60">
+                                    <?php echo $comment1;?>
+                                </textarea>
                                 <br>
                                 <input type="reset" name="reset" value="Clear" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                                 <input type="submit" name="submit" value="Send Message" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -223,72 +230,75 @@ if(isset($_POST['submit_details']))
 
 
                         </div>
-                    
-                    
-                    
-                </div>
-            </main>
-        </div>
 
-        
-      <!--To Fetch Data From Table-->  
-    <script>
-//function showUser(str) {
-//    if (str == "") {
-//        document.getElementById("txtHint").innerHTML = "";
-//        return;
-//    } else { 
-//        if (window.XMLHttpRequest) {
-//            // code for IE7+, Firefox, Chrome, Opera, Safari
-//            xmlhttp = new XMLHttpRequest();
-//        } else {
-//            // code for IE6, IE5
-//            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-//        }
-//        xmlhttp.onreadystatechange = function() {
-//            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-//                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-//            }
-//        }
-//        xmlhttp.open("GET","get_student.php?s_class="+str,true);
-//        xmlhttp.send();
-//    }
-//}
-     function addallmob() {
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      document.myform.textarea1.value +=xmlhttp.responseText;
-        
-            }
-        }
-        xmlhttp.open("GET","allstud.php",true);
-        xmlhttp.send();
-}
 
-  
-</script>
 
-    
-       <script> 
-           function addmob(mob1)
-           {
-document.myform.textarea1.value += mob1+',';
-            }
-       </script> 
-        
-       <script>
-                  $(function() {
-            $('#datepicker').datepicker({dateFormat: 'dd-mm-yy', minDate: 0 });
-                       });
-    </script>
+                    </div>
+                </main>
+            </div>
 
-    </body>
 
-    </html>
+            <!--To Fetch Data From Table-->
+            <script>
+                //function showUser(str) {
+                //    if (str == "") {
+                //        document.getElementById("txtHint").innerHTML = "";
+                //        return;
+                //    } else { 
+                //        if (window.XMLHttpRequest) {
+                //            // code for IE7+, Firefox, Chrome, Opera, Safari
+                //            xmlhttp = new XMLHttpRequest();
+                //        } else {
+                //            // code for IE6, IE5
+                //            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                //        }
+                //        xmlhttp.onreadystatechange = function() {
+                //            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                //                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                //            }
+                //        }
+                //        xmlhttp.open("GET","get_student.php?s_class="+str,true);
+                //        xmlhttp.send();
+                //    }
+                //}
+                function addallmob() {
+                    if (window.XMLHttpRequest) {
+                        // code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp = new XMLHttpRequest();
+                    } else {
+                        // code for IE6, IE5
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange = function() {
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            document.myform.textarea1.value += xmlhttp.responseText;
+
+                        }
+                    }
+                    xmlhttp.open("GET", "allstud.php", true);
+                    xmlhttp.send();
+                }
+
+            </script>
+
+
+            <script>
+                function addmob(mob1) {
+                    document.myform.textarea1.value += mob1 + ',';
+                }
+
+            </script>
+
+            <script>
+                $(function() {
+                    $('#datepicker').datepicker({
+                        dateFormat: 'dd-mm-yy',
+                        minDate: 0
+                    });
+                });
+
+            </script>
+
+        </body>
+
+        </html>
