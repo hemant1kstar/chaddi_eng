@@ -39,21 +39,23 @@
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
-                    <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <nav class="mdl-navigation ">
                     <a class="mdl-navigation__link" href="backup/backup_db.php">Backup</a>
+                    <a class="mdl-navigation__link" href="../index.php">Home</a>
                 </nav>
 
             </div>
 
         </header>
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Dynamic Content</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="../index.php">Home</a>
                 <a class="mdl-navigation__link" href="backup/backup_db.php">Backup</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
+-->
         <main class="mdl-layout__content">
             <div class="page-content mdl-shadow--4dp">
                 <!--                Floating FAB button -->
@@ -75,7 +77,7 @@
    echo "<div class='mdl-grid'>";
 
         while($table = mysqli_fetch_array($result)) {
-            echo "<div class='mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col'>";
+            echo "<div class='mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col'>";
             echo "<div class='mdl-card mdl-shadow--2dp demo-card-square'>";
             $tablename1=ucwords($table[0]);
             echo "<a href='table_display.php?q=`$table[0]`'  class='mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect'>";

@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
     <!--  End of CSS For Material Design-->
-    
+
     <!-- CSS and JS for Jquery datepicker -->
     <link rel="stylesheet" href="../jquery-ui-1.11.4.custom/jquery-ui.min.css" />
     <script src="../jquery/jquery-2.1.4.min.js"></script>
     <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
-    
+
     <!-- CSS and JS for Snackbar -->
     <link href="../css/snackbar.min.css" rel="stylesheet">
     <link href="../material_js/material_for_snackbar.css" rel="stylesheet">
@@ -39,7 +39,7 @@
         });
 
     </script>
-    
+
     <!-- For separate styles other than MAIN>CSS file -->
     <link rel="stylesheet" href="../css/update.css">
 
@@ -47,15 +47,20 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">All Student Details</span>                 <div class="mdl-layout-spacer"></div>                 <nav class="mdl-navigation">                     <a class="mdl-navigation__link" href="../index.php">Home</a>                 </nav>
-                
-                
+                <span class="mdl-layout-title">All Student Details</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="master.php">Master</a>
+                    <a class="mdl-navigation__link" href="../index.php">Home</a> 
+                </nav>
+
+
             </div>
             <!-- Bottom row, not visible on scroll -->
             <!--
@@ -83,14 +88,16 @@
 
 
 
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-                 <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
                 <a class="mdl-navigation__link" href="master.php">Master</a>
                 <a class="mdl-navigation__link" href="index.php">Entry</a>
             </nav>
         </div>
+-->
 
 
 

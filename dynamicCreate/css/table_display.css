@@ -45,6 +45,8 @@ table{
     width: 99%;
     overflow:auto;
 }
+
+
 @media (min-width: 992px) {
     .page-content {
         margin: 96px 24px;

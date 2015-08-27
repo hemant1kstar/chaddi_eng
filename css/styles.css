@@ -8,7 +8,7 @@ body {
     position: relative;
 /*    max-width: 1023px;*/
     display: inline-block;
-    margin: 48px 24px;
+    margin: 48px 24px 0;
 /*    background-color: white;*/
     padding: 48px 16px;
 }
@@ -46,5 +46,17 @@ body {
 
 #dynamicTables {
     background-color: #795548;
+}
+
+.madeBy {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 700;
+}
+.madeBy a {
+    text-decoration: none;
+    
 }
 

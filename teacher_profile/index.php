@@ -39,7 +39,7 @@
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <nav class="mdl-navigation ">
                         <a class="mdl-navigation__link" href="index.php">Home</a>
                         <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
                         
@@ -47,6 +47,7 @@
                     </nav>
                 </div>
             </header>
+<!--
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Teacher Panel</span>
                 <nav class="mdl-navigation">
@@ -56,6 +57,7 @@
                     <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
                 </nav>
             </div>
+-->
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <!-- Your content goes here -->

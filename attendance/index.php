@@ -43,7 +43,7 @@
                 <!-- Title -->
                 <span class="mdl-layout-title">Attendance</span>
                 <div class="mdl-layout-spacer"></div>
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <nav class="mdl-navigation ">
                     <a class="mdl-navigation__link" href="../index.php">Home</a>
                 </nav>
 
@@ -58,12 +58,14 @@
 
 
 
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
+-->
 
 
 

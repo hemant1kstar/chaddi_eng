@@ -20,7 +20,14 @@ body {
     background-color: white;
     margin: auto;
     padding: 48px 16px 16px;
+    margin-bottom: 16px;
     /*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);*/
+}
+.uploadPicDiv {
+    background-color: white;
+    padding: 16px;
+    height: 36px;
+    position: relative;
 }
 .editProfile {
     padding: 12px;
@@ -48,12 +55,12 @@ body {
     margin: 0px auto 16px;
     border-radius: 50%;
 }
-td>label {
-    color: rgba(0, 0, 0, 1);
+.contentDiv td>label {
     font-weight: 700;
+/*    padding-right: 16px;*/
 }
 td {
-    padding: 8px 0;
+    padding: 8px 16px 8px 0;
 }
 
 .updateButton {
@@ -64,6 +71,10 @@ td {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+.uploadPicDiv button {
+    position: absolute;
+    right: 16px;
 }
 @media (min-width: 992px) {
     .page-content {

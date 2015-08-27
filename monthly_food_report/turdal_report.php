@@ -63,9 +63,9 @@
             </div>
 
 <div class="tabs mdl-js-ripple-effect">
-    <a href="index.php" class="mdl-layout__tab is-active">तांदुळाचे हिशोब </a>
+    <a href="index.php" class="mdl-layout__tab">तांदुळाचे हिशोब </a>
     <a href="mugdal_report.php" class="mdl-layout__tab">मुगडाळ हिशोब </a>
-    <a href="turdal_report.php" class="mdl-layout__tab"> तुरडाळ हिशोब </a>
+    <a href="turdal_report.php" class="mdl-layout__tab is-active"> तुरडाळ हिशोब </a>
     <a href="masurdal_report.php" class="mdl-layout__tab"> मसूरडाळ हिशोब</a>
     <a href="sugar_report.php" class="mdl-layout__tab">गुळ / साखर हिशोब </a>
     <a href="matki_report.php" class="mdl-layout__tab">मटकी हिशोब </a>
@@ -84,7 +84,7 @@
             
 </header>
 <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">शालेय पोषण आहार </span>
+    <span class="mdl-layout-title"> शालेय पोषण आहार </span>
     <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="../index.php">Home</a>
         <a class="mdl-navigation__link" href="master.php">Master Report</a>
@@ -100,21 +100,20 @@
         ?>
 
             <?php
-     if(isset($_POST['daily_rice_info']))
+     if(isset($_POST['daily_turdal_info']))
      {
          $entry_date=$_POST['entry_date'];
          $entry_date1= new DateTime($entry_date);
          $entry_date1=date_format ($entry_date1, 'Y-m-d');
          $t_student=$_POST['total_student'];
-         $prev_month_remain_rice=$_POST['prev_month_remain_rice'];
-         $rice_got=$_POST['rice_got'];
-         $total_rice=$_POST['total_rice'];
+         $prev_month_remain_turdal=$_POST['prev_month_remain_turdal'];
+         $turdal_got=$_POST['turdal_got'];
+         $total_turdal=$_POST['total_turdal'];
          $total_plates=$_POST['total_plates'];
-         $cooked_rice=$_POST['cooked_rice'];
-         $remaining_rice=$_POST['remaining_rice'];
+         $cooked_turdal=$_POST['cooked_turdal'];
+         $remaining_turdal=$_POST['remaining_turdal'];
          mysqli_query ($con,"set character_set_results='utf8'");      
-      if(mysqli_query($con,"INSERT INTO rice_report(date,total_student,prev_rice_remain,current_month_rice_got,total_rice,total_plates,cooked_rice,monthEnd_remaining_rice)
-      values  (N'$entry_date1',N'$t_student',N'$prev_month_remain_rice',N'$rice_got',N'$total_rice',N'$total_plates',N'$cooked_rice',N'$remaining_rice')"))
+      if(mysqli_query($con,"INSERT INTO turdal_report(date, total_student,prev_turdal_remain, current_month_turdal_got, total_turdal, total_plates, turdal_cooked, monthEnd_remaining_turdal)values (N'$entry_date1',N'$t_student',N'$prev_month_remain_turdal',N'$turdal_got',N'$total_turdal',N'$total_plates',N'$cooked_turdal',N'$remaining_turdal')"))
       {
          // Code for Snackbar after the Submit button is clicked
          echo "<script type='text/javascript'>
@@ -135,12 +134,12 @@
 
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
         <div class="mdl-tabs__tab-bar">
-            <a href="#rice_entry_panel" class="mdl-tabs__tab is-active">Daily Rice Entry</a>
-            <a href="#rice_report_panel" class="mdl-tabs__tab">Rice Report</a>
+            <a href="#turdal_entry_panel" class="mdl-tabs__tab is-active">Daily turdal Entry</a>
+            <a href="#turdal_report_panel" class="mdl-tabs__tab">turdal Report</a>
         </div>
-        <div class="mdl-tabs__panel is-active" id="rice_entry_panel">
-            <div class="rice_entry_div">
-                <h2 id="form_header">Daily Rice Entry Form</h2>
+        <div class="mdl-tabs__panel is-active" id="turdal_entry_panel">
+            <div class="turdal_entry_div">
+                <h2 id="form_header">Daily turdal Entry Form</h2>
                 <form action="" method="post">
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -154,20 +153,20 @@
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_rice" name="prev_month_remain_rice" required/>
-                            <label class="mdl-textfield__label" for="prev_month_remain_rice"> मागील महिना शिल्लक तांदूळ</label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_turdal" name="prev_month_remain_turdal" required/>
+                            <label class="mdl-textfield__label" for="prev_month_remain_turdal"> मागील महिना शिल्लक तुरडाळ</label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                     </div>
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="rice_got" name="rice_got" required/>
-                            <label class="mdl-textfield__label" for="rice_got"> चालू महिना प्राप्त तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="turdal_got" name="turdal_got" required/>
+                            <label class="mdl-textfield__label" for="turdal_got"> चालू महिना प्राप्त तुरडाळ </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_rice" name="total_rice" required/>
-                            <label class="mdl-textfield__label" for="total_rice"> एकून तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_turdal" name="total_turdal" required/>
+                            <label class="mdl-textfield__label" for="total_turdal"> एकून तुरडाळ </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
@@ -178,29 +177,29 @@
                     </div>
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_rice" name="cooked_rice" required/>
-                            <label class="mdl-textfield__label" for="cooked_rice"> शिजवलेला तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_turdal" name="cooked_turdal" required/>
+                            <label class="mdl-textfield__label" for="cooked_turdal"> शिजवलेला तुरडाळ</label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_rice" name="remaining_rice" required/>
-                            <label class="mdl-textfield__label" for="remaining_rice"> महिना अखेर शिल्लक तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_turdal" name="remaining_turdal" required/>
+                            <label class="mdl-textfield__label" for="remaining_turdal"> महिना अखेर शिल्लक तुरडाळ </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
 
                     </div>
                     <!-- Accent-colored raised button with ripple -->
                     <div class="submitButtonDiv">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_rice_info" type="submit">Submit</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_turdal_info" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
 
 </div>
-<div class="mdl-tabs__panel" id="rice_report_panel">
+<div class="mdl-tabs__panel" id="turdal_report_panel">
 
-    <div class="rice_report_div">
-        <h2 id="form_header">Monthly Rice  Report</h2>
+    <div class="turdal_report_div">
+        <h2 id="form_header">Monthly turdal  Report</h2>
         <div class="mdl-shadow--2dp">
             <div class="mdl-grid">
                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -272,7 +271,7 @@
         }
         str1=document.getElementById("report_year").value;
         str2=document.getElementById("report_month").value;
-        xmlhttp.open("GET","php/monthly_rice_report.php?s_year="+str1+"&s_month="+str2,true);
+        xmlhttp.open("GET","php/monthly_turdal_report.php?s_year="+str1+"&s_month="+str2,true);
         xmlhttp.send();
 }
     </script>

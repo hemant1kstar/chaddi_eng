@@ -63,14 +63,14 @@
             </div>
 
 <div class="tabs mdl-js-ripple-effect">
-    <a href="index.php" class="mdl-layout__tab is-active">तांदुळाचे हिशोब </a>
+    <a href="index.php" class="mdl-layout__tab">तांदुळाचे हिशोब </a>
     <a href="mugdal_report.php" class="mdl-layout__tab">मुगडाळ हिशोब </a>
     <a href="turdal_report.php" class="mdl-layout__tab"> तुरडाळ हिशोब </a>
     <a href="masurdal_report.php" class="mdl-layout__tab"> मसूरडाळ हिशोब</a>
     <a href="sugar_report.php" class="mdl-layout__tab">गुळ / साखर हिशोब </a>
     <a href="matki_report.php" class="mdl-layout__tab">मटकी हिशोब </a>
     <a href="mug_report.php" class="mdl-layout__tab"> मुग हिशोब </a>
-    <a href="chavli_report.php" class="mdl-layout__tab"> चवली हिशोब </a>
+    <a href="chavli_report.php" class="mdl-layout__tab is-active"> चवली हिशोब </a>
      <a href="" class="mdl-layout__tab">report</a> 
      <a href="" class="mdl-layout__tab">report</a> 
      <a href="" class="mdl-layout__tab">report</a>
@@ -84,7 +84,7 @@
             
 </header>
 <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">शालेय पोषण आहार </span>
+    <span class="mdl-layout-title"> शालेय पोषण आहार </span>
     <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="../index.php">Home</a>
         <a class="mdl-navigation__link" href="master.php">Master Report</a>
@@ -100,21 +100,20 @@
         ?>
 
             <?php
-     if(isset($_POST['daily_rice_info']))
+     if(isset($_POST['daily_chavli_info']))
      {
          $entry_date=$_POST['entry_date'];
          $entry_date1= new DateTime($entry_date);
          $entry_date1=date_format ($entry_date1, 'Y-m-d');
          $t_student=$_POST['total_student'];
-         $prev_month_remain_rice=$_POST['prev_month_remain_rice'];
-         $rice_got=$_POST['rice_got'];
-         $total_rice=$_POST['total_rice'];
+         $prev_month_remain_chavli=$_POST['prev_month_remain_chavli'];
+         $chavli_got=$_POST['chavli_got'];
+         $total_chavli=$_POST['total_chavli'];
          $total_plates=$_POST['total_plates'];
-         $cooked_rice=$_POST['cooked_rice'];
-         $remaining_rice=$_POST['remaining_rice'];
+         $cooked_chavli=$_POST['cooked_chavli'];
+         $remaining_chavli=$_POST['remaining_chavli'];
          mysqli_query ($con,"set character_set_results='utf8'");      
-      if(mysqli_query($con,"INSERT INTO rice_report(date,total_student,prev_rice_remain,current_month_rice_got,total_rice,total_plates,cooked_rice,monthEnd_remaining_rice)
-      values  (N'$entry_date1',N'$t_student',N'$prev_month_remain_rice',N'$rice_got',N'$total_rice',N'$total_plates',N'$cooked_rice',N'$remaining_rice')"))
+      if(mysqli_query($con,"INSERT INTO chavli_report(date, total_student,prev_chavli_remain, current_month_chavli_got, total_chavli, total_plates, chavli_cooked, monthEnd_remaining_chavli)values (N'$entry_date1',N'$t_student',N'$prev_month_remain_chavli',N'$chavli_got',N'$total_chavli',N'$total_plates',N'$cooked_chavli',N'$remaining_chavli')"))
       {
          // Code for Snackbar after the Submit button is clicked
          echo "<script type='text/javascript'>
@@ -135,12 +134,12 @@
 
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
         <div class="mdl-tabs__tab-bar">
-            <a href="#rice_entry_panel" class="mdl-tabs__tab is-active">Daily Rice Entry</a>
-            <a href="#rice_report_panel" class="mdl-tabs__tab">Rice Report</a>
+            <a href="#chavli_entry_panel" class="mdl-tabs__tab is-active">Daily chavli Entry</a>
+            <a href="#chavli_report_panel" class="mdl-tabs__tab">chavli Report</a>
         </div>
-        <div class="mdl-tabs__panel is-active" id="rice_entry_panel">
-            <div class="rice_entry_div">
-                <h2 id="form_header">Daily Rice Entry Form</h2>
+        <div class="mdl-tabs__panel is-active" id="chavli_entry_panel">
+            <div class="chavli_entry_div">
+                <h2 id="form_header">Daily chavli Entry Form</h2>
                 <form action="" method="post">
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -154,20 +153,20 @@
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_rice" name="prev_month_remain_rice" required/>
-                            <label class="mdl-textfield__label" for="prev_month_remain_rice"> मागील महिना शिल्लक तांदूळ</label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_chavli" name="prev_month_remain_chavli" required/>
+                            <label class="mdl-textfield__label" for="prev_month_remain_chavli"> मागील महिना शिल्लक चवली </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                     </div>
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="rice_got" name="rice_got" required/>
-                            <label class="mdl-textfield__label" for="rice_got"> चालू महिना प्राप्त तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="chavli_got" name="chavli_got" required/>
+                            <label class="mdl-textfield__label" for="chavli_got"> चालू महिना प्राप्त चवली </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_rice" name="total_rice" required/>
-                            <label class="mdl-textfield__label" for="total_rice"> एकून तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_chavli" name="total_chavli" required/>
+                            <label class="mdl-textfield__label" for="total_chavli"> एकून चवली </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
@@ -178,29 +177,29 @@
                     </div>
                     <div class="mdl-grid">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_rice" name="cooked_rice" required/>
-                            <label class="mdl-textfield__label" for="cooked_rice"> शिजवलेला तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_chavli" name="cooked_chavli" required/>
+                            <label class="mdl-textfield__label" for="cooked_chavli"> शिजवलेला चवली </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_rice" name="remaining_rice" required/>
-                            <label class="mdl-textfield__label" for="remaining_rice"> महिना अखेर शिल्लक तांदूळ </label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_chavli" name="remaining_chavli" required/>
+                            <label class="mdl-textfield__label" for="remaining_chavli"> महिना अखेर शिल्लक चवली </label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
 
                     </div>
                     <!-- Accent-colored raised button with ripple -->
                     <div class="submitButtonDiv">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_rice_info" type="submit">Submit</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_chavli_info" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
 
 </div>
-<div class="mdl-tabs__panel" id="rice_report_panel">
+<div class="mdl-tabs__panel" id="chavli_report_panel">
 
-    <div class="rice_report_div">
-        <h2 id="form_header">Monthly Rice  Report</h2>
+    <div class="chavli_report_div">
+        <h2 id="form_header">Monthly chavli  Report</h2>
         <div class="mdl-shadow--2dp">
             <div class="mdl-grid">
                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -272,7 +271,7 @@
         }
         str1=document.getElementById("report_year").value;
         str2=document.getElementById("report_month").value;
-        xmlhttp.open("GET","php/monthly_rice_report.php?s_year="+str1+"&s_month="+str2,true);
+        xmlhttp.open("GET","php/monthly_chavli_report.php?s_year="+str1+"&s_month="+str2,true);
         xmlhttp.send();
 }
     </script>

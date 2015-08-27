@@ -43,17 +43,19 @@ $linksTitle = strtoupper($links);
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <nav class="mdl-navigation ">
                         <a class="mdl-navigation__link" href="./index.php">Home</a>
                     </nav>
                 </div>
             </header>
+<!--
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Title</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="./index.php">Home</a>
                 </nav>
             </div>
+-->
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <!-- Your content goes here -->
@@ -81,7 +83,7 @@ $linksTitle = strtoupper($links);
                                <tr>
                                     <td><label class=""><?php echo $name;?></label></td>
 <!--                                    <td><input type="text" class="" name="table_name" placeholder="" required /></td>-->
-                                   <td><a href="drop_field.php?q=<?php echo $links;?>&q1=<?php echo $name;?>">Drop Field</a></td>
+                                   <td><a href="drop_field.php?q=<?php echo $links;?>&q1=<?php echo $name;?>" title="Delete this column and all its data"><img src="../images/dynamicTables/ic_delete_24px.svg" /></a></td>
                                </tr>                    
                             </div>
                     <?php

@@ -45,7 +45,7 @@
                 <!--                  <a href="" class="mdl-layout__tab">Student Leaved</a>-->
                 <a href="division_wise.php" class="mdl-layout__tab is-active">Division Wise</a>
                 <a href="aadhar_card_wise.php" class="mdl-layout__tab">Aadhar Card Wise</a>
-                <a href="" class="mdl-layout__tab">BPL Wise</a>
+                <!--<a href="" class="mdl-layout__tab">BPL Wise</a>-->
                 <a href="scholarship.php" class="mdl-layout__tab">Scholarship</a>
                 <a href="total_report.php" class="mdl-layout__tab">Student Report</a>
             </div>
@@ -54,12 +54,14 @@
 
 
 
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="../index.php">Home</a>
             </nav>
         </div>
+-->
 
 
 

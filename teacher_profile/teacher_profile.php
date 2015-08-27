@@ -37,7 +37,7 @@
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <nav class="mdl-navigation ">
                         <a class="mdl-navigation__link" href="index.php">Home</a>
                         <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
                         
@@ -45,6 +45,7 @@
                     </nav>
                 </div>
             </header>
+<!--
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Teacher Panel</span>
                 <nav class="mdl-navigation">
@@ -54,6 +55,7 @@
                     <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
                 </nav>
             </div>
+-->
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <!-- Your content goes here -->
@@ -69,6 +71,13 @@
                         ?>
 
                     <div class="contentDiv mdl-shadow--2dp">
+                        <a href='index.php' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
+                            <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
+                        </a>
+                        
+                        <a class='editProfile mdl-js-button mdl-js-ripple-effect' href='update_profile.php' title='Edit your profile'>
+                            <img class='' src='../images/dynamicTables/ic_edit_24px.svg' alt='Edit Profile'>
+                        </a>
                         
                     <?php
 
@@ -88,7 +97,6 @@
                          $date_of_appointment=$row['date_of_appointment'];
                          $profile_photo_url=$row['profile_photo_url'];
                          
-                         echo "<a class='editProfile mdl-js-button mdl-js-ripple-effect' href='update_profile.php' title='Edit your profile'><img class='' src='../images/dynamicTables/ic_edit_24px.svg' alt='Edit Profile'></a>";
                          echo "<img class='profilePicture' src='$profile_photo_url' title='Hi, $teacher_profile_name!'  alt='Profile Picture'>";
                          echo "<div>";
                          echo "<table>";

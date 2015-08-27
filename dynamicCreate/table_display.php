@@ -42,17 +42,19 @@ $linksTitle = strtoupper($links);
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <nav class="mdl-navigation ">
                         <a class="mdl-navigation__link" href="./index.php">Home</a>
                     </nav>
                 </div>
             </header>
+<!--
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Title</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="./index.php">Home</a>
                 </nav>
             </div>
+-->
             <main class="mdl-layout__content scroll" id="dvContents">
                 <div class="page-content">
                     <h2 class="contentHeader"><?php echo $links; ?></h2>
@@ -105,7 +107,9 @@ $linksTitle = strtoupper($links);
                                 echo "<th class='mdl-data-table__cell--non-numeric'>$col_value</th>";
                          
                                  }
+                                
                                 echo "<th class='divhide'><a class='mdl-js-button mdl-js-ripple-effect' href='edit_table_row.php?q=".$link."&Create_id=".$link1."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></th>";
+                                
                                 echo '<th class="divhide"><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$link.'\',\''.$link1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></th>';
 //           echo "<th><a class='mdl-button mdl-js-button mdl-button--primary' href='table_row_delete.php?q=".$link."&row_id=".$link1."'>Delete</a></th>";
                                    echo "</tr>";
@@ -121,7 +125,7 @@ $linksTitle = strtoupper($links);
                                 <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary divhide" id="btnPrint" value="Print">Print </button>
                             
                              <?php
-   echo "<a href='add_Fields_layout.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary divhide'>Fields Add</a>";
+   echo "<a href='add_Fields_layout.php?q=$link' class='mdl-button mdl-js-button mdl-button--primary divhide'>Edit Columns</a>";
 ?>
                         </div>
                     </div>

@@ -21,7 +21,7 @@
     <script src="../jquery/jquery-2.1.4.min.js"></script>
     <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <!-- End of CSS and JS for Jquery datepicker -->
-    
+
     <!-- CSS and JS for Snackbar -->
     <link href="../css/snackbar.min.css" rel="stylesheet">
     <link href="../material_js/material_for_snackbar.css" rel="stylesheet">
@@ -44,15 +44,20 @@
 </head>
 
 <body>
-    
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">All Student Details</span>                 <div class="mdl-layout-spacer"></div>                 <nav class="mdl-navigation">                     <a class="mdl-navigation__link" href="../index.php">Home</a>                 </nav>
-                
-                
+                <span class="mdl-layout-title">All Student Details</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="master.php">Master</a>
+                    <a class="mdl-navigation__link" href="../index.php">Home</a>
+                </nav>
+
+
             </div>
             <!-- Bottom row, not visible on scroll -->
             <!--
@@ -80,20 +85,22 @@
 
 
 
+<!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
-                 <a class="mdl-navigation__link" href="../index.php">Home</a>
+                <a class="mdl-navigation__link" href="../index.php">Home</a>
                 <a class="mdl-navigation__link" href="master.php">Master</a>
                 <a class="mdl-navigation__link" href="index.php">Entry</a>
             </nav>
         </div>
+-->
 
 
 
         <main class="mdl-layout__content">
 
-<?php
+            <?php
    include("../database/connection.php");
 ?>
 
@@ -254,16 +261,16 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-<!--
+                                        <!--
                                         <input class="mdl-textfield__input" type="text" id="status" name="status" />
                                         <label class="mdl-textfield__label" for="status">Status</label>
 -->
-                                 <label class="customLabel">Status :</label> 
-                                    <select  name="status" class='dropdownOptions' required>
-                                     <option value=''></option>
-                                     <option value='Present'>Present</option>
-                                     <option value='Left School'>Left School</option>
-                                    </select>
+                                        <label class="customLabel">Status :</label>
+                                        <select name="status" class='dropdownOptions' required>
+                                            <option value=''></option>
+                                            <option value='Present'>Present</option>
+                                            <option value='Left School'>Left School</option>
+                                        </select>
 
                                     </div>
 
@@ -309,22 +316,22 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-<!--
+                                        <!--
                                         <input class="mdl-textfield__input" type="text" id="scholarship" name="scholarship" />
                                         <label class="mdl-textfield__label" for="scholarship">Scholarship</label>
 -->
-                            <label class="customLabel">Scholarship :</label> 
-                                        
-                                    <select  name="scholarship" class='dropdownOptions' required>
-                                     <option value='No'>नाही</option>
-                                     <option value='Savitri_Bai'>सावेत्री बाई</option>
-                                     <option value='Handicapped'>अपंग</option>
-                                     <option value='Unclean_business'>अस्वच्छ व्यवसाय</option>
-                                     <option value='Minority'>अल्पसंख्याक</option>
-                                     <option value='Metric_before'>मेट्रिकपूर्व</option>
-                                     <option value='Attendance_bhatta'>उपस्थितीभत्ता</option>
-                                     <option value='Adivasi_Scholarship'>आदिवासी शिष्यवृत्ती</option>
-                                    </select>
+                                        <label class="customLabel">Scholarship :</label>
+
+                                        <select name="scholarship" class='dropdownOptions' required>
+                                            <option value='No'>नाही</option>
+                                            <option value='Savitri_Bai'>सावेत्री बाई</option>
+                                            <option value='Handicapped'>अपंग</option>
+                                            <option value='Unclean_business'>अस्वच्छ व्यवसाय</option>
+                                            <option value='Minority'>अल्पसंख्याक</option>
+                                            <option value='Metric_before'>मेट्रिकपूर्व</option>
+                                            <option value='Attendance_bhatta'>उपस्थितीभत्ता</option>
+                                            <option value='Adivasi_Scholarship'>आदिवासी शिष्यवृत्ती</option>
+                                        </select>
 
                                     </div>
                                 </div>
