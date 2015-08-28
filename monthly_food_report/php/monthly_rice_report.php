@@ -68,3 +68,8 @@ $query1=mysqli_query($con,"SELECT *
         ?>
     </tbody>
 </table>
+
+<div class="signature">
+    <label id="principalSingature">मुख्याध्यापक स्वाक्षरी </label>
+    <label id="presidentSingature">अध्यक्ष<br> शाळा व्यवस्थापन समिती </label>
+</div>

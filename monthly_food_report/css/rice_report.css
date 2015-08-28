@@ -9,7 +9,31 @@
 .mdl-tabs{
     margin: 36px auto;
 }
+#dvContents {
+    overflow: auto;
+}
 
+table {
+    display: block;
+    position: relative;
+    margin: 16px 16px 0;
+}
+
+.signature {
+    height: 96px;
+    position: relative;
+}
+.signature #principalSingature {
+    position: absolute;
+    left: 96px;
+    bottom: 0;
+}
+.signature #presidentSingature {
+    position: absolute;
+    text-align: center;
+    right: 96px;
+    bottom: 0;
+}
 .printButtonDiv{
     padding: 16px 0 8px 0;
 }
