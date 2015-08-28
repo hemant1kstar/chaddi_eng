@@ -84,6 +84,7 @@
             
             
 </header>
+<!--
 <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">शालेय पोषण आहार </span>
     <nav class="mdl-navigation">
@@ -92,6 +93,7 @@
         <a class="mdl-navigation__link" href="index.php">Entry Report</a>
     </nav>
 </div>
+-->
 <main class="mdl-layout__content">
 
     <div class="page-content">
