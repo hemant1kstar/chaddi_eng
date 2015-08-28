@@ -15,9 +15,9 @@
     <!--  End of CSS For Material Design-->
 
 
-    
-    
-        <!-- CSS and JS for Jquery datepicker -->
+
+
+    <!-- CSS and JS for Jquery datepicker -->
     <link rel="stylesheet" href="../jquery-ui-1.11.4.custom/jquery-ui.min.css" />
     <script src="../jquery/jquery-2.1.4.min.js"></script>
     <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
@@ -62,29 +62,29 @@
 
             </div>
 
-<div class="tabs mdl-js-ripple-effect">
-    <a href="index.php" class="mdl-layout__tab">तांदुळाचे हिशोब </a>
-    <a href="mugdal_report.php" class="mdl-layout__tab">मुगडाळ हिशोब </a>
-    <a href="turdal_report.php" class="mdl-layout__tab"> तुरडाळ हिशोब </a>
-    <a href="masurdal_report.php" class="mdl-layout__tab"> मसूरडाळ हिशोब</a>
-    <a href="sugar_report.php" class="mdl-layout__tab">गुळ / साखर हिशोब </a>
-    <a href="matki_report.php" class="mdl-layout__tab is-active">मटकी हिशोब </a>
-    <a href="mug_report.php" class="mdl-layout__tab"> मुग हिशोब </a>
-    <a href="chavli_report.php" class="mdl-layout__tab"> चवली हिशोब </a>
-    <a href="harbara_report.php" class="mdl-layout__tab"> हरभरा हिशोब </a> 
-    <a href="vatana_report.php" class="mdl-layout__tab"> वाटाणा हिशोब </a> 
-    <a href="jire_report.php" class="mdl-layout__tab"> जिरे हिशोब </a>
-    <a href="mohari_report.php" class="mdl-layout__tab"> मोहरी हिशोब </a>
-    <a href="halad_report.php" class="mdl-layout__tab"> हळद हिशोब </a>
-    <a href="mirchi_powder_report.php" class="mdl-layout__tab">  मिर्ची पावडर हिशोब </a>
-    <a href="soyabin_tel_report.php" class="mdl-layout__tab"> सोयाबीन तेल हिशोब </a>
-    <a href="salt_report.php" class="mdl-layout__tab"> मीठ हिशोब </a>
-    <a href="vegetables_report.php" class="mdl-layout__tab"> भाजीपाला हिशोब </a>
-</div>
-            
-            
-</header>
-<!--
+            <div class="tabs mdl-js-ripple-effect">
+                <a href="index.php" class="mdl-layout__tab">तांदुळाचे हिशोब </a>
+                <a href="mugdal_report.php" class="mdl-layout__tab">मुगडाळ हिशोब </a>
+                <a href="turdal_report.php" class="mdl-layout__tab"> तुरडाळ हिशोब </a>
+                <a href="masurdal_report.php" class="mdl-layout__tab"> मसूरडाळ हिशोब</a>
+                <a href="sugar_report.php" class="mdl-layout__tab">गुळ / साखर हिशोब </a>
+                <a href="matki_report.php" class="mdl-layout__tab is-active">मटकी हिशोब </a>
+                <a href="mug_report.php" class="mdl-layout__tab"> मुग हिशोब </a>
+                <a href="chavli_report.php" class="mdl-layout__tab"> चवली हिशोब </a>
+                <a href="harbara_report.php" class="mdl-layout__tab"> हरभरा हिशोब </a>
+                <a href="vatana_report.php" class="mdl-layout__tab"> वाटाणा हिशोब </a>
+                <a href="jire_report.php" class="mdl-layout__tab"> जिरे हिशोब </a>
+                <a href="mohari_report.php" class="mdl-layout__tab"> मोहरी हिशोब </a>
+                <a href="halad_report.php" class="mdl-layout__tab"> हळद हिशोब </a>
+                <a href="mirchi_powder_report.php" class="mdl-layout__tab">  मिर्ची पावडर हिशोब </a>
+                <a href="soyabin_tel_report.php" class="mdl-layout__tab"> सोयाबीन तेल हिशोब </a>
+                <a href="salt_report.php" class="mdl-layout__tab"> मीठ हिशोब </a>
+                <a href="vegetables_report.php" class="mdl-layout__tab"> भाजीपाला हिशोब </a>
+            </div>
+
+
+        </header>
+        <!--
 <div class="mdl-layout__drawer">
     <span class="mdl-layout-title"> शालेय पोषण आहार </span>
     <nav class="mdl-navigation">
@@ -94,15 +94,15 @@
     </nav>
 </div>
 -->
-<main class="mdl-layout__content">
+        <main class="mdl-layout__content">
 
-    <div class="page-content">
-        <!-- Your content goes here -->
-        <?php
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <?php
             include("database/connection.php");
         ?>
 
-            <?php
+                    <?php
      if(isset($_POST['daily_matki_info']))
      {
          $entry_date=$_POST['entry_date'];
@@ -133,152 +133,153 @@
       }
      }
      ?>
-<div class="mdl-shadow--2dp">
+                        <div class="mdl-shadow--2dp contentDiv">
 
-    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
-        <div class="mdl-tabs__tab-bar">
-            <a href="#matki_entry_panel" class="mdl-tabs__tab is-active">Daily matki Entry</a>
-            <a href="#matki_report_panel" class="mdl-tabs__tab">matki Report</a>
-        </div>
-        <div class="mdl-tabs__panel is-active" id="matki_entry_panel">
-            <div class="matki_entry_div">
-                <h2 id="form_header">Daily matki Entry Form</h2>
-                <form action="" method="post">
-                    <div class="mdl-grid">
-                        <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
-                            <label class="customLabel">Date :
-                                <input class="datepicker" type="text" name="entry_date" required/>
-                            </label>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_student" name="total_student" required/>
-                            <label class="mdl-textfield__label" for="total_student"> पटसंख्या</label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_matki" name="prev_month_remain_matki" required/>
-                            <label class="mdl-textfield__label" for="prev_month_remain_matki"> मागील महिना शिल्लक मटकी </label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                    </div>
-                    <div class="mdl-grid">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="matki_got" name="matki_got" required/>
-                            <label class="mdl-textfield__label" for="matki_got"> चालू महिना प्राप्त मटकी </label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_matki" name="total_matki" required/>
-                            <label class="mdl-textfield__label" for="total_matki"> एकून मटकी </label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_plates" name="total_plates" required/>
-                            <label class="mdl-textfield__label" for="total_plates"> लाभाथ्री संख्या ( ताटांची संख्या )</label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                    </div>
-                    <div class="mdl-grid">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_matki" name="cooked_matki" required/>
-                            <label class="mdl-textfield__label" for="cooked_matki"> शिजवलेली मटकी </label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_matki" name="remaining_matki" required/>
-                            <label class="mdl-textfield__label" for="remaining_matki"> महिना अखेर शिल्लक मटकी </label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
+                            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
+                                <div class="mdl-tabs__tab-bar">
+                                    <a href="#matki_entry_panel" class="mdl-tabs__tab is-active">Daily matki Entry</a>
+                                    <a href="#matki_report_panel" class="mdl-tabs__tab">matki Report</a>
+                                </div>
+                                <div class="mdl-tabs__panel is-active" id="matki_entry_panel">
+                                    <div class="matki_entry_div">
+                                        <h2 id="form_header">Daily matki Entry Form</h2>
+                                        <form action="" method="post">
+                                            <div class="mdl-grid">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
+                                                    <label class="customLabel">Date :
+                                                        <input class="datepicker" type="text" name="entry_date" required/>
+                                                    </label>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_student" name="total_student" required/>
+                                                    <label class="mdl-textfield__label" for="total_student"> पटसंख्या</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_matki" name="prev_month_remain_matki" required/>
+                                                    <label class="mdl-textfield__label" for="prev_month_remain_matki"> मागील महिना शिल्लक मटकी </label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </div>
+                                            <div class="mdl-grid">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="matki_got" name="matki_got" required/>
+                                                    <label class="mdl-textfield__label" for="matki_got"> चालू महिना प्राप्त मटकी </label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_matki" name="total_matki" required/>
+                                                    <label class="mdl-textfield__label" for="total_matki"> एकून मटकी </label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_plates" name="total_plates" required/>
+                                                    <label class="mdl-textfield__label" for="total_plates"> लाभाथ्री संख्या ( ताटांची संख्या )</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </div>
+                                            <div class="mdl-grid">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_matki" name="cooked_matki" required/>
+                                                    <label class="mdl-textfield__label" for="cooked_matki"> शिजवलेली मटकी </label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_matki" name="remaining_matki" required/>
+                                                    <label class="mdl-textfield__label" for="remaining_matki"> महिना अखेर शिल्लक मटकी </label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+
+                                            </div>
+                                            <!-- Accent-colored raised button with ripple -->
+                                            <div class="submitButtonDiv">
+                                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_matki_info" type="submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                <div class="mdl-tabs__panel" id="matki_report_panel">
+
+                                    <div class="matki_report_div">
+                                        <h2 id="form_header">Monthly matki  Report</h2>
+                                        <div class="">
+                                            <div class="mdl-grid">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
+                                                    <label>Select Year :</label>
+                                                    <select name="report_year" id="report_year" onChange="showReport()">
+                                                        <option value=""></option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2013">2013</option>
+                                                        <option value="2012">2012</option>
+                                                        <option value="2011">2011</option>
+                                                        <option value="2010">2010</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
+                                                    <label>Select Month :</label>
+                                                    <select name="report_month" onChange="showReport()" id="report_month">
+                                                        <option value=""></option>
+                                                        <option value="01">Jan</option>
+                                                        <option value="02">Feb</option>
+                                                        <option value="03">March</option>
+                                                        <option value="04">April</option>
+                                                        <option value="05">May</option>
+                                                        <option value="06">Jun</option>
+                                                        <option value="07">July</option>
+                                                        <option value="08">Aug</option>
+                                                        <option value="09">Sept</option>
+                                                        <option value="10">Oct</option>
+                                                        <option value="11">Nov</option>
+                                                        <option value="12">Deb</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div id="dvContents">
+
+                                        </div>
+
+                                        <div class="printButtonDiv">
+                                            <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print Report</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
 
-                    </div>
-                    <!-- Accent-colored raised button with ripple -->
-                    <div class="submitButtonDiv">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="daily_matki_info" type="submit">Submit</button>
-                    </div>
-                </form>
             </div>
-
-</div>
-<div class="mdl-tabs__panel" id="matki_report_panel">
-
-    <div class="matki_report_div">
-        <h2 id="form_header">Monthly matki  Report</h2>
-        <div class="mdl-shadow--2dp">
-            <div class="mdl-grid">
-                <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
-                    <label>Select Year :</label>
-                    <select name="report_year" id="report_year" onChange="showReport()">
-                        <option value=""></option>
-                        <option value="2015">2015</option>
-                        <option value="2014">2014</option>
-                        <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                        <option value="2011">2011</option>
-                        <option value="2010">2010</option>
-                    </select>
-                 </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
-                    <label>Select Month :</label>
-                    <select name="report_month" onChange="showReport()" id="report_month">
-                        <option value=""></option>
-                        <option value="01">Jan</option>
-                        <option value="02">Feb</option>
-                        <option value="03">March</option>
-                        <option value="04">April</option>
-                        <option value="05">May</option>
-                        <option value="06">Jun</option>
-                        <option value="07">July</option>
-                        <option value="08">Aug</option>
-                        <option value="09">Sept</option>
-                        <option value="10">Oct</option>
-                        <option value="11">Nov</option>
-                        <option value="12">Deb</option>
-                    </select>
-                 </div>
-
-            </div>
-
-        </div>
-        <div id="dvContents">
-
-        </div>
-    
-          <div class="printButtonDiv">
-    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="btnPrint" value="Print">Print Report</button>
-        </div>
+        </main>
     </div>
 
-</div>
-</div>
-
-</div>
-
-</div>
-</main>
-</div>
-    
     <script>
         function showReport() {
- 
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("dvContents").innerHTML = xmlhttp.responseText;
+
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("dvContents").innerHTML = xmlhttp.responseText;
+                }
+            }
+            str1 = document.getElementById("report_year").value;
+            str2 = document.getElementById("report_month").value;
+            xmlhttp.open("GET", "php/monthly_matki_report.php?s_year=" + str1 + "&s_month=" + str2, true);
+            xmlhttp.send();
         }
-        str1=document.getElementById("report_year").value;
-        str2=document.getElementById("report_month").value;
-        xmlhttp.open("GET","php/monthly_matki_report.php?s_year="+str1+"&s_month="+str2,true);
-        xmlhttp.send();
-}
+
     </script>
-    
+
     <script type="text/javascript">
         $(function() {
             $("#btnPrint").click(function() {
@@ -310,7 +311,7 @@
         });
 
     </script>
-    
+
 </body>
 
 </html>
