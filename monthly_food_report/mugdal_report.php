@@ -242,10 +242,10 @@
                                         <div id="dvContents">
 
                                         </div>
-
                                         <div class="printButtonDiv">
                                             <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="btnPrint" value="Print">Print Report</button>
                                         </div>
+                                        
                                     </div>
 
                                 </div>

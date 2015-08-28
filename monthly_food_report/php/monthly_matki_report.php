@@ -1,25 +1,25 @@
-            <h3 class="report_title">शालेय पोषण आहार /राष्ट्रीय मध्यान्ह भोजन योजना ( इ .  ते  )</h3>
-            <h3 class="report_title">शाळा स्तरावर ठेवावयाची  नियमित खर्च नोंदवही भाग -१ ( मटकी हिशोब )</h3>
-            <label class="report_sub_title">शाळेचे नाव :संत नामदेव विद्यालय, लातूर </label>
-            <label class="report_sub_title"> केंद्र :</label>
-            <label class="report_sub_title"> महिना :</label>
-            <label class="report_sub_title"> ( मटकी कि. ग्राम मध्ये )</label>
-        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-            <thead>
-                <tr>
-                    <th>अ . क्र .</th>
-                    <th>दिनांक </th>
-                    <th>पटसंख्या </th>
-                    <th>मागील महिना शिल्लक मटकी </th>
-                    <th>चालू महिना प्राप्त मटकी </th>
-                    <th>एकून मटकी </th>
-                    <th>लाभाथ्री संख्या  ( ताटांची संख्या  )</th>
-                    <th> शिजवलेली मटकी </th>
-                    <th>महिना अखेर शिल्लक मटकी </th>
-                    <th>मुख्याध्यापक स्वाक्षरी</th>
-                </tr>
-            </thead>
-            <tbody>
+<h3 class="report_title">शालेय पोषण आहार /राष्ट्रीय मध्यान्ह भोजन योजना ( इ .  ते  )</h3>
+<h3 class="report_title">शाळा स्तरावर ठेवावयाची  नियमित खर्च नोंदवही भाग -१ ( मटकी हिशोब )</h3>
+<label class="report_sub_title">शाळेचे नाव :संत नामदेव विद्यालय, लातूर </label>
+<label class="report_sub_title"> केंद्र :</label>
+<label class="report_sub_title"> महिना :</label>
+<label class="report_sub_title"> ( मटकी कि. ग्राम मध्ये )</label>
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th>अ . क्र .</th>
+            <th>दिनांक </th>
+            <th>पटसंख्या </th>
+            <th>मागील महिना शिल्लक मटकी </th>
+            <th>चालू महिना प्राप्त मटकी </th>
+            <th>एकून मटकी </th>
+            <th>लाभाथ्री संख्या ( ताटांची संख्या )</th>
+            <th> शिजवलेली मटकी </th>
+            <th>महिना अखेर शिल्लक मटकी </th>
+            <th>मुख्याध्यापक स्वाक्षरी</th>
+        </tr>
+    </thead>
+    <tbody>
         <?php
             $s_year=$_GET['s_year'];
             $s_month=$_GET['s_month'];
@@ -66,5 +66,8 @@ $query1=mysqli_query($con,"SELECT *
 }
  
         ?>
-           </tbody>
-        </table>
+    </tbody>
+</table>
+
+    
+
