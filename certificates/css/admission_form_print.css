@@ -2,9 +2,9 @@
 
 .main {
     width: 850px;
-    margin: 15px auto 20px;
+/*    margin: 15px auto 20px;*/
     background: white;
-    border: 1px solid #9E9E9E;
+/*    border: 1px solid #9E9E9E;*/
     padding: 30px 20px;
 }
 
@@ -23,7 +23,7 @@
 
 .personal_info,.prev_school_info,.family_info{
 /*    margin: 16px auto;*/
-    padding: 16px;
+    padding: 8px;
 }
 .section_label{
     font-size: 22px;

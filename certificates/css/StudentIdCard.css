@@ -28,7 +28,8 @@ h5 {
     /* Width is kept as 850px rather than original 650px as it fits properly in the print in 850px */
     margin: 0px auto 20px;
     background-color: #fff;
-    border: 1px solid #9E9E9E;
+    padding: 20px 0;
+/*    border: 1px solid #9E9E9E;*/
 }
 .photo {
     width: 200px;

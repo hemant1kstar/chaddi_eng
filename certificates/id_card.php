@@ -222,7 +222,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                 frameDoc.document.write('<html><head><title></title>');
                 frameDoc.document.write('</head><body>');
                 //Append the external CSS file.
-                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/StudentIdCard.css" rel="stylesheet" type="text/css" />');
+                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/StudentIdCard.css" rel="stylesheet" type="text/css" /><link href="../certificates/css/ShikshAbhiyanForPrinting.css" rel="stylesheet" type="text/css" />');
                 //Append the DIV contents.
                 frameDoc.document.write(contents);
                 frameDoc.document.write('</body></html>');
