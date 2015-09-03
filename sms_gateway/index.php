@@ -100,7 +100,7 @@ function test_input($data) {
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label>Select the Class</label>
+                                        <label>Select the Class: </label>
                                         <select name="student_class1" required>
                                             <option value=""></option>
                                             <option value="1">1</option>
@@ -118,13 +118,13 @@ function test_input($data) {
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label class="customLabel">Date :</label>
+                                        <label class="customLabel">Date: </label>
                                         <input type="date" name="attendance_date" class="dropdownOptions" id="datepicker" required>
 
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label class="customLabel"> Timing:
+                                        <label class="customLabel"> Timing: 
                                             <select name='attendance_timing' class="dropdownOptions" required>
                                                 <option></option>
                                                 <option value='Morning'>Morning</option>
@@ -135,9 +135,9 @@ function test_input($data) {
                                     </div>
                                 </div>
 
-                                <input type="submit" name="submit_details" value="Get Student" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                <input type="submit" name="submit_details" value="Get Student" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent sms_button">
 
-                                <button id='button2' onClick='addallmob()' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Get All Student</button>
+                                <button id='button2' onClick='addallmob()' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent sms_button">Get All Student</button>
                             </form>
 
                             <?php
@@ -220,8 +220,8 @@ if(isset($_POST['submit_details']))
                                     <?php echo $comment1;?>
                                 </textarea>
                                 <br>
-                                <input type="reset" name="reset" value="Clear" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                                <input type="submit" name="submit" value="Send Message" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                <input type="reset" name="reset" value="Clear" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent sms_button">
+                                <input type="submit" name="submit" value="Send Message" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent sms_button">
 
                             </form>
 

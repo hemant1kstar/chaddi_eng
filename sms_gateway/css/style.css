@@ -33,6 +33,11 @@ body {
     padding: 16px;
 }
 
+.sms_button {
+    margin-top: 16px;
+    margin-right: 16px;
+}
+    
 @media (min-width:1221px) {
     #student_display{
 /*        float: right;*/
