@@ -1,27 +1,40 @@
 body {
-    background-color: #A1887F;
+    background-color: #fafafa;
     font-family: Roboto, sans-serif;
+}
+.mdl-layout__content {
+    overflow: auto;
 }
 .page-content {
     position: relative;
 /*    max-width: 1023px;*/
     margin: 46px;
+    display: inline-block;
     background-color: white;
     padding: 48px 16px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
-    height: 600px;
 }
  
 #get_student_div{
-     display: inline-block;
-     border: 1px solid rgba(0, 0, 0, 0.57);
+    float: left;
+/*     display: inline-block;*/
+     border: 1px solid rgba(0, 0, 0, 0.12);
      padding: 16px;
      max-width: 650px;
+    margin-bottom: 48px;
+    margin-right: 16px;
 }
 
 #student_display{
-    float: right;
-    border: 1px solid rgba(0, 0, 0, 0.57);
+    display: inline-block;
+/*    float: right;*/
+    border: 1px solid rgba(0, 0, 0, 0.12);
     padding: 16px;
+}
+
+@media (min-width:1221px) {
+    #student_display{
+/*        float: right;*/
+    }
 }
