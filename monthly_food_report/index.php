@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monthly Food Report | Paperless System</title>
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="../css/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="../css/material.deep_orange-indigo.min.css" />
+    <link rel="stylesheet" href="../css/material.deep_orange-indigo.min.css" />
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />

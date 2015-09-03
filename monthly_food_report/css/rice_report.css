@@ -9,6 +9,10 @@
 .mdl-tabs{
     margin: 36px auto;
 }
+
+#form_header {
+    background-color: #3F51B5;
+}
 #dvContents {
     overflow: auto;
 }

@@ -48,6 +48,13 @@ body {
     background-color: #795548;
 }
 
+#smsGateway {
+    background-color: #607D8B;
+}
+#foodReport {
+    background-color: #FF5722;
+}
+
 .madeBy {
     display: block;
     text-align: center;

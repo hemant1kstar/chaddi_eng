@@ -47,7 +47,7 @@ function test_input($data) {
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <link rel="stylesheet" href="../css/material.orange-green.min.css" />
+            <link rel="stylesheet" href="../css/material.blue_grey-light_blue.min.css" />            
             <script src="../material_js/material.min.js"></script>
             <link rel="stylesheet" href="../material_js/Material+Icons.css" />
             <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
