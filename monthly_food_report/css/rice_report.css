@@ -14,7 +14,7 @@
 }
 
 table {
-    display: inline-block;
+    display: block;
     position: relative;
     margin: 16px 16px 0;
 }
