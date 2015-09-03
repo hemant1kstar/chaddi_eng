@@ -137,12 +137,12 @@
 
                             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
                                 <div class="mdl-tabs__tab-bar">
-                                    <a href="#soyabin_tel_entry_panel" class="mdl-tabs__tab is-active">Daily soyabin_tel Entry</a>
-                                    <a href="#soyabin_tel_report_panel" class="mdl-tabs__tab">soyabin_tel Report</a>
+                                    <a href="#soyabin_tel_entry_panel" class="mdl-tabs__tab is-active">Daily soyabin tel Entry</a>
+                                    <a href="#soyabin_tel_report_panel" class="mdl-tabs__tab">soyabin tel Report</a>
                                 </div>
                                 <div class="mdl-tabs__panel is-active" id="soyabin_tel_entry_panel">
                                     <div class="soyabin_tel_entry_div">
-                                        <h2 id="form_header">Daily soyabin_tel Entry Form</h2>
+                                        <h2 id="form_header">Daily soyabin tel Entry Form</h2>
                                         <form action="" method="post">
                                             <div class="mdl-grid">
                                                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -202,7 +202,7 @@
                                 <div class="mdl-tabs__panel" id="soyabin_tel_report_panel">
 
                                     <div class="soyabin_tel_report_div">
-                                        <h2 id="form_header">Monthly soyabin_tel  Report</h2>
+                                        <h2 id="form_header">Monthly soyabin tel  Report</h2>
                                         <div class="">
                                             <div class="mdl-grid">
                                                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">

@@ -24,6 +24,7 @@ body {
     background-color: #E91E63;
     color: #fff;
     margin: 0;
+    text-transform: capitalize;
     padding: 16px 16px 2px;
     font-weight: 300;
 }

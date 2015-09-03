@@ -137,12 +137,12 @@
 
                             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
                                 <div class="mdl-tabs__tab-bar">
-                                    <a href="#mirchi_powder_entry_panel" class="mdl-tabs__tab is-active">Daily mirchi_powder Entry</a>
-                                    <a href="#mirchi_powder_report_panel" class="mdl-tabs__tab">mirchi_powder Report</a>
+                                    <a href="#mirchi_powder_entry_panel" class="mdl-tabs__tab is-active">Daily mirchi powder Entry</a>
+                                    <a href="#mirchi_powder_report_panel" class="mdl-tabs__tab">mirchi powder Report</a>
                                 </div>
                                 <div class="mdl-tabs__panel is-active" id="mirchi_powder_entry_panel">
                                     <div class="mirchi_powder_entry_div">
-                                        <h2 id="form_header">Daily mirchi_powder Entry Form</h2>
+                                        <h2 id="form_header">Daily mirchi powder Entry Form</h2>
                                         <form action="" method="post">
                                             <div class="mdl-grid">
                                                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
@@ -202,7 +202,7 @@
                                 <div class="mdl-tabs__panel" id="mirchi_powder_report_panel">
 
                                     <div class="mirchi_powder_report_div">
-                                        <h2 id="form_header">Monthly mirchi_powder  Report</h2>
+                                        <h2 id="form_header">Monthly mirchi powder  Report</h2>
                                         <div class="">
                                             <div class="mdl-grid">
                                                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
