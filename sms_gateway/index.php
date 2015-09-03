@@ -100,8 +100,8 @@ function test_input($data) {
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <label>Select the Class</label>
-                                        <select name="student_class1" required>
+                                        <label>Select the Class: </label>
+                                        <select name="student_class1" class="dropdownOptions" required>
                                             <option value=""></option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -117,7 +117,7 @@ function test_input($data) {
 
                                     </div>
 
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel">Date :</label>
                                         <input type="date" name="attendance_date" class="dropdownOptions" id="datepicker" required>
 
@@ -209,14 +209,14 @@ if(isset($_POST['submit_details']))
                             <form method="post" action="send.php" name="myform" id="id2">
                                 <b>Numbers:</b>
                                 <br/>
-                                <textarea name="comment" rows="5" cols="60" id="textarea1">
+                                <textarea name="comment" rows="5" id="textarea1">
                                     <?php echo $comment;?>
                                 </textarea>
                                 <br>
                                 <br>
                                 <b> Message:</b>
                                 <br/>
-                                <textarea name="comment1" rows="15" cols="60">
+                                <textarea name="comment1" rows="15" >
                                     <?php echo $comment1;?>
                                 </textarea>
                                 <br>
