@@ -1,0 +1,23 @@
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
+}
+.page-content {
+    position: relative;
+    margin:56px 196px;
+    background-color: white;
+    padding: 48px 16px;
+}
+
+#back1{
+    margin: 16px;
+}
+.contentDiv{
+    margin: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.58);
+    padding: 16px;
+}
+
+.dropdown1{
+    margin: 16px auto;
+}

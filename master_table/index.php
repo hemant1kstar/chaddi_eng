@@ -84,6 +84,7 @@
         <main class="mdl-layout__content">
             <?php
     include("../database/connection.php");
+    include("../database/connection1.php");
    ?>
                 <?php
      if(isset($_POST['submit_student_info']))
@@ -127,12 +128,24 @@
         $nadar_fee=$_POST['nadar_fee'];
         $permanent_address=$_POST['permanent_address'];
         $medium=$_POST['medium'];
-      
+         
+        $current_class=$_POST['current_class'];
+        $status=$_POST['status'];
+        $contact_no=$_POST['contact_no'];
       
       
       mysqli_query ($con,"set character_set_results='utf8'");      
-      mysqli_query($con,"INSERT INTO master(reg_no,student_name,mother_name,gender,Mother_tongue,birthdate,age,nationality,religion,caste,sub_caste,category,father_name,father_occupation,annual_income,birth_place,district,state,prev_class,admission_date,prev_school_name,admission_class,prev_mark_sheet,prev_tc,nadar_fee,permanent_address,medium)values
-      (N'$reg_no',N'$student_name',N'$mother_name',N'$gender',N'$mother_tongue',N'$birth_date',N'$age',N'$nationality',N'$religion',N'$caste',N'$sub_caste',N'$category',N'$father_name',N'$father_occupation',N'$annual_income',N'$birth_place',N'$district',N'$state',N'$prev_class',N'$admission_date',N'$prev_school_name',N'$admission_class',N'$prev_mark_sheet',N'$prev_tc',N'$nadar_fee',N'$permanent_address',N'$medium')"); 
+      mysqli_query($con,"INSERT INTO master(reg_no,student_name,mother_name,gender,Mother_tongue,birthdate,age,nationality,religion,caste,sub_caste,category,father_name,father_occupation,annual_income,birth_place,district,state,prev_class,admission_date,prev_school_name,admission_class,prev_mark_sheet,prev_tc,nadar_fee,permanent_address,medium,current_class,status,contact_no)values
+      (N'$reg_no',N'$student_name',N'$mother_name',N'$gender',N'$mother_tongue',N'$birth_date',N'$age',N'$nationality',N'$religion',N'$caste',N'$sub_caste',N'$category',N'$father_name',N'$father_occupation',N'$annual_income',N'$birth_place',N'$district',N'$state',N'$prev_class',N'$admission_date',N'$prev_school_name',N'$admission_class',N'$prev_mark_sheet',N'$prev_tc',N'$nadar_fee',N'$permanent_address',N'$medium',N'$current_class',N'$status',N'$contact_no')"); 
+    
+         
+if($status=='Present'){
+$status1="Active";
+}else{
+$status1="Banned";
+}
+        
+mysqli_query($con1,"insert into member(member_id,name,gender,address,contact,type,year_level,status) values($reg_no,N'$student_name','$gender',N'$permanent_address','$contact_no','Student','$current_class','$status1')");
          // Code for Snackbar after the Submit button is clicked
          echo "<script type='text/javascript'>
                     $( document ).ready(function() {
@@ -255,6 +268,31 @@
                                         <label class="mdl-textfield__label" for="prev_class">Previous Class</label>
                                     </div>
                                 </div>
+                                  <div class="mdl-grid">
+                                                       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col">
+                                        <input class="mdl-textfield__input" type="text" id="current_class" name="current_class"  pattern="-?[0-9]*(\.[0-9]+)?" id="current_class" />
+                                        <label class="mdl-textfield__label" for="current_class">Current Class</label>
+<span class="mdl-textfield__error">Input is not a number!</span>
+                                    </div>
+                                      
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col">
+                                        <label class="customLabel">Status :</label>
+                                        <select name="status" class='dropdownOptions' required>
+                                            <option value=''></option>
+                                            <option value='Present'>Present</option>
+                                            <option value='Left School'>Left School</option>
+                                        </select>
+
+                                    </div>
+                                      
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="contact_no" name="contact_no" required/>
+                                        <label class="mdl-textfield__label" for="contact_no">Contact Number</label>
+                                        <span class="mdl-textfield__error">Input is not a number!</span>
+                                    </div>
+                                </div>
+                                
+                                
                                 <div class="mdl-grid">
                                     <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel">Admission Date :

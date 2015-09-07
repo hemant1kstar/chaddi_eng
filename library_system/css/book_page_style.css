@@ -1,0 +1,14 @@
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
+}
+.page-content {
+    position: relative;
+    margin: 56px;
+    background-color: white;
+    padding: 48px 16px;
+}
+
+#add_book{
+    margin: 16px;
+}

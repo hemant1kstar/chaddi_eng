@@ -117,10 +117,7 @@
         $minority_details=$_POST['minority_details'];
         $admitted_division=$_POST['admitted_division'];
         $student_name1=$_POST['student_name1'];
-        $current_class=$_POST['current_class'];
         $current_class_entry_date=$_POST['current_class_entry_date'];
-        $status=$_POST['status'];
-        $contact_no=$_POST['contact_no'];
         $fee_concession=$_POST['fee_concession'];
         $admission_month=$_POST['admission_month'];
         $admission_year=$_POST['admission_year'];
@@ -129,7 +126,7 @@
       
       
       mysqli_query ($con,"set character_set_results='utf8'");      
-      mysqli_query($con,"UPDATE master SET aadhar_no=N'$aadhar_no',bank_account_no=N'$bank_account_no',bank_branch=N'$bank_branch',bank_branch_code=N'$bank_branch_code',lic_id_no=N'$lic_id_no',minority_details=N'$minority_details',admitted_division=N'$admitted_division',student_name1=N'$student_name1',current_class=N'$current_class',current_class_entry_date=N'$current_class_entry_date',status=N'$status',contact_no=N'$contact_no',fee_concession=N'$fee_concession',admission_month=N'$admission_month',admission_year=N'$admission_year',handicapped=N'$handicapped',scholarship=N'$scholarship' WHERE reg_no='$reg_no'");
+      mysqli_query($con,"UPDATE master SET aadhar_no=N'$aadhar_no',bank_account_no=N'$bank_account_no',bank_branch=N'$bank_branch',bank_branch_code=N'$bank_branch_code',lic_id_no=N'$lic_id_no',minority_details=N'$minority_details',admitted_division=N'$admitted_division',student_name1=N'$student_name1',current_class_entry_date=N'$current_class_entry_date',fee_concession=N'$fee_concession',admission_month=N'$admission_month',admission_year=N'$admission_year',handicapped=N'$handicapped',scholarship=N'$scholarship' WHERE reg_no='$reg_no'");
       
          
          // Code for Snackbar after the Submit button is clicked
@@ -244,47 +241,6 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="current_class" name="current_class" />
-                                        <label class="mdl-textfield__label" for="current_class">Current Class</label>
-
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <label class="customLabel">Entry Date :</label>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input datepicker" type="text" id="current_class_entry_date" name="current_class_entry_date" />
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="mdl-grid">
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <!--
-                                        <input class="mdl-textfield__input" type="text" id="status" name="status" />
-                                        <label class="mdl-textfield__label" for="status">Status</label>
--->
-                                        <label class="customLabel">Status :</label>
-                                        <select name="status" class='dropdownOptions' required>
-                                            <option value=''></option>
-                                            <option value='Present'>Present</option>
-                                            <option value='Left School'>Left School</option>
-                                        </select>
-
-                                    </div>
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="contact_no" name="contact_no" required/>
-                                        <label class="mdl-textfield__label" for="contact_no">Contact Number</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-
-                                </div>
-
-                                <div class="mdl-grid">
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
                                         <input class="mdl-textfield__input" type="text" id="fee_concession" name="fee_concession" />
                                         <label class="mdl-textfield__label" for="fee_concession">Fee Concession</label>
 
@@ -314,12 +270,15 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
                                 <div class="mdl-grid">
 
+                                   <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
+                                        <label class="customLabel">Entry Date :</label>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input datepicker" type="text" id="current_class_entry_date" name="current_class_entry_date" />
+                                        </div>
 
+                                    </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <!--
-                                        <input class="mdl-textfield__input" type="text" id="scholarship" name="scholarship" />
-                                        <label class="mdl-textfield__label" for="scholarship">Scholarship</label>
--->
+
                                         <label class="customLabel">Scholarship :</label>
 
                                         <select name="scholarship" class='dropdownOptions' required>
