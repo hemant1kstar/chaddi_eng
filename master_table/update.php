@@ -288,11 +288,10 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
         $district1=$_POST['district'];
         $state1=$_POST['state'];
         $prev_class1=$_POST['prev_class'];
-//        $admission_date1=$_POST['admission_date'];
-          $admission_date1=$_POST['admission_date'];
+        $admission_date1=$_POST['admission_date'];
          
         $dateTime2 = new DateTime($admission_date1);
-        $admission_date=date_format ($dateTime2, 'Y-m-d');
+        $admission_date1=date_format ($dateTime2, 'Y-m-d');
                        
         $prev_school_name1=$_POST['prev_school_name'];
         $admission_class1=$_POST['admission_class'];
