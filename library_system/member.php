@@ -91,8 +91,8 @@
                             echo "<td class='mdl-data-table__cell--non-numeric'>$type1</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$year_level1</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$status1</td>";
-                            echo "<td class='divhide'><a href='edit_member.php?mem_id=".$member_id1."' class='mdl-js-button mdl-js-ripple-effect' title='Edit Data'><img src='images/ic_edit_24px.svg' /></a></td>";
-                            echo '<td class="divhide"><button onClick="myFunction_Delete_row(\''.$member_id1.'\')" class="mdl-js-button mdl-js-ripple-effect deleteRowButton" title="Delete Complete Row"><img src="images/ic_delete_24px.svg" /></button></td>';
+                                echo "<td class='divhide'><a href='edit_member.php?mem_id=".$member_id1."' class='mdl-js-button mdl-js-ripple-effect' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
+                                echo '<td class="divhide"><button onClick="myFunction_Delete_row(\''.$member_id1.'\')" class="mdl-js-button mdl-js-ripple-effect deleteRowButton" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></td>';
                             echo "</tr>";
                             }
                             ?>
