@@ -11,7 +11,6 @@
     <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
-    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
     <!--  End of CSS For Material Design-->
 
     <!-- CSS and JS for Jquery datepicker -->

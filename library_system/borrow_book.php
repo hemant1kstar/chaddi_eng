@@ -10,10 +10,12 @@
     <title>Library | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="mdl/material.min.css" />
-    <script src="mdl/material.js"></script>
-    <link rel="stylesheet" href="fonts/Roboto+300,400,500,700.css" />
+    <link rel="stylesheet" href="../css/material.pink-amber.min.css" />
+    <script src="../material_js/material.js"></script>
+    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
     <!--  End of CSS For Material Design-->
+    
+    <link rel="stylesheet" href="../css/main.css" />
 
     <link rel="stylesheet" href="css/book_page_style.css">
 

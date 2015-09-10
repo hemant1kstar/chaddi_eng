@@ -10,10 +10,12 @@
     <title>Library | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="mdl/material.min.css" />
-    <script src="mdl/material.js"></script>
-    <link rel="stylesheet" href="fonts/Roboto+300,400,500,700.css" />
+    <link rel="stylesheet" href="../css/material.pink-amber.min.css" />
+    <script src="../material_js/material.js"></script>
+    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
     <!--  End of CSS For Material Design-->
+
+    <link rel="stylesheet" href="../css/main.css" />
 
     <link rel="stylesheet" href="css/book_page_style.css">
 
@@ -64,6 +66,7 @@
                         </thead>
                         <tbody>
                             <?php
+mysqli_query ($con,"set character_set_results='utf8'");
                    $user_query=mysqli_query($con,"select * from borrow
 								LEFT JOIN member ON borrow.member_id = member.member_id
 								LEFT JOIN borrowdetails ON borrow.borrow_id = borrowdetails.borrow_id

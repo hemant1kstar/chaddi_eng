@@ -53,6 +53,9 @@ body {
 #foodReport {
     background-color: #FF5722;
 }
+#libraryManagement {
+    background-color: #E91E63;
+}
 .madeBy {
     display: block;
     text-align: center;

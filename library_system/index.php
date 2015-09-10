@@ -10,15 +10,18 @@
     <title>Library | Paperless System</title>
 
     <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="mdl/material.min.css" />
-    <script src="mdl/material.js"></script>
-    <link rel="stylesheet" href="fonts/Roboto+300,400,500,700.css" />
+    <link rel="stylesheet" href="../material_js/Material+Icons.css" />
+    
+    <link rel="stylesheet" href="../css/material.pink-amber.min.css" />
+    <script src="../material_js/material.js"></script>
+    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
     <!--  End of CSS For Material Design-->
     <!-- CSS and JS for Snackbar -->
     <link href="css/snackbar.min.css" rel="stylesheet">
     <link href="css/material_for_snackbar.css" rel="stylesheet">
     <script src="js/snackbar.min.js" type="text/javascript"></script>
     <!-- End of CSS and JS for Snackbar -->
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="css/book_page_style.css">
            <!-- SweetAlert CSS and JavaScript files-->
         <script src="dist/sweetalert.min.js"></script>

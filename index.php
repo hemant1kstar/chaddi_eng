@@ -149,6 +149,17 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card mdl-shadow--2dp cards_layout">
+                            <a href="library_system/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="libraryManagement">
+                                <h2 class="mdl-card__title-text">Library Management</h2>
+                            </a>
+                            <div class="mdl-card__supporting-text">
+                                Manage library
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
