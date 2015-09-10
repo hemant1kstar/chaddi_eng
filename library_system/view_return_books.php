@@ -47,11 +47,12 @@
         </header>
 
         <main class="mdl-layout__content">
-            <div class="page-content mdl-shadow--4dp">
+            <div class="page-content ">
                 <!-- Your content goes here -->
-                <!-- Accent-colored raised button with ripple -->
-           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="btnPrint">Print</button>
-                  <div class="contentDiv" id="contentDiv">
+                
+                <div class="contentDiv mdl-shadow--2dp" id="contentDiv">
+                    <!-- Accent-colored raised button with ripple -->
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="btnPrint">Print</button>
                     <table class="mdl-data-table mdl-js-data-table">
                         <thead>
                             <tr>

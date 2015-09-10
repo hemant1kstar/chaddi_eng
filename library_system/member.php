@@ -50,11 +50,12 @@
         </header>
 
         <main class="mdl-layout__content">
-            <div class="page-content mdl-shadow--4dp">
+            <div class="page-content ">
                 <!-- Your content goes here -->
                 <!-- Accent-colored raised button with ripple -->
-           <a href="add_member.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  id="add_book">ADD MEMBER</a>
-                  <div class="contentDiv">
+           
+                <div class="contentDiv mdl-shadow--2dp">
+                    <a href="add_member.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  id="add_book">ADD MEMBER</a>
                     <table class="mdl-data-table mdl-js-data-table">
                         <thead>
                             <tr>

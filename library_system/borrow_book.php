@@ -47,11 +47,11 @@
         </header>
 
         <main class="mdl-layout__content">
-            <div class="page-content mdl-shadow--4dp">
+            <div class="page-content ">
                 <!-- Your content goes here -->
                 <!-- Accent-colored raised button with ripple -->
 
-                <div class="contentDiv">
+                <div class="contentDiv mdl-shadow--2dp">
                   <div class="mdl-grid">
                       
                       <form method="post" action="borrow_book_save.php">

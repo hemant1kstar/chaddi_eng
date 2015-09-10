@@ -50,9 +50,9 @@
         </header>
 
         <main class="mdl-layout__content">
-            <div class="page-content mdl-shadow--4dp">
+            <div class="page-content ">
                 <!-- Your content goes here -->
-    <div class="">
+                <div class="contentDiv mdl-shadow--2dp">
         <form action="" method="post">
             <div class="mdl-grid">
                <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield">
@@ -69,8 +69,10 @@
          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="ad_submit">
           Submit
         </button>
+        </form>
     </div>
-                  <div class="contentDiv">                      
+                
+        <div class="contentDiv mdl-shadow--2dp">                      
  
                             <?php
 if(isset($_POST['ad_submit']))
@@ -125,8 +127,8 @@ if(isset($_POST['ad_submit']))
                             echo "<td>$book_copyright_year1</td>";
                             echo "<td>$book_status1</td>";
                             echo "<td>$book_date_added1</td>";
-                            echo "<td class='divhide'><a class='mdl-js-button mdl-js-ripple-effect' href='edit_book.php?b_id=".$book_id1."' title='Edit Data'><img src='images/ic_edit_24px.svg' /></a></td>";
-                            echo '<td class="divhide"><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$book_id1.'\')" title="Delete Complete Row"><img src="images/ic_delete_24px.svg" /></button></td>';
+                                echo "<td class='divhide'><a class='mdl-js-button mdl-js-ripple-effect' href='edit_book.php?b_id=".$book_id1."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
+                                echo '<td class="divhide"><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$book_id1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></td>';
                             echo "</tr>";
                             }
        echo "</tbody>";

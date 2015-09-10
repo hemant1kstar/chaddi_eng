@@ -45,7 +45,7 @@
         </header>
 
         <main class="mdl-layout__content">
-            <div class="page-content mdl-shadow--4dp">
+            <div class="page-content mdl-shadow--2dp">
                 <!-- Your content goes here -->
                 <!-- Accent-colored raised button with ripple -->
            <a href="index.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  id="back1">Back</a>

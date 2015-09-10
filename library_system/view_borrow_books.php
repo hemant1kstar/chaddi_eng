@@ -47,29 +47,30 @@
         </header>
 
         <main class="mdl-layout__content">
-            <div class="page-content mdl-shadow--4dp">
+            <div class="page-content ">
                 <!-- Your content goes here -->
-                <form action="" method="post">
-                    <div>
-                    <label>Select Fine per Day</label>
-                    <select name="fine_charges" required>
-                        <option></option>
-                        <option value="5">RS:5</option>
-                        <option value="10">RS:10</option>
-                        <option value="15">RS:15</option>
-                        <option value="20">RS:20</option>
-                    </select>
-                    <input type="submit" name="submit_fine" value="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                    </div>
-                </form>
-                <?php
-                $fine_charges=5;
-                if(isset($_POST['submit_fine']))
-                {
-                   $fine_charges=$_POST['fine_charges'];
-                }
-                ?>
-                  <div class="contentDiv">
+                
+                <div class="contentDiv mdl-shadow--2dp">
+                    <form action="" method="post">
+                        <div>
+                            <label>Select Fine per Day</label>
+                            <select name="fine_charges" required>
+                                <option></option>
+                                <option value="5">RS:5</option>
+                                <option value="10">RS:10</option>
+                                <option value="15">RS:15</option>
+                                <option value="20">RS:20</option>
+                            </select>
+                            <input type="submit" name="submit_fine" value="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        </div>
+                    </form>
+                    <?php
+$fine_charges=5;
+if(isset($_POST['submit_fine']))
+{
+    $fine_charges=$_POST['fine_charges'];
+}
+                    ?>
                     <table class="mdl-data-table mdl-js-data-table">
                         <thead>
                             <tr>

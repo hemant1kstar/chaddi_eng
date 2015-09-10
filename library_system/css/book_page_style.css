@@ -2,13 +2,19 @@ body {
     background-color: #fafafa;
     font-family: Roboto, sans-serif;
 }
+
+.mdl-layout__content {
+    overflow: auto;
+}
 .page-content {
     position: relative;
-    margin: 56px;
-    background-color: white;
-    padding: 48px 16px;
+    margin: 48px 24px;
 }
-
+.contentDiv {
+    display: inline-block;
+    background-color: white;
+    padding: 16px;
+}
 #add_book{
     margin: 16px;
 }
