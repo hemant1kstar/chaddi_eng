@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
     <!--  End of CSS For Material Design-->
 
+    <link rel="stylesheet" href="../css/main.css" />
+
     <link rel="stylesheet" href="css/add_member.css">
 
 </head>
