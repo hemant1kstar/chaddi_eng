@@ -52,13 +52,12 @@
                 <!-- Accent-colored raised button with ripple -->
 
                 <div class="contentDiv mdl-shadow--2dp">
-                  <div class="mdl-grid">
                       
                       <form method="post" action="borrow_book_save.php">
-                        <div class="mdl-cell mdl-cell--4-col">
-                          <div class="mdl-cell mdl-cell--12-col">
-                         <label>Borrower Name</label>
-                            <select name="mem_id" class="mdl-cell--8-col" required>
+                        <div class="topInputs mdl-grid">
+                            <div class="mdl-cell--6-col">
+                                <label class="customLabel">Borrower Name: </label>
+                                <select name="mem_id" class="dropdownOptions" required>
                                 <option></option>
                             <?php
                                  mysqli_query ($con,"set character_set_results='utf8'");
@@ -73,15 +72,13 @@
                             ?>
                             </select>
                           </div>
-                          <div class="mdl-cell mdl-cell--12-col">
-                              <label>Due Date: </label>
-                              <input type="date" name="due_date" class="mdl-cell--8-col" required>
+                            <div class="mdl-cell--6-col">
+                                <label class="customLabel">Due Date: </label>
+                                <input type="date" name="due_date" class="dropdownOptions" required>
                           </div>
-                          <div class="mdl-cell mdl-cell--12-col">
-            <input type="submit" name="borrow_book_submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Borrow Book">
-                            </div>
+                          
                       </div>
-                     <div class="mdl-cell mdl-cell--8-col">
+                     <div class="">
                      <table class="mdl-data-table mdl-js-data-table">
                         <thead>
                             <tr>
@@ -128,9 +125,11 @@
                         </tbody>
                       </table>
                     </div>
+                          <div class="">
+                              <input type="submit" name="borrow_book_submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent borrowBookButton" value="Borrow Book">
+                          </div>
    
                       </form>
-                </div>
             </div>
 
             </div>

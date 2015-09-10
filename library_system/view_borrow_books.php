@@ -52,16 +52,16 @@
                 
                 <div class="contentDiv mdl-shadow--2dp">
                     <form action="" method="post">
-                        <div>
-                            <label>Select Fine per Day</label>
-                            <select name="fine_charges" required>
+                        <div class="topInputs">
+                            <label class="customLabel">Select fine per day: </label>
+                            <select name="fine_charges" class="dropdownOptions" required>
                                 <option></option>
                                 <option value="5">RS:5</option>
                                 <option value="10">RS:10</option>
                                 <option value="15">RS:15</option>
                                 <option value="20">RS:20</option>
                             </select>
-                            <input type="submit" name="submit_fine" value="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                            <input type="submit" name="submit_fine" value="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="viewBooksSubmitButton">
                         </div>
                     </form>
                     <?php

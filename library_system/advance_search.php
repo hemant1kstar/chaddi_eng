@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("db/connection.php");?>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Library | Paperless System</title>
+        <title>Library | Paperless System</title>
 
-    <!--    CSS For Material Design-->
-    <link rel="stylesheet" href="../css/material.pink-amber.min.css" />
-    <script src="../material_js/material.js"></script>
-    <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
-    <!--  End of CSS For Material Design-->
+        <!--    CSS For Material Design-->
+        <link rel="stylesheet" href="../css/material.pink-amber.min.css" />
+        <script src="../material_js/material.js"></script>
+        <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
+        <!--  End of CSS For Material Design-->
 
-    <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/main.css" />
 
-    <link rel="stylesheet" href="css/book_page_style.css">
-           <!-- SweetAlert CSS and JavaScript files-->
+        <link rel="stylesheet" href="css/book_page_style.css">
+        <!-- SweetAlert CSS and JavaScript files-->
         <script src="dist/sweetalert.min.js"></script>
         <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <!-- Top row, always visible -->
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Library System</span>
-                <div class="mdl-layout-spacer"></div>
-                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <!-- Top row, always visible -->
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Library System</span>
+                    <div class="mdl-layout-spacer"></div>
+                    <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="../index.php">Home</a> </nav>
 
 
-            </div>
+                </div>
 
-            <div class="tabs mdl-js-ripple-effect">
-                <a href="index.php" class="mdl-layout__tab">Books</a>
-                <a href="borrow_book.php" class="mdl-layout__tab">Borrow Book</a>
-                <a href="member.php" class="mdl-layout__tab">Member</a>
-                <a href="view_borrow_books.php" class="mdl-layout__tab">Borrowed Books</a>
-                <a href="view_return_books.php" class="mdl-layout__tab">Returned Books</a>
-                <a href="advance_search.php" class="mdl-layout__tab is-active">Advanced Search</a>
-            </div>
+                <div class="tabs mdl-js-ripple-effect">
+                    <a href="index.php" class="mdl-layout__tab">Books</a>
+                    <a href="borrow_book.php" class="mdl-layout__tab">Borrow Book</a>
+                    <a href="member.php" class="mdl-layout__tab">Member</a>
+                    <a href="view_borrow_books.php" class="mdl-layout__tab">Borrowed Books</a>
+                    <a href="view_return_books.php" class="mdl-layout__tab">Returned Books</a>
+                    <a href="advance_search.php" class="mdl-layout__tab is-active">Advanced Search</a>
+                </div>
 
-        </header>
+            </header>
 
-        <main class="mdl-layout__content">
-            <div class="page-content ">
-                <!-- Your content goes here -->
-                <div class="contentDiv mdl-shadow--2dp">
-        <form action="" method="post">
-            <div class="mdl-grid">
-               <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" />
-                <label class="mdl-textfield__label" for="book_title">Book Title</label>
-               </div>
-            
-               <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" />
-                <label class="mdl-textfield__label" for="book_author">Book Author</label>
-               </div>
-                    
-            </div>
-         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="ad_submit">
-          Submit
-        </button>
-        </form>
-    </div>
-                
-        <div class="contentDiv mdl-shadow--2dp">                      
- 
-                            <?php
+            <main class="mdl-layout__content">
+                <div class="page-content ">
+                    <!-- Your content goes here -->
+                    <div class="contentDiv advancedSearch mdl-shadow--2dp">
+                        <form action="" method="post">
+                            <div class="mdl-grid">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" />
+                                    <label class="mdl-textfield__label" for="book_title">Book Title</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" />
+                                    <label class="mdl-textfield__label" for="book_author">Book Author</label>
+                                </div>
+                            </div>
+                            
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="ad_submit">Submit</button>
+                            
+                        </form>
+                    </div>
+
+                    <div class="contentDiv mdl-shadow--2dp">
+
+                        <?php
 if(isset($_POST['ad_submit']))
 {
     $title1=$_POST['book_title'];
@@ -135,17 +135,17 @@ if(isset($_POST['ad_submit']))
        echo "</table>";
 }
                             ?>
-                            
-                     
+
+
+                    </div>
+
                 </div>
+            </main>
 
-            </div>
-        </main>
+        </div>
 
-    </div>
 
-    
-            <script>
+        <script>
             function myFunction_Delete_row(b_name) {
                 swal({
                     title: "Are you sure?",
@@ -162,6 +162,6 @@ if(isset($_POST['ad_submit']))
             }
 
         </script>
-</body>
+    </body>
 
 </html>

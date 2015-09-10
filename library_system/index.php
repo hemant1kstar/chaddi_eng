@@ -125,7 +125,7 @@
                             echo "<td>$book_status1</td>";
                             echo "<td>$book_date_added1</td>";
                                 echo "<td class='divhide'><a class='mdl-js-button mdl-js-ripple-effect' href='edit_book.php?b_id=".$book_id1."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
-                            echo '<td class="divhide"><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$book_id1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></td>';
+                            echo '<td class="divhide "><button class="mdl-js-button mdl-js-ripple-effect deleteRowButton" onClick="myFunction_Delete_row(\''.$book_id1.'\')" title="Delete Complete Row"><img src="../images/dynamicTables/ic_delete_24px.svg" /></button></td>';
                             echo "</tr>";
                             }
                             ?>
