@@ -1,0 +1,14 @@
+.bus_list_div {
+    margin: 48px 16px;
+    background-color: #fff;
+}
+
+.add_button{
+     margin: 24px 0px 0px 14px;
+}
+
+@media (min-width: 992px) {
+   .bus_list_div {
+        margin: 48px 24px;
+    }
+}

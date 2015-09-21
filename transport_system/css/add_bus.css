@@ -1,0 +1,10 @@
+.bus_add_div {
+    margin: 48px 16px;
+    background-color: #fff;
+}
+
+@media (min-width: 992px) {
+   .bus_add_div {
+        margin:54px 96px;
+    }
+}
