@@ -1,11 +1,12 @@
 <?php
          session_start();
-         if(!$_SESSION['LoggedIn'])
+         if(!$_SESSION['LoggedIn_teacher'])
            {
-                 header("location:login/login.php?problem='Not Logged In'");
-                     exit;
+                 header("location:../login_panel/login.php?problem='Not Logged In'");
+                 exit;
          }
- $teacher_id=$_SESSION['teacher_id'];
+    $user_name=$_SESSION['user_name'];
+    $teacher_id=$_SESSION['teacher_id'];
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -30,7 +31,7 @@
     <body>
         <!-- Always shows a header, even in smaller screens. -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
+                    <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
                     <span class="mdl-layout-title">Teacher Panel</span>
@@ -41,7 +42,7 @@
                         <a class="mdl-navigation__link" href="index.php">Home</a>
                         <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
                         
-                        <a class="mdl-navigation__link" href="login/teacher_logout.php">Logout</a>
+                        <a class="mdl-navigation__link" href="../login_panel/teacher_logout.php">Logout</a>
                     </nav>
                 </div>
             </header>
@@ -57,6 +58,7 @@
             </div>
 -->
             <main class="mdl-layout__content">
+                <h5 class="user_name">Hello,<?php echo $user_name;?></h5>
                 <div class="page-content">
                     <!-- Your content goes here -->
 

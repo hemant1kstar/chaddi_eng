@@ -46,7 +46,7 @@
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
                 <nav class="mdl-navigation ">
-                    <a class="mdl-navigation__link" href="login_panel/logout.php">Logout</a>
+                    <a class="mdl-navigation__link" href="login_panel/admin_logout.php">Logout</a>
                 </nav>
 
             </div>
@@ -61,7 +61,7 @@
         </div>
 -->
         <main class="mdl-layout__content">
-                           <h5 class="user_name">Hello ,<?php echo $user_name;?></h5>
+                           <h5 class="user_name">Hello,<?php echo $user_name;?></h5>
             <div class="page-content">
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
@@ -75,6 +75,7 @@
                         </div>
                     </div>
 
+<!--
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
                             <a href="attendance/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="attendance">
@@ -85,6 +86,7 @@
                             </div>
                         </div>
                     </div>
+-->
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
@@ -110,6 +112,7 @@
                     </div>
 
 
+<!--
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
                             <a href="teacher_profile/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="teacherProfile">
@@ -120,6 +123,7 @@
                             </div>
                         </div>
                     </div>
+-->
 
 
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
@@ -134,6 +138,7 @@
                     </div>
                     
                     
+<!--
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
                             <a href="sms_gateway/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="smsGateway">
@@ -144,6 +149,7 @@
                             </div>
                         </div>
                     </div>
+-->
                     
                     
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">

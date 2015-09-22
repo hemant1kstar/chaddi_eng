@@ -53,11 +53,11 @@
             <div class="page-content">
                 <!-- Your content goes here -->
 
+<!--
                 <div class="loginBlock mdl-shadow--2dp">
                     <h2>Login</h2>
-                    <!-- Textfield with Floating Label -->
 
-                    <form action="<?php echo htmlspecialchars('welcome.php');?>" method="post">
+                    <form action="" method="post">
                         <div class="inputDiv">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" id="username" name="admin_user" />
@@ -71,6 +71,50 @@
                         </div>
                     </form>
 
+                </div>
+-->
+                
+                <div class="loginBlock mdl-shadow--2dp">
+                            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                            <div class="mdl-tabs__tab-bar">
+                                <a href="#admin-panel" class="mdl-tabs__tab is-active">Admin</a>
+                                <a href="#teacher-panel" class="mdl-tabs__tab">Teacher</a>
+                            </div>
+
+                            <div class="mdl-tabs__panel is-active" id="admin-panel">
+                                
+                                 <form action="<?php echo htmlspecialchars('welcome_admin.php');?>" method="post">
+                                <div class="inputDiv">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="username" name="admin_user" />
+                                        <label class="mdl-textfield__label" for="username">Username</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="password" id="password" name="admin_pass" />
+                                        <label class="mdl-textfield__label" for="password">Password</label>
+                                    </div>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit_user">Submit</button>
+                                </div>
+                            </form>
+
+                            </div>
+                            <div class="mdl-tabs__panel" id="teacher-panel">
+                                    <form action="<?php echo htmlspecialchars('welcome_teacher.php');?>" method="post">
+                                    <div class="inputDiv">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="username" name="teacher_user" />
+                                            <label class="mdl-textfield__label" for="username">Username</label>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="password" id="password" name="teacher_pass" />
+                                            <label class="mdl-textfield__label" for="password">Password</label>
+                                        </div>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit_teacher">Submit</button>
+                                    </div>
+                                </form>
+     
+                            </div>
+                            </div>
                 </div>
 
                 <p class="loginStatus">

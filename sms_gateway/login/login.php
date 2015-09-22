@@ -35,7 +35,7 @@
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
                 <nav class="mdl-navigation ">
-                    <a class="mdl-navigation__link" href="../../index.php">Home</a>
+                    <a class="mdl-navigation__link" href="../../teacher_profile/index.php">Home</a>
                 </nav>
             </div>
         </header>

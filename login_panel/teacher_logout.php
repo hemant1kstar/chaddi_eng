@@ -3,7 +3,8 @@ $success="";
 
            @ob_start();
            session_start();    
-unset($_SESSION['LoggedIn']);
+unset($_SESSION['LoggedIn_teacher']);
+unset($_SESSION['user_name']);
 unset($_SESSION['teacher_id']);
      $success=1;
 ?>
