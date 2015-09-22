@@ -14,7 +14,10 @@ $id=$_GET['row_id'];
 $query3=mysqli_query($con,"delete from $link where id='$id'");
 if($query3)
 {
-        header("Location:table_display.php?q=$link");
+//        header("Location:table_display.php?q=$link");
+      echo "<script>
+            window.location = 'table_display.php?q=$link';
+            </script>";
 }else{
      echo "error in deleting row";
 }

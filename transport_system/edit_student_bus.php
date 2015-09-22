@@ -53,7 +53,10 @@ mysqli_query ($con,"set character_set_results='utf8'");
 $sql = "UPDATE student_bus_status SET student_name=N'$student_name1',class='$student_class1',contact_no='$student_no1',student_drop_area=N'$student_drop_area1',bus_fee='$bus_fee1' WHERE bus_id1='$bus_id1'";
 
 if ($con->query($sql) === TRUE) {
-     header("Location:student_bus_status.php");
+//     header("Location:student_bus_status.php");
+   echo "<script>
+          window.location = 'student_bus_status.php';
+          </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }

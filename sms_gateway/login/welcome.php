@@ -9,8 +9,11 @@ if(isset($_POST['submitteacher']))
    if($username=='sms' && $password=='gateway@2015')
         {
          $_SESSION['LoggedIn_SMS']='admin_logged_in';     
-         $url="Location:../index.php" ;
-         header($url);   
+//         $url="Location:../index.php" ;
+//         header($url);   
+      echo "<script>
+             window.location = '../index.php';
+             </script>";
         exit;
         }    
    $problem="";
@@ -27,8 +30,11 @@ if(isset($_POST['submitteacher']))
     $problem="Invalid Username and Password";
   }
                  
-    $url="Location:login.php?login_problem=$problem" ;
-    header($url);    
+//    $url="Location:login.php?login_problem=$problem" ;
+//    header($url);   
+   echo "<script>
+             window.location = 'login.php?login_problem=$problem';
+             </script>";
     exit; 
      }
 

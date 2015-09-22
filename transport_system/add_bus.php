@@ -54,7 +54,10 @@ if ($con->query($sql) === TRUE) {
     echo "New Bus Added successfully";
 } else {
 //    echo "Error: " . $sql . "<br>" . $con->error;
-  header("Location:index.php");
+//  header("Location:index.php");
+   echo "<script>
+          window.location = 'index.php';
+          </script>";
 }
   
 }

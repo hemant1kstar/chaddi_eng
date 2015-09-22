@@ -72,7 +72,7 @@
                         </form>
                     </div>
 
-                    <div class="contentDiv mdl-shadow--2dp">
+                    <div class="contentDiv">
 
                         <?php
 if(isset($_POST['ad_submit']))

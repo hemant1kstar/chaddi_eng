@@ -13,7 +13,10 @@ $status=$_POST['m_status'];
 
 if(mysqli_query($con,"update member set name=N'$firstname',gender='$gender',address = N'$address',contact = '$contact',type = '$type',year_level = '$year_level',status = '$status' where member_id='$mem_id'")or die(mysqli_error()))
 {											
-   header('location:member.php');
+//   header('location:member.php');
+    echo "<script>
+         window.location = 'member.php';
+         </script>";
 }else{
 echo "query unsucessful";
 }

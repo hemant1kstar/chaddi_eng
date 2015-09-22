@@ -56,7 +56,10 @@ VALUES ('$student_id1',N'$student_name1', '$student_class1','$student_no1',N'$st
 if ($con->query($sql) === TRUE) {
     echo "Student Registered successfully";
 } else {
-    header("Location:student_bus_status.php");
+//    header("Location:student_bus_status.php");
+   echo "<script>
+          window.location = 'student_bus_status.php';
+          </script>";
 }
   
 }

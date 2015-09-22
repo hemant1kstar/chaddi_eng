@@ -9,7 +9,10 @@ $id1=$_GET['student_id1'];
 $query3=mysqli_query($con,"delete from student_bus_status where student_id='$id1'");
 if($query3)
 {
-        header("Location:student_bus_status.php");
+//        header("Location:student_bus_status.php");
+         echo "<script>
+                window.location = 'student_bus_status.php';
+              </script>";
 }else{
      echo "error in deleting student Bus";
 }

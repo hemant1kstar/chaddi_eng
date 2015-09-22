@@ -14,7 +14,10 @@ $status=$_POST['b_status'];
 if(mysqli_query($con,"insert into book (book_title,category_id,author,book_copies,book_pub,publisher_name,isbn,copyright_year,date_added,status)
  values(N'$book_title','$category_id',N'$author','$book_copies',N'$book_pub',N'$publisher_name',N'$isbn','$copyright_year',NOW(),'$status')")or die(mysql_error()))
 {
-  header("location:index.php?success1='success'");
+//  header("location:index.php?success1='success'");
+     echo "<script>
+          window.location = 'index.php?success1=success';
+          </script>";
 }else{
   echo "query unsuccessful";
 }

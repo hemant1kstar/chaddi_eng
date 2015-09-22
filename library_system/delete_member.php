@@ -4,6 +4,9 @@ if(isset($_GET['r_id']))
 {
 $id=$_GET['r_id'];
 mysqli_query($con,"delete from member where member_id='$id'") or die(mysqli_error());
-header('location:member.php');
+//header('location:member.php');
+   echo "<script>
+          window.location = 'member.php';
+          </script>";
 }
 ?>

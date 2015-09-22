@@ -70,7 +70,10 @@
                                  mysqli_query($con,"UPDATE $link set `$columnname1`=N'$value1' WHERE id='$dCreate_id'"); 
                           }
                        }
-                       header("Location:table_display.php?q=$link");
+//                       header("Location:table_display.php?q=$link");
+                     echo "<script>
+                            window.location = 'table_display.php?q=$link';
+                            </script>";
 
                 }
         ?>

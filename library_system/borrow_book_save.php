@@ -14,7 +14,10 @@
 
 
 	if ($book_id == '' ){ 
-	header("location: borrow_book.php");
+//	header("location: borrow_book.php");
+		  echo "<script>
+          window.location = 'borrow_book.php';
+          </script>";
 	?>
 	
 
@@ -34,7 +37,10 @@ for($i=0; $i < $N; $i++)
 	 mysqli_query($con,"insert borrowdetails (book_id,borrow_id,borrow_status) values('$book_id[$i]','$borrow_id','pending')")or die(mysql_error());
 
 }
-header("location: borrow_book.php");
+//header("location: borrow_book.php");
+		   echo "<script>
+          window.location = 'borrow_book.php';
+          </script>";
 } 
 		
 }

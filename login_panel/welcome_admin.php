@@ -16,8 +16,11 @@ if(isset($_POST['submit_user']))
         {
          $_SESSION['LoggedIn_user']='admin_logged_in';     
          $_SESSION['user_name']=$row['admin_name'];
-         $url="Location:../index.php" ;
-         header($url);   
+//         $url="Location:../index.php" ;
+//         header($url);   
+       echo "<script>
+             window.location = '../index.php';
+             </script>";
         exit;
         }    
    $problem="";
@@ -35,8 +38,11 @@ if(isset($_POST['submit_user']))
   }
                  
    }
-    $url="Location:login.php?problem=$problem" ;
-    header($url);    
+//    $url="Location:login.php?problem=$problem" ;
+//    header($url);    
+ echo "<script>
+             window.location = 'login.php?problem=$problem';
+             </script>";
     exit; 
      }
 

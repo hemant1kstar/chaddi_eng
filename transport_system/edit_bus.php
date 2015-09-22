@@ -51,7 +51,10 @@ if(isset($_POST['edit_bus_confirm']))
   $sql = "UPDATE bus_system SET bus_name='$bus_name1',driver_name='$driver_name1',pickup_time='$pickup_time1',drop_time='$drop_time1',area='$bus_area1' WHERE bus_id='$bus_id1'";
 
 if ($con->query($sql) === TRUE) {
-     header("Location:index.php");
+//     header("Location:index.php");
+   echo "<script>
+          window.location = 'index.php';
+          </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }

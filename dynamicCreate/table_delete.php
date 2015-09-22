@@ -7,7 +7,10 @@ if (isset($_GET['q'])) {
       $query=mysqli_query($con,"DROP TABLE `$table_name`");
 if($query)
 {
-        header("Location:index.php");
+//        header("Location:index.php");
+         echo "<script>
+                window.location = 'index.php';
+                </script>";
 }else{
      echo "error in deleting table";
 }

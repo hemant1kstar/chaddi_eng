@@ -17,7 +17,10 @@ if(isset($_POST['edit_book_submit']))
 if(mysqli_query($con,"update book set book_title=N'$b_title',category_id='$b_category',author=N'$b_author'
 ,book_copies = '$b_copies',book_pub =N'$b_publication',publisher_name = N'$b_publisher_name',isbn = N'$b_isbn',copyright_year='$b_copyright_year',status=N'$b_status' where book_id='$b_id'")or die(mysqli_error()))
 {											
-   header('location:index.php');
+   //header('location:index.php');
+     echo "<script>
+          window.location = 'index.php';
+          </script>";
 }else{
 echo "query unsucessful";
 }

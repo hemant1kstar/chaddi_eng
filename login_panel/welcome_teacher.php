@@ -17,8 +17,11 @@ if(isset($_POST['submit_teacher']))
          $_SESSION['LoggedIn_teacher']='teacher_logged_in';     
          $_SESSION['user_name']=$row['teacher_name'];
          $_SESSION['teacher_id']=$row['teacher_id'];
-         $url="Location:../teacher_profile/index.php" ;
-         header($url);   
+//         $url="Location:../teacher_profile/index.php" ;
+//         header($url);   
+      echo "<script>
+             window.location = '../teacher_profile/index.php';
+             </script>";
         exit;
         }    
    $problem="";
@@ -36,8 +39,11 @@ if(isset($_POST['submit_teacher']))
   }
                  
    }
-    $url="Location:login.php?problem=$problem" ;
-    header($url);    
+//    $url="Location:login.php?problem=$problem" ;
+//    header($url);    
+  echo "<script>
+             window.location = 'login.php?problem=$problem';
+             </script>";
     exit; 
      }
 
