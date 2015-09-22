@@ -99,7 +99,7 @@
             <div class="page-content">
                 <!-- Your content goes here -->
                 <?php
-            include("database/connection.php");
+          include("../database/connection.php");
         ?>
 
                     <?php

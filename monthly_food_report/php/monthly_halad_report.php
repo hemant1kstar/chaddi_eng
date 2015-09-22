@@ -25,7 +25,7 @@
             $s_month=$_GET['s_month'];
 //echo "$s_year<br/>";
 //echo "$s_month";
-              include("../database/connection.php");
+              include("../../database/connection.php");
               mysqli_query ($con,"set character_set_results='utf8'");
 //              $query1 = mysqli_query($con,"SELECT * FROM halad_report") or die(mysqli_error());
 if($s_year=="" or $s_month=="")

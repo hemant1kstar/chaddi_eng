@@ -1,5 +1,5 @@
 <?php 
-include("db/connection.php");
+include("../database/connection.php");
 if (isset($_POST['add_book_submit'])){
 $book_title=$_POST['b_title'];
 $category_id=$_POST['b_category'];

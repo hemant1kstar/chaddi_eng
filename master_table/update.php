@@ -262,7 +262,6 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
 
                         <?php
-  include("../database/connection1.php");
                    if(isset($_POST['submit_update_profile']))
                    {
         $reg_no3=$_POST['reg_no3'];

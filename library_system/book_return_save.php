@@ -1,5 +1,5 @@
 <?php 
-include("db/connection.php");
+include("../database/connection.php");
 
 $id=$_GET['id'];
 $book_id = $_GET['b_id'];

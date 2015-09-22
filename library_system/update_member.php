@@ -1,6 +1,5 @@
 <?php
-
-include("db/connection.php");
+include("../database/connection.php");
 if(isset($_POST['edit_member_submit']))
 {
 $mem_id=$_GET['mem_id'];

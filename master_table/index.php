@@ -83,7 +83,6 @@
         <main class="mdl-layout__content">
             <?php
     include("../database/connection.php");
-    include("../database/connection1.php");
    ?>
                 <?php
      if(isset($_POST['submit_student_info']))

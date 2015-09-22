@@ -2,7 +2,7 @@
 <?php
 if(isset($_GET['student_id1']))
 {
-   include("db/connection.php");
+ include("../database/connection.php");
 
 $id1=$_GET['student_id1'];
 //     echo "$link";

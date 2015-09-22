@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("db/connection.php");?>
+<?php include("../database/connection.php");?>
 
     <head>
         <meta charset="utf-8">

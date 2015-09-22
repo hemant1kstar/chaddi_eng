@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['stu_id']))
 {
-  include("db/connection.php");
+include("../database/connection.php");
 $student_id=$_GET['stu_id'];
 //echo "Student_id:$student_id";
                        $s_name="";

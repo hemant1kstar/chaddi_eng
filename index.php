@@ -1,3 +1,12 @@
+<?php
+         session_start();
+         if(!$_SESSION['LoggedIn_user'])
+           {
+                 header("location:login_panel/login.php?problem='Not Logged In'");
+                 exit;
+         }
+    $user_name=$_SESSION['user_name'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,13 +43,11 @@
                 <!-- Title -->
                 <span class="mdl-layout-title">Sant Namdev Vidyalaya, Paperless System</span>
                 <!-- Add spacer, to align navigation to the right -->
-<!--                <div class="mdl-layout-spacer"></div>-->
+                <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
-<!--
                 <nav class="mdl-navigation ">
-                    <a class="mdl-navigation__link" href="index.php">Home</a>
+                    <a class="mdl-navigation__link" href="login_panel/logout.php">Logout</a>
                 </nav>
--->
 
             </div>
 
@@ -54,8 +61,8 @@
         </div>
 -->
         <main class="mdl-layout__content">
+                           <h5 class="user_name">Hello ,<?php echo $user_name;?></h5>
             <div class="page-content">
-
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card mdl-shadow--2dp cards_layout">
@@ -157,6 +164,18 @@
                             </a>
                             <div class="mdl-card__supporting-text">
                                 Manage library
+                            </div>
+                        </div>
+                    </div>
+                    
+                              
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card mdl-shadow--2dp cards_layout">
+                            <a href="transport_system/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="transportSystem">
+                                <h2 class="mdl-card__title-text">Transport System</h2>
+                            </a>
+                            <div class="mdl-card__supporting-text">
+                                Manage transpotation
                             </div>
                         </div>
                     </div>

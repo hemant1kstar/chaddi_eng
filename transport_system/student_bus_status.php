@@ -23,7 +23,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Home</a>
+        <a class="mdl-navigation__link" href="../index.php">Home</a>
       </nav>
     </div>
     
@@ -39,7 +39,7 @@
       
       
   <?php
-    include("db/connection.php");
+    include("../database/connection.php");
     ?>
       <div class="student_list_div mdl-shadow--2dp">
         <h3>Student List</h3>

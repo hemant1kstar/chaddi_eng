@@ -1,5 +1,5 @@
 <?php
- 	include("db/connection.php");
+ include("../database/connection.php");
 	if (isset($_POST['borrow_book_submit'])){
 		
 	$book_id=$_POST['book_selector'];

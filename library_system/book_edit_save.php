@@ -1,6 +1,6 @@
 <?php
 
-include("db/connection.php");
+include("../database/connection.php");
 if(isset($_POST['edit_book_submit']))
 {
     $b_id=$_GET['book_id'];

@@ -5,6 +5,12 @@ body {
     overflow: auto;
 
 }
+
+.user_name{
+    margin:16px;
+    font-family:Roboto, sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+}
 .mdl-layout__content {
     overflow: auto;
 }
@@ -55,6 +61,10 @@ body {
 }
 #libraryManagement {
     background-color: #E91E63;
+}
+
+#transportSystem{
+    background-color: #2196f3;
 }
 .madeBy {
     display: block;

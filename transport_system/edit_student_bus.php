@@ -23,7 +23,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Home</a>
+        <a class="mdl-navigation__link" href="../index.php">Home</a>
       </nav>
     </div>
     
@@ -38,7 +38,7 @@
     <div class="page-content">
       
   <?php
-    include("db/connection.php");
+include("../database/connection.php");
 if(isset($_POST['student_bus_edit']))
 {
 //  $student_id1=$_POST['student_id1'];

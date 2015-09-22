@@ -1,5 +1,5 @@
 <?php 
-include("db/connection.php");
+include("../database/connection.php");
 if (isset($_POST['add_member_submit'])){
 $firstname=$_POST['first_name'];
 $lastname=$_POST['last_name'];

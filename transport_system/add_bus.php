@@ -19,7 +19,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Home</a>
+        <a class="mdl-navigation__link" href="../index.php">Home</a>
       </nav>
     </div>
     
@@ -38,7 +38,7 @@
 </a>
       
   <?php
-    include("db/connection.php");
+    include("../database/connection.php");
 if(isset($_POST['bus_add_confirm']))
 {
   $bus_name=$_POST['bus_name1'];
