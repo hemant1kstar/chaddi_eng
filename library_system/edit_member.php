@@ -77,8 +77,8 @@
                         <form action="update_member.php?mem_id=<?php echo $mem_id;?>" method="post">
                         <div class="mdl-grid">
                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                    <input class="mdl-textfield__input" type="text" id="m_firstname" name="m_firstname" value="<?php echo $member_firstname;?>"/>
-                            <label class="mdl-textfield__label" for="m_firstname">Firstname</label>
+                    <input class="mdl-textfield__input" type="text" id="m_firstname" name="m_firstname" value="<?php echo $member_firstname;?>" placeholder="Firstname"/>
+<!--                            <label class="mdl-textfield__label" for="m_firstname">Firstname</label>-->
                           </div>
                             
                             
@@ -93,13 +93,13 @@
                         </div>
                             
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                            <input class="mdl-textfield__input" type="text" id="m_address" name="m_address" value="<?php echo $member_address;?>"/>
-                            <label class="mdl-textfield__label" for="m_address">Address</label>
+                            <input class="mdl-textfield__input" type="text" id="m_address" name="m_address" value="<?php echo $member_address;?>" placeholder="Address"/>
+<!--                            <label class="mdl-textfield__label" for="m_address">Address</label>-->
                           </div>
                             
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="m_contact" name="m_contact" value="<?php echo $member_contact;?>" />
-                            <label class="mdl-textfield__label" for="m_contact">Contact</label>
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="m_contact" name="m_contact" value="<?php echo $member_contact;?>" placeholder="Contact" />
+<!--                            <label class="mdl-textfield__label" for="m_contact">Contact</label>-->
                             <span class="mdl-textfield__error">Input is not a number!</span>
                           </div>
                             

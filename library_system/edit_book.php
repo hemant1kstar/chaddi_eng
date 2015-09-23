@@ -77,8 +77,8 @@
                         <form action="book_edit_save.php?book_id=<?php echo $b_id;?>" method="post">
                         <div class="mdl-grid">
                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                    <input class="mdl-textfield__input" type="text" id="b_title" name="b_title" value="<?php echo $b_title;?>"/>
-                            <label class="mdl-textfield__label" for="b_title">Book Title</label>
+    <input class="mdl-textfield__input" type="text" id="b_title" name="b_title" value="<?php echo $b_title;?>" placeholder="Book Title"/>
+<!--                            <label class="mdl-textfield__label" for="b_title">Book Title</label>-->
                           </div>
                             
                         <div class="mdl-cell--8-col">
@@ -95,34 +95,34 @@
                         </div> 
                             
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                            <input class="mdl-textfield__input" type="text" id="b_author" name="b_author" value="<?php echo $b_author;?>"/>
-                            <label class="mdl-textfield__label" for="b_author">Author</label>
+    <input class="mdl-textfield__input" type="text" id="b_author" name="b_author" value="<?php echo $b_author;?>" placeholder="Author"/>
+<!--                            <label class="mdl-textfield__label" for="b_author">Author</label>-->
                           </div>
                             
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b_copies" name="b_copies" value="<?php echo $b_copies;?>" />
-                            <label class="mdl-textfield__label" for="b_copies">Book Copies</label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b_copies" name="b_copies" value="<?php echo $b_copies;?>" placeholder="Book Copies"/>
+<!--                            <label class="mdl-textfield__label" for="b_copies">Book Copies</label>-->
                             <span class="mdl-textfield__error">Input is not a number!</span>
                           </div>
                             
                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                            <input class="mdl-textfield__input" type="text" id="b_publication" name="b_publication" value="<?php echo $b_pub;?>" />
-                            <label class="mdl-textfield__label" for="b_publication">Book Publication</label>
+                            <input class="mdl-textfield__input" type="text" id="b_publication" name="b_publication" value="<?php echo $b_pub;?>" placeholder="Book Publication"/>
+<!--                            <label class="mdl-textfield__label" for="b_publication">Book Publication</label>-->
                           </div>
                             
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                            <input class="mdl-textfield__input" type="text" id="b_publisher_name" name="b_publisher_name" value="<?php echo $b_publisher_name;?>"/>
-                            <label class="mdl-textfield__label" for="b_publisher_name">Publisher Name</label>
+                            <input class="mdl-textfield__input" type="text" id="b_publisher_name" name="b_publisher_name" value="<?php echo $b_publisher_name;?>" placeholder="Publisher Name"/>
+<!--                            <label class="mdl-textfield__label" for="b_publisher_name">Publisher Name</label>-->
                           </div>
                             
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                            <input class="mdl-textfield__input" type="text" id="b_isbn" name="b_isbn" value="<?php echo $b_isbn;?>"/>
-                            <label class="mdl-textfield__label" for="b_isbn">ISBN No.</label>
+                            <input class="mdl-textfield__input" type="text" id="b_isbn" name="b_isbn" value="<?php echo $b_isbn;?>" placeholder="ISBN No."/>
+<!--                            <label class="mdl-textfield__label" for="b_isbn">ISBN No.</label>-->
                           </div>
                             
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col">
-                            <input class="mdl-textfield__input" type="text" id="b_copyright_year" name="b_copyright_year" value="<?php echo $b_copyright_year;?>"/>
-                            <label class="mdl-textfield__label" for="b_copyright_year">Copyright Year</label>
+                            <input class="mdl-textfield__input" type="text" id="b_copyright_year" name="b_copyright_year" value="<?php echo $b_copyright_year;?>" placeholder="Copyright Year"/>
+<!--                            <label class="mdl-textfield__label" for="b_copyright_year">Copyright Year</label>-->
                           </div>
                             
                         <div class="mdl-cell--8-col">
