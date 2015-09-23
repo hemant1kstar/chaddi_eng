@@ -1,3 +1,11 @@
+<?php
+         session_start();
+         if(!$_SESSION['LoggedIn_teacher'])
+           {
+                 header("location:../login_panel/login.php?problem='Not Logged In'");
+                 exit;
+         }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

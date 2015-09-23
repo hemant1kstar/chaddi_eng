@@ -1,4 +1,13 @@
-<html>
+<?php
+         session_start();
+         if(!$_SESSION['LoggedIn_user'])
+           {
+                 header("location:../login_panel/login.php?problem='Not Logged In'");
+                 exit;
+         }
+?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Transpotation System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
