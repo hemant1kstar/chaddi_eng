@@ -46,6 +46,7 @@
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
                 <nav class="mdl-navigation ">
+                     <a class="mdl-navigation__link" href="backup/backup_db.php">Backup</a>
                     <a class="mdl-navigation__link" href="login_panel/admin_logout.php">Logout</a>
                 </nav>
 
