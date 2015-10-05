@@ -1,0 +1,41 @@
+ .test_list_div{
+  margin: auto;
+  padding: 16px;
+} 
+
+.test_heading{
+  text-align: center;
+  font-size: 22px;
+  text-transform:capitalize;
+  color: rgba(63, 81, 181, 0.57);
+}
+
+
+.test_sub_head{
+  text-align: center;
+  font-size: 20px;
+}
+
+.test_list{
+  margin: 8px;
+}
+
+.test_list_label{
+  margin: 8px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.menu_list > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background-color: rgba(0, 128, 255, 0.83);
+}
+
+@media screen and (min-width: 667px) {
+  
+ .test_list_div{
+  margin: 54px;
+} 
+
+}

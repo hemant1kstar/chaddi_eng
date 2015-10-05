@@ -1,0 +1,27 @@
+ .test_list_div{
+  margin: auto;
+  padding: 16px;
+} 
+
+.test_heading{
+  text-align: center;
+  font-size: 22px;
+}
+
+
+.test_sub_head{
+  text-align: center;
+  font-size: 20px;
+}
+
+.test_list{
+  margin: 8px;
+}
+
+@media screen and (min-width: 667px) {
+  
+ .test_list_div{
+  margin: 54px;
+} 
+
+}

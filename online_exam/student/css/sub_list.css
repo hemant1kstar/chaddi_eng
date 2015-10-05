@@ -1,0 +1,28 @@
+
+.subject_list_div{
+  margin: auto;
+  padding: 16px;
+}
+.sublist_heading{
+  text-align: center;
+  font-size: 22px;
+  color: rgba(63, 81, 181, 0.57);
+}
+
+.menu_list.mdl-card {
+/*  margin: 8px;*/
+}
+.menu_list > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background-color: rgba(0, 128, 255, 0.83);
+}
+
+
+@media screen and (min-width: 667px) {
+  
+ .subject_list_div{
+  margin: 54px;
+} 
+
+}

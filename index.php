@@ -186,6 +186,17 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card mdl-shadow--2dp cards_layout">
+                            <a href="online_exam/student/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="onlineSystem">
+                                <h2 class="mdl-card__title-text">Online Exam System</h2>
+                            </a>
+                            <div class="mdl-card__supporting-text">
+                                Manage Online Exam
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

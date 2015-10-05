@@ -1,0 +1,41 @@
+.exam_display{
+ margin: auto;
+}
+
+.result_title{
+ text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 26px;
+ text-decoration: underline;
+}
+.result_list{
+ list-style: none;
+ text-align: center;
+ font-size: 18px;
+ color: rgba(0, 0, 0, 0.87);
+ padding: 8px;
+}
+.review_div{
+  text-align: center;
+ margin: 16px auto;
+}
+
+.review_link{
+
+ font-size: 18px;
+ color: #006cff;
+ text-decoration: none;
+}
+
+.review_link:hover{
+ color: rgba(0, 108, 255, 0.74);
+
+}
+@media screen and (min-width: 667px) {
+  
+ .exam_display{
+  margin: 54px;
+  padding: 8px;
+} 
+
+}

@@ -1,0 +1,37 @@
+body{
+  font-size: 16px;
+} 
+.result_div{
+  margin: 8px;
+  padding: 8px;
+}
+
+.result_heading{
+  text-align: center;
+  font-size: 22px;
+  padding: 16px;
+}
+
+  .result_table{
+    overflow: scroll;
+    border-collapse: collapse;
+}
+
+.result_table,th,td {
+  border: 1px solid rgba(0, 0, 0, 0.73);
+  padding: 8px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 667px) {
+  
+.result_div{
+  margin: 56px;
+}
+  
+  .result_table{
+margin-left: 350px;
+    overflow: scroll;
+}
+  
+}

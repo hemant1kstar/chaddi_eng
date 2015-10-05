@@ -1,0 +1,25 @@
+
+.subject_list_div{
+  margin: auto;
+  padding: 16px;
+}
+.sublist_heading{
+  text-align: center;
+  font-size: 22px;
+}
+
+.sub_list{
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 8px;
+}
+
+@media screen and (min-width: 667px) {
+  
+ .subject_list_div{
+  margin: 54px;
+} 
+
+}

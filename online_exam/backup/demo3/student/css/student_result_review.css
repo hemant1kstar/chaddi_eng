@@ -1,0 +1,30 @@
+.result_review{
+  margin: 54px;
+  padding: 16px;
+} 
+
+.review_title{
+font-size: 22px;
+  text-align: center;
+}
+.tans{
+color: rgba(0, 128, 0, 0.87);
+  font-size: 16px;
+}
+.style8{
+  color: rgba(255, 0, 0, 0.87);
+  font-size: 16px;
+}
+
+.que_title{
+  font-size: 20px;
+  margin: 8px;
+}
+
+@media screen and (min-width: 667px) {
+  
+ .result_review{
+  margin: 54px;
+} 
+
+}
