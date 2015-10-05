@@ -86,13 +86,34 @@ include("../database/connection.php");
                                     <label class="customLabel">Class :
                                         <select name="class" class="dropdownOptions" onchange="changeStudent()" id="class1" required>
                                             <option value=""></option>
-                                            <option value="6">6th Class</option>
-                                            <option value="7">7th Class</option>
+                                                 <option value="1">1st Class</option>
+                                                <option value="2">2nd Class</option>
+                                                <option value="3">3rd Class</option>
+                                                <option value="4">4th Class</option>
+                                                <option value="5">5th Class</option>
+                                                <option value="6">6th Class</option>
+                                                <option value="7">7th Class</option>
+                                                <option value="8">8th Class</option>
+                                                <option value="9">9th Class</option>
+                                                <option value="10">10th Class</option>
 
                                         </select>
                                     </label>
 
                                 </div>
+                                
+                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                        <label class="customLabel">Division :
+                                            <select name="division" class="dropdownOptions" onchange="showUser(this.value)"  id="division1" required>
+                                                <option></option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+
+                                            </select>
+                                        </label>
+
+                                    </div>
                                 <div class="mdl-textfield mdl-js-textfield  mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                     <label class="customLabel">Month :
                                         <select name="month" class="dropdownOptions" required>
@@ -191,6 +212,7 @@ include("../database/connection.php");
                                 $class1=$_POST['class'];
                                 $month=$_POST['month'];
                                 $year=$_POST['year'];
+                                $division=$_POST['division'];
                                 $monthName = "";
 
                                 
@@ -239,7 +261,7 @@ include("../database/connection.php");
 //                              echo "$year<br/>";
 //                              echo "$year-$month-01";
 //                              echo "$year-$month-$days";
-                        $sql1="SELECT date,timing FROM calendar WHERE date BETWEEN '$year-$month-01' AND '$year-$month-$days'  ORDER BY date";
+                        $sql1="SELECT date,timing FROM calendar WHERE date BETWEEN '$year-$month-01' AND '$year-$month-$days'  ORDER BY date ASC";
                         $result1=mysqli_query($con,$sql1);
 //                        $result1=mysqli_query($con,$sql);
 
@@ -269,7 +291,7 @@ include("../database/connection.php");
                         echo "</tr>";
                         echo "</thead>";
                         echo "<tbody>";
-                        $sql3 = "SELECT * FROM master where current_class='$class1'";
+                        $sql3 = "SELECT * FROM master where current_class='$class1' and admitted_division='$division'";
                         $result3=mysqli_query($con,$sql3);
 
                         while($row=mysqli_fetch_array($result3,MYSQLI_NUM))

@@ -119,16 +119,36 @@
                                 <div class="mdl-grid">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel">Class :
-                                            <select name="class" class="dropdownOptions" onchange="changeStudent()" id="class1" required>
-                                                <option value=""></option>
+                                            <select name="class" class="dropdownOptions" id="class1" required>
+<!--                                                <option value=""></option>-->
+                                                <option value="1">1st Class</option>
+                                                <option value="2">2nd Class</option>
+                                                <option value="3">3rd Class</option>
+                                                <option value="4">4th Class</option>
+                                                <option value="5">5th Class</option>
                                                 <option value="6">6th Class</option>
                                                 <option value="7">7th Class</option>
+                                                <option value="8">8th Class</option>
+                                                <option value="9">9th Class</option>
+                                                <option value="10">10th Class</option>
 
                                             </select>
                                         </label>
 
                                     </div>
 
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                        <label class="customLabel">Division :
+                                            <select name="division" class="dropdownOptions" onchange="showUser(this.value)"  id="division1" required>
+                                                <option></option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+
+                                            </select>
+                                        </label>
+
+                                    </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel"> Timing:
@@ -151,7 +171,7 @@
 
                                 <div class="mdl-grid">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--12-col">
-                                        <div class="" id="student_dropdown">
+                                        <div class="" id="student_list">
                                             <table class='mdl-data-table mdl-js-data-table  mdl-shadow--2dp'>
                                                 <thead>
                                                     <tr>
@@ -170,6 +190,8 @@
                                 <div class=''>
                                     <input type='submit' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submitAttendance" name='submit' value='Submit'>
                                 </div>
+
+<!--<div id="txtHint"><b>Person info will be listed here...</b></div>-->
 
                             </form>
 
@@ -191,60 +213,31 @@
                 </script>";
       ?>
 
-        <script>
-            function changeStudent() {
-                if (document.getElementById("class1").value == "6") {
-                    document.getElementById("student_dropdown").innerHTML = "<?php
-                    $con = mysqli_connect("localhost", "root", "", "school_project");
-                    if (mysqli_connect_errno()) {
-                        echo "Failed to connect to MySQL: ".mysqli_connect_error();
-                    }
-                    echo "<table class='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'>";
-                    echo "<thead>";
-                    echo "<tr><th>Reg No.</th><th class='mdl-data-table__cell--non-numeric'>Student Name</th><th>Attendance (Select only absent)</th></tr>";
-                    echo "</thead><tbody>";
-                    mysqli_query($con, "set character_set_results='utf8'");
-                    $result = mysqli_query($con, "SELECT * FROM master where current_class='6'");
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr><td>".$row['reg_no'].
-                        "</td>";
-                        echo "<td class='mdl-data-table__cell--non-numeric'> ".$row['student_name'].
-                        "</td>";
-                        echo "<td><label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect' for='checkbox-1'>";
-                        echo "<input type='checkbox' id='checkbox-1'  name='check_list[]' value={$row['reg_no']} class='mdl-checkbox__input'>";
-                        echo "</label></td>";
-                        echo "</tr>";
-
-                    }
-                    echo "</tbody></table>"; ?> ";
-
-                } else if (document.getElementById("class1").value == "7") {
-                    document.getElementById("student_dropdown").innerHTML = "<?php
-                    $con = mysqli_connect("localhost", "root", "", "school_project");
-                    if (mysqli_connect_errno()) {
-                        echo "Failed to connect to MySQL: ".mysqli_connect_error();
-                    }
-                    echo "<table class='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'>";
-                    echo "<thead>";
-                    echo "<tr><th>Reg No.</th><th class='mdl-data-table__cell--non-numeric'>Student Name</th><th>Attendance (Select only absent)</th></tr>";
-                    echo "</thead><tbody>";
-                    mysqli_query($con, "set character_set_results='utf8'");
-                    $result = mysqli_query($con, "SELECT * FROM master where current_class='7'");
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr><td>".$row['reg_no'].
-                        "</td>";
-                        echo "<td class='mdl-data-table__cell--non-numeric'> ".$row['student_name'].
-                        "</td>";
-                        echo "<td><input type='checkbox' name='check_list[]' value={$row['reg_no']} class='check'></td>";
-                        echo "</tr>";
-
-                    }
-                    echo "</tbody></table>"; ?> ";
-
-                }
+ <script>   
+function showUser(s_division) {
+var s_class=document.getElementById('class1').value;
+    if (s_division == "") {
+        document.getElementById("student_list").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("student_list").innerHTML = xmlhttp.responseText;
             }
+        }
+        xmlhttp.open("GET","fetch_student.php?stu_division="+s_division+"&stu_class="+s_class,true);
+        xmlhttp.send();
+    }
+}
+</script>
 
-        </script>
 
 </body>
 
