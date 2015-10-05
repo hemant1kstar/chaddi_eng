@@ -75,7 +75,7 @@
                 <a href="tc_info.php" class="mdl-layout__tab">TC Information</a>
                 <a href="other_info.php" class="mdl-layout__tab">Other Info</a>
                 <a href="student_grade.php" class="mdl-layout__tab">Student Grades</a>
-                <a href="update.php" class="mdl-layout__tab">Update Student Info</a>
+<!--                <a href="update.php" class="mdl-layout__tab">Update Student Info</a>-->
             </div>
         </header>
 <!--

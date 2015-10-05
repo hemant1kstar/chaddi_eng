@@ -90,6 +90,7 @@
                             <th>Date of Leaving</th>
                             <th class="mdl-data-table__cell--non-numeric">Reason for Leaving</th>
                             <th class="mdl-data-table__cell--non-numeric">Remarks</th>
+                            <th class="mdl-data-table__cell--non-numeric">Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -124,7 +125,8 @@ include("../database/connection.php");
           echo "<td>$class</td>"; 
           echo "<td>$date_leaving2</td>"; 
           echo "<td class='mdl-data-table__cell--non-numeric'>$reason</td>";
-          echo "<td class='mdl-data-table__cell--non-numeric'>$remark</td>"; 
+          echo "<td class='mdl-data-table__cell--non-numeric'>$remark</td>";
+                                        echo "<td class='mdl-data-table__cell--non-numeric'><a class='mdl-js-button mdl-js-ripple-effect' href='update/edit_tc_row.php?row_id=".$adm_no."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
           echo "</tr>";
           
            $sr_no++;

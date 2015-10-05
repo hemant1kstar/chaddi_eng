@@ -115,6 +115,7 @@
                             <th class="mdl-data-table__cell--non-numeric">Nadar Fee</th>
                             <th class="mdl-data-table__cell--non-numeric">Permanent Address</th>
                             <th class="mdl-data-table__cell--non-numeric">Medium</th>
+                            <th class="mdl-data-table__cell--non-numeric">Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -193,6 +194,7 @@
                             echo "<td class='mdl-data-table__cell--non-numeric'>$nadar_fee</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$permanent_address</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$medium</td>"; 
+                            echo "<td class='mdl-data-table__cell--non-numeric'><a class='mdl-js-button mdl-js-ripple-effect' href='update/edit_master_row.php?row_id=".$reg_no."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
                             echo "</tr>";
                           }
 

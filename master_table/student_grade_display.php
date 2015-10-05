@@ -95,6 +95,7 @@
                             <th>3rd class</th>
                             <th>2nd class</th>
                             <th>1st class</th>
+                            <th class="mdl-data-table__cell--non-numeric">Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -137,7 +138,7 @@
           echo "<td>$class3_grade</td>"; 
           echo "<td>$class2_grade</td>"; 
           echo "<td>$class1_grade</td>"; 
-       
+     echo "<td class='mdl-data-table__cell--non-numeric'><a class='mdl-js-button mdl-js-ripple-effect' href='update/edit_grade_row.php?row_id=".$reg_no."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
           echo "</tr>";
           
            $sr_no++;

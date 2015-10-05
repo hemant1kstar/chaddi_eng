@@ -89,6 +89,16 @@
                             <th class="mdl-data-table__cell--non-numeric">Bank/Branch</th>
                             <th>Branch Code</th>
                             <th>LIC No.</th>
+                            <th>Minority Details</th>
+                            <th>Admitted Division</th>
+                            <th>Fee Concession</th>
+                            <th>Admission Year</th>
+                            <th>Admission Month</th>
+                             <th>Handicapped</th>
+                             <th>Entry Date</th>
+                             <th>Scholarship</th>
+                            <th class="mdl-data-table__cell--non-numeric">Update</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -108,6 +118,15 @@ include("../database/connection.php");
           $bank_branch=$row['bank_branch'];
           $bank_branch_code=$row['bank_branch_code'];
           $lic_id_no=$row['lic_id_no'];
+        $minority_details=$row['minority_details'];
+        $admitted_division=$row['admitted_division'];
+        $student_name1=$row['student_name1'];
+        $current_class_entry_date=$row['current_class_entry_date'];
+        $fee_concession=$row['fee_concession'];
+        $admission_month=$row['admission_month'];
+        $admission_year=$row['admission_year'];
+        $handicapped=$row['handicapped'];
+        $scholarship=$row['scholarship'];
           
           
           echo "<tr>";
@@ -119,6 +138,15 @@ include("../database/connection.php");
           echo "<td>$bank_branch</td>"; 
           echo "<td>$bank_branch_code</td>";
           echo "<td>$lic_id_no</td>"; 
+          echo "<td>$minority_details</td>"; 
+          echo "<td>$admitted_division</td>";
+              echo "<td>$fee_concession</td>";
+          echo "<td>$admission_year</td>"; 
+          echo "<td>$admission_month</td>"; 
+          echo "<td>$handicapped</td>";
+          echo "<td>$current_class_entry_date</td>"; 
+            echo "<td>$scholarship</td>"; 
+         echo "<td class='mdl-data-table__cell--non-numeric'><a class='mdl-js-button mdl-js-ripple-effect' href='update/edit_other_info_row.php?row_id=".$reg_no."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
           echo "</tr>";
           
            $sr_no++;
