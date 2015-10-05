@@ -44,7 +44,7 @@
 </a>
      <h3 class="sublist_heading"> Online Test : Subject List</h3>
      <?php
-include("../connection.php");
+include("../../database/connection.php");
 $rs=mysqli_query($con,"select * from mst_subject");
 
 echo "<div class='mdl-grid'>";

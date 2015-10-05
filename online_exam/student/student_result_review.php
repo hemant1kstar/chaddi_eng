@@ -2,7 +2,7 @@
 session_start();
 extract($_POST);
 extract($_SESSION);
-include("../connection.php");
+include("../../database/connection.php");
 	if(isset($_POST['submit']))
 	{
 		$submit=$_POST['submit'];

@@ -49,7 +49,7 @@
               <form action="add_question_confirm.php" method="post">
                 
               <?php
-                    include("../connection.php");
+                    include("../../database/connection.php");
                     $result_set=mysqli_query($con,"Select * from mst_test order by test_name");
                     echo "<select name='test_id' required>";
                     while($row=mysqli_fetch_array($result_set))

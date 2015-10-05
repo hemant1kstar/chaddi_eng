@@ -1,7 +1,7 @@
 <?php
   if(isset($_POST['add_question']))
   {
-    include("../connection.php");
+    include("../../database/connection.php");
     $test_id=$_POST['test_id'];
     $question_name=$_POST['question_name'];
     $option1=$_POST['option1'];

@@ -35,7 +35,7 @@
 </a>
      <h4 class="result_heading">Online Exam Result</h4>
      <?php
-include("../connection.php");
+include("../../database/connection.php");
      $login_id="gg";
 
 $rs=mysqli_query($con,"select t.test_name,t.total_que,r.test_date,r.score,r.subject_id,t.test_id from mst_test t, mst_result r where

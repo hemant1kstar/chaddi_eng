@@ -48,7 +48,7 @@
         <h5>Add Test</h5>
               <form action="add_test_confirm.php" method="post">
                 <?php
-                    include("../connection.php");
+                 include("../../database/connection.php");
                     $result_set=mysqli_query($con,"Select * from mst_subject order by sub_name");
                     echo "<h5>Select the subject</h5>";
                     echo "<select name='subject_id' required>";

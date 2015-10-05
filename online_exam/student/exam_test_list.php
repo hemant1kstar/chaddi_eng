@@ -43,7 +43,7 @@
   Back
 </a>
       <?php
-        include("../connection.php");
+       include("../../database/connection.php");
         $subid=$_GET['subid'];
         $rs1=mysqli_query($con,"select * from mst_subject where sub_id=$subid");
         $row1=mysqli_fetch_array($rs1);

@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['add_sub']))
 {
-  include("../connection.php");
+include("../../database/connection.php");
   $sub_name=$_POST['subject_name'];
 //  echo "$sub_name";
   $sql="insert into mst_subject(sub_name)values('$sub_name')";

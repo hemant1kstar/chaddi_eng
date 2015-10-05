@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../connection.php");
+include("../../database/connection.php");
 extract($_POST);
 extract($_GET);
 extract($_SESSION);
