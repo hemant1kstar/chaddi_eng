@@ -35,19 +35,19 @@
                         
                         $sqla="ALTER TABLE"." "."`".$linksTitle."`".$sqla;
                         
-                        echo $sqla;
-                        echo $linksTitle;
+//                        echo $sqla;
+//                        echo $linksTitle;
                     if ($con->query($sqla) === TRUE){
                         
-                         header("Location:table_display.php?q=$linksTitle");
+                         header("Location:table_display.php?q=`$links`");
                     }
                         else{
 ?>
                        <script>
                            if(confirm("field names and table names not to same?")) {
-                                window.location.href = "add_Fields_layout.php";
+                                window.location.href = "add_Fields_layout.php?q=`<?php echo $links;?>`";
                             }else{
-                            window.location.href = "add_Fields_layout.php";
+                            window.location.href = "add_Fields_layout.php?q=`<?php echo $links;?>`";
                             }   
                         </script>
 <?php  

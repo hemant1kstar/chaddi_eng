@@ -16,23 +16,14 @@
 
 //                        $sqla="ALTER TABLE"." "."`".$linksTitle."`".$sqla;
                         
-                        $sqla="ALTER TABLE"." "."`".$link."`"."DROP COLUMN"."`".$link1."`";
+//                        $sqla="ALTER TABLE"." "."`".$link."`"."DROP COLUMN"."`".$link1."`";
+$sqla="ALTER TABLE"." ".$link."DROP COLUMN".$link1;
                         
-//                        echo $sqla;
+                        echo $sqla;
                     if ($con->query($sqla) === TRUE)
                     {
                          header("Location:table_display.php?q=$link");
-                    }else{
-?>
-                       <script>
-                           if(confirm("field names and table names not to same?")) {
-                                window.location.href = "add_Fields_layout.php";
-                            }else{
-                            window.location.href = "add_Fields_layout.php";
-                            }   
-                        </script>
-<?php  
-                      }
+                    }
                         $con->close();  
 ?>
 

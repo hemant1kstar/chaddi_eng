@@ -180,9 +180,9 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="aadhar_no" name="aadhar_no" required/>
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="aadhar_no" name="aadhar_no" minlength="16" maxlength="16" required/>
                                         <label class="mdl-textfield__label" for="aadhar_no">Aadhar Number</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
+<!--                                        <span class="mdl-textfield__error">Input is not a number!</span>-->
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
@@ -204,8 +204,9 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="bank_branch_code" name="bank_branch_code" required/>
+                         <input class="mdl-textfield__input" type="text" id="bank_branch_code" pattern="-?[0-9]*(\.[0-9]+)?"  name="bank_branch_code" required/>
                                         <label class="mdl-textfield__label" for="bank_branch_code">Bank Branch Code</label>
+                                        <span class="mdl-textfield__error">Input is not a number!</span>
 
                                     </div>
 
@@ -216,13 +217,14 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="lic_id_no" name="lic_id_no" />
+                        <input class="mdl-textfield__input" type="text" id="lic_id_no" name="lic_id_no" />
                                         <label class="mdl-textfield__label" for="lic_id_no">LIC ID Number</label>
+                                      
 
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="minority_details" name="minority_details" required/>
+                 <input class="mdl-textfield__input" type="text" id="minority_details" name="minority_details" pattern="[a-zA-Z]{1,}" title="Enter only characters" required/>
                                         <label class="mdl-textfield__label" for="minority_details">Minority Details</label>
 
                                     </div>
@@ -234,13 +236,13 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="admitted_division" name="admitted_division" />
+                                        <input class="mdl-textfield__input" type="text" id="admitted_division" name="admitted_division" pattern="[a-zA-Z]{1,}" title="Enter only characters" maxlength="1" required/>
                                         <label class="mdl-textfield__label" for="admitted_division">Admitted Division</label>
 
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="student_name1" name="student_name1" required="required" />
+                     <input class="mdl-textfield__input" type="text" id="student_name1" pattern="[a-zA-Z]{1,}" title="Enter only characters" name="student_name1" required="required" />
                                         <label class="mdl-textfield__label" for="student_name1">Student Name (English)</label>
 
                                     </div>
@@ -249,13 +251,13 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                 <div class="mdl-grid">
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="fee_concession" name="fee_concession" />
+                            <input class="mdl-textfield__input" type="text" id="fee_concession" name="fee_concession" pattern="[a-zA-Z]{1,}" title="Enter only characters"/>
                                         <label class="mdl-textfield__label" for="fee_concession">Fee Concession</label>
 
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="admission_month" name="admission_month" />
+                 <input class="mdl-textfield__input" type="text" id="admission_month" name="admission_month" />
                                         <label class="mdl-textfield__label" for="admission_month">Admission Month</label>
 
                                     </div>
@@ -270,7 +272,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="handicapped" name="handicapped" />
+                    <input class="mdl-textfield__input" type="text" id="handicapped" pattern="[a-zA-Z]{1,}" title="Enter only characters" name="handicapped" required />
                                         <label class="mdl-textfield__label" for="handicapped">Handicapped</label>
 
                                     </div>

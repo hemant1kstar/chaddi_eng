@@ -9,10 +9,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Transpotation System</title>
+    <title>Transportation System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+ <script src="../material_js/material.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   
   <link rel="stylesheet" href="css/add_bus.css">
@@ -23,7 +23,7 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Transpotation System</span>
+      <span class="mdl-layout-title">Transportation System</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
@@ -75,23 +75,23 @@ if ($con->query($sql) === TRUE) {
         <div class="mdl-grid">
 <form action="" method="post">
   <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    <input class="mdl-textfield__input" type="text" id="bus_name1" name="bus_name1"/>
+    <input class="mdl-textfield__input" type="text" id="bus_name1" name="bus_name1" required/>
     <label class="mdl-textfield__label" for="bus_name1">Bus Number or Bus Name</label>
   </div>
     <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    <input class="mdl-textfield__input" type="text" id="driver_name1" name="driver_name1"/>
+    <input class="mdl-textfield__input" type="text" id="driver_name1" name="driver_name1" pattern="[a-zA-Z]{1,}" title="Enter only characters" required/>
     <label class="mdl-textfield__label" for="driver_name1">Driver Name</label>
   </div>
     <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    <input class="mdl-textfield__input" type="text" id="pick_time1" name="pick_time1"/>
+    <input class="mdl-textfield__input" type="text" id="pick_time1" name="pick_time1" required/>
     <label class="mdl-textfield__label" for="pick_time1">PickUp Time</label>
   </div>
       <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    <input class="mdl-textfield__input" type="text" id="drop_time1" name="drop_time1"/>
+    <input class="mdl-textfield__input" type="text" id="drop_time1" name="drop_time1" required/>
     <label class="mdl-textfield__label" for="drop_time1">Drop Time</label>
   </div>
     <div class="dropdown mdl-cell mdl-cell--6-col">
-      <label>Select the area</label>
+      <label>Area</label>
 <select name="area1" required>
   <option value=""></option>
   <option value="Shivaji Chowk">Shivaji Chowk</option>

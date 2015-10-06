@@ -162,15 +162,15 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
                                 <div class="mdl-grid">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="class10_percentage" name="class10_percentage" required/>
+                                        <input class="mdl-textfield__input" type="text" id="class10_percentage" name="class10_percentage" pattern="-?[0-9]*(\.[0-9]+)?"/>
                                         <label class="mdl-textfield__label" for="class10_percentage">Class 10 Percentage</label>
-
+ <span class="mdl-textfield__error">Input is not a number!</span>
                                     </div>
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="class9_percentage" name="class9_percentage" />
+                                        <input class="mdl-textfield__input" type="text" id="class9_percentage" name="class9_percentage" pattern="-?[0-9]*(\.[0-9]+)?"  />
                                         <label class="mdl-textfield__label" for="class9_percentage">Class 9 Percentage</label>
-
+ <span class="mdl-textfield__error">Input is not a number!</span>
                                     </div>
                                 </div>
 
@@ -227,7 +227,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col">
                                         <input class="mdl-textfield__input" type="text" id="class1_grade" name="class1_grade" />
-                                        <label class="mdl-textfield__label" for="class1_grade">class 1 Grade</label>
+                                        <label class="mdl-textfield__label" for="class1_grade">Class 1 Grade</label>
 
                                     </div>
                                 </div>

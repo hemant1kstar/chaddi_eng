@@ -67,7 +67,7 @@
                         <form action="book_save.php" method="post">
                             <div class="">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="b_title" name="b_title" />
+                                    <input class="mdl-textfield__input" type="text" id="b_title" name="b_title" required/>
                                     <label class="mdl-textfield__label" for="b_title">Book Title</label>
                                 </div>
 
@@ -88,39 +88,42 @@
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="b_author" name="b_author" />
+                                    <input class="mdl-textfield__input" type="text" id="b_author" name="b_author" 
+                                           pattern="[a-zA-Z]{1,}" title="Enter only characters" required/>
                                     <label class="mdl-textfield__label" for="b_author">Author</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b_copies" name="b_copies" />
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b_copies" name="b_copies" required/>
                                     <label class="mdl-textfield__label" for="b_copies">Book Copies</label>
                                     <span class="mdl-textfield__error">Input is not a number!</span>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="b_publication" name="b_publication" />
+                                    <input class="mdl-textfield__input" type="text" id="b_publication" name="b_publication" pattern="[a-zA-Z]{1,}" title="Enter only characters" required />
                                     <label class="mdl-textfield__label" for="b_publication">Book Publication</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="b_publisher_name" name="b_publisher_name" />
+                                    <input class="mdl-textfield__input" type="text" id="b_publisher_name" name="b_publisher_name" pattern="[a-zA-Z]{1,}" title="Enter only characters" required />
                                     <label class="mdl-textfield__label" for="b_publisher_name">Publisher Name</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="b_isbn" name="b_isbn" />
+                                    <input class="mdl-textfield__input" type="text" id="b_isbn" name="b_isbn" pattern="-?[0-9]*(\.[0-9]+)?" required/>
                                     <label class="mdl-textfield__label" for="b_isbn">ISBN No.</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="b_copyright_year" name="b_copyright_year" />
+                                    <input class="mdl-textfield__input" type="text" id="b_copyright_year" pattern="-?[0-9]*(\.[0-9]+)?" name="b_copyright_year" required/>
                                     <label class="mdl-textfield__label" for="b_copyright_year">Copyright Year</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
                                 </div>
 
                                 <div class="dropdowns">
                                     <label class="customLabel">Status: </label>
-                                    <select name="b_status" class="dropdownOptions">
+                                    <select name="b_status" class="dropdownOptions" required>
                                         <option value=""></option>
                                         <option value="New">New</option>
                                         <option value="Old">Old</option>

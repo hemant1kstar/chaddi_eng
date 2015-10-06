@@ -232,6 +232,7 @@ mysqli_query($con1,"insert into member(member_id,name,gender,address,contact,typ
                                         <label class="customLabel">Category :</label>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <select class="dropdownOptions" name="category" required>
+                                                 <option></option>
                                                 <option value="Open">OPEN</option>
                                                 <option value="OBC">OBC</option>
                                                 <option value="SC">SC</option>

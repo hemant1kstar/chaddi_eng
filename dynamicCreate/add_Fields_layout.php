@@ -67,13 +67,12 @@ $linksTitle = strtoupper($links);
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <!-- Your content goes here -->
-
-                    <h2 class="contentHeader">Update <?php echo $linksTitle; ?> Fields</h2>
+              <h2 class="contentHeader">Update <?php echo $linksTitle; ?> Fields</h2>
                     <div class="contentDiv mdl-grid">
                         <a href='table_display.php?q=<?php echo $link;?>' class='mdl-js-button mdl-js-ripple-effect backButton' title='Back'>
                             <img src="../images/dynamicTables/ic_arrow_back_24px.svg" alt="Back" />
                         </a>  
-                        <form method="post" action="add_Fields.php?q=<?php echo $link; ?>">
+                        <form method="post" action="add_Fields.php?q=`<?php echo $link; ?>`">
                              <table>
                     <?php
                             $columnname=array();
@@ -91,7 +90,7 @@ $linksTitle = strtoupper($links);
                                <tr>
                                     <td><label class=""><?php echo $name;?></label></td>
 <!--                                    <td><input type="text" class="" name="table_name" placeholder="" required /></td>-->
-                                   <td><a href="drop_field.php?q=<?php echo $links;?>&q1=<?php echo $name;?>" title="Delete this column and all its data"><img src="../images/dynamicTables/ic_delete_24px.svg" /></a></td>
+                                   <td><a href="drop_field.php?q=`<?php echo $links;?>`&q1=`<?php echo $name;?>`" title="Delete this column and all its data"><img src="../images/dynamicTables/ic_delete_24px.svg" /></a></td>
                                </tr>                    
                             </div>
                     <?php

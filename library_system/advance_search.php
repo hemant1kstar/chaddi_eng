@@ -65,12 +65,12 @@
                         <form action="" method="post">
                             <div class="mdl-grid">
                                 <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" />
+                                    <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" required/>
                                     <label class="mdl-textfield__label" for="book_title">Book Title</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" />
+                                    <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" required/>
                                     <label class="mdl-textfield__label" for="book_author">Book Author</label>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Transpotation System</title>
+    <title>Transportation System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
@@ -27,7 +27,7 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Transpotation System</span>
+      <span class="mdl-layout-title">Transportation System</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
@@ -105,7 +105,8 @@ if(isset($_GET['student_id']))
   </div>
   
   <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    <input class="mdl-textfield__input" type="text" id="student_name1" name="student_name1" value="<?php echo $s_name;?>"/>
+    <input class="mdl-textfield__input" type="text" id="student_name1" name="student_name1" value="<?php echo $s_name;?>" 
+           pattern="[a-zA-Z]{1,}" title="Enter only characters"required/>
     <label class="mdl-textfield__label" for="student_name1">Student Name</label>
   </div>
   <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
@@ -114,7 +115,7 @@ if(isset($_GET['student_id']))
     <span class="mdl-textfield__error">Input is not a number!</span>
   </div>
   <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="student_no1" name="student_no1" value="<?php echo $s_contact_no;?>"/>
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="student_no1" name="student_no1" value="<?php echo $s_contact_no;?>" maxlength="10"/>
     <label class="mdl-textfield__label" for="student_no1">Contact Number</label>
     <span class="mdl-textfield__error">Input is not a number!</span>
   </div>

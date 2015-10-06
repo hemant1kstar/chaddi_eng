@@ -16,7 +16,7 @@
     <meta name="author" content="">
     
     <link rel="stylesheet" href="../css/material.brown-light_green.min.css" />
-    <script src="../material_js/material.min.js"></script>
+    <script src="../material_js/material.js"></script>
     <link rel="stylesheet" href="../material_js/Material+Icons.css" />
         <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
 
@@ -93,7 +93,8 @@
                            </td>
                            <td>
                                <div id="addDataInput" class="mdl-textfield mdl-js-textfield">
-                        <input type="text"  class="mdl-textfield__input" name="cname[]" value="">
+                        <input type="text"  class="mdl-textfield__input" name="cname[]" pattern="[a-zA-Z]{1,}" title="Enter characters only"  required>
+                               
                     </div>
                            </td>
                        </tr>

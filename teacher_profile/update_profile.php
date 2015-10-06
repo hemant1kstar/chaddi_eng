@@ -93,7 +93,8 @@
                          echo "<label>Teacher Name </label>";
                          echo "</td>";
                          echo "<td>";
-                         echo "<input type='text' class='mdl-textfield__input' value='$teacher_profile_name' name='teacher_name'/>";
+            echo "<input type='text' class='mdl-textfield__input' value='$teacher_profile_name' name='teacher_name' 
+         required/>";
                          echo "</td>";
                          echo "</tr>";
                          
@@ -156,7 +157,7 @@
                          echo "<label>Date of Appointment </label>";
                          echo "</td>";
                          echo "<td>";
-                         echo "<input type='text' class='mdl-textfield__input' value='$date_of_appointment' name='date_of_appointment'/>";
+                         echo "<input type='date' class='mdl-textfield__input' value='$date_of_appointment' name='date_of_appointment'/>";
                          echo "</td>";
                          echo "</tr>";
                          

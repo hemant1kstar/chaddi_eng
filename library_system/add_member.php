@@ -67,7 +67,7 @@
                         <form action="add_member_save.php" method="post">
                             <div class="">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="first_name" name="first_name" />
+            <input class="mdl-textfield__input" type="text" id="first_name" name="first_name" pattern="[a-zA-Z]{1,}" title="Enter only characters" required />
                                     <label class="mdl-textfield__label" for="first_name">Member Name</label>
                                 </div>
 
@@ -81,14 +81,14 @@
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" id="address1" name="address1" />
+                                    <input class="mdl-textfield__input" type="text" id="address1" name="address1" required/>
                                     <label class="mdl-textfield__label" for="address1">Address</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="contact" name="contact" />
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="contact" name="contact" minlength="10" maxlength="10" required/>
                                     <label class="mdl-textfield__label" for="contact">Contact</label>
-                                    <span class="mdl-textfield__error">Input is not a number!</span>
+<!--                                    <span class="mdl-textfield__error">Input is not a number!</span>-->
                                 </div>
 
                                 <div class="dropdowns">

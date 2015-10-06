@@ -109,7 +109,7 @@
                 </div>
 
             </div>
-            <p class="madeBy">Made by <a href="http://www.resoneuronance.com">Team Resoneuronance</a></p>
+<!--            <p class="madeBy">Made by <a href="http://www.resoneuronance.com">Team Resoneuronance</a></p>-->
 
 
         </main>
