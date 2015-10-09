@@ -120,6 +120,7 @@ $r_id=$_GET['row_id'];
         $permanent_address=$row['permanent_address'];
         $medium=$row['medium']; 
         $contact_no=$row['contact_no'];
+        $birthdate_inwords=$row['birthdate_inwords'];
     }
 }
                 
@@ -179,10 +180,9 @@ $r_id=$_GET['row_id'];
                                         </div>
                                     </div>
 
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age" name="age" value="<?php echo $age;?>" placeholder="Age" required />
-<!--                                        <label class="mdl-textfield__label" for="age">Age</label>-->
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
+                                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                        <input class="mdl-textfield__input" type="text" id="birthdate_inwords" name="birthdate_inwords" value="<?php echo $birthdate_inwords;?>" placeholder="Birthdate in words" />
+<!--                                        <label class="mdl-textfield__label" for="birthdate_inwords">Birthdate in words</label>-->
                                     </div>
 
                                 </div>
@@ -218,12 +218,15 @@ $r_id=$_GET['row_id'];
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
                                         <label class="customLabel">Category :</label>
                                         <select class="dropdownOptions" name="category" required>
-                                            <option value="Open">OPEN</option>
-                                            <option value="OBC">OBC</option>
-                                            <option value="SC">SC</option>
-                                            <option value="ST">ST</option>
-                                            <option value="VJ">VJ</option>
-                                            <option value="SBC">SBC</option>
+                                             <option value="OPEN">OPEN</option>
+                                                <option value="OBC">OBC</option>
+                                                <option value="SC">SC</option>
+                                                <option value="ST">ST</option>
+                                                <option value="VJ-A">VJ-A</option>
+                                                <option value="SBC">SBC</option>
+                                                 <option value="NT-B">NT-B</option>
+                                                 <option value="NT-C">NT-C</option>
+                                                 <option value="NT-D">NT-D</option>
                                         </select>
                                     </div>
 
@@ -390,6 +393,12 @@ $r_id=$_GET['row_id'];
                                         <input class="mdl-textfield__input" type="text" id="medium" name="medium" value="<?php echo $medium;?>" placeholder="Medium"/>
 <!--                                        <label class="mdl-textfield__label" for="medium">Medium</label>-->
 
+                                    </div>
+                                    
+                                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age" name="age" value="<?php echo $age;?>" placeholder="Age" required />
+<!--                                        <label class="mdl-textfield__label" for="age">Age</label>-->
+                                        <span class="mdl-textfield__error">Input is not a number!</span>
                                     </div>
 
 

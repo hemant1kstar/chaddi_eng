@@ -101,6 +101,7 @@ echo "</select>";
                      $state="";
                      $birthdate="";
                      $caste="";
+ $birthdate_inwords="";
                   
                    if(isset($_POST['submit_student_info']))
                    {
@@ -120,6 +121,7 @@ echo "</select>";
                           $state=$row['state'];
                           $birthdate=$row['birthdate'];
                           $caste=$row['caste'];
+                               $birthdate_inwords=$row['birthdate_inwords'];
                           }
                    }
                   ?>
@@ -133,7 +135,7 @@ echo "</select>";
                             <p class="regino">
                                 जनरल रजि क्र. <span class="space"><?php echo "$reg_no1";?></span>
                             </p>
-                            <p class="context">प्रमाणित करण्यात येते की, <span class="space"><?php echo "$student_name";?></span> ही/हा या विद्यालयाचा विद्यार्थी आहे. व शैक्षणिक वर्ष <span class="space">2015-16</span> मध्ये इयत्ता <span class="space"><?php echo"$current_class"; ?></span> वी मध्ये शिकत आहे. शाळेच्या सर्वसाधारण नोंदवहीतील क्रमांक <span class="space"></span> वरील नोंदीनुसार तिचा/त्याचा जन्म <span class="space"><?php echo"$birth_place"; ?></span>, जिल्हा: <span class="space"><?php echo"$district";?></span>, राज्य: <span class="space"><?php echo"$state"; ?></span>, येथे झाला असून जन्मदिनांक: <span class="space"><?php echo "$birthdate";?></span> (अक्षरी : <span class="space"></span>) आणि जात: <span class="space"><?php echo "$caste";?></span>, असे नोंदविलेली आहे. या विद्यार्थीची शाळेतील प्रगती व वर्तणूक चांगली आहे. सदर प्रमाणपत्र शाळेच्या नोंदवहीनुसार देण्यात येत आहे.</p>
+                            <p class="context">प्रमाणित करण्यात येते की, <span class="space"><?php echo "$student_name";?></span> ही/हा या विद्यालयाचा विद्यार्थी आहे. व शैक्षणिक वर्ष <span class="space">2015-16</span> मध्ये इयत्ता <span class="space"><?php echo"$current_class"; ?></span> वी मध्ये शिकत आहे. शाळेच्या सर्वसाधारण नोंदवहीतील क्रमांक <span class="space"></span> वरील नोंदीनुसार तिचा/त्याचा जन्म <span class="space"><?php echo"$birth_place"; ?></span>, जिल्हा: <span class="space"><?php echo"$district";?></span>, राज्य: <span class="space"><?php echo"$state"; ?></span>, येथे झाला असून जन्मदिनांक: <span class="space"><?php echo "$birthdate";?></span> (अक्षरी : <span class="space"><?php echo "$birthdate_inwords";?></span>) आणि जात: <span class="space"><?php echo "$caste";?></span>, असे नोंदविलेली आहे. या विद्यार्थीची शाळेतील प्रगती व वर्तणूक चांगली आहे. सदर प्रमाणपत्र शाळेच्या नोंदवहीनुसार देण्यात येत आहे.</p>
 
                             <div class="lastdiv">
                                 <p class="last">ठिकाण : <span class="space">लातूर</span></p>

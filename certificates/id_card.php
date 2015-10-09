@@ -97,6 +97,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                      $current_class="";
                      $permanent_address="";
                      $exam_seat_no="";
+                    $student_photo="";
        
                   
                    if(isset($_POST['submit_student_info']))
@@ -114,6 +115,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                           $current_class=$row['current_class'];
                           $permanent_address=$row['permanent_address'];
                           $exam_seat_no=$row['exam_seat_no'];
+                          $student_photo=$row['student_img_url'];
                           }
                    }
                   ?>
@@ -125,7 +127,7 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
                             <h4 class="headdata">ओळखपत्र</h4>
                             <div class="photo">
                                 <!--                    <h6>PHOTO</h6>-->
-                                <img src="images/student.png" class="image">
+                                <img src="<?php echo $student_photo;?>" class="image">
 
                             </div>
                             <table class="studentinfo">

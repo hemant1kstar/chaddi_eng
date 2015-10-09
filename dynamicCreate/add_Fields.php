@@ -34,6 +34,7 @@
                     $sqla=substr_replace($sql, "", -1);
                         
                         $sqla="ALTER TABLE"." "."`".$linksTitle."`".$sqla;
+             mysqli_query ($con,"ALTER TABLE $linksTitle MODIFY $sqla CHARACTER SET utf8 collate utf8_general_ci;"); 
                         
 //                        echo $sqla;
 //                        echo $linksTitle;

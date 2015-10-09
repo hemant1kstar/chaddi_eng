@@ -41,9 +41,11 @@
         $current_class1=$_POST['current_class'];
         $status1=$_POST['status'];
         $contact_no1=$_POST['contact_no'];
+                           $birthdate_inwords=$_POST['birthdate_inwords'];
+               
 
                     mysqli_query ($con,"set character_set_results='utf8'");      
-mysqli_query($con,"UPDATE master SET student_name=N'$student_name1',mother_name=N'$mother_name1',gender=N'$gender1',Mother_tongue=N'$mother_tongue1',birthdate=N'$birth_date',age=N'$age1',nationality=N'$nationality1',religion=N'$religion1',caste=N'$caste1',sub_caste=N'$sub_caste1',category=N'$category1',father_name=N'$father_name1',father_occupation=N'$father_occupation1',annual_income=N'$annual_income1',birth_place=N'$birth_place1',district=N'$district1',state=N'$state1',prev_class='$prev_class1',admission_date=N'$admission_date1',prev_school_name=N'$prev_school_name1',admission_class=N'$admission_class1',prev_mark_sheet=N'$prev_mark_sheet1',prev_tc=N'$prev_tc1',nadar_fee=N'$nadar_fee1',permanent_address=N'$permanent_address1',medium=N'$medium1',current_class=N'$current_class1',status=N'$status1',contact_no=N'$contact_no1'  WHERE reg_no='$reg_no1'");
+mysqli_query($con,"UPDATE master SET student_name=N'$student_name1',mother_name=N'$mother_name1',gender=N'$gender1',Mother_tongue=N'$mother_tongue1',birthdate=N'$birth_date',age=N'$age1',nationality=N'$nationality1',religion=N'$religion1',caste=N'$caste1',sub_caste=N'$sub_caste1',category=N'$category1',father_name=N'$father_name1',father_occupation=N'$father_occupation1',annual_income=N'$annual_income1',birth_place=N'$birth_place1',district=N'$district1',state=N'$state1',prev_class='$prev_class1',admission_date=N'$admission_date1',prev_school_name=N'$prev_school_name1',admission_class=N'$admission_class1',prev_mark_sheet=N'$prev_mark_sheet1',prev_tc=N'$prev_tc1',nadar_fee=N'$nadar_fee1',permanent_address=N'$permanent_address1',medium=N'$medium1',current_class=N'$current_class1',status=N'$status1',contact_no=N'$contact_no1',birthdate_inwords=N'$birthdate_inwords' WHERE reg_no='$reg_no1'");
                        
 if($status1=='Present'){
 $status2="Active";

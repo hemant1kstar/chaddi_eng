@@ -93,7 +93,7 @@
                            </td>
                            <td>
                                <div id="addDataInput" class="mdl-textfield mdl-js-textfield">
-                        <input type="text"  class="mdl-textfield__input" name="cname[]" pattern="[a-zA-Z]{1,}" title="Enter characters only"  required>
+                        <input type="text"  class="mdl-textfield__input" name="cname[]" required>
                                
                     </div>
                            </td>

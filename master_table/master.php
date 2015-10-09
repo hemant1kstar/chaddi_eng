@@ -26,7 +26,11 @@
     <!--  End of CSS For Material Design-->
 
     <link rel="stylesheet" href="../css/master.css">
-
+    
+<!--    Css For Data Tables-->
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+       <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 
 
 </head>
@@ -82,7 +86,7 @@
             <!-- Your content goes here -->
             <div class="" id="masterTableBlock">
                 <h2 id="form_header">Master Table</h2>
-
+<div class="dataTable_wrapper">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="table1">
                     <thead>
                         <tr>
@@ -93,6 +97,7 @@
                             <th class='mdl-data-table__cell--non-numeric'>Gender</th>
                             <th class="mdl-data-table__cell--non-numeric">Mother Tongue</th>
                             <th>Birth Date</th>
+                            <th>Birth Date in words</th>
                             <th>Age</th>
                             <th class="mdl-data-table__cell--non-numeric">Nationality</th>
                             <th class="mdl-data-table__cell--non-numeric">Religion</th>
@@ -115,6 +120,7 @@
                             <th class="mdl-data-table__cell--non-numeric">Nadar Fee</th>
                             <th class="mdl-data-table__cell--non-numeric">Permanent Address</th>
                             <th class="mdl-data-table__cell--non-numeric">Medium</th>
+                            <th>Document Url</th>
                             <th class="mdl-data-table__cell--non-numeric">Update</th>
                         </tr>
                     </thead>
@@ -163,6 +169,9 @@
                             $birthdate2=date('d/m/Y',$birthdate1);
                             $admission_date1= strtotime($admission_date);
                             $admission_date2=date('d/m/Y',$admission_date1);
+                              
+                            $birthdate_inwords=$row['birthdate_inwords'];
+                            $document_url=$row['document_pdf_url'];
 
 
                             echo "<tr>";
@@ -172,6 +181,7 @@
                             echo "<td class='mdl-data-table__cell--non-numeric'>$gender</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$Mother_tongue</td>";
                             echo "<td>$birthdate2</td>"; 
+                            echo "<td>$birthdate_inwords</td>"; 
                             echo "<td>$age</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$nationality</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$religion</td>"; 
@@ -194,6 +204,7 @@
                             echo "<td class='mdl-data-table__cell--non-numeric'>$nadar_fee</td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'>$permanent_address</td>";
                             echo "<td class='mdl-data-table__cell--non-numeric'>$medium</td>"; 
+                            echo "<td class='mdl-data-table__cell--non-numeric'><a href='$document_url' target='_blank'>Document</a></td>"; 
                             echo "<td class='mdl-data-table__cell--non-numeric'><a class='mdl-js-button mdl-js-ripple-effect' href='update/edit_master_row.php?row_id=".$reg_no."' title='Edit Data'><img src='../images/dynamicTables/ic_edit_24px.svg' /></a></td>";
                             echo "</tr>";
                           }
@@ -202,11 +213,20 @@
 
                     </tbody>
                 </table>
+                </div>
 
             </div>
         </main>
 
     </div>
+    
+        <script>
+    $(document).ready(function() {
+        $('#table1').DataTable({
+                responsive: true
+        });
+    });
+    </script>
 </body>
 
 </html>

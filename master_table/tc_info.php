@@ -122,7 +122,7 @@
                        
                       $student_progress=$_POST['student_progress'];
                       $leaving_reason=$_POST['leaving_reason'];
-                      $tc_no=$_POST['tc_no'];
+//                      $tc_no=$_POST['tc_no'];
                       $behaviour=$_POST['behaviour'];
                       $date1=$_POST['tc_date'];
                        
@@ -132,7 +132,7 @@
                       $remark=$_POST['remark'];
 
                     mysqli_query ($con,"set character_set_results='utf8'");      
-                    mysqli_query($con,"UPDATE master SET school_leaving_class=N'$school_leaving_class',school_leaving_date=N'$date_leaving',student_progress=N'$student_progress',behaviour=N'$behaviour',school_leaving_reason=N'$leaving_reason',tc_no=N'$tc_no',tc_date=N'$tc_date',tc_remark=N'$remark' WHERE reg_no='$reg_no'");
+                    mysqli_query($con,"UPDATE master SET school_leaving_class=N'$school_leaving_class',school_leaving_date=N'$date_leaving',student_progress=N'$student_progress',behaviour=N'$behaviour',school_leaving_reason=N'$leaving_reason',tc_date=N'$tc_date',tc_remark=N'$remark' WHERE reg_no='$reg_no'");
                     
                        // Code for Snackbar after the Submit button is clicked
                        echo "<script type='text/javascript'>
@@ -199,12 +199,19 @@
 
                                 <div class="mdl-grid">
 
+<!--
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--6-col">
                                         <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="tc_no" name="tc_no" />
                                         <label class="mdl-textfield__label" for="tc_no">TC No</label>
                                         <span class="mdl-textfield__error">Input is not a number!</span>
                                     </div>
+-->
 
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--6-col">
+                                        <input class="mdl-textfield__input" type="text" id="behaviour" name="behaviour" />
+                                        <label class="mdl-textfield__label" for="behaviour">Behaviour</label>
+
+                                    </div>
                                     <div class="mdl-cell mdl-cell-8-col-tablet mdl-cell--6-col">
                                         <label class="customLabel">TC Date :</label>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -216,11 +223,6 @@
                                 <div class="mdl-grid">
 
 
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--6-col">
-                                        <input class="mdl-textfield__input" type="text" id="behaviour" name="behaviour" />
-                                        <label class="mdl-textfield__label" for="behaviour">Behaviour</label>
-
-                                    </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--6-col">
                                         <input class="mdl-textfield__input" type="text" id="remark" name="remark" />
                                         <label class="mdl-textfield__label" for="remark">Remark</label>

@@ -1,4 +1,6 @@
-    <!-- SweetAlert CSS and JavaScript files-->  
+<html lang="en">
+<meta charset="utf-8">
+<!-- SweetAlert CSS and JavaScript files-->  
     <script src="dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
@@ -27,8 +29,38 @@
                     $sqla=substr_replace($sql, "", -1);
                     mysqli_query ($con,"set character_set_results='utf8'"); 
                     $sqla="create table"." "."`".$table."`"."(`id` int(5) NOT NULL AUTO_INCREMENT,$sqla,PRIMARY KEY (`id`))";
+                    mysqli_query ($con,"ALTER TABLE $table MODIFY $sqla varchar(300) CHARACTER SET utf8 collate utf8_general_ci;"); 
                     if ($con->query($sqla) === TRUE){
+                        if(isset($_POST['ckeck2'])){
+                            
+                        if ($_POST['ckeck2'] == 'checkbox_checked')
+                        {
+                            mysqli_query ($con,"ALTER TABLE $table ADD student_name varchar(300) CHARACTER SET utf8 collate utf8_general_ci");  
+                        $class1=$_POST['class1'];
+                            $division1=$_POST['division1'];
+//                            echo "$class1";
+//                            echo "$division1";
+                            $con2=mysqli_connect("localhost","root","","school_project");
+                                if (mysqli_connect_errno())
+                                {
+                                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                                }
+                            mysqli_query ($con2,"set character_set_results='utf8'"); 
+                            $query="select student_name from master where current_class='$class1' and admitted_division='$division1'";
+                            $result11=mysqli_query($con2,$query);
+                            while($row1=mysqli_fetch_array($result11))
+                            {
+                            $student_name1=$row1['student_name'];
+//                            echo "$student_name1<br/>";  
+                    mysqli_query ($con,"INSERT INTO $table (student_name)VALUES (N'$student_name1')"); 
+                            }
+                         header("Location:index.php");   
+                            
+                        }
+                    }
+                        else{
                          header("Location:index.php");
+                        }
                     }else{
 ?>
                         <script>

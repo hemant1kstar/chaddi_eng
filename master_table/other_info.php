@@ -304,6 +304,8 @@ echo "<select name='reg_no' class='dropdownOptions' required>";
 
                                     </div>
                                 </div>
+                                
+                           
 
 
                                 <!-- Accent-colored raised button with ripple -->

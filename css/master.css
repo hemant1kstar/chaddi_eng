@@ -22,6 +22,11 @@ body {
 #table1 {
     width: 100%;
 }
+
+
+a,a:hover{
+    text-decoration: none;
+}
 @media (min-width: 992px) {
     #masterTableBlock {
         margin: 48px 24px;
