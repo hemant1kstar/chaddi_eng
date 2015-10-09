@@ -7,9 +7,10 @@ body {
 }
 
 .user_name{
-    margin:16px;
+    margin:16px auto;
     font-family:Roboto, sans-serif;
     color: rgba(0, 0, 0, 0.87);
+    text-transform: capitalize;
 }
 .mdl-layout__content {
     overflow: auto;
@@ -17,8 +18,8 @@ body {
 .page-content {
     position: relative;
     /*    max-width: 1023px;*/
-    display: inline-block;
-    margin: 48px 24px 0;
+/*    display: inline-block;*/
+    margin: 48px auto;
     /*    background-color: white;*/
     padding: 48px 16px;
 }
@@ -26,13 +27,17 @@ body {
     padding: 16px 0;
 }
 .cards_layout {
-    margin: auto;
+    display: block;
+    max-width: 480px;
+    margin: 32px auto;
 }
 
 /*Squre Card*/
 
 .cards_layout > .mdl-card__title {
     color: #fff;
+    padding-top: 120px;
+    padding-bottom: 16px;
     text-transform: capitalize;
 }
 #studentInformation {
