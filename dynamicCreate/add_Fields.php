@@ -29,12 +29,13 @@
                         }  
              
                     for($i=0;$i<sizeof($varname);$i++){
-                       $sql=$sql."ADD COLUMN"."`".$varname[$i]."`"." ".$datatype[$i].",";
+                       $sql=$sql."ADD COLUMN"."`".$varname[$i]."`"." ".$datatype[$i]." CHARACTER SET utf8 collate utf8_general_ci,";
+//                      mysqli_query ($con,"ALTER TABLE $linksTitle MODIFY $varname[$i] CHARACTER SET utf8 collate utf8_general_ci;");
                      }
                     $sqla=substr_replace($sql, "", -1);
                         
                         $sqla="ALTER TABLE"." "."`".$linksTitle."`".$sqla;
-             mysqli_query ($con,"ALTER TABLE $linksTitle MODIFY $sqla CHARACTER SET utf8 collate utf8_general_ci;"); 
+          
                         
 //                        echo $sqla;
 //                        echo $linksTitle;
