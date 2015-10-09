@@ -58,8 +58,9 @@
             </div>
 -->
             <main class="mdl-layout__content">
-                <h5 class="user_name">Hello,<?php echo $user_name;?></h5>
                 <div class="page-content">
+                    <h5 class="user_name">Hello, <?php echo $user_name;?></h5>
+
                     <!-- Your content goes here -->
                     <h2 class="contentHeader">Update Profile</h2>
                     <div class="contentDiv mdl-shadow--2dp">
@@ -93,8 +94,7 @@
                          echo "<label>Teacher Name </label>";
                          echo "</td>";
                          echo "<td>";
-            echo "<input type='text' class='mdl-textfield__input' value='$teacher_profile_name' name='teacher_name' 
-         required/>";
+                         echo "<input type='text' class='mdl-textfield__input' value='$teacher_profile_name' name='teacher_name'/>";
                          echo "</td>";
                          echo "</tr>";
                          
@@ -157,7 +157,7 @@
                          echo "<label>Date of Appointment </label>";
                          echo "</td>";
                          echo "<td>";
-                         echo "<input type='date' class='mdl-textfield__input' value='$date_of_appointment' name='date_of_appointment'/>";
+                         echo "<input type='text' class='mdl-textfield__input' value='$date_of_appointment' name='date_of_appointment'/>";
                          echo "</td>";
                          echo "</tr>";
                          

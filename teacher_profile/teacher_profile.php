@@ -58,9 +58,9 @@
             </div>
 -->
             <main class="mdl-layout__content">
-                <h5 class="user_name">Hello,<?php echo $user_name;?></h5>
                 <div class="page-content">
                     <!-- Your content goes here -->
+                    <h5 class="user_name">Hello, <?php echo $user_name;?></h5>
 
                     <?php
                          if (isset($_GET["success_info"]))

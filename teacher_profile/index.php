@@ -8,36 +8,40 @@
     $user_name=$_SESSION['user_name'];
     $teacher_id=$_SESSION['teacher_id'];
 ?>
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
+    <head>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel="stylesheet" href="../css/bootstrap-3.3.5-dist/css/bootstrap.css" />
+        <script type="text/javascript" src="../css/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
 
         <link rel="stylesheet" href="../css/material.orange-green.min.css" />
         <script src="../material_js/material.min.js"></script>
         <link rel="stylesheet" href="../material_js/Material+Icons.css" />
         <link rel="stylesheet" href="../fonts/Roboto+300,400,500,700.css" />
         <title>Teacher Profile</title>
-    <!--  End of CSS For Material Design-->
+        <!--  End of CSS For Material Design-->
 
-    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
 
-    <!--        it must for checkbox select-->
-    <script src="jquery/jquery-2.1.4.min.js"></script>
-
-
-</head>
-
-<body>
+        <!--        it must for checkbox select-->
+        <script src="jquery/jquery-2.1.4.min.js"></script>
 
 
+    </head>
 
-    <!-- Always shows a header, even in smaller screens. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <body>
+
+
+
+        <!-- Always shows a header, even in smaller screens. -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
@@ -48,12 +52,12 @@
                     <nav class="mdl-navigation ">
                         <a class="mdl-navigation__link" href="index.php">Home</a>
                         <a class="mdl-navigation__link" href="teacher_profile.php">Profile</a>
-                        
+
                         <a class="mdl-navigation__link" href="../login_panel/teacher_logout.php">Logout</a>
                     </nav>
                 </div>
             </header>
-<!--
+            <!--
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Paperless System</span>
             <nav class="mdl-navigation">
@@ -61,63 +65,61 @@
             </nav>
         </div>
 -->
-        <main class="mdl-layout__content">
-                           <h5 class="user_name">Hello,<?php echo $user_name;?></h5>
-            <div class="page-content">
-                <div class="mdl-grid">
-                    
-                    
-
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                        <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <a href="teacher_profile.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="teacherProfile">
-                                <h2 class="mdl-card__title-text">Teacher Profile</h2>
-                            </a>
-                            <div class="mdl-card__supporting-text">
-                                Get Teacher info..
+            <main class="mdl-layout__content">
+                <div class="page-content container">
+                    <h5 class="user_name">Hello, <?php echo $user_name;?></h5>
+                    <div class="row">
+                        
+                        <div class="col-sm-4">
+                            <div class="mdl-shadow--2dp cards_layout">
+                                <a href="teacher_profile.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="teacherProfile">
+                                    <h2 class="mdl-card__title-text">Teacher Profile</h2>
+                                </a>
+                                <div class="mdl-card__supporting-text">
+                                    Get Teacher info..
+                                </div>
                             </div>
                         </div>
-                    </div>
 
 
 
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                        <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <a href="../attendance/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="attendance">
-                                <h2 class="mdl-card__title-text"> Student Attendance</h2>
-                            </a>
-                            <div class="mdl-card__supporting-text">
-                                Get Student attendance..
+                        <div class="col-sm-4">
+                            <div class="mdl-shadow--2dp cards_layout">
+                                <a href="../attendance/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="attendance">
+                                    <h2 class="mdl-card__title-text"> Student Attendance</h2>
+                                </a>
+                                <div class="mdl-card__supporting-text">
+                                    Get Student attendance..
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                        <div class="mdl-card mdl-shadow--2dp cards_layout">
-                            <a href="../sms_gateway/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="smsGateway">
-                                <h2 class="mdl-card__title-text">SMS</h2>
-                            </a>
-                            <div class="mdl-card__supporting-text">
-                                Send SMS to students
+
+
+                        <div class="col-sm-4">
+                            <div class="mdl-shadow--2dp cards_layout">
+                                <a href="../sms_gateway/index.php" class="mdl-card__title mdl-card--expand mdl-button mdl-js-button mdl-js-ripple-effect" id="smsGateway">
+                                    <h2 class="mdl-card__title-text">SMS</h2>
+                                </a>
+                                <div class="mdl-card__supporting-text">
+                                    Send SMS to students
+                                </div>
                             </div>
                         </div>
+
+
+
                     </div>
-                    
-                              
 
                 </div>
-
-            </div>
-<!--            <p class="madeBy">Made by <a href="http://www.resoneuronance.com">Team Resoneuronance</a></p>-->
+                <p class="madeBy">Made by <a href="http://www.resoneuronance.com">Team Resoneuronance</a></p>
 
 
-        </main>
+            </main>
 
-    </div>
-    
+        </div>
 
 
-</body>
 
-</html>
+    </body>
+
+    </html>

@@ -8,6 +8,12 @@ body {
     max-width: 452px;
     margin: 96px auto;
 }
+.user_name{
+    margin:16px auto;
+    font-family:Roboto, sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    text-transform: capitalize;
+}
 .contentHeader {
     font-size: 24px;
     /*    text-transform: capitalize;*/
