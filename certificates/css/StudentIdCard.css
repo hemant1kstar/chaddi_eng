@@ -13,6 +13,9 @@ h5 {
     margin: 0px;
     padding: 0px;
 }
+.mdl-layout__content {
+    overflow: auto;
+}
 .reg_info {
     /*    width: 950px;*/
     margin: 48px 16px;
