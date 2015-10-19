@@ -1,0 +1,43 @@
+.main {
+    padding: 0px 20px;
+}
+#dateNumberDiv {
+    left: 50%;
+}
+.lastdiv {
+    top: 100px;
+    padding-bottom: 0px;
+}
+.principal {
+    left: 60%; 
+}
+
+
+/*Css For Colleges certificate*/
+#schoolname1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+     margin: 8px auto;
+}
+
+#tc_title1{
+    text-align: center;
+     margin: 8px auto;
+}
+
+#tc_org{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 8px auto;
+}
+
+#tc_note{
+    text-align: justify;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.59);
+}
+
+.numbersDiv{
+    padding: 16px;
+}

@@ -1,0 +1,97 @@
+body {
+    color: rgba(0, 0, 0, 0.87);
+}
+.mdl-layout__content {
+    overflow: auto;
+}
+
+.main {
+    width: 950px;
+    margin: 15px auto 20px; 
+    background: white;
+/*    border: 1px solid #9E9E9E;*/
+    padding: 30px 20px;
+}
+.memo_info {
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+
+.schoolname{
+    text-align: center;
+    font-size: 24px;
+    margin: 16px auto;
+}
+.community{
+   text-align: center;
+    font-size: 16px;
+    margin:0px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.place{
+   text-align: center;
+    font-size: 16px;
+    margin: 8px auto;
+    color: rgba(0, 0, 0, 0.56);
+}
+#mark_memo_title1{
+   text-align: center;
+    font-size: 22px;
+    margin: 8px auto;
+}
+
+
+
+#student_name_p{
+    margin: 24px auto;
+    font-family: cursive;
+    font-size: 22px;
+    text-align: center;
+}
+table{
+    width: 100%;
+    margin: 16px auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+}
+
+.lastdiv {
+    padding: 54px 0px ;
+    position: relative;
+}
+.principal {
+    display: inline;
+    position: relative;
+    left: 74%;
+    
+}
+
+#principal1{
+    display: inline;
+    position: relative;
+    left: 80%;
+
+}
+
+#btnPrint{
+    display: block;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .memo_info {
+        margin: 48px 24px;
+    }
+}

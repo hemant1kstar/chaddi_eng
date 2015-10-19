@@ -1,0 +1,83 @@
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
+
+body {
+    color: rgba(0, 0, 0, 0.87);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0px;
+    padding: 0px;
+}
+.mdl-layout__content {
+    overflow: auto;
+}
+.reg_info {
+    /*    width: 950px;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+.main {
+    width: 900px;
+    /* Width is kept as 850px rather than original 650px as it fits properly in the print in 850px */
+    margin: 0px auto 20px;
+    background-color: #fff;
+    padding: 20px 0;
+/*    border: 1px solid #9E9E9E;*/
+}
+.photo {
+    width: 200px;
+    height: 250px;
+    float: left;
+    text-align: center;
+}
+.headdata {
+    text-align: center;
+    margin: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.studentinfo {
+    position: relative;
+    padding: 0px;
+}
+.studentinfo td {
+    padding: 0px;
+}
+.image {
+    width: 150px;
+    height: 150px;
+}
+.signdiv {
+    position: relative;
+    margin: 25px;
+}
+.signdiv h5 {
+    display: inline-block;
+    margin: 0px;
+}
+.principal {
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    /*    padding: 5px 0px 0px 55%;*/
+    /*    text-align: center;*/
+    /*    margin: 15px auto;*/
+}
+#btnPrint {
+    display: block;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
+}

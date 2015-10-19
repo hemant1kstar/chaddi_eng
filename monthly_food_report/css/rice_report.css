@@ -57,3 +57,12 @@ table {
     font-size: 16px;
 }
 
+.option1{
+    padding: 16px;
+}
+
+.Customlabel,.option12{
+margin: 16px auto;
+    font-size: 16px;
+}
+

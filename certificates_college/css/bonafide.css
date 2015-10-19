@@ -1,0 +1,66 @@
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
+
+body {
+    color: rgba(0, 0, 0, 0.87);
+}
+.mdl-layout__content {
+    overflow: auto;
+}
+.main {
+    width: 850px;
+    margin: 15px auto 20px;
+    background: white;
+/*    border: 1px solid #9E9E9E;*/
+    padding: 30px 20px;
+}
+.reg_info {
+    /*    width: 950px;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+.schoolname,
+.place {
+    text-align: center;
+    margin: 10px auto;
+}
+.bonafide {
+    text-align: center;
+    padding: 15px 0px;
+}
+.regino {
+    padding: 20px 0px;
+}
+.context {
+    text-align: justify;
+}
+
+.space {
+    font-weight: 700;
+}
+.lastdiv {
+    padding: 20px 0px 0px 0px;
+    position: relative;
+}
+.last {
+    padding: 10px 0px;
+}
+.principal {
+    position: absolute;
+    right: 40px;
+    top: 87px;
+}
+#btnPrint,#btnPrint1 {
+    display: block;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
+}

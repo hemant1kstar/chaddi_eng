@@ -88,6 +88,7 @@
                 <a href="soyabin_tel_report.php" class="mdl-layout__tab"> सोयाबीन तेल हिशोब </a>
                 <a href="salt_report.php" class="mdl-layout__tab"> मीठ हिशोब </a>
                 <a href="vegetables_report.php" class="mdl-layout__tab"> भाजीपाला हिशोब </a>
+                <a href="monthly_stock.php" class="mdl-layout__tab">मासिक स्टॉक</a>
             </div>
 
 
@@ -108,39 +109,26 @@
                 <!-- Your content goes here -->
                 <?php
             include("../database/connection.php");
-        ?>
-
-                    <?php
-     if(isset($_POST['daily_mohari_info']))
-     {
-         $entry_date=$_POST['entry_date'];
-         $entry_date1= new DateTime($entry_date);
-         $entry_date1=date_format ($entry_date1, 'Y-m-d');
-         $t_student=$_POST['total_student'];
-         $prev_month_remain_mohari=$_POST['prev_month_remain_mohari'];
-         $mohari_got=$_POST['mohari_got'];
-         $total_mohari=$_POST['total_mohari'];
-         $total_plates=$_POST['total_plates'];
-         $cooked_mohari=$_POST['cooked_mohari'];
-         $remaining_mohari=$_POST['remaining_mohari'];
-         mysqli_query ($con,"set character_set_results='utf8'");      
-      if(mysqli_query($con,"INSERT INTO mohari_report(date, total_student,prev_mohari_remain, current_month_mohari_got, total_mohari, total_plates, mohari_cooked, monthEnd_remaining_mohari)values (N'$entry_date1',N'$t_student',N'$prev_month_remain_mohari',N'$mohari_got',N'$total_mohari',N'$total_plates',N'$cooked_mohari',N'$remaining_mohari')"))
-      {
-         // Code for Snackbar after the Submit button is clicked
-         echo "<script type='text/javascript'>
+if(isset($_GET['success1']))
+{
+                   echo "<script type='text/javascript'>
                     $( document ).ready(function() {
                         $.snackbar({content: 'Data was entered successfully', timeout: 5000});
                     });
                 </script>" ;
-      }else{
-         echo "<script type='text/javascript'>
-                    $( document ).ready(function() {
-                        $.snackbar({content: 'Data was not entered', timeout: 5000});
-                    });
-                </script>" ;
-      }
-     }
-     ?>
+}
+        ?>
+                
+         <?php
+                  $result12=mysqli_query($con,"select * from food_daily_stock where food_name='mohari'");
+                $result_set=mysqli_fetch_array($result12);
+                $mohari_remaining=$result_set['last_month_stock'];
+                $mohari_current_month=$result_set['current_month_stock'];
+                $total_current_mohari=$mohari_remaining+$mohari_current_month;
+                
+                ?>
+
+     
                         <div class="mdl-shadow--2dp  contentDiv">
 
                             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="tabs1">
@@ -151,7 +139,28 @@
                                 <div class="mdl-tabs__panel is-active" id="mohari_entry_panel">
                                     <div class="mohari_entry_div">
                                         <h2 id="form_header">Daily mohari Entry Form</h2>
-                                        <form action="" method="post">
+                                        <form action="mohari_daily_report_submit.php" method="post">
+                                                     <div class="mdl-grid">
+                                        
+                                            <div class="mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                <label class="Customlabel">select the student category</label>
+                                                <select name="student_category1" class="option12" required>
+                                                    <option></option>
+                                                    <option value="6to8">६ ते ८</option>
+                                                    <option value="1to5">१ ते ५</option>
+                                                </select>
+                                        </div>
+                                                                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="per_student_material" name="per_student_material" required/>
+                                                    <label class="mdl-textfield__label" for="per_student_material"> प्रती विद्यार्थी वस्तू (ग्राम मध्ये )</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                                                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="per_student_expense" name="per_student_expense" required/>
+                                            <label class="mdl-textfield__label" for="per_student_expense"> प्रती विद्यार्थी खर्च </label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                    </div>
                                             <div class="mdl-grid">
                                                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
                                                     <label class="customLabel">Date :
@@ -163,38 +172,51 @@
                                                     <label class="mdl-textfield__label" for="total_student"> पटसंख्या</label>
                                                     <span class="mdl-textfield__error">Input is not a number!</span>
                                                 </div>
-                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_mohari" name="prev_month_remain_mohari" required/>
-                                                    <label class="mdl-textfield__label" for="prev_month_remain_mohari"> मागील महिना शिल्लक मोहरी </label>
-                                                    <span class="mdl-textfield__error">Input is not a number!</span>
-                                                </div>
-                                            </div>
-                                            <div class="mdl-grid">
-                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="mohari_got" name="mohari_got" required/>
-                                                    <label class="mdl-textfield__label" for="mohari_got"> चालू महिना प्राप्त मोहरी </label>
-                                                    <span class="mdl-textfield__error">Input is not a number!</span>
-                                                </div>
-                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_mohari" name="total_mohari" required/>
-                                                    <label class="mdl-textfield__label" for="total_mohari"> एकून मोहरी </label>
-                                                    <span class="mdl-textfield__error">Input is not a number!</span>
-                                                </div>
-                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_plates" name="total_plates" required/>
+                                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_plates" name="total_plates" onchange="myFunction2(this.value)" required/>
                                                     <label class="mdl-textfield__label" for="total_plates"> लाभाथ्री संख्या ( ताटांची संख्या )</label>
                                                     <span class="mdl-textfield__error">Input is not a number!</span>
                                                 </div>
+                                       
                                             </div>
                                             <div class="mdl-grid">
-                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
-                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_mohari" name="cooked_mohari" required/>
-                                                    <label class="mdl-textfield__label" for="cooked_mohari"> मोहरी वापरली </label>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                   <label class="" for="prev_month_remain_mohari"> मागील महिना शिल्लक मोहरी </label>
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="prev_month_remain_mohari" name="prev_month_remain_mohari" value="<?php echo $mohari_remaining;?>" required/>
+                                                   
                                                     <span class="mdl-textfield__error">Input is not a number!</span>
                                                 </div>
                                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                       <label class="" for="mohari_got"> चालू महिना प्राप्त मोहरी </label>
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="mohari_got" name="mohari_got" value="<?php echo $mohari_current_month;?>"  required/>
+                                                 
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                           <label class="" for="total_mohari"> एकून मोहरी </label>
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_mohari" name="total_mohari" value="<?php echo $total_current_mohari;?>" required/>
+                                             
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                             
+                                            </div>
+                                            <div class="mdl-grid">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                            <label class="" for="cooked_mohari"> मोहरी वापरली </label>
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cooked_mohari" name="cooked_mohari" required/>
+                                            
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                                           <label class="" for="remaining_mohari"> महिना अखेर शिल्लक मोहरी </label>
                                                     <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="remaining_mohari" name="remaining_mohari" required/>
-                                                    <label class="mdl-textfield__label" for="remaining_mohari"> महिना अखेर शिल्लक मोहरी </label>
+                                             
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col">
+                                 <label class="" for="total_expense"> एकूण खर्च </label>
+                                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="total_expense" name="total_expense" required/>
+       
                                                     <span class="mdl-textfield__error">Input is not a number!</span>
                                                 </div>
 
@@ -243,6 +265,14 @@
                                                         <option value="12">Deb</option>
                                                     </select>
                                                 </div>
+                                                    <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell-8-col-tablet mdl-cell--4-col">
+                                                  <label>select the student category</label>
+                                                <select name="student_category12" onChange="showReport()" id="student_category12" required>
+                                                    <option></option>
+                                                    <option value="6to8">६ ते ८</option>
+                                                    <option value="1to5">१ ते ५</option>
+                                                </select>
+                                                </div>
 
                                             </div>
 
@@ -282,7 +312,8 @@
             }
             str1 = document.getElementById("report_year").value;
             str2 = document.getElementById("report_month").value;
-            xmlhttp.open("GET", "php/monthly_mohari_report.php?s_year=" + str1 + "&s_month=" + str2, true);
+            str3 = document.getElementById("student_category12").value;
+            xmlhttp.open("GET", "php/monthly_mohari_report.php?s_year=" + str1 + "&s_month=" + str2 +"&s_category=" + str3, true);
             xmlhttp.send();
         }
 
@@ -319,6 +350,45 @@
         });
 
     </script>
+    
+            <script>
+function myFunction2(val) {
+    var per_student_quantity=document.getElementById("per_student_material").value;
+    var per_student_expense=document.getElementById("per_student_expense").value;
+    var student_served=document.getElementById("total_plates").value;
+    var used_stock1=(per_student_quantity*student_served)/1000;
+    var expense1=(per_student_expense*student_served);
+    document.getElementById("cooked_mohari").value=used_stock1;
+    document.getElementById("total_expense").value=expense1;
+    
+    
+    var total_stock=document.getElementById("total_mohari").value;
+    var used_stock=document.getElementById("cooked_mohari").value;
+    var remaining_stock=total_stock-used_stock;
+    
+    if (remaining_stock >= 0) {
+      document.getElementById("remaining_mohari").value=remaining_stock;
+    }else{
+      alert("used stock is more than total stock available");
+    }
+   
+
+}
+</script>
+    
+    <script>
+function myFunction1(val) {
+//    alert("The input value has changed. The new value is: " + val);
+    var total_stock=document.getElementById("total_mohari").value;
+    var used_stock=document.getElementById("cooked_mohari").value;
+    var remaining_stock=total_stock-used_stock;
+    if (remaining_stock >= 0) {
+      document.getElementById("remaining_mohari").value=remaining_stock;
+    }else{
+      alert("used stock is more than total stock available");
+    }
+}
+</script>
 
 </body>
 

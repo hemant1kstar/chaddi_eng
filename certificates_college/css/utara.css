@@ -1,0 +1,80 @@
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
+
+body {
+    color: rgba(0, 0, 0, 0.87);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.reg_info {
+    /*    width: 950px;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+.main {
+/*        width: 900px;*/
+    margin: 20px 16px;
+    background-color: white;
+/*    border: 1px solid #9E9E9E;*/
+    padding: 20px 0;
+    position: relative;
+    overflow: scroll;
+/*    display: inline-block;*/
+}
+.headname,
+.schoolname {
+    text-align: center;
+    margin: 10px auto;
+}
+.place {
+    text-align: center;
+    padding: 5px 0px 15px;
+}
+.tabledata {
+    border: 1px solid #9E9E9E;
+    text-align: center;
+    border-collapse: collapse;
+    margin: auto;
+}
+tr {
+    border-bottom: 1px solid #9E9E9E;
+}
+th {
+    border-left: 1px solid #9E9E9E;
+}
+td {
+    border-left: 1px solid #9E9E9E;
+}
+.info {
+    margin-left: 16px;
+    padding: 35px 0px 0;
+}
+.principal {
+    margin-left: 16px;
+    margin-top: 48px;
+}
+#btnPrint {
+    display: block;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
+    .main {
+        margin: 20px 24px;
+    }
+}

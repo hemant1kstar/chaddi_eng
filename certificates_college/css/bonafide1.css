@@ -1,0 +1,46 @@
+.certificate_title1{
+    padding: 16px;
+/*    border: 1px solid rgba(0, 0, 0, 0.22);*/
+    text-align: center;
+}
+
+.lastdiv{
+    margin-top: 74px;
+}
+
+.lipik{
+    text-align: left;
+    margin-left: 200px;
+}
+
+.princi{
+/*    text-align: right;*/
+/*    margin: 16px;*/
+    position:absolute;
+    right: 200px;
+}
+
+#certificate_title1{
+        text-align: center;
+     margin: 8px auto;
+}
+
+#bonafide{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 16px auto;
+}
+
+.numbersDiv {
+    position: relative;
+    margin-bottom: 32px;
+}
+#bonafideNumberDiv,
+#dateNumberDiv {
+    display: inline;
+    position: relative;
+}
+
+#dateNumberDiv {
+    left: 74%;
+}

@@ -1,0 +1,89 @@
+/*  the css has many properties same in the other css files. but as the print function takes this css as its basis
+so this css is kept as it is*/
+
+body {
+    color: rgba(0, 0, 0, 0.87);
+}
+.mdl-layout__content {
+    overflow: auto;
+}
+.reg_info {
+    /*    width: 950px;*/
+    margin: 48px 16px;
+    background-color: white;
+    padding: 16px;
+}
+#showCertificateButton {
+    position: relative;
+    left: 48px;
+}
+.main {
+    width: 850px;
+    margin: 15px auto 20px;
+    background: white;
+/*    border: 1px solid #9E9E9E;*/
+    padding: 30px 20px;
+}
+.space {
+    font-weight: 700;
+}
+
+.headname {
+    text-align: center;
+}
+.namuna {
+    text-align: center;
+}
+.pramanptra {
+    margin: 10px auto;
+}
+.pramanptra h3 {
+    text-align: center;
+    width: 440px;
+    margin: 2px auto;
+    border-width: 2px;
+    padding: 10px;
+    border-style: dashed;
+    border-color: #9E9E9E;
+}
+.schoolname,
+.place {
+    margin: 10px auto;
+    text-align: center;
+}
+.data,
+.context {
+    text-align: justify;
+}
+.place {
+    padding: 5px 0px;
+}
+.logoimage {
+    /*    margin: 20px 2px 5px;*/
+    width: 650px;
+    display: block;
+    margin: auto;
+    /*    margin: 48px auto 0;*/
+}
+.lastdiv {
+    padding: 20px 0px 0px 0px;
+    position: relative;
+}
+.last {
+    padding: 10px 0px;
+}
+.principal {
+    position: absolute;
+    /*    float: right;*/
+    right: 40px;
+    top: 28px;
+}
+#btnPrint {
+    display: block;
+    margin: auto;
+}
+@media (min-width: 992px) {
+    .reg_info {
+        margin: 48px 24px;
+    }
+}

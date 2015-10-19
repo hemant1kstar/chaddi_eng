@@ -1,4 +1,16 @@
-<h3 class="report_title">शालेय पोषण आहार /राष्ट्रीय मध्यान्ह भोजन योजना ( इ .  ते  )</h3>
+<?php
+            $s_year=$_GET['s_year'];
+            $s_month=$_GET['s_month'];
+            $s_category=$_GET['s_category'];
+if($s_category=="1to5")
+{
+    $stu_category1="१ ते ५";
+}else{
+$stu_category1="६ ते ८";
+}
+?>
+
+<h3 class="report_title">शालेय पोषण आहार /राष्ट्रीय मध्यान्ह भोजन योजना ( <?php echo $stu_category1;?> )</h3>
 <h3 class="report_title">शाळा स्तरावर ठेवावयाची  नियमित खर्च नोंदवही भाग -१ ( वाटाणा हिशोब )</h3>
 <label class="report_sub_title">शाळेचे नाव :संत नामदेव विद्यालय, लातूर </label>
 <label class="report_sub_title"> केंद्र :</label>
@@ -16,15 +28,15 @@
             <th>लाभाथ्री संख्या ( ताटांची संख्या )</th>
             <th>वाटाणा वापरला </th>
             <th>महिना अखेर शिल्लक वाटाणा </th>
+            <th>प्रती विद्यार्थी वस्तू (ग्राम मध्ये )</th>
+            <th>प्रती विद्यार्थी खर्च  </th>
+            <th>एकूण खर्च</th>
             <th>मुख्याध्यापक स्वाक्षरी</th>
         </tr>
     </thead>
     <tbody>
         <?php
-            $s_year=$_GET['s_year'];
-            $s_month=$_GET['s_month'];
-//echo "$s_year<br/>";
-//echo "$s_month";
+
               include("../../database/connection.php");
               mysqli_query ($con,"set character_set_results='utf8'");
 //              $query1 = mysqli_query($con,"SELECT * FROM vatana_report") or die(mysqli_error());
@@ -34,7 +46,7 @@ if($s_year=="" or $s_month=="")
 }else{
     
 $query1=mysqli_query($con,"SELECT * 
- FROM vatana_report Where YEAR(date)=$s_year and MONTH(date)=$s_month");
+ FROM vatana_report Where YEAR(date)=$s_year and MONTH(date)=$s_month and class_category='$s_category'");
               $s_no=1;
               while($row1=mysqli_fetch_array($query1))
              {
@@ -48,6 +60,11 @@ $query1=mysqli_query($con,"SELECT *
                   $total_plates1=$row1['total_plates'];
                   $cooked_vatana1=$row1['vatana_cooked'];
                   $remaining_vatana1=$row1['monthEnd_remaining_vatana'];
+                  
+                  $food_per_student=$row1['food_per_student'];
+                  $money_spent_per_student=$row1['money_spent_per_student'];
+                  $total_expense=$row1['total_expense'];
+                  
                   echo "<tr>";
                   echo "<td>$s_no</td>";
                   echo "<td>$e_date1</td>";
@@ -58,6 +75,9 @@ $query1=mysqli_query($con,"SELECT *
                   echo "<td>$total_plates1</td>";
                   echo "<td>$cooked_vatana1</td>";
                   echo "<td>$remaining_vatana1</td>";
+                  echo "<td>$food_per_student</td>";
+                  echo "<td>$money_spent_per_student</td>";
+                  echo "<td>$total_expense</td>";
                   echo "<td></td>";
                   echo "</tr>";
 
